@@ -8,9 +8,7 @@ package b12x;
 import java.io.IOException;
 import java.net.HttpURLConnection;
 import java.net.URL;
-import java.net.MalformedURLException;
-import javax.xml.bind.JAXBContext;
-//import org.json.*;
+import org.json.*;
 /**
  *
  * @author KAEaton
@@ -42,6 +40,7 @@ public class b12xFormRequest{
 
             connection.setRequestMethod("GET");
             connection.setRequestProperty("Accept", "application/json");
+            
             System.out.println("Test");
 
             connection.disconnect();

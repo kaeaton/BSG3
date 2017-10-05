@@ -16,7 +16,7 @@ public class B12xGUI extends javax.swing.JFrame {
 
     /**
      * Creates new form B12xGUI
-     */
+     */ 
     public B12xGUI() {
         initComponents();
     }
