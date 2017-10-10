@@ -6,13 +6,18 @@
 package b12x;
 
 import java.io.BufferedReader;
+//import java.io.DataOutputStream;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.IOException;
 import java.net.HttpURLConnection;
 import java.net.URL;
+import java.util.Scanner;
 //import javax.json.stream.JsonParser;
 import org.json.*;
+import org.json.JSONObject;
+import org.json.*;
+
 /**
  *
  * @author KAEaton
@@ -40,31 +45,65 @@ public class b12xFormRequest{
     public void makeCall(String customURL) throws IOException {
         try {
             URL url = new URL(customURL);
-//            HttpURLConnection connection = (HttpURLConnection) url.openConnection();
+            HttpURLConnection connection = (HttpURLConnection) url.openConnection();
+            System.out.println(connection);
 
-            BufferedReader in = new BufferedReader(new InputStreamReader(url.openStream()));
-            String inputLine;
-            JSONObject obj = new JSONObject(in); 
+              // Try via buffered reader. Trouble capturing the input stream.
+//            BufferedReader in = new BufferedReader(new InputStreamReader(url.openStream()));
+//            String inputLine;
+//            JSONObject obj = new JSONObject(in.readLine()); 
 
-            while ((inputLine = in.readLine()) != null)
-                System.out.println(inputLine);
-            in.close();
-            System.out.println(obj);
-//            connection.setRequestMethod("GET");
-//            connection.setRequestProperty("Accept", "application/json");
+//            while ((inputLine = in.readLine()) != null)
+//                System.out.println(inputLine);
+//                JSONObject obj = new JSONObject().put("", inputLine); 
+
+//            in.close();
+//            System.out.println(obj);
+
+            connection.setRequestMethod("GET");
+            connection.setRequestProperty("Accept", "application/json");
 //            InputStream json = connection.getInputStream();
-//            Object json = connection.getContent();
+//                       InputStreamReader json2 = new InputStreamReader(json);
+            BufferedReader in = new BufferedReader(
+                    new InputStreamReader(connection.getInputStream()));
+            String inputLine;
+            StringBuffer response = new StringBuffer();
+
+            while ((inputLine = in.readLine()) != null) {
+                    response.append(inputLine);
+            }
+            in.close();
+
+            //print result
+//            System.out.println(response.toString());
+//            Scanner json2 = new Scanner(json);
+//            String json3 = json2.next();
+//            json3 = json2.next();
+//                System.out.println(json3);
+
+//            json3 = json2.next();
+//                System.out.println(json3);
+
+//            Object json = connection.Scanner();
+//            JSONObject json = new JSONObject(url.getContent());
 
 //            json.toString();
-//            System.out.println(json);
-////            JsonParser parser = Json.createParser(new FileReader(json));
-//            JSONObject obj = new JSONObject(json);
+//            System.out.println(json2);
+//            System.out.println(json3);
+//            while (json2 != null)
+//                json3.append(json2.next());
+//                System.out.println(json3);
+//            JsonParser parser = Json.createParser(new FileReader(json));
+//             token = new JSONTokener(json);
+//            System.out.println(token);
+            JSONObject obj = new JSONObject(response.toString());
+
+            System.out.println(obj);
+
             String n = obj.getString("act_version");
-//            System.out.println(obj);
             System.out.println(n);
-//            System.out.println("Test");
 //
-//            connection.disconnect();
+            connection.disconnect();
         } catch (Exception ex) {
             System.out.println(ex);
         }
