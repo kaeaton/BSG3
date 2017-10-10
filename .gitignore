@@ -2,3 +2,6 @@ Thumbs.db
 *.pptx
 /b12x/nbproject/private/
 /b12x/build/
+/b12x-ee/nbproject/private/
+/b12x-ee/b12x-ee-war/nbproject/private/
+/b12x-ee/b12x-ee-ejb/nbproject/private/

@@ -5,9 +5,13 @@
  */
 package b12x;
 
+import java.io.BufferedReader;
+import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.io.IOException;
 import java.net.HttpURLConnection;
 import java.net.URL;
+//import javax.json.stream.JsonParser;
 import org.json.*;
 /**
  *
@@ -36,14 +40,31 @@ public class b12xFormRequest{
     public void makeCall(String customURL) throws IOException {
         try {
             URL url = new URL(customURL);
-            HttpURLConnection connection = (HttpURLConnection) url.openConnection();
+//            HttpURLConnection connection = (HttpURLConnection) url.openConnection();
 
-            connection.setRequestMethod("GET");
-            connection.setRequestProperty("Accept", "application/json");
-            
-            System.out.println("Test");
+            BufferedReader in = new BufferedReader(new InputStreamReader(url.openStream()));
+            String inputLine;
+            JSONObject obj = new JSONObject(in); 
 
-            connection.disconnect();
+            while ((inputLine = in.readLine()) != null)
+                System.out.println(inputLine);
+            in.close();
+            System.out.println(obj);
+//            connection.setRequestMethod("GET");
+//            connection.setRequestProperty("Accept", "application/json");
+//            InputStream json = connection.getInputStream();
+//            Object json = connection.getContent();
+
+//            json.toString();
+//            System.out.println(json);
+////            JsonParser parser = Json.createParser(new FileReader(json));
+//            JSONObject obj = new JSONObject(json);
+            String n = obj.getString("act_version");
+//            System.out.println(obj);
+            System.out.println(n);
+//            System.out.println("Test");
+//
+//            connection.disconnect();
         } catch (Exception ex) {
             System.out.println(ex);
         }
