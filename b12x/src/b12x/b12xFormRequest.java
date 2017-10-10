@@ -46,64 +46,31 @@ public class b12xFormRequest{
         try {
             URL url = new URL(customURL);
             HttpURLConnection connection = (HttpURLConnection) url.openConnection();
-            System.out.println(connection);
-
-              // Try via buffered reader. Trouble capturing the input stream.
-//            BufferedReader in = new BufferedReader(new InputStreamReader(url.openStream()));
-//            String inputLine;
-//            JSONObject obj = new JSONObject(in.readLine()); 
-
-//            while ((inputLine = in.readLine()) != null)
-//                System.out.println(inputLine);
-//                JSONObject obj = new JSONObject().put("", inputLine); 
-
-//            in.close();
-//            System.out.println(obj);
 
             connection.setRequestMethod("GET");
             connection.setRequestProperty("Accept", "application/json");
-//            InputStream json = connection.getInputStream();
-//                       InputStreamReader json2 = new InputStreamReader(json);
             BufferedReader in = new BufferedReader(
-                    new InputStreamReader(connection.getInputStream()));
+                new InputStreamReader(connection.getInputStream()));
             String inputLine;
             StringBuffer response = new StringBuffer();
 
             while ((inputLine = in.readLine()) != null) {
-                    response.append(inputLine);
+                response.append(inputLine);
             }
             in.close();
 
-            //print result
-//            System.out.println(response.toString());
-//            Scanner json2 = new Scanner(json);
-//            String json3 = json2.next();
-//            json3 = json2.next();
-//                System.out.println(json3);
-
-//            json3 = json2.next();
-//                System.out.println(json3);
-
-//            Object json = connection.Scanner();
-//            JSONObject json = new JSONObject(url.getContent());
-
-//            json.toString();
-//            System.out.println(json2);
-//            System.out.println(json3);
-//            while (json2 != null)
-//                json3.append(json2.next());
-//                System.out.println(json3);
-//            JsonParser parser = Json.createParser(new FileReader(json));
-//             token = new JSONTokener(json);
-//            System.out.println(token);
+            System.out.println(response.toString());
+            
             JSONObject obj = new JSONObject(response.toString());
-
             System.out.println(obj);
 
-            String n = obj.getString("act_version");
+//            String n = obj.getString("act_version");
+            String n = obj.getString("rank");
+
             System.out.println(n);
 //
-            connection.disconnect();
+//            connection.disconnect();
+
         } catch (Exception ex) {
             System.out.println(ex);
         }
