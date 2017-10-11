@@ -5,17 +5,13 @@
  */
 package b12x;
 
+import com.dslplatform.json;
 import java.io.BufferedReader;
-//import java.io.DataOutputStream;
-import java.io.InputStream;
+//import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.IOException;
 import java.net.HttpURLConnection;
 import java.net.URL;
-import java.util.Scanner;
-//import javax.json.stream.JsonParser;
-import org.json.*;
-import org.json.JSONObject;
 import org.json.*;
 
 /**
@@ -44,11 +40,14 @@ public class b12xFormRequest{
     
     public void makeCall(String customURL) throws IOException {
         try {
+            
+            // Open connection
             URL url = new URL(customURL);
             HttpURLConnection connection = (HttpURLConnection) url.openConnection();
-
             connection.setRequestMethod("GET");
             connection.setRequestProperty("Accept", "application/json");
+            
+            // Get data from connection: creates a single string buffer
             BufferedReader in = new BufferedReader(
                 new InputStreamReader(connection.getInputStream()));
             String inputLine;
@@ -57,17 +56,20 @@ public class b12xFormRequest{
             while ((inputLine = in.readLine()) != null) {
                 response.append(inputLine);
             }
-            in.close();
+            in.close(); 
 
             System.out.println(response.toString());
             
-            JSONObject obj = new JSONObject(response.toString());
-            System.out.println(obj);
+            // Org.JSON code - creating garbled JSON file 
+//            JSONObject obj = new JSONObject(response.toString());
+//            System.out.println(obj);
 
+            
+            // Search testing
 //            String n = obj.getString("act_version");
-            String n = obj.getString("rank");
+//            String n = obj.getString("rank");
 
-            System.out.println(n);
+//            System.out.println(n);
 //
 //            connection.disconnect();
 
