@@ -1,6 +1,6 @@
 package b12xGUI;
 
-import b12x.b12xFormRequest;
+import b12x.B12xFormRequest;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -65,7 +65,7 @@ public class B12xGUI extends javax.swing.JFrame {
         // TODO add your handling code here:
         
         try {
-            b12xFormRequest request = new b12xFormRequest();
+            B12xFormRequest request = new B12xFormRequest();
             String uri = request.buildURL();
             request.makeCall(uri);
             System.out.println("Gui running");

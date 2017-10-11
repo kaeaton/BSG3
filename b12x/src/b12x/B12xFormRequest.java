@@ -5,7 +5,9 @@
  */
 package b12x;
 
-import com.dslplatform.json;
+import com.jsoniter.*;
+import com.jsoniter.spi.*;
+
 import java.io.BufferedReader;
 //import java.io.InputStream;
 import java.io.InputStreamReader;
@@ -18,10 +20,10 @@ import org.json.*;
  *
  * @author KAEaton
  */
-public class b12xFormRequest{
-    String uri;
+public class B12xFormRequest{
+    private String uri;
     
-    public b12xFormRequest() throws IOException {
+    public B12xFormRequest() throws IOException {
         URL url = new URL(buildURL());
 //        HttpURLConnection connection = (HttpURLConnection) url.openConnection();
 //
@@ -58,7 +60,14 @@ public class b12xFormRequest{
             }
             in.close(); 
 
-            System.out.println(response.toString());
+//            System.out.println(response.toString());
+            
+            // Jsoniter code
+//            JsonIterator test = JsonIterator.parse(response.toString());
+            registerTypeDecoder(B12xActObject.class, ReflectionDecoderFactory.create(B12xActObject.class));
+            B12
+            
+            System.out.println(iter.read(TestObject.class));
             
             // Org.JSON code - creating garbled JSON file 
 //            JSONObject obj = new JSONObject(response.toString());
