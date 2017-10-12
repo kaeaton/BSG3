@@ -5,9 +5,7 @@
  */
 package b12x;
 
-import com.jsoniter.*;
-import com.jsoniter.spi.*;
-
+import com.fasterxml.jackson.core.*;
 import java.io.BufferedReader;
 //import java.io.InputStream;
 import java.io.InputStreamReader;
@@ -62,12 +60,7 @@ public class B12xFormRequest{
 
 //            System.out.println(response.toString());
             
-            // Jsoniter code
-//            JsonIterator test = JsonIterator.parse(response.toString());
-            registerTypeDecoder(B12xActObject.class, ReflectionDecoderFactory.create(B12xActObject.class));
-            B12
-            
-            System.out.println(iter.read(TestObject.class));
+
             
             // Org.JSON code - creating garbled JSON file 
 //            JSONObject obj = new JSONObject(response.toString());
