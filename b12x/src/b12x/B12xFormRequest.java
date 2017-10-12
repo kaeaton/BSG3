@@ -7,7 +7,8 @@ package b12x;
 
 import com.fasterxml.jackson.core.*;
 import java.io.BufferedReader;
-//import java.io.InputStream;
+import java.io.File;
+import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.IOException;
 import java.net.HttpURLConnection;
@@ -47,6 +48,7 @@ public class B12xFormRequest{
             connection.setRequestMethod("GET");
             connection.setRequestProperty("Accept", "application/json");
             
+            InputStreamReader testInput = new InputStreamReader(connection.getInputStream());
             // Get data from connection: creates a single string buffer
             BufferedReader in = new BufferedReader(
                 new InputStreamReader(connection.getInputStream()));
@@ -56,23 +58,31 @@ public class B12xFormRequest{
             while ((inputLine = in.readLine()) != null) {
                 response.append(inputLine);
             }
-            in.close(); 
+//            in.close(); 
 
 //            System.out.println(response.toString());
             
-
+            JsonFactory factory = new JsonFactory();           
+            factory.enable(JsonParser.Feature.ALLOW_COMMENTS);
+            System.out.println(factory.getFormatName());
             
+            JsonParser p = factory.createParser(testInput);
+            System.out.println(p);
             // Org.JSON code - creating garbled JSON file 
 //            JSONObject obj = new JSONObject(response.toString());
 //            System.out.println(obj);
-
+            p.nextToken();
             
             // Search testing
-//            String n = obj.getString("act_version");
-//            String n = obj.getString("rank");
+            String m = p.getCurrentName();
+            // "act_version"
+            String n = p.getValueAsString("act_version");
+            
+            p.close();
 
-//            System.out.println(n);
-//
+            System.out.println(m);
+            System.out.println(n);
+
 //            connection.disconnect();
 
         } catch (Exception ex) {
