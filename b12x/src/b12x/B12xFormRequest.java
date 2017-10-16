@@ -5,7 +5,10 @@
  */
 package b12x;
 
-import com.fasterxml.jackson.core.*;
+//import com.fasterxml.jackson.core.*;
+import com.fasterxml.jackson.core.JsonFactory;
+import com.fasterxml.jackson.core.JsonParser;
+import com.fasterxml.jackson.core.JsonToken;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.InputStream;
@@ -44,44 +47,80 @@ public class B12xFormRequest{
             
             // Open connection
             URL url = new URL(customURL);
-            HttpURLConnection connection = (HttpURLConnection) url.openConnection();
-            connection.setRequestMethod("GET");
-            connection.setRequestProperty("Accept", "application/json");
-            
-            InputStreamReader testInput = new InputStreamReader(connection.getInputStream());
-            // Get data from connection: creates a single string buffer
-            BufferedReader in = new BufferedReader(
-                new InputStreamReader(connection.getInputStream()));
-            String inputLine;
-            StringBuffer response = new StringBuffer();
-
-            while ((inputLine = in.readLine()) != null) {
-                response.append(inputLine);
-            }
+//            HttpURLConnection connection = (HttpURLConnection) url.openConnection();
+//            connection.setRequestMethod("GET");
+//            connection.setRequestProperty("Accept", "application/json");
+//            
+//            InputStreamReader testInput = new InputStreamReader(connection.getInputStream());
+//            // Get data from connection: creates a single string buffer
+//            BufferedReader in = new BufferedReader(
+//                new InputStreamReader(connection.getInputStream()));
+//            String inputLine;
+//            StringBuffer response = new StringBuffer();
+//
+//            while ((inputLine = in.readLine()) != null) {
+//                response.append(inputLine);
+//            }
 //            in.close(); 
 
 //            System.out.println(response.toString());
+
+            // get an instance of the json parser from the json factory
+            JsonFactory factory = new JsonFactory();  
+            JsonParser parser = factory.createParser(url);
             
-            JsonFactory factory = new JsonFactory();           
-            factory.enable(JsonParser.Feature.ALLOW_COMMENTS);
-            System.out.println(factory.getFormatName());
+            // continue parsing the token till the end of input is reached
+            while (!parser.isClosed()) {
+                // get the token
+                JsonToken token = parser.nextToken();
+                // if its the last token then we are done
+                if (token == null)
+                    break;
+                // we want to look for a field that says dataset
+
+                if (JsonToken.FIELD_NAME.equals(token) && "features".equals(parser.getCurrentName())) {
+                    // we are entering the datasets now. The first token should be
+                    // start of array
+                    token = parser.nextToken();
+                    if (!JsonToken.START_ARRAY.equals(token)) {
+                        // bail out
+                        break;
+                    }
+                    // each element of the array is an album so the next token
+                    // should be 
+                    token = parser.nextToken();
+                    if (!JsonToken.START_OBJECT.equals(token)) {
+                        break;
+                    }
+                    // we are now looking for a field that says "album_title". We
+                    // continue looking till we find all such fields. This is
+                    // probably not a best way to parse this json, but this will
+                    // suffice for this example.
+                    while (true) {
+                        token = parser.nextToken();
+                        if (token == null)
+                                break;
+                        if (JsonToken.FIELD_NAME.equals(token) && "accession".equals(parser.getCurrentName())) {
+                                token = parser.nextToken();
+                                System.out.println(parser.getText());
+                        }
+                    }
+                }
+            }
             
-            JsonParser p = factory.createParser(testInput);
-            System.out.println(p);
             // Org.JSON code - creating garbled JSON file 
 //            JSONObject obj = new JSONObject(response.toString());
 //            System.out.println(obj);
-            p.nextToken();
             
             // Search testing
-            String m = p.getCurrentName();
-            // "act_version"
-            String n = p.getValueAsString("act_version");
-            
-            p.close();
-
-            System.out.println(m);
-            System.out.println(n);
+//            String m = p.getCurrentName();
+//            // "act_version"
+//            String n = p.getValueAsString("act_version");
+//            
+//            p.close();
+//
+//            System.out.println(m);
+//            System.out.println(n);
 
 //            connection.disconnect();
 
