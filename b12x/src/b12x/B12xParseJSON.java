@@ -68,7 +68,7 @@ public class B12xParseJSON{
                     break;
                 // we want to look for a field that says dataset
 
-                if (JsonToken.FIELD_NAME.equals(token) && "features".equals(parser.getCurrentName())) {
+                if (JsonToken.FIELD_NAME.equals(token) && "act_version".equals(parser.getCurrentName())) {
                     // we are entering the datasets now. The first token should be
                     // start of array
                     token = parser.nextToken();
@@ -76,6 +76,7 @@ public class B12xParseJSON{
 //                        // bail out
 //                        break;
 //                    }
+                    System.out.println(parser.getText());
                     // each element of the array is an album so the next token
                     // should be 
                     token = parser.nextToken();
