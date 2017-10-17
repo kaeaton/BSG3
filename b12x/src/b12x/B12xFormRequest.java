@@ -78,14 +78,14 @@ public class B12xFormRequest{
                     break;
                 // we want to look for a field that says dataset
 
-                if (JsonToken.FIELD_NAME.equals(token) && "features".equals(parser.getCurrentName())) {
+                if (JsonToken.FIELD_NAME.equals(token) && "full_gene".equals(parser.getCurrentName())) {
                     // we are entering the datasets now. The first token should be
                     // start of array
                     token = parser.nextToken();
-                    if (!JsonToken.START_ARRAY.equals(token)) {
-                        // bail out
-                        break;
-                    }
+//                    if (!JsonToken.START_ARRAY.equals(token)) {
+//                        // bail out
+//                        break;
+//                    }
                     // each element of the array is an album so the next token
                     // should be 
                     token = parser.nextToken();
@@ -100,7 +100,7 @@ public class B12xFormRequest{
                         token = parser.nextToken();
                         if (token == null)
                                 break;
-                        if (JsonToken.FIELD_NAME.equals(token) && "accession".equals(parser.getCurrentName())) {
+                        if (JsonToken.FIELD_NAME.equals(token) && "sequence".equals(parser.getCurrentName())) {
                                 token = parser.nextToken();
                                 System.out.println(parser.getText());
                         }
