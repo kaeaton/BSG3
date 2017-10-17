@@ -23,24 +23,13 @@ import org.json.*;
  * @author KAEaton
  */
 public class B12xParseJSON{
-    private String uri;
     
     public B12xParseJSON() throws IOException {
-        URL url = new URL(buildURL());
-//        HttpURLConnection connection = (HttpURLConnection) url.openConnection();
-//
-//        connection.setRequestMethod("GET");
-//        connection.setRequestProperty("Accept", "application/json");
-//        System.out.println("Test");
-//        
-//        connection.disconnect();
+//        B12xCustomUrl uri = new B12xCustomUrl();
+//        URL url = new URL(uri.buildURL());
     }
     
-    public String buildURL(){
-        uri = "http://act.b12x.org/act?locus=HLA-A&gfe=HLA-Aw1-1-7-20-10-32-7-1-1-1-6-1-5-3-5-1-1";
-        System.out.println(uri);
-        return uri;
-    }
+    
     
     public void makeCall(String customURL) throws IOException {
         try {
@@ -79,7 +68,7 @@ public class B12xParseJSON{
                     break;
                 // we want to look for a field that says dataset
 
-                if (JsonToken.FIELD_NAME.equals(token) && "full_gene".equals(parser.getCurrentName())) {
+                if (JsonToken.FIELD_NAME.equals(token) && "features".equals(parser.getCurrentName())) {
                     // we are entering the datasets now. The first token should be
                     // start of array
                     token = parser.nextToken();
@@ -101,7 +90,7 @@ public class B12xParseJSON{
                         token = parser.nextToken();
                         if (token == null)
                                 break;
-                        if (JsonToken.FIELD_NAME.equals(token) && "sequence".equals(parser.getCurrentName())) {
+                        if (JsonToken.FIELD_NAME.equals(token) && "term".equals(parser.getCurrentName())) {
                                 token = parser.nextToken();
                                 System.out.println(parser.getText());
                         }

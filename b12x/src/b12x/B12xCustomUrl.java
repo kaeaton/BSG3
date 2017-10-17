@@ -5,10 +5,31 @@
  */
 package b12x;
 
+import java.io.IOException;
+
 /**
  *
  * @author KAEaton
  */
 public class B12xCustomUrl {
+    
+    public String uri;
+    
+    public B12xCustomUrl() {
+//        uri = "http://act.b12x.org/act?locus=HLA-A&gfe=HLA-Aw1-1-7-20-10-32-7-1-1-1-6-1-5-3-5-1-1";
+    }
+    
+    public String buildURL() throws IOException {
+        
+        try {
+            uri = "http://act.b12x.org/act?locus=HLA-A&gfe=HLA-Aw1-1-7-20-10-32-7-1-1-1-6-1-5-3-5-1-1";
+            System.out.println(uri);
+        } catch (Exception ex) {
+            System.out.println(ex);
+        }
+        
+        return uri;
+    }
+    
     
 }

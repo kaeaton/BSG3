@@ -1,6 +1,6 @@
 package b12xGUI;
 
-import b12x.B12xParseJSON;
+import b12x.B12x;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -65,15 +65,17 @@ public class B12xGUI extends javax.swing.JFrame {
         // TODO add your handling code here:
         
         try {
-            B12xParseJSON request = new B12xParseJSON();
-            String uri = request.buildURL();
-            request.makeCall(uri);
+            B12x request = new B12x();
+            request.execute();
+
             System.out.println("Gui running");
+
         } catch (Exception ex) {
             System.out.println(ex);
         }
+        
     }//GEN-LAST:event_jButton1ActionPerformed
-
+    
     /**
      * @param args the command line arguments
      */
