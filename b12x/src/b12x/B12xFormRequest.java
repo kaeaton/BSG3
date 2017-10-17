@@ -64,7 +64,6 @@ public class B12xFormRequest{
             
             JsonFactory factory = new JsonFactory();           
             factory.enable(JsonParser.Feature.ALLOW_COMMENTS);
-            System.out.println(factory.getFormatName());
             
             JsonParser p = factory.createParser(testInput);
             System.out.println(p);
