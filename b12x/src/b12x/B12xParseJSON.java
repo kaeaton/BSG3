@@ -22,10 +22,10 @@ import org.json.*;
  *
  * @author KAEaton
  */
-public class B12xFormRequest{
+public class B12xParseJSON{
     private String uri;
     
-    public B12xFormRequest() throws IOException {
+    public B12xParseJSON() throws IOException {
         URL url = new URL(buildURL());
 //        HttpURLConnection connection = (HttpURLConnection) url.openConnection();
 //
