@@ -7,6 +7,7 @@ package b12x;
 
 import java.io.IOException;
 import javax.swing.SwingWorker;
+import neo4j.Neo4j;
 
 
 /**
