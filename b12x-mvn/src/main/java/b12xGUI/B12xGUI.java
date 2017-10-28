@@ -1,6 +1,6 @@
 package b12xGUI;
 
-import b12x.B12x;
+import b12xAPI.B12xAPI;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -65,7 +65,7 @@ public class B12xGUI extends javax.swing.JFrame {
         // TODO add your handling code here:
         
         try {
-            B12x request = new B12x();
+            B12xAPI request = new B12xAPI();
             request.execute();
 
             System.out.println("Gui running");

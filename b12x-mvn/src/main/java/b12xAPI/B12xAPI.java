@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package b12x;
+package b12xAPI;
 
 import java.io.IOException;
 import javax.swing.SwingWorker;
@@ -14,11 +14,11 @@ import neo4j.Neo4j;
  *
  * @author KAEaton
  */
-public class B12x  extends SwingWorker<Void, String>{
+public class B12xAPI  extends SwingWorker<Void, String>{
     
     public String uri;
     
-    public B12x() {
+    public B12xAPI() {
 //        uri = "http://act.b12x.org/act?locus=HLA-A&gfe=HLA-Aw1-1-7-20-10-32-7-1-1-1-6-1-5-3-5-1-1";
     }
     
@@ -30,9 +30,10 @@ public class B12x  extends SwingWorker<Void, String>{
             uri = "http://act.b12x.org/act?locus=HLA-A&gfe=HLA-Aw1-1-7-20-10-32-7-1-1-1-6-1-5-3-5-1-1";
             System.out.println(uri);
             
-            B12xCustomUrl uri = new B12xCustomUrl();
+            B12xAPICustomUrl uri = new B12xAPICustomUrl();
             B12xParseJSON parser = new B12xParseJSON();
             parser.makeCall(uri.buildURL());
+            Neo4j neo4j = new Neo4j("bolt://neo4j.b12x.org/db/data/index/node", "keaton", "chori17");
             
         } catch (Exception ex) {
             System.out.println(ex);

@@ -26,4 +26,40 @@ public class Neo4j implements AutoCloseable{
     {
         driver.close();
     }
+
+    public void importJSON()
+    {
+        try ( Session session = driver.session() )
+        {
+            String incomingJSON = session.readTransaction( new TransactionWork<String>()
+            {
+                @Override
+                public String execute( Transaction tx )
+                {
+                    /*
+                        MATCH (h:IMGT)-[r1:HAS_GFE]-(g:GFE) 
+                        WHERE h.locus = "HLA-A"
+                        AND r1.status = "Expected"
+                        RETURN h.name, g.name
+                    */
+                    StatementResult result = tx.run( "MATCH (h:IMGT)-[r1:HAS_GFE]-(g:GFE) " +
+                                                     "WHERE h.locus = \"HLA-DRA\" " +
+                                                     "AND r1.status = \"Expected\" " +
+                                                     "RETURN h.name, g.name" );
+//                            parameters( "message", message ) );
+                    return result.single().get( 0 ).asString();
+                }
+            } );
+            System.out.println( incomingJSON );
+        }
+    }
+    
+    public static void main( String... args ) throws Exception
+    {
+//        try ( Neo4j greeter = new Neo4j( "bolt://localhost:7687", "neo4j", "password" ) )
+        try ( Neo4j greeter = new Neo4j( "bolt+routing://neo4j.b12x.org", "keaton", "chori17" ) )
+        {
+            greeter.importJSON();
+        }
+    }
 }
