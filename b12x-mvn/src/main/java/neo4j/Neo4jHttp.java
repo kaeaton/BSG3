@@ -8,11 +8,11 @@ package neo4j;
 import com.fasterxml.jackson.core.JsonFactory;
 import com.fasterxml.jackson.core.JsonParser;
 import com.fasterxml.jackson.core.JsonToken;
-import java.io.IOException;
-import java.net.URL;
+//import java.net.URL;
 import java.io.BufferedReader;
-import java.io.File;
-import java.io.InputStream;
+//import java.io.DataInputStream;
+//import java.io.File;
+//import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.IOException;
 import java.net.HttpURLConnection;
@@ -54,53 +54,60 @@ public class Neo4jHttp {
 
 
             
-            InputStreamReader testInput = new InputStreamReader(connection.getInputStream());
+//            InputStreamReader testInput = new InputStreamReader(connection.getInputStream());
+//            DataInputStream dataIn = new DataInputStream(connection.getInputStream());
+            
+//            DataInputStream dataIn = 
+            
             // Get data from connection: creates a single string buffer
-            BufferedReader in = new BufferedReader(
-                new InputStreamReader(connection.getInputStream()));
-            String inputLine;
-            StringBuffer response = new StringBuffer();
+//            BufferedReader in = new BufferedReader(
+//                new InputStreamReader(connection.getInputStream()));
+//            String inputLine;
+//            StringBuffer response = new StringBuffer();
+//
+//            while ((inputLine = in.readLine()) != null) {
+//                response.append(inputLine);
+//            }
+//            in.close(); 
 
-            while ((inputLine = in.readLine()) != null) {
-                response.append(inputLine);
-            }
-            in.close(); 
-
-            System.out.println(response.toString());
+//            System.out.println(response.toString());
 
             // get an instance of the json parser from the json factory
-//            JsonFactory factory = new JsonFactory();  
-//            JsonParser parser = factory.createParser(url);
-//            
-//
-//            // continue parsing the token till the end of input is reached
-//            while (!parser.isClosed()) {
-//                // get the token
-//                JsonToken token = parser.nextToken();
-//                // if its the last token then we are done
-//                if (token == null)
-//                    break;
-//                // we want to look for a field that says dataset
-//
+            JsonFactory factory = new JsonFactory();  
+            JsonParser parser = factory.createParser(connection.getInputStream());
+            
+
+            // continue parsing the token till the end of input is reached
+            while (!parser.isClosed()) {
+                // get the token
+                JsonToken token = parser.nextToken();
+                // if its the last token then we are done
+                if (token == null)
+                    break;
+                // we want to look for a field that says dataset
+
 //                if (JsonToken.FIELD_NAME.equals(token) && "act_version".equals(parser.getCurrentName())) {
-//                    // we are entering the datasets now. The first token should be
-//                    // start of array
+                    // we are entering the datasets now. The first token should be
+                    // start of array
 //                    token = parser.nextToken();
-////                    if (!JsonToken.START_ARRAY.equals(token)) {
-////                        // bail out
-////                        break;
-////                    }
-//                    System.out.println(parser.getText());
-//                    // each element of the array is an album so the next token
-//                    // should be 
+//                    if (!JsonToken.START_ARRAY.equals(token)) {
+//                        // bail out
+//                        break;
+//                    }
+                else{
+                    System.out.println(parser.getText());
+//                    parser.nextToken();
+                }
+                    // each element of the array is an album so the next token
+                    // should be 
 //                    token = parser.nextToken();
 //                    if (!JsonToken.START_OBJECT.equals(token)) {
 //                        break;
 //                    }
-//                    // we are now looking for a field that says "album_title". We
-//                    // continue looking till we find all such fields. This is
-//                    // probably not a best way to parse this json, but this will
-//                    // suffice for this example.
+                    // we are now looking for a field that says "album_title". We
+                    // continue looking till we find all such fields. This is
+                    // probably not a best way to parse this json, but this will
+                    // suffice for this example.
 //                    while (true) {
 //                        token = parser.nextToken();
 //                        if (token == null)
@@ -111,7 +118,7 @@ public class Neo4jHttp {
 //                        }
 //                    }
 //                }
-//            }
+            }
             
             // Org.JSON code - creating garbled JSON file 
 //            JSONObject obj = new JSONObject(response.toString());
