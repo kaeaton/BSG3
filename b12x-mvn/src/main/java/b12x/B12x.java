@@ -19,6 +19,7 @@ public class B12x extends SwingWorker<Void, String> {
     
     public String b12xUri;
     public String neo4jUri;
+    public String locus;
     
     public B12x() {
 //        uri = "http://act.b12x.org/act?locus=HLA-A&gfe=HLA-Aw1-1-7-20-10-32-7-1-1-1-6-1-5-3-5-1-1";
@@ -36,13 +37,18 @@ public class B12x extends SwingWorker<Void, String> {
             parser.makeCall(uri.buildURL());
             
             neo4jUri = "http://neo4j.b12x.org/db/data/transaction/commit";
+            locus = "HLA-A";
 
             Neo4jHttp neo4j = new Neo4jHttp();
-            neo4j.makeCall(neo4jUri);
+            neo4j.makeCall(neo4jUri, locus);
             
         } catch (Exception ex) {
             System.out.println(ex);
         }
         return null;
     }
+    
+    @Override
+    protected void done() {System.out.println("B12x complete.");}
+
 }

@@ -14,7 +14,7 @@ import neo4j.Neo4jHttp;
  *
  * @author KAEaton
  */
-public class B12xAPI  extends SwingWorker<Void, String>{
+public class B12xAPI{
     
     public String uri;
     public String uri2;
@@ -24,32 +24,30 @@ public class B12xAPI  extends SwingWorker<Void, String>{
 //        uri = "http://act.b12x.org/act?locus=HLA-A&gfe=HLA-Aw1-1-7-20-10-32-7-1-1-1-6-1-5-3-5-1-1";
     }
     
-    
-    @Override
-    protected Void doInBackground() throws IOException {
-        
-        try {
-            uri = "http://act.b12x.org/act?locus=HLA-A&gfe=HLA-Aw1-1-7-20-10-32-7-1-1-1-6-1-5-3-5-1-1";
-            System.out.println(uri);
-            
-            B12xAPICustomUrl uri = new B12xAPICustomUrl();
-            B12xParseJSON parser = new B12xParseJSON();
-            parser.makeCall(uri.buildURL());
-            
-//            uri2 = "http://neo4j.b12x.org:7687";
-            uri2 = "http://neo4j.b12x.org/db/data/transaction/commit";
-
-            Neo4jHttp neo4j = new Neo4jHttp();
-            neo4j.makeCall(uri2);
-            
-        } catch (Exception ex) {
-            System.out.println(ex);
-        }
-        return null;
-    }
-    
-    @Override
-    protected void done() {System.out.println("B12x complete.");}
+//    
+//    @Override
+//    protected Void doInBackground() throws IOException {
+//        
+//        try {
+//            uri = "http://act.b12x.org/act?locus=HLA-A&gfe=HLA-Aw1-1-7-20-10-32-7-1-1-1-6-1-5-3-5-1-1";
+//            System.out.println(uri);
+//            
+//            B12xAPICustomUrl uri = new B12xAPICustomUrl();
+//            B12xParseJSON parser = new B12xParseJSON();
+//            parser.makeCall(uri.buildURL());
+//            
+////            uri2 = "http://neo4j.b12x.org:7687";
+//            uri2 = "http://neo4j.b12x.org/db/data/transaction/commit";
+//
+//            Neo4jHttp neo4j = new Neo4jHttp();
+//            neo4j.makeCall(uri2);
+//            
+//        } catch (Exception ex) {
+//            System.out.println(ex);
+//        }
+//        return null;
+//    }
+//    
 
     
     /**

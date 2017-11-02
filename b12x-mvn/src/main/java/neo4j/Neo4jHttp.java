@@ -41,7 +41,7 @@ public class Neo4jHttp {
     
     
     
-    public void makeCall(String customURL) throws IOException {
+    public void makeCall(String customURL, String locus) throws IOException {
         try {
             
             // Open connection
