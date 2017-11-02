@@ -11,6 +11,20 @@ package neo4j;
  */
 public class Neo4jRequest {
     
+    private String locus;
+    private String request;
     
+    public Neo4jRequest(String incomingLocus) {
+        locus = incomingLocus;
+    }
+    
+    public String formNeo4jRequest(){
+        request = ( "MATCH (h:IMGT)-[r1:HAS_GFE]-(g:GFE) " +
+                    "WHERE h.locus = \"" + locus + "\" " +
+                    "AND r1.status = \"Expected\" " +
+                    "RETURN h.name, g.name" );
+        
+        return request;
+    }
     
 }

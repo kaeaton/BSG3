@@ -53,10 +53,8 @@ public class Neo4jHttp {
             connection.setRequestProperty("X-Stream", "true");
             connection.setRequestProperty("Authorization", "Basic a2VhdG9uOmNob3JpMTc=");
             
-            String params = ( "MATCH (h:IMGT)-[r1:HAS_GFE]-(g:GFE) " +
-                                "WHERE h.locus = \"HLA-DRA\" " +
-                                "AND r1.status = \"Expected\" " +
-                                "RETURN h.name, g.name" );
+            Neo4jRequest customParams = new Neo4jRequest(locus);
+            String params = customParams.formNeo4jRequest();
 
 
             
