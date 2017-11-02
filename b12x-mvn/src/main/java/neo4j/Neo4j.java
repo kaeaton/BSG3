@@ -53,13 +53,4 @@ public class Neo4j implements AutoCloseable{
             System.out.println( incomingJSON );
         }
     }
-    
-    public static void main( String... args ) throws Exception
-    {
-//        try ( Neo4j greeter = new Neo4j( "bolt://localhost:7687", "neo4j", "password" ) )
-//        try ( Neo4j greeter = new Neo4j( "bolt+routing://neo4j.b12x.org:7687", "keaton", "chori17" ) )
-        {
-//            greeter.importJSON();
-        }
-    }
 }

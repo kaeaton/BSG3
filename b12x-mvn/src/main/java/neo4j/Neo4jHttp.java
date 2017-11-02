@@ -6,6 +6,7 @@
 package neo4j;
 
 import com.fasterxml.jackson.core.JsonFactory;
+import com.fasterxml.jackson.core.JsonGenerator;
 import com.fasterxml.jackson.core.JsonParser;
 import com.fasterxml.jackson.core.JsonToken;
 //import java.net.URL;
@@ -51,6 +52,11 @@ public class Neo4jHttp {
             connection.setRequestProperty("Content-Type", "application/json");
             connection.setRequestProperty("X-Stream", "true");
             connection.setRequestProperty("Authorization", "Basic a2VhdG9uOmNob3JpMTc=");
+            
+            String params = ( "MATCH (h:IMGT)-[r1:HAS_GFE]-(g:GFE) " +
+                                "WHERE h.locus = \"HLA-DRA\" " +
+                                "AND r1.status = \"Expected\" " +
+                                "RETURN h.name, g.name" );
 
 
             
@@ -96,7 +102,6 @@ public class Neo4jHttp {
 //                    }
                 else{
                     System.out.println(parser.getText());
-//                    parser.nextToken();
                 }
                     // each element of the array is an album so the next token
                     // should be 
