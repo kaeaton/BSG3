@@ -16,6 +16,7 @@ import java.io.BufferedReader;
 //import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.IOException;
+import java.io.OutputStream;
 import java.io.OutputStreamWriter;
 import java.net.HttpURLConnection;
 import java.net.URL;
@@ -57,7 +58,7 @@ public class Neo4jHttp {
             connection.setRequestProperty("Authorization", "Basic a2VhdG9uOmNob3JpMTc=");
             
             Neo4jRequest customParams = new Neo4jRequest(locus);
-            String params = customParams.formNeo4jRequest();
+            OutputStream params = customParams.formNeo4jRequest();
             
             OutputStreamWriter wr = new OutputStreamWriter(connection.getOutputStream());
             wr.write(params.toString());
