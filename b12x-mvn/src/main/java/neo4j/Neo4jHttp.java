@@ -16,6 +16,7 @@ import java.io.BufferedReader;
 //import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.IOException;
+import java.io.OutputStreamWriter;
 import java.net.HttpURLConnection;
 import java.net.URL;
 
@@ -47,6 +48,8 @@ public class Neo4jHttp {
             // Open connection
             URL url = new URL(customURL);
             HttpURLConnection connection = (HttpURLConnection) url.openConnection();
+            connection.setDoOutput(true);
+            connection.setDoInput(true);
             connection.setRequestMethod("POST");
             connection.setRequestProperty("Accept", "application/json");
             connection.setRequestProperty("Content-Type", "application/json");
@@ -55,6 +58,10 @@ public class Neo4jHttp {
             
             Neo4jRequest customParams = new Neo4jRequest(locus);
             String params = customParams.formNeo4jRequest();
+            
+            OutputStreamWriter wr = new OutputStreamWriter(connection.getOutputStream());
+            wr.write(params.toString());
+            wr.flush();
 
 
             
@@ -64,17 +71,17 @@ public class Neo4jHttp {
 //            DataInputStream dataIn = 
             
             // Get data from connection: creates a single string buffer
-//            BufferedReader in = new BufferedReader(
-//                new InputStreamReader(connection.getInputStream()));
-//            String inputLine;
-//            StringBuffer response = new StringBuffer();
-//
-//            while ((inputLine = in.readLine()) != null) {
-//                response.append(inputLine);
-//            }
+            BufferedReader in = new BufferedReader(
+                new InputStreamReader(connection.getInputStream()));
+            String inputLine;
+            StringBuffer response = new StringBuffer();
+
+            while ((inputLine = in.readLine()) != null) {
+                response.append(inputLine);
+            }
 //            in.close(); 
 
-//            System.out.println(response.toString());
+            System.out.println(response.toString());
 
             // get an instance of the json parser from the json factory
             JsonFactory factory = new JsonFactory();  

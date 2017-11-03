@@ -19,10 +19,14 @@ public class Neo4jRequest {
     }
     
     public String formNeo4jRequest(){
-        request = ( "MATCH (h:IMGT)-[r1:HAS_GFE]-(g:GFE) " +
+        request = ( "{\n" +
+"  \"statements\" : [ {\n" +
+"    \"statement\" : " + "MATCH (h:IMGT)-[r1:HAS_GFE]-(g:GFE) " +
                     "WHERE h.locus = \"" + locus + "\" " +
                     "AND r1.status = \"Expected\" " +
-                    "RETURN h.name, g.name" );
+                    "RETURN h.name, g.name\n" +
+                    "  } ]\n" + 
+                    "}");
         
         return request;
     }
