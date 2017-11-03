@@ -58,7 +58,7 @@ public class Neo4jHttp {
             connection.setRequestProperty("Authorization", "Basic a2VhdG9uOmNob3JpMTc=");
             
             Neo4jRequest customParams = new Neo4jRequest(locus);
-            OutputStream params = customParams.formNeo4jRequest();
+            OutputStream params = customParams.formNeo4jRequest(wr);
             
             OutputStreamWriter wr = new OutputStreamWriter(connection.getOutputStream());
             wr.write(params.toString());
