@@ -34,13 +34,12 @@ public class Neo4jHttp {
        
     public void makeCall(String customURL, String locus) throws IOException {
         try {
-            
             // Open connection
             URL url = new URL(customURL);
             HttpURLConnection connection = (HttpURLConnection) url.openConnection();
             connection.setDoOutput(true);
             connection.setDoInput(true);
-            connection.setRequestMethod("POST");
+            connection.setRequestMethod("GET");
             connection.setRequestProperty("Accept", "application/json");
             connection.setRequestProperty("Content-Type", "application/json");
             connection.setRequestProperty("X-Stream", "true");
@@ -51,10 +50,19 @@ public class Neo4jHttp {
             OutputStreamWriter wr = new OutputStreamWriter(connection.getOutputStream());
             String params = customParams.formNeo4jRequest();
 
-//            wr.write(params.toString());
             wr.flush();
 
-
+            StringBuilder sb = new StringBuilder();  
+            int HttpResult = connection.getResponseCode(); 
+            if (HttpResult == HttpURLConnection.HTTP_OK) {
+                BufferedReader br = new BufferedReader(
+                        new InputStreamReader(connection.getInputStream(), "utf-8"));
+                String line = null;  
+                while ((line = br.readLine()) != null) {  
+                    sb.append(line + "\n");  
+                }
+                br.close();
+                System.out.println("" + sb.toString());  
             
 //            InputStreamReader testInput = new InputStreamReader(connection.getInputStream());
 //            DataInputStream dataIn = new DataInputStream(connection.getInputStream());
@@ -62,30 +70,30 @@ public class Neo4jHttp {
 //            DataInputStream dataIn = 
             
             // Get data from connection: creates a single string buffer
-            BufferedReader in = new BufferedReader(
-                new InputStreamReader(connection.getInputStream()));
-            String inputLine;
-            StringBuffer response = new StringBuffer();
-
-            while ((inputLine = in.readLine()) != null) {
-                response.append(inputLine);
-            }
+//            BufferedReader in = new BufferedReader(
+//                new InputStreamReader(connection.getInputStream()));
+//            String inputLine;
+//            StringBuffer response = new StringBuffer();
+//
+//            while ((inputLine = in.readLine()) != null) {
+//                response.append(inputLine);
+//            }
 //            in.close(); 
 
-            System.out.println(params.toString());
+//            System.out.println(params.toString());
 
             // get an instance of the json parser from the json factory
-            JsonFactory factory = new JsonFactory();  
-            JsonParser parser = factory.createParser(connection.getInputStream());
-            
-
-            // continue parsing the token till the end of input is reached
-            while (!parser.isClosed()) {
-                // get the token
-                JsonToken token = parser.nextToken();
-                // if its the last token then we are done
-                if (token == null)
-                    break;
+//            JsonFactory factory = new JsonFactory();  
+//            JsonParser parser = factory.createParser(connection.getInputStream());
+//            
+//
+//            // continue parsing the token till the end of input is reached
+//            while (!parser.isClosed()) {
+//                // get the token
+//                JsonToken token = parser.nextToken();
+//                // if its the last token then we are done
+//                if (token == null)
+//                    break;
                 // we want to look for a field that says dataset
 
 //                if (JsonToken.FIELD_NAME.equals(token) && "act_version".equals(parser.getCurrentName())) {
@@ -96,9 +104,9 @@ public class Neo4jHttp {
 //                        // bail out
 //                        break;
 //                    }
-                else{
-                    System.out.println(parser.getText());
-                }
+//                else{
+//                    System.out.println(parser.getText());
+//                }
                     // each element of the array is an album so the next token
                     // should be 
 //                    token = parser.nextToken();
