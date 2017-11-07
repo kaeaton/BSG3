@@ -49,7 +49,7 @@ public class Neo4jHttp {
             
             OutputStreamWriter wr = new OutputStreamWriter(connection.getOutputStream());
             String params = customParams.formNeo4jRequest();
-
+            wr.write(params);
             wr.flush();
 
             StringBuilder sb = new StringBuilder();  
@@ -61,8 +61,9 @@ public class Neo4jHttp {
                 while ((line = br.readLine()) != null) {  
                     sb.append(line + "\n");  
                 }
-                br.close();
-                System.out.println("" + sb.toString());  
+            br.close();
+            System.out.println("" + sb.toString());  
+//            connection.close();
             
 //            InputStreamReader testInput = new InputStreamReader(connection.getInputStream());
 //            DataInputStream dataIn = new DataInputStream(connection.getInputStream());

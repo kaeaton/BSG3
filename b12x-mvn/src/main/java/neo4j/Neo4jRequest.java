@@ -12,15 +12,18 @@ public class Neo4jRequest {
     private StringWriter writer = new StringWriter();
     
     public Neo4jRequest(String incomingLocus) {
-        locus = incomingLocus;
+        locus = "\"" + incomingLocus + "\"";
     }
     
     public String formNeo4jRequest() throws IOException {
         try {
-            request = ("MATCH (h:IMGT)-[r1:HAS_GFE]-(g:GFE) " +
-                        "WHERE h.locus = \"" + locus + "\" " +
-                        "AND r1.status = \"Expected\" " +
-                        "RETURN h.name, g.name");
+//            request = "MATCH (h:IMGT)-[r1:HAS_GFE]-(g:GFE) WHERE h.locus = \"" + locus + "\" AND r1.status = \"Expected\" RETURN h.name, g.name";
+            request = "MATCH (h:IMGT)-[r1:HAS_GFE]-(g:GFE) WHERE h.locus = " + locus + " RETURN h.name, g.name";
+
+//            request = ("MATCH (h:IMGT)-[r1:HAS_GFE]-(g:GFE) " +
+//                        "WHERE h.locus = \"" + locus + "\" " +
+//                        "AND r1.status = \"Expected\" " +
+//                        "RETURN h.name, g.name");
             
             JsonFactory factory = new JsonFactory();
             JsonGenerator generator = factory.createGenerator(writer);
@@ -30,6 +33,8 @@ public class Neo4jRequest {
             generator.writeFieldName("statements");
             generator.writeStartArray();
             generator.writeStartObject();
+//            generator.writeFieldName("statement");
+//            generator.writeRaw(request);
             generator.writeStringField("statement", request);
             generator.writeEndObject();
             generator.writeEndArray();

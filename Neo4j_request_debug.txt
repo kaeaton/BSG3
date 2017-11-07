@@ -1,0 +1,48 @@
+// Results from Neo4j upon request
+
+{"results":[],
+ "errors" :
+ 	[
+ 		{
+ 			"code" : "Neo.ClientError.Request.InvalidFormat",
+ 			"message" : "Unable to deserialize request: Unexpected end-of-input in VALUE_STRING\n at [Source: HttpInputOverHTTP@4fb642b0; line: 1, column: 235]"
+ 		}
+ 	]
+}
+
+// Sample of what request should look like
+
+{
+  "statements" : [ {
+    "statement" : "CREATE (n) RETURN id(n)"
+  } ]
+}
+
+// What is being printed out as the request the program is sending
+
+{
+ "statements" : [ { 
+ 	"statement" : "MATCH (h:IMGT)-[r1:HAS_GFE]-(g:GFE) WHERE h.locus = \"HLA-A\" AND r1.status = \"Expected
+
+// What is being sent as the request in the program
+
+"MATCH (h:IMGT)-[r1:HAS_GFE]-(g:GFE) " +
+                        "WHERE h.locus = \"" + locus + "\" " +
+                        "AND r1.status = \"Expected\" " +
+                        "RETURN h.name, g.name"
+
+// Single line request in the program
+
+"MATCH (h:IMGT)-[r1:HAS_GFE]-(g:GFE) WHERE h.locus = \"" + locus + "\" AND r1.status = \"Expected\" RETURN h.name, g.name"
+
+// Search terms sent by Michael Halagan
+
+MATCH (h:IMGT)-[r1:HAS_GFE]-(g:GFE) 
+WHERE h.locus = "HLA-A"
+AND r1.status = "Expected"
+RETURN h.name, g.name
+
+// Search terms without line breaks
+
+MATCH (h:IMGT)-[r1:HAS_GFE]-(g:GFE) WHERE h.locus = "HLA-A" AND r1.status = "Expected" RETURN h.name, g.name
+
