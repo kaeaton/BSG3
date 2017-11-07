@@ -26,23 +26,12 @@ import java.net.URL;
  * @author katrinaeaton
  */
 public class Neo4jHttp {
-    /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 
-/**
- *
- * @author KAEaton
- */
     public Neo4jHttp() throws IOException {
 //        B12xCustomUrl uri = new B12xCustomUrl();
 //        URL url = new URL(uri.buildURL());
     }
-    
-    
-    
+       
     public void makeCall(String customURL, String locus) throws IOException {
         try {
             
@@ -58,10 +47,11 @@ public class Neo4jHttp {
             connection.setRequestProperty("Authorization", "Basic a2VhdG9uOmNob3JpMTc=");
             
             Neo4jRequest customParams = new Neo4jRequest(locus);
-            OutputStream params = customParams.formNeo4jRequest(wr);
             
             OutputStreamWriter wr = new OutputStreamWriter(connection.getOutputStream());
-            wr.write(params.toString());
+            String params = customParams.formNeo4jRequest();
+
+//            wr.write(params.toString());
             wr.flush();
 
 
@@ -82,7 +72,7 @@ public class Neo4jHttp {
             }
 //            in.close(); 
 
-            System.out.println(response.toString());
+            System.out.println(params.toString());
 
             // get an instance of the json parser from the json factory
             JsonFactory factory = new JsonFactory();  
