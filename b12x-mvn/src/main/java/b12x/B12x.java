@@ -7,8 +7,9 @@ package b12x;
 
 import b12xAPI.*;
 import java.io.IOException;
+import java.net.URL;
 import javax.swing.SwingWorker;
-import neo4j.*;
+import neo4j.Neo4j;
 
 
 /**
@@ -16,10 +17,11 @@ import neo4j.*;
  * @author katrinaeaton
  */
 public class B12x extends SwingWorker<Void, String> {
-    
-    public String b12xUri;
-    public String neo4jUri;
-    public String locus;
+
+    private String locus;
+    private String b12xUri;
+    private final String neo4jUri = new String("http://neo4j.b12x.org/db/data/transaction/commit");
+
     
     public B12x() {
 //        uri = "http://act.b12x.org/act?locus=HLA-A&gfe=HLA-Aw1-1-7-20-10-32-7-1-1-1-6-1-5-3-5-1-1";
@@ -36,11 +38,11 @@ public class B12x extends SwingWorker<Void, String> {
             B12xParseJSON parser = new B12xParseJSON();
             parser.makeCall(uri.buildURL());
             
-            neo4jUri = "http://neo4j.b12x.org/db/data/transaction/commit";
+//            neo4jUri = "http://neo4j.b12x.org/db/data/transaction/commit";
             locus = "HLA-A";
 
-            Neo4jHttp neo4j = new Neo4jHttp();
-            neo4j.makeCall(neo4jUri, locus);
+            Neo4j neo4j = new Neo4j(locus, neo4jUri);
+            neo4j.fetchData();
             
         } catch (Exception ex) {
             System.out.println(ex);

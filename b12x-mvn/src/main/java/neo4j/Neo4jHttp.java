@@ -32,11 +32,11 @@ public class Neo4jHttp {
 //        URL url = new URL(uri.buildURL());
     }
        
-    public void makeCall(String customURL, String locus) throws IOException {
+    public void makeCall(URL customURL, String params) throws IOException {
         try {
             // Open connection
-            URL url = new URL(customURL);
-            HttpURLConnection connection = (HttpURLConnection) url.openConnection();
+//            URL url = new URL(customURL);
+            HttpURLConnection connection = (HttpURLConnection) customURL.openConnection();
             connection.setDoOutput(true);
             connection.setDoInput(true);
             connection.setRequestMethod("GET");
@@ -45,10 +45,10 @@ public class Neo4jHttp {
             connection.setRequestProperty("X-Stream", "true");
             connection.setRequestProperty("Authorization", "Basic a2VhdG9uOmNob3JpMTc=");
             
-            Neo4jRequest customParams = new Neo4jRequest(locus);
+//            Neo4jRequest customParams = new Neo4jRequest(locus);
             
             OutputStreamWriter wr = new OutputStreamWriter(connection.getOutputStream());
-            String params = customParams.formNeo4jRequest();
+//            String params = customParams.formNeo4jRequest();
             wr.write(params);
             wr.flush();
 

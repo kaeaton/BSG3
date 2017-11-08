@@ -1,56 +1,29 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package neo4j;
 
-import org.neo4j.driver.v1.*;
-import static org.neo4j.driver.v1.Values.parameters;
+import java.io.IOException;
+import java.net.URL;
 
-/**
- *
- * @author katrinaeaton
- */
-public class Neo4j implements AutoCloseable{
+public class Neo4j {
     
-    private final Driver driver;
+    private final String locus;
+    private final URL neo4jURL;
+
+//    private String request;
     
-    public Neo4j( String uri, String user, String password )
-    {
-        driver = GraphDatabase.driver( uri, AuthTokens.basic( user, password ) );
+    public Neo4j(String incomingLocus, String incomingURL) throws IOException {
+        locus = incomingLocus;
+        neo4jURL = new URL(incomingURL);
     }
     
-    @Override
-    public void close() throws Exception
-    {
-        driver.close();
-    }
-
-    public void importJSON()
-    {
-        try ( Session session = driver.session() )
-        {
-            String incomingJSON = session.readTransaction( new TransactionWork<String>()
-            {
-                @Override
-                public String execute( Transaction tx )
-                {
-                    /*
-                        MATCH (h:IMGT)-[r1:HAS_GFE]-(g:GFE) 
-                        WHERE h.locus = "HLA-A"
-                        AND r1.status = "Expected"
-                        RETURN h.name, g.name
-                    */
-                    StatementResult result = tx.run( "MATCH (h:IMGT)-[r1:HAS_GFE]-(g:GFE) " +
-                                                     "WHERE h.locus = \"HLA-DRA\" " +
-                                                     "AND r1.status = \"Expected\" " +
-                                                     "RETURN h.name, g.name" );
-//                            parameters( "message", message ) );
-                    return result.single().get( 0 ).asString();
-                }
-            } );
-            System.out.println( incomingJSON );
+    public void fetchData() throws IOException {
+        try {
+            Neo4jRequest request = new Neo4jRequest(locus);
+            Neo4jHttp neo4jHttp = new Neo4jHttp();
+            neo4jHttp.makeCall(neo4jURL, request.formNeo4jRequest());
+        } catch (Exception ex) {
+            System.out.println(ex);
         }
+//        return null;
     }
 }
