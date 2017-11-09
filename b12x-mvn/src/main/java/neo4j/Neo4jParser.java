@@ -3,6 +3,8 @@ package neo4j;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
@@ -14,15 +16,16 @@ import java.net.HttpURLConnection;
  */
 public class Neo4jParser {
     
-    int httpResult;
-    
     public Neo4jParser() {
 
     }
     
     public void parseResponse(InputStream httpResult) throws IOException {
-        ObjectMapper mapper = new ObjectMapper();
-        Object json = mapper.readValue(httpResult, Object.class);
+        try {
+            ObjectMapper mapper = new ObjectMapper();
+            Object json = mapper.readValue(httpResult, Object.class);
+            File neo4jRaw = new File(System.getProperty("user.home") + System.getProperty("file.separator") + "Documents" + System.getProperty("file.separator") + "neo4jRawData.json");
+            mapper.writeValue(neo4jRaw, json); // writes JSON serialization of MyValue instance
         
 //        Object json = mapper.readValue(input, Object.class);
 //        String indented = (new JSONObject(httpResult)).toString(4);
@@ -37,5 +40,8 @@ public class Neo4jParser {
 //            }
 //        br.close();
 //        System.out.println("" + sb.toString());
+        } catch (Exception ex) {
+            System.out.println(ex);
+        }
     }
 }

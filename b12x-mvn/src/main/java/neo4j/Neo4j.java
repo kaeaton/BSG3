@@ -2,6 +2,7 @@
 package neo4j;
 
 import java.io.IOException;
+import java.io.InputStream;
 import java.net.URL;
 
 public class Neo4j {
@@ -20,7 +21,9 @@ public class Neo4j {
         try {
             Neo4jRequest request = new Neo4jRequest(locus);
             Neo4jHttp neo4jHttp = new Neo4jHttp();
-            neo4jHttp.makeCall(neo4jURL, request.formNeo4jRequest());
+            InputStream incomingData = neo4jHttp.makeCall(neo4jURL, request.formNeo4jRequest());
+            Neo4jParser parser = new Neo4jParser();
+            parser.parseResponse(incomingData);
         } catch (Exception ex) {
             System.out.println(ex);
         }
