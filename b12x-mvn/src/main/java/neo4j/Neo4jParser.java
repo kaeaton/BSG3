@@ -1,7 +1,9 @@
 
 package neo4j;
 
+import com.fasterxml.jackson.core.util.DefaultPrettyPrinter;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.SerializationConfig;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileWriter;
@@ -25,7 +27,8 @@ public class Neo4jParser {
             ObjectMapper mapper = new ObjectMapper();
             Object json = mapper.readValue(httpResult, Object.class);
             File neo4jRaw = new File(System.getProperty("user.home") + System.getProperty("file.separator") + "Documents" + System.getProperty("file.separator") + "neo4jRawData.json");
-            mapper.writeValue(neo4jRaw, json); // writes JSON serialization of MyValue instance
+            mapper.writerWithDefaultPrettyPrinter().writeValue(neo4jRaw, json);         
+//            mapper.writeValue(neo4jRaw, json); // writes JSON serialization of MyValue instance
         
 //        Object json = mapper.readValue(input, Object.class);
 //        String indented = (new JSONObject(httpResult)).toString(4);
