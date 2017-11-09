@@ -13,7 +13,7 @@ import com.fasterxml.jackson.core.JsonToken;
 import java.io.BufferedReader;
 //import java.io.DataInputStream;
 //import java.io.File;
-//import java.io.InputStream;
+import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.IOException;
 import java.io.OutputStream;
@@ -26,13 +26,15 @@ import java.net.URL;
  * @author katrinaeaton
  */
 public class Neo4jHttp {
+    
+    private InputStream incomingData;
 
     public Neo4jHttp() throws IOException {
 //        B12xCustomUrl uri = new B12xCustomUrl();
 //        URL url = new URL(uri.buildURL());
     }
        
-    public void makeCall(URL customURL, String params) throws IOException {
+    public InputStream makeCall(URL customURL, String params) throws IOException {
         try {
             // Open connection
 //            URL url = new URL(customURL);
@@ -52,17 +54,17 @@ public class Neo4jHttp {
             wr.write(params);
             wr.flush();
 
-            StringBuilder sb = new StringBuilder();  
-            int HttpResult = connection.getResponseCode(); 
-            if (HttpResult == HttpURLConnection.HTTP_OK) {
-                BufferedReader br = new BufferedReader(
-                        new InputStreamReader(connection.getInputStream(), "utf-8"));
-                String line = null;  
-                while ((line = br.readLine()) != null) {  
-                    sb.append(line + "\n");  
+//            StringBuilder sb = new StringBuilder();  
+            int httpResult = connection.getResponseCode(); 
+            if (httpResult == HttpURLConnection.HTTP_OK) {
+//                BufferedReader br = new BufferedReader(
+                incomingData = connection.getInputStream();//, "utf-8");//);
+//                String line = null;  
+//                while ((line = br.readLine()) != null) {  
+//                    sb.append(line + "\n");  
                 }
-            br.close();
-            System.out.println("" + sb.toString());  
+//            br.close();
+//            System.out.println("" + sb.toString());  
 //            connection.close();
             
 //            InputStreamReader testInput = new InputStreamReader(connection.getInputStream());
@@ -128,7 +130,7 @@ public class Neo4jHttp {
 //                        }
 //                    }
 //                }
-            }
+//            }
             
             // Org.JSON code - creating garbled JSON file 
 //            JSONObject obj = new JSONObject(response.toString());
@@ -149,6 +151,7 @@ public class Neo4jHttp {
         } catch (Exception ex) {
             System.out.println(ex);
         }
+        return incomingData;
     }
     
 //    public static void main(String[] args) {
