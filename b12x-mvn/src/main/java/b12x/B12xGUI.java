@@ -1,6 +1,4 @@
-package b12xGUI;
-
-import b12x.B12x;
+package b12x;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
