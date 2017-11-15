@@ -29,7 +29,7 @@ public class Neo4jParser {
         try {
             
             // Write raw data to file
-//            ObjectMapper mapper = new ObjectMapper();
+            ObjectMapper mapper = new ObjectMapper();
 //            Object json = mapper.readValue(httpResult, Object.class);
 //            File neo4jRaw = new File(System.getProperty("user.home") + System.getProperty("file.separator") + "Documents" + System.getProperty("file.separator") + "neo4jRawData.json");
 //            mapper.writerWithDefaultPrettyPrinter().writeValue(neo4jRaw, json);  
@@ -43,24 +43,14 @@ public class Neo4jParser {
                 // if its the last token then we are done
                 if (token == null)
                     break;
-                // we want to look for a field that says dataset
+                // we want to look for a field that says data
 
                 if (JsonToken.FIELD_NAME.equals(token) && "data".equals(parser.getCurrentName())) {
                     // we are entering the datasets now. The first token should be
                     // start of array
                     token = parser.nextToken();
-//                    System.out.println(parser.getText());
-//                    token = parser.nextToken();
-//                    System.out.println(parser.getText());
-//                    token = parser.nextToken();
-//                    System.out.println(parser.getText());
-//                    token = parser.nextToken();
-//                    System.out.println(parser.getText());
-                    
-//                    if (!JsonToken.START_OBJECT.equals(token)) {
-//                        break;
-//                    }
-                    // we are now looking for a field that says "album_title". We
+
+                    // we are now looking for a field that says "row". We
                     // continue looking till we find all such fields. This is
                     // probably not a best way to parse this json, but this will
                     // suffice for this example.
@@ -72,12 +62,18 @@ public class Neo4jParser {
                             token = parser.nextToken();
                             token = parser.nextToken();
                             System.out.println(parser.getText());
+//                            System.out.println(parser.nextFieldName());
+
                             token = parser.nextToken();
                             System.out.println(parser.getText());
+                            File neo4jParsed = new File(System.getProperty("user.home") + System.getProperty("file.separator") + "Documents" + System.getProperty("file.separator") + "neo4jRawData.json");
+                            mapper.writerWithDefaultPrettyPrinter().writeValue(neo4jParsed, token);
                         }
                     }
                 }
             }
+            
+            
         
         } catch (Exception ex) {
             System.out.println(ex);
