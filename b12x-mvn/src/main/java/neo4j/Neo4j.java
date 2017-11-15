@@ -25,7 +25,7 @@ public class Neo4j {
             Neo4jHttp neo4jHttp = new Neo4jHttp();
             InputStream incomingData = neo4jHttp.makeCall(neo4jURL, request.formNeo4jRequest());
             Neo4jParser parser = new Neo4jParser();
-            parser.parseResponse(incomingData);
+            parser.parseResponse(incomingData, factory);
         } catch (Exception ex) {
             System.out.println(ex);
         }

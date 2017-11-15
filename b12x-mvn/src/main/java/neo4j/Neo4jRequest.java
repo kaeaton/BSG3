@@ -28,7 +28,6 @@ public class Neo4jRequest {
                         "AND r1.status = \"Expected\" " +
                         "RETURN h.name, g.name");
             
-//            JsonFactory factory = new JsonFactory();
             JsonGenerator generator = factory.createGenerator(writer);
 
             // start writing with {
@@ -36,8 +35,6 @@ public class Neo4jRequest {
             generator.writeFieldName("statements");
             generator.writeStartArray();
             generator.writeStartObject();
-//            generator.writeFieldName("statement");
-//            generator.writeRaw(request);
             generator.writeStringField("statement", request);
             generator.writeEndObject();
             generator.writeEndArray();

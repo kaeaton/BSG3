@@ -25,14 +25,13 @@ public class Neo4jParser {
 
     }
     
-    public void parseResponse(InputStream httpResult) throws IOException {
+    public void parseResponse(InputStream httpResult, JsonFactory factory) throws IOException {
         try {
             ObjectMapper mapper = new ObjectMapper();
             Object json = mapper.readValue(httpResult, Object.class);
             File neo4jRaw = new File(System.getProperty("user.home") + System.getProperty("file.separator") + "Documents" + System.getProperty("file.separator") + "neo4jRawData.json");
             mapper.writerWithDefaultPrettyPrinter().writeValue(neo4jRaw, json);  
             
-            JsonFactory factory = new JsonFactory();  
             JsonParser parser = factory.createParser(httpResult);
             
 
