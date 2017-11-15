@@ -15,14 +15,13 @@ public class Neo4jRequest {
     private String request;
     private StringWriter writer = new StringWriter();
     
-    public Neo4jRequest(String incomingLocus, JsonFactory parentFactory) {
+    public Neo4jRequest(String incomingLocus, JsonFactory parentFactory){
         locus = incomingLocus;
         factory = parentFactory;
     }
     
     public String formNeo4jRequest() throws IOException {
         try {
-//            request = "MATCH (h:IMGT)-[r1:HAS_GFE]-(g:GFE) WHERE h.locus = \"" + locus + "\" AND r1.status = \"Expected\" RETURN h.name, g.name";
             request = ("MATCH (h:IMGT)-[r1:HAS_GFE]-(g:GFE) " +
                         "WHERE h.locus = \"" + locus + "\" " +
                         "AND r1.status = \"Expected\" " +

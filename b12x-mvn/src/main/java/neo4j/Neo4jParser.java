@@ -27,14 +27,15 @@ public class Neo4jParser {
     
     public void parseResponse(InputStream httpResult, JsonFactory factory) throws IOException {
         try {
-            ObjectMapper mapper = new ObjectMapper();
-            Object json = mapper.readValue(httpResult, Object.class);
-            File neo4jRaw = new File(System.getProperty("user.home") + System.getProperty("file.separator") + "Documents" + System.getProperty("file.separator") + "neo4jRawData.json");
-            mapper.writerWithDefaultPrettyPrinter().writeValue(neo4jRaw, json);  
+            
+            // Write raw data to file
+//            ObjectMapper mapper = new ObjectMapper();
+//            Object json = mapper.readValue(httpResult, Object.class);
+//            File neo4jRaw = new File(System.getProperty("user.home") + System.getProperty("file.separator") + "Documents" + System.getProperty("file.separator") + "neo4jRawData.json");
+//            mapper.writerWithDefaultPrettyPrinter().writeValue(neo4jRaw, json);  
             
             JsonParser parser = factory.createParser(httpResult);
             
-
             // continue parsing the token till the end of input is reached
             while (!parser.isClosed()) {
                 // get the token
@@ -48,17 +49,17 @@ public class Neo4jParser {
                     // we are entering the datasets now. The first token should be
                     // start of array
                     token = parser.nextToken();
-//                    if (!JsonToken.START_ARRAY.equals(token)) {
-//                        // bail out
+//                    System.out.println(parser.getText());
+//                    token = parser.nextToken();
+//                    System.out.println(parser.getText());
+//                    token = parser.nextToken();
+//                    System.out.println(parser.getText());
+//                    token = parser.nextToken();
+//                    System.out.println(parser.getText());
+                    
+//                    if (!JsonToken.START_OBJECT.equals(token)) {
 //                        break;
 //                    }
-                    System.out.println(parser.getText());
-                    // each element of the array is an album so the next token
-                    // should be 
-                    token = parser.nextToken();
-                    if (!JsonToken.START_OBJECT.equals(token)) {
-                        break;
-                    }
                     // we are now looking for a field that says "album_title". We
                     // continue looking till we find all such fields. This is
                     // probably not a best way to parse this json, but this will
@@ -68,8 +69,12 @@ public class Neo4jParser {
                         if (token == null)
                                 break;
                         if (JsonToken.FIELD_NAME.equals(token) && "row".equals(parser.getCurrentName())) {
-                                token = parser.nextToken();
-                                System.out.println(parser.getText());
+                            token = parser.nextToken();
+                            token = parser.nextToken();
+                            System.out.println(parser.getText());
+                            token = parser.nextToken();
+                            System.out.println(parser.getText());
+                            token = parser.nextToken();
                         }
                     }
                 }
