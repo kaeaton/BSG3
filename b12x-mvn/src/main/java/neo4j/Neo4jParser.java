@@ -74,7 +74,6 @@ public class Neo4jParser {
                             System.out.println(parser.getText());
                             token = parser.nextToken();
                             System.out.println(parser.getText());
-                            token = parser.nextToken();
                         }
                     }
                 }
