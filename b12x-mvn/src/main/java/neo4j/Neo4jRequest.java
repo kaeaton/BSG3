@@ -11,11 +11,13 @@ import java.nio.charset.Charset;
 public class Neo4jRequest {
     
     private String locus;
+    private JsonFactory factory;
     private String request;
     private StringWriter writer = new StringWriter();
     
-    public Neo4jRequest(String incomingLocus) {
+    public Neo4jRequest(String incomingLocus, JsonFactory parentFactory) {
         locus = incomingLocus;
+        factory = parentFactory;
     }
     
     public String formNeo4jRequest() throws IOException {
@@ -26,7 +28,7 @@ public class Neo4jRequest {
                         "AND r1.status = \"Expected\" " +
                         "RETURN h.name, g.name");
             
-            JsonFactory factory = new JsonFactory();
+//            JsonFactory factory = new JsonFactory();
             JsonGenerator generator = factory.createGenerator(writer);
 
             // start writing with {
