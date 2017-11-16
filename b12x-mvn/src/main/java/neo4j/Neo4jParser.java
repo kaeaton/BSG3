@@ -14,6 +14,8 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
+//import java.util.Hashmap;
+import java.util.*;
 
 /**
  *
@@ -29,7 +31,9 @@ public class Neo4jParser {
         try {
             
             // Write raw data to file
-            ObjectMapper mapper = new ObjectMapper();
+//            ObjectMapper mapper = new ObjectMapper();
+            File neo4jParsed = new File(System.getProperty("user.home") + System.getProperty("file.separator") + "Documents" + System.getProperty("file.separator") + "neo4jParsedData.json");
+            Map neo4jPairs = new HashMap();
 //            Object json = mapper.readValue(httpResult, Object.class);
 //            File neo4jRaw = new File(System.getProperty("user.home") + System.getProperty("file.separator") + "Documents" + System.getProperty("file.separator") + "neo4jRawData.json");
 //            mapper.writerWithDefaultPrettyPrinter().writeValue(neo4jRaw, json);  
@@ -61,18 +65,22 @@ public class Neo4jParser {
                         if (JsonToken.FIELD_NAME.equals(token) && "row".equals(parser.getCurrentName())) {
                             token = parser.nextToken();
                             token = parser.nextToken();
+                            String key = parser.getText();
                             System.out.println(parser.getText());
 //                            System.out.println(parser.nextFieldName());
 
                             token = parser.nextToken();
+                            String value = parser.getText();
                             System.out.println(parser.getText());
-                            File neo4jParsed = new File(System.getProperty("user.home") + System.getProperty("file.separator") + "Documents" + System.getProperty("file.separator") + "neo4jRawData.json");
-                            mapper.writerWithDefaultPrettyPrinter().writeValue(neo4jParsed, token);
+                            neo4jPairs.put(key, value);
+                            
+//                            mapper.writeValue(neo4jParsed, token);
                         }
                     }
                 }
             }
-            
+//            System.out.println(neo4jPairs);
+            parser.close();
             
         
         } catch (Exception ex) {
