@@ -1,5 +1,7 @@
 package b12x;
 
+import neo4j.Neo4j;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -51,7 +53,7 @@ public class B12xGUI extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(245, 245, 245)
                 .addComponent(goButton)
-                .addContainerGap(265, Short.MAX_VALUE))
+                .addContainerGap(297, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -65,7 +67,7 @@ public class B12xGUI extends javax.swing.JFrame {
 
         hlaSelect.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "HLA-A", "HLA-B", "HLA-C" }));
 
-        updateButton.setText("Update Records");
+        updateButton.setText("Update Neo4j Records");
         updateButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 updateButtonActionPerformed(evt);
@@ -77,9 +79,9 @@ public class B12xGUI extends javax.swing.JFrame {
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(60, 60, 60)
+                .addContainerGap(150, Short.MAX_VALUE)
                 .addComponent(hlaSelect, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 190, Short.MAX_VALUE)
+                .addGap(100, 100, 100)
                 .addComponent(updateButton)
                 .addGap(141, 141, 141))
         );
@@ -93,13 +95,13 @@ public class B12xGUI extends javax.swing.JFrame {
                 .addContainerGap(317, Short.MAX_VALUE))
         );
 
-        jTabbedPane2.addTab("tab2", jPanel2);
+        jTabbedPane2.addTab("Neo4j Update", jPanel2);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 560, Short.MAX_VALUE)
+            .addGap(0, 592, Short.MAX_VALUE)
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
@@ -132,7 +134,16 @@ public class B12xGUI extends javax.swing.JFrame {
     }//GEN-LAST:event_goButtonActionPerformed
 
     private void updateButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_updateButtonActionPerformed
-        // TODO add your handling code here:
+        try {
+            String locus = "HLA-A";
+            String neo4jUri = new String("http://neo4j.b12x.org/db/data/transaction/commit");
+
+            Neo4j neo4j = new Neo4j(locus, neo4jUri);
+            neo4j.fetchData();
+        } catch (Exception ex) {
+            System.out.println(ex);
+        }
+        
     }//GEN-LAST:event_updateButtonActionPerformed
     
     /**
