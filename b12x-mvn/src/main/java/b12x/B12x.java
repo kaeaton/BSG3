@@ -41,7 +41,7 @@ public class B12x extends SwingWorker<Void, String> {
 //            neo4jUri = "http://neo4j.b12x.org/db/data/transaction/commit";
             locus = "HLA-A";
 
-            Neo4j neo4j = new Neo4j(locus, neo4jUri);
+            Neo4j neo4j = new Neo4j(locus);
             neo4j.fetchData();
             
         } catch (Exception ex) {

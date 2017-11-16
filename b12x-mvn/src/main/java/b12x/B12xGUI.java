@@ -136,9 +136,8 @@ public class B12xGUI extends javax.swing.JFrame {
     private void updateButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_updateButtonActionPerformed
         try {
             String locus = hlaSelect.getSelectedItem().toString();
-            String neo4jUri = new String("http://neo4j.b12x.org/db/data/transaction/commit");
 
-            Neo4j neo4j = new Neo4j(locus, neo4jUri);
+            Neo4j neo4j = new Neo4j(locus);
             neo4j.fetchData();
         } catch (Exception ex) {
             System.out.println(ex);

@@ -9,13 +9,12 @@ import java.net.URL;
 public class Neo4j {
     
     private final String locus;
-    private final URL neo4jURL;
+    private final URL neo4jURL = new URL("http://neo4j.b12x.org/db/data/transaction/commit");
 
 //    private String request;
     
-    public Neo4j(String incomingLocus, String incomingURL) throws IOException {
+    public Neo4j(String incomingLocus) throws IOException {
         locus = incomingLocus;
-        neo4jURL = new URL(incomingURL);
     }
     
     public void fetchData() throws IOException {
