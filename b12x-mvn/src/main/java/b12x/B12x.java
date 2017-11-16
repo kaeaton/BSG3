@@ -38,7 +38,6 @@ public class B12x extends SwingWorker<Void, String> {
 //            B12xParseJSON parser = new B12xParseJSON();
 //            parser.makeCall(uri.buildURL());
             
-//            neo4jUri = "http://neo4j.b12x.org/db/data/transaction/commit";
             locus = "HLA-A";
 
             Neo4j neo4j = new Neo4j(locus);
