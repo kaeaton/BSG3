@@ -29,18 +29,21 @@ public class Neo4jParser {
 
     }
     
-    public void parseResponse(InputStream httpResult, JsonFactory factory) throws IOException {
+    public void parseResponse(String locus, InputStream httpResult, JsonFactory factory) throws IOException {
         try {
             
             // Write raw data to file
 //            ObjectMapper mapper = new ObjectMapper();
-            File neo4jParsed = new File(System.getProperty("user.home") + System.getProperty("file.separator") + "Documents" + System.getProperty("file.separator") + "neo4jParsedData.csv");
-            BufferedWriter writer = new BufferedWriter(new FileWriter(neo4jParsed));
+            File neo4jRaw = new File(System.getProperty("user.home") 
+                    + System.getProperty("file.separator") + "Documents" 
+                    + System.getProperty("file.separator") 
+                    + "neo4j_" + locus + "_Data.txt");
+            BufferedWriter writer = new BufferedWriter(new FileWriter(neo4jRaw));
             
             Date date = new Date();
             writer.write(date.toString() + System.lineSeparator());
             
-            Map neo4jPairs = new HashMap();
+            Map<String, String> neo4jPairs = new HashMap<String, String>();
 //            Object json = mapper.readValue(httpResult, Object.class);
 //            File neo4jRaw = new File(System.getProperty("user.home") + System.getProperty("file.separator") + "Documents" + System.getProperty("file.separator") + "neo4jRawData.json");
 //            mapper.writerWithDefaultPrettyPrinter().writeValue(neo4jRaw, json);  
@@ -80,7 +83,7 @@ public class Neo4jParser {
                             String value = parser.getText();
                             System.out.println(parser.getText());
                             neo4jPairs.put(key, value);
-                            writer.write(key + "," + value + System.lineSeparator());
+//                            writer.write(key + "," + value + System.lineSeparator());
                             
 //                            mapper.writeValue(neo4jParsed, token);
                         }
@@ -92,6 +95,10 @@ public class Neo4jParser {
 //            writer.write(date.toString() + System.lineSeparator());
 //            writer.write(neo4jPairs.toString());
             parser.close();
+            for(Map.Entry m:neo4jPairs.entrySet()){  
+//                System.out.println(m.getKey()+" "+m.getValue());
+                writer.write(m.getKey()+" "+m.getValue() + System.lineSeparator());  
+            }  
             writer.close();
             
         
