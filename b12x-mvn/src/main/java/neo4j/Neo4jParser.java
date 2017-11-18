@@ -4,18 +4,16 @@ package neo4j;
 import com.fasterxml.jackson.core.JsonFactory;
 import com.fasterxml.jackson.core.JsonParser;
 import com.fasterxml.jackson.core.JsonToken;
-import com.fasterxml.jackson.core.util.DefaultPrettyPrinter;
-import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fasterxml.jackson.databind.SerializationConfig;
+//import com.fasterxml.jackson.core.util.DefaultPrettyPrinter;
+//import com.fasterxml.jackson.databind.ObjectMapper;
+//import com.fasterxml.jackson.databind.SerializationConfig;
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.net.HttpURLConnection;
-import java.sql.Timestamp;
-//import java.util.Hashmap;
+//import java.io.InputStreamReader;
+//import java.net.HttpURLConnection;
 import java.util.*;
 import java.util.Date;
 
@@ -37,7 +35,7 @@ public class Neo4jParser {
             File neo4jRaw = new File(System.getProperty("user.home") 
                     + System.getProperty("file.separator") + "Documents" 
                     + System.getProperty("file.separator") 
-                    + "neo4j_" + locus + "_Data.txt");
+                    + "neo4j_" + locus + "_Data.csv");
             BufferedWriter writer = new BufferedWriter(new FileWriter(neo4jRaw));
             
             Date date = new Date();
@@ -77,31 +75,20 @@ public class Neo4jParser {
                             token = parser.nextToken();
                             String key = parser.getText();
                             System.out.println(parser.getText());
-//                            System.out.println(parser.nextFieldName());
-
                             token = parser.nextToken();
                             String value = parser.getText();
                             System.out.println(parser.getText());
                             neo4jPairs.put(key, value);
-//                            writer.write(key + "," + value + System.lineSeparator());
-                            
-//                            mapper.writeValue(neo4jParsed, token);
                         }
                     }
                 }
             }
-//            System.out.println(neo4jPairs);
-//            Date date = new Date();
-//            writer.write(date.toString() + System.lineSeparator());
-//            writer.write(neo4jPairs.toString());
             parser.close();
             for(Map.Entry m:neo4jPairs.entrySet()){  
-//                System.out.println(m.getKey()+" "+m.getValue());
-                writer.write(m.getKey()+" "+m.getValue() + System.lineSeparator());  
+                writer.write(m.getKey() + "," + m.getValue()
+                        + System.lineSeparator());  
             }  
             writer.close();
-            
-        
         } catch (Exception ex) {
             System.out.println(ex);
         }
