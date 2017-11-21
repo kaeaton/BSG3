@@ -6,6 +6,9 @@
 package neo4jRawData;
 
 //import java.io.File;
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileReader;
 import java.io.IOException;
 import java.nio.file.*;
 import java.time.LocalDate;
@@ -29,10 +32,17 @@ public class Neo4jRawDataCheck {
         fileLocation = fileLoc;
     }
     
-    public boolean dateCheck(Path path) throws IOException {
+    public boolean dateCheck(File file) throws IOException {
         try {
+            // Set expiration date
             LocalDate expirationDate = LocalDate.now().minus(1, ChronoUnit.MONTHS);
             System.out.println(expirationDate);
+            
+            // Get file date
+            BufferedReader r = new BufferedReader(new FileReader(file));
+            String line = r.readLine();
+            System.out.println(line);
+            r.close();
             
             
 //            if (date )
@@ -67,11 +77,11 @@ public class Neo4jRawDataCheck {
                     // path is regular file
                     
                     // check date of file
-                    dateCheck(defaultPath);
+//                    dateCheck(defaultPath);
                 }
                 
                 // check date of file
-                dateCheck(defaultPath);
+//                dateCheck(defaultPath);
             }
             
             // check and see if file exists local to program
@@ -83,7 +93,7 @@ public class Neo4jRawDataCheck {
                     // path is regular file
                     
                     // check date of file
-                    dateCheck(localPath);
+//                    dateCheck(localPath);
                 }
                 
                  // check date of file
@@ -99,7 +109,7 @@ public class Neo4jRawDataCheck {
                     // path is regular file
                     
                     // check date of file
-                    dateCheck(submittedPath);
+//                    dateCheck(submittedPath);
                 }
                 
                  // check date of file

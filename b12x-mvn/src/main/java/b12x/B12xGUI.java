@@ -1,6 +1,8 @@
 package b12x;
 
 import neo4j.Neo4j;
+import java.nio.file.*;
+
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -137,8 +139,12 @@ public class B12xGUI extends javax.swing.JFrame {
         try {
             String locus = hlaSelect.getSelectedItem().toString();
             String neo4jLocation = "";
+            Path path = Paths.get(System.getProperty("user.home") 
+                    + System.getProperty("file.separator") + "Documents" 
+                    + System.getProperty("file.separator") 
+                    + "neo4j_" + locus + "_Download.csv");
 
-            Neo4j neo4j = new Neo4j(locus, neo4jLocation);
+            Neo4j neo4j = new Neo4j(locus, neo4jLocation, path);
             neo4j.fetchData();
         } catch (Exception ex) {
             System.out.println(ex);

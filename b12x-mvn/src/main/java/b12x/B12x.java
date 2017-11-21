@@ -8,6 +8,7 @@ package b12x;
 import b12xAPI.*;
 import java.io.IOException;
 import java.net.URL;
+import java.nio.file.*;
 import javax.swing.SwingWorker;
 import neo4j.Neo4j;
 
@@ -41,8 +42,12 @@ public class B12x extends SwingWorker<Void, String> {
             
             locus = "HLA-A";
             incomingLoc = "";
+            Path path = Paths.get(System.getProperty("user.home") 
+                    + System.getProperty("file.separator") + "Documents" 
+                    + System.getProperty("file.separator") 
+                    + "neo4j_" + locus + "_Download.csv");
 
-            Neo4j neo4j = new Neo4j(locus, incomingLoc);
+            Neo4j neo4j = new Neo4j(locus, incomingLoc, path);
             neo4j.fetchData();
             
         } catch (Exception ex) {
