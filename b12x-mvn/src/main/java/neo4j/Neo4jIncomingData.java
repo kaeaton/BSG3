@@ -21,9 +21,9 @@ import java.util.Date;
  *
  * @author katrinaeaton
  */
-public class Neo4jParser {
+public class Neo4jIncomingData {
     
-    public Neo4jParser() {
+    public Neo4jIncomingData() {
 
     }
     
@@ -35,7 +35,7 @@ public class Neo4jParser {
             File neo4jRaw = new File(System.getProperty("user.home") 
                     + System.getProperty("file.separator") + "Documents" 
                     + System.getProperty("file.separator") 
-                    + "neo4j_" + locus + "_Data.csv");
+                    + "neo4j_" + locus + "_Download.csv");
             BufferedWriter writer = new BufferedWriter(new FileWriter(neo4jRaw));
             
             Date date = new Date();
