@@ -14,6 +14,7 @@ import java.io.IOException;
 import java.io.InputStream;
 //import java.io.InputStreamReader;
 //import java.net.HttpURLConnection;
+import java.time.LocalDate;
 import java.util.*;
 import java.util.Date;
 
@@ -38,7 +39,7 @@ public class Neo4jIncomingData {
                     + "neo4j_" + locus + "_Download.csv");
             BufferedWriter writer = new BufferedWriter(new FileWriter(neo4jRaw));
             
-            Date date = new Date();
+            LocalDate date = LocalDate.now();
             writer.write(date.toString() + System.lineSeparator());
             
             Map<String, String> neo4jPairs = new HashMap<String, String>();
