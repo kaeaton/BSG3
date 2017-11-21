@@ -20,6 +20,7 @@ public class B12x extends SwingWorker<Void, String> {
 
     private String locus;
     private String b12xUri;
+    private String incomingLoc;
     private final String neo4jUri = new String("http://neo4j.b12x.org/db/data/transaction/commit");
 
     
@@ -39,8 +40,9 @@ public class B12x extends SwingWorker<Void, String> {
 //            parser.makeCall(uri.buildURL());
             
             locus = "HLA-A";
+            incomingLoc = "";
 
-            Neo4j neo4j = new Neo4j(locus);
+            Neo4j neo4j = new Neo4j(locus, incomingLoc);
             neo4j.fetchData();
             
         } catch (Exception ex) {

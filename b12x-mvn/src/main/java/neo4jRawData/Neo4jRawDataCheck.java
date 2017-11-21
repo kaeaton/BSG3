@@ -5,9 +5,11 @@
  */
 package neo4jRawData;
 
-import java.io.File;
+//import java.io.File;
 import java.io.IOException;
 import java.nio.file.*;
+import java.time.LocalDate;
+import java.time.temporal.ChronoUnit;
 import java.util.Date;
 
 
@@ -29,7 +31,9 @@ public class Neo4jRawDataCheck {
     
     public boolean dateCheck(Path path) throws IOException {
         try {
-            Date date = new Date();
+            LocalDate expirationDate = LocalDate.now().minus(1, ChronoUnit.MONTHS);
+            System.out.println(expirationDate);
+            
             
 //            if (date )
             
@@ -61,10 +65,13 @@ public class Neo4jRawDataCheck {
                 // make sure it's a readable file
                 if (Files.isRegularFile(defaultPath)) {
                     // path is regular file
+                    
+                    // check date of file
+                    dateCheck(defaultPath);
                 }
                 
-                 // check date of file
-                Date date = new Date();
+                // check date of file
+                dateCheck(defaultPath);
             }
             
             // check and see if file exists local to program
@@ -74,6 +81,9 @@ public class Neo4jRawDataCheck {
                 // make sure it's a readable file
                 if (Files.isRegularFile(localPath)) {
                     // path is regular file
+                    
+                    // check date of file
+                    dateCheck(localPath);
                 }
                 
                  // check date of file
@@ -87,6 +97,9 @@ public class Neo4jRawDataCheck {
                 // make sure it's a readable file
                 if (Files.isRegularFile(submittedPath)) {
                     // path is regular file
+                    
+                    // check date of file
+                    dateCheck(submittedPath);
                 }
                 
                  // check date of file
