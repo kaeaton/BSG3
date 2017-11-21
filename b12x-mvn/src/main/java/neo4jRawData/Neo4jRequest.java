@@ -1,4 +1,4 @@
-package neo4j;
+package neo4jRawData;
 
 import com.fasterxml.jackson.core.JsonFactory;
 import com.fasterxml.jackson.core.JsonGenerator;

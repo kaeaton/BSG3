@@ -7,7 +7,7 @@ package b12xAPI;
 
 import java.io.IOException;
 import javax.swing.SwingWorker;
-import neo4j.Neo4jHttp;
+import neo4jRawData.Neo4jHttp;
 
 
 /**

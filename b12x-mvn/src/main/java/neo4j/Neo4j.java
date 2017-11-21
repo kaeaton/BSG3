@@ -1,6 +1,9 @@
 
 package neo4j;
 
+import neo4jRawData.Neo4jHttp;
+import neo4jRawData.Neo4jRequest;
+import neo4jRawData.Neo4jIncomingData;
 import com.fasterxml.jackson.core.JsonFactory;
 import java.io.IOException;
 import java.io.InputStream;
