@@ -41,7 +41,7 @@ public class Neo4j {
             Neo4jHttp neo4jHttp = new Neo4jHttp();
             InputStream incomingData = neo4jHttp.makeCall(neo4jURL, request.formNeo4jRequest());
             Neo4jRawDataCheck dataCheck = new Neo4jRawDataCheck(locus, fileLocation);
-            if (dataCheck.dateCheck(file) == true){
+            if (dataCheck.checkDate(path.toFile()) != true){
                 Neo4jIncomingData parser = new Neo4jIncomingData();
                 parser.parseResponse(locus, incomingData, factory);
             }
