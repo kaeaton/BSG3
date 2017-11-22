@@ -10,5 +10,12 @@ package neo4j;
  * @author kaeaton
  */
 public class Neo4jLocusA {
+    public Neo4jLocusA () {
+        
+    }
+    
+    // HLA-A Regex
+    // ^HLA-Aw\d+-\d+-\d+-\d+-\d+-\d+-\d+-\d+-\d+-\d+-\d+-\d+-\d+-\d+-\d+-\d+-\d+$
+    
     
 }
