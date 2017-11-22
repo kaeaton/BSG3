@@ -4,7 +4,7 @@ package neo4j;
 import neo4jRawData.Neo4jHttp;
 import neo4jRawData.Neo4jRequest;
 import neo4jRawData.Neo4jIncomingData;
-import neo4jRawData.Neo4jRawDataDateCheck;
+import neo4jRawData.Neo4jDateCheck;
 import com.fasterxml.jackson.core.JsonFactory;
 import java.io.File;
 import java.io.IOException;
@@ -35,11 +35,15 @@ public class Neo4j {
             Neo4jRequest request = new Neo4jRequest(locus, factory);
             Neo4jHttp neo4jHttp = new Neo4jHttp();
             InputStream incomingData = neo4jHttp.makeCall(neo4jURL, request.formNeo4jRequest());
-            Neo4jRawDataDateCheck dataCheck = new Neo4jRawDataDateCheck();
+            Neo4jDateCheck dataCheck = new Neo4jDateCheck();
             if (dataCheck.checkDate(path.toFile()) != true){
                 Neo4jIncomingData parser = new Neo4jIncomingData();
                 parser.parseResponse(locus, incomingData, factory);
             }
+//            Neo4jDataIO neo4jIO = new Neo4jDataIO();
+//            neo4jIO.readCSVFile(path.toFile());
+            Neo4jLocusA hlaA = new Neo4jLocusA();
+            hlaA.parseLocusA(locus);
             
             
         } catch (Exception ex) {

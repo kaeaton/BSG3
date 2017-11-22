@@ -20,14 +20,14 @@ import java.util.Date;
  *
  * @author kaeaton
  */
-public class Neo4jRawDataDateCheck {
+public class Neo4jDateCheck {
     
 //    private final String locus;
 //    private final String fileLocation;
 //    private boolean fileExists = false;
 //    private boolean currentDate = false;
     
-    public Neo4jRawDataDateCheck() throws IOException {
+    public Neo4jDateCheck() throws IOException {
 //        String incomingLocus, String fileLoc
 //        locus = incomingLocus;
 //        fileLocation = fileLoc;
@@ -40,10 +40,10 @@ public class Neo4jRawDataDateCheck {
             System.out.println(expirationDate);
             
             // Get file date
-            BufferedReader r = new BufferedReader(new FileReader(file));
-            String line = r.readLine();
+            BufferedReader br = new BufferedReader(new FileReader(file));
+            String line = br.readLine();
             System.out.println(line);
-            r.close();
+            br.close();
             LocalDate fileDate = LocalDate.parse(line);
             
             // compare file date to expiration date
