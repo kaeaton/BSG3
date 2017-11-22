@@ -22,14 +22,15 @@ import java.util.Date;
  */
 public class Neo4jRawDataDateCheck {
     
-    private final String locus;
-    private final String fileLocation;
-    private boolean fileExists = false;
-    private boolean currentDate = false;
+//    private final String locus;
+//    private final String fileLocation;
+//    private boolean fileExists = false;
+//    private boolean currentDate = false;
     
-    public Neo4jRawDataDateCheck(String incomingLocus, String fileLoc) throws IOException {
-        locus = incomingLocus;
-        fileLocation = fileLoc;
+    public Neo4jRawDataDateCheck() throws IOException {
+//        String incomingLocus, String fileLoc
+//        locus = incomingLocus;
+//        fileLocation = fileLoc;
     }
     
     public boolean checkDate(File file) throws IOException {

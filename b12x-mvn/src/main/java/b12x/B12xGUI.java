@@ -35,6 +35,7 @@ public class B12xGUI extends javax.swing.JFrame {
         jTabbedPane2 = new javax.swing.JTabbedPane();
         jPanel1 = new javax.swing.JPanel();
         goButton = new javax.swing.JToggleButton();
+        hlaSelect1 = new javax.swing.JComboBox<>();
         jPanel2 = new javax.swing.JPanel();
         hlaSelect = new javax.swing.JComboBox<>();
         updateButton = new javax.swing.JToggleButton();
@@ -48,24 +49,33 @@ public class B12xGUI extends javax.swing.JFrame {
             }
         });
 
+        hlaSelect1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "HLA-A", "HLA-B", "HLA-C" }));
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(245, 245, 245)
-                .addComponent(goButton)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(245, 245, 245)
+                        .addComponent(goButton))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(56, 56, 56)
+                        .addComponent(hlaSelect1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(297, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(375, Short.MAX_VALUE)
+                .addGap(45, 45, 45)
+                .addComponent(hlaSelect1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 310, Short.MAX_VALUE)
                 .addComponent(goButton)
                 .addContainerGap())
         );
 
-        jTabbedPane2.addTab("tab1", jPanel1);
+        jTabbedPane2.addTab("Neo4j", jPanel1);
 
         hlaSelect.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "HLA-A", "HLA-B", "HLA-C" }));
 
@@ -144,7 +154,7 @@ public class B12xGUI extends javax.swing.JFrame {
                     + System.getProperty("file.separator") 
                     + "neo4j_" + locus + "_Download.csv");
 
-            Neo4j neo4j = new Neo4j(locus, neo4jLocation, path);
+            Neo4j neo4j = new Neo4j(locus, path);
             neo4j.fetchData();
         } catch (Exception ex) {
             System.out.println(ex);
@@ -190,6 +200,7 @@ public class B12xGUI extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JToggleButton goButton;
     private javax.swing.JComboBox<String> hlaSelect;
+    private javax.swing.JComboBox<String> hlaSelect1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JTabbedPane jTabbedPane2;
