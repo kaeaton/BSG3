@@ -14,11 +14,11 @@ import java.util.regex.Matcher;
  */
 public class Neo4jLocusA {
     
-    private String locusA1 = "HLA-Aw0-0-0-211-0-1-0-0-0-0-0-0-0-0-0-0-0";
-    private String locusA2 = "HLA-Aw52-8-12-45-19-65-15-10-7-9-12-2-3-2-4-1-24";
-    private String locusA3 = "HLA-Aw2-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-10";
-    private String locusA4 = "HLA-Aw46-1-1-1-1-1-90-1-1-1-1-1-1-1-1-1-7";
-    private String[] locii = {locusA1, locusA2, locusA3, locusA4};
+    private String alleleA1 = "HLA-Aw0-0-0-211-0-1-0-0-0-0-0-0-0-0-0-0-0";
+    private String alleleA2 = "HLA-Aw52-8-12-45-19-65-15-10-7-9-12-2-3-2-4-1-24";
+    private String alleleA3 = "HLA-Aw2-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-10";
+    private String alleleA4 = "HLA-Aw46-1-1-1-1-1-90-1-1-1-1-1-1-1-1-1-7";
+    private String[] alleles = {alleleA1, alleleA2, alleleA3, alleleA4};
 
     private String locusARegex = "^HLA-Aw(\\d+)-(\\d+)-(\\d+)-(\\d+)-(\\d+)"
             + "-(\\d+)-(\\d+)-(\\d+)-(\\d+)-(\\d+)-(\\d+)-(\\d+)-(\\d+)-(\\d+)"
@@ -42,9 +42,9 @@ public class Neo4jLocusA {
     //        -(\d+)-(\d+)-(\d+)-(\d+)-(\d+)-(\d+)$
     
     public void parseLocusA(String GFE) {
-        for (int i = 0; i < locii.length; i++){
-            if (locii[i].matches(locusARegexTest)){
-                System.out.println(locii[i]);
+        for (int i = 0; i < alleles.length; i++){
+            if (alleles[i].matches(locusARegexTest)){
+                System.out.println(alleles[i]);
             }
         }
     }

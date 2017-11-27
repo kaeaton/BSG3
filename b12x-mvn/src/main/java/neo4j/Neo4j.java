@@ -16,7 +16,7 @@ import java.nio.file.*;
 public class Neo4j {
     
     private final String locus;
-    private Path path;
+    private final Path path;
     private final URL neo4jURL = new URL("http://neo4j.b12x.org/db/data/transaction/commit");
 
 //    private String request;
