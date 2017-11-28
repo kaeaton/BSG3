@@ -33,9 +33,9 @@
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="1" attributes="0">
-              <EmptySpace pref="20" max="32767" attributes="0"/>
+              <EmptySpace max="32767" attributes="0"/>
               <Component id="jTabbedPane2" min="-2" max="-2" attributes="0"/>
-              <EmptySpace pref="20" max="32767" attributes="0"/>
+              <EmptySpace max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -45,236 +45,7 @@
 
       <Layout class="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout"/>
       <SubComponents>
-        <Container class="javax.swing.JPanel" name="jPanel1">
-          <Constraints>
-            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
-              <JTabbedPaneConstraints tabName="Neo4j">
-                <Property name="tabTitle" type="java.lang.String" value="Neo4j"/>
-              </JTabbedPaneConstraints>
-            </Constraint>
-          </Constraints>
-
-          <Layout>
-            <DimensionLayout dim="0">
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" attributes="0">
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" attributes="0">
-                              <EmptySpace min="-2" pref="56" max="-2" attributes="0"/>
-                              <Component id="hlaSelect1" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace min="-2" pref="272" max="-2" attributes="0"/>
-                              <Component id="goButton" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                      </Group>
-                      <EmptySpace pref="334" max="32767" attributes="0"/>
-                  </Group>
-                  <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
-                      <Group type="102" attributes="0">
-                          <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
-                          <Component id="jPanel4" pref="663" max="32767" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
-                      </Group>
-                  </Group>
-              </Group>
-            </DimensionLayout>
-            <DimensionLayout dim="1">
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="1" attributes="0">
-                      <EmptySpace min="-2" pref="45" max="-2" attributes="0"/>
-                      <Component id="hlaSelect1" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="310" max="-2" attributes="0"/>
-                      <Component id="goButton" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
-                  </Group>
-                  <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
-                      <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace min="-2" pref="73" max="-2" attributes="0"/>
-                          <Component id="jPanel4" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace pref="210" max="32767" attributes="0"/>
-                      </Group>
-                  </Group>
-              </Group>
-            </DimensionLayout>
-          </Layout>
-          <SubComponents>
-            <Component class="javax.swing.JToggleButton" name="goButton">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Go"/>
-              </Properties>
-              <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="goButtonActionPerformed"/>
-              </Events>
-            </Component>
-            <Component class="javax.swing.JComboBox" name="hlaSelect1">
-              <Properties>
-                <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-                  <StringArray count="3">
-                    <StringItem index="0" value="HLA-A"/>
-                    <StringItem index="1" value="HLA-B"/>
-                    <StringItem index="2" value="HLA-C"/>
-                  </StringArray>
-                </Property>
-              </Properties>
-              <AuxValues>
-                <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
-              </AuxValues>
-            </Component>
-            <Container class="javax.swing.JPanel" name="jPanel4">
-
-              <Layout>
-                <DimensionLayout dim="0">
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" alignment="0" attributes="0">
-                          <Component id="hlaLabel" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Component id="a5Prime" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="32767" attributes="0"/>
-                          <Component id="aExon1" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Component id="aIntron1" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Component id="aExon2" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Component id="aIntron2" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Component id="jTextField21" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Component id="jTextField22" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Component id="jTextField23" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Component id="jTextField24" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Component id="jTextField25" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Component id="jTextField26" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Component id="jTextField27" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Component id="jTextField30" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Component id="jTextField28" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Component id="jTextField29" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace min="-2" pref="281" max="-2" attributes="0"/>
-                      </Group>
-                  </Group>
-                </DimensionLayout>
-                <DimensionLayout dim="1">
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace min="-2" pref="86" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="a5Prime" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="hlaLabel" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="aIntron1" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="aExon1" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="aExon2" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="aIntron2" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jTextField21" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jTextField22" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jTextField23" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jTextField24" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jTextField25" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jTextField26" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jTextField27" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jTextField30" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jTextField28" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jTextField29" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace pref="22" max="32767" attributes="0"/>
-                      </Group>
-                  </Group>
-                </DimensionLayout>
-              </Layout>
-              <SubComponents>
-                <Component class="javax.swing.JTextField" name="a5Prime">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="000"/>
-                  </Properties>
-                </Component>
-                <Component class="javax.swing.JTextField" name="aExon1">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="000"/>
-                  </Properties>
-                </Component>
-                <Component class="javax.swing.JLabel" name="hlaLabel">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="HLA-Aw"/>
-                  </Properties>
-                </Component>
-                <Component class="javax.swing.JTextField" name="aIntron1">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="000"/>
-                  </Properties>
-                </Component>
-                <Component class="javax.swing.JTextField" name="aExon2">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="000"/>
-                  </Properties>
-                </Component>
-                <Component class="javax.swing.JTextField" name="aIntron2">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="000"/>
-                  </Properties>
-                </Component>
-                <Component class="javax.swing.JTextField" name="jTextField21">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="000"/>
-                  </Properties>
-                </Component>
-                <Component class="javax.swing.JTextField" name="jTextField22">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="000"/>
-                  </Properties>
-                </Component>
-                <Component class="javax.swing.JTextField" name="jTextField23">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="000"/>
-                  </Properties>
-                </Component>
-                <Component class="javax.swing.JTextField" name="jTextField24">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="000"/>
-                  </Properties>
-                </Component>
-                <Component class="javax.swing.JTextField" name="jTextField25">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="000"/>
-                  </Properties>
-                </Component>
-                <Component class="javax.swing.JTextField" name="jTextField26">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="000"/>
-                  </Properties>
-                </Component>
-                <Component class="javax.swing.JTextField" name="jTextField27">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="000"/>
-                  </Properties>
-                </Component>
-                <Component class="javax.swing.JTextField" name="jTextField28">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="000"/>
-                  </Properties>
-                </Component>
-                <Component class="javax.swing.JTextField" name="jTextField29">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="000"/>
-                  </Properties>
-                </Component>
-                <Component class="javax.swing.JTextField" name="jTextField30">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="000"/>
-                  </Properties>
-                </Component>
-              </SubComponents>
-            </Container>
-          </SubComponents>
-        </Container>
-        <Container class="javax.swing.JPanel" name="jPanel2">
+        <Container class="javax.swing.JPanel" name="neo4jUpdate">
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
               <JTabbedPaneConstraints tabName="Neo4j Update">
@@ -287,23 +58,23 @@
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace pref="158" max="32767" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
                       <Component id="hlaSelect" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="100" max="-2" attributes="0"/>
                       <Component id="updateButton" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="141" max="-2" attributes="0"/>
+                      <EmptySpace pref="168" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="69" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="41" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="hlaSelect" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="updateButton" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace pref="317" max="32767" attributes="0"/>
+                      <EmptySpace pref="884" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -331,6 +102,500 @@
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="updateButtonActionPerformed"/>
               </Events>
             </Component>
+          </SubComponents>
+        </Container>
+        <Container class="javax.swing.JPanel" name="neo4j">
+          <Constraints>
+            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
+              <JTabbedPaneConstraints tabName="Neo4j">
+                <Property name="tabTitle" type="java.lang.String" value="Neo4j"/>
+              </JTabbedPaneConstraints>
+            </Constraint>
+          </Constraints>
+
+          <Layout>
+            <DimensionLayout dim="0">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" attributes="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" attributes="0">
+                              <EmptySpace min="-2" pref="56" max="-2" attributes="0"/>
+                              <Component id="hlaSelect1" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace min="-2" pref="292" max="-2" attributes="0"/>
+                              <Component id="goButton" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="mainCardPanel" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                      <EmptySpace pref="1161" max="32767" attributes="0"/>
+                  </Group>
+                  <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="jPanel5" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace pref="1160" max="32767" attributes="0"/>
+                      </Group>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+            <DimensionLayout dim="1">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="1" attributes="0">
+                      <EmptySpace min="-2" pref="45" max="-2" attributes="0"/>
+                      <Component id="hlaSelect1" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="107" max="-2" attributes="0"/>
+                      <Component id="mainCardPanel" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="106" max="-2" attributes="0"/>
+                      <Component id="goButton" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="457" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace min="-2" pref="99" max="-2" attributes="0"/>
+                          <Component id="jPanel5" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace pref="951" max="32767" attributes="0"/>
+                      </Group>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+          </Layout>
+          <SubComponents>
+            <Component class="javax.swing.JToggleButton" name="goButton">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Go"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="goButtonActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JComboBox" name="hlaSelect1">
+              <Properties>
+                <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                  <StringArray count="3">
+                    <StringItem index="0" value="HLA-A"/>
+                    <StringItem index="1" value="HLA-B"/>
+                    <StringItem index="2" value="HLA-C"/>
+                  </StringArray>
+                </Property>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="hlaSelect1ActionPerformed"/>
+              </Events>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+              </AuxValues>
+            </Component>
+            <Container class="javax.swing.JPanel" name="jPanel5">
+
+              <Layout>
+                <DimensionLayout dim="0">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="0" attributes="0">
+                          <Component id="hlaLabel1" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="a5Prime1" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="32767" attributes="0"/>
+                          <Component id="aExon5" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="aIntron5" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="aExon6" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="aIntron6" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="aExon7" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="aIntron7" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="aExon8" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="aIntron8" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="jTextField31" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="jTextField32" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="jTextField33" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="jTextField36" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="jTextField34" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="jTextField35" pref="1" max="32767" attributes="0"/>
+                          <EmptySpace min="-2" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+                </DimensionLayout>
+                <DimensionLayout dim="1">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace min="-2" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="a5Prime1" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="hlaLabel1" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="aIntron5" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="aExon5" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="aExon6" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="aIntron6" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="aExon7" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="aIntron7" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="aExon8" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="aIntron8" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jTextField31" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jTextField32" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jTextField33" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jTextField36" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jTextField34" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jTextField35" alignment="3" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace max="32767" attributes="0"/>
+                      </Group>
+                  </Group>
+                </DimensionLayout>
+              </Layout>
+              <SubComponents>
+                <Component class="javax.swing.JTextField" name="a5Prime1">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="000"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JTextField" name="aExon5">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="000"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="hlaLabel1">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="HLA-Aw"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JTextField" name="aIntron5">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="000"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JTextField" name="aExon6">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="000"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JTextField" name="aIntron6">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="000"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JTextField" name="aExon7">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="000"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JTextField" name="aIntron7">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="000"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JTextField" name="aExon8">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="000"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JTextField" name="aIntron8">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="000"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JTextField" name="jTextField31">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="000"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JTextField" name="jTextField32">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="000"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JTextField" name="jTextField33">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="000"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JTextField" name="jTextField34">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="000"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JTextField" name="jTextField35">
+                  <Properties>
+                    <Property name="horizontalAlignment" type="int" value="0"/>
+                    <Property name="text" type="java.lang.String" value="000"/>
+                    <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                      <Dimension value="[10, 26]"/>
+                    </Property>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JTextField" name="jTextField36">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="000"/>
+                  </Properties>
+                </Component>
+              </SubComponents>
+            </Container>
+            <Container class="javax.swing.JPanel" name="mainCardPanel">
+
+              <Layout class="org.netbeans.modules.form.compat2.layouts.DesignCardLayout"/>
+              <SubComponents>
+                <Container class="javax.swing.JPanel" name="jPanelC">
+                  <Properties>
+                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                      <Color blue="cc" green="ff" red="0" type="rgb"/>
+                    </Property>
+                  </Properties>
+                  <Constraints>
+                    <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignCardLayout" value="org.netbeans.modules.form.compat2.layouts.DesignCardLayout$CardConstraintsDescription">
+                      <CardConstraints cardName="cardC"/>
+                    </Constraint>
+                  </Constraints>
+
+                  <Layout>
+                    <DimensionLayout dim="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <EmptySpace min="0" pref="625" max="32767" attributes="0"/>
+                      </Group>
+                    </DimensionLayout>
+                    <DimensionLayout dim="1">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <EmptySpace min="0" pref="100" max="32767" attributes="0"/>
+                      </Group>
+                    </DimensionLayout>
+                  </Layout>
+                </Container>
+                <Container class="javax.swing.JPanel" name="jPanelB">
+                  <Properties>
+                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                      <Color blue="66" green="0" red="66" type="rgb"/>
+                    </Property>
+                  </Properties>
+                  <Constraints>
+                    <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignCardLayout" value="org.netbeans.modules.form.compat2.layouts.DesignCardLayout$CardConstraintsDescription">
+                      <CardConstraints cardName="cardB"/>
+                    </Constraint>
+                  </Constraints>
+
+                  <Layout>
+                    <DimensionLayout dim="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                      </Group>
+                    </DimensionLayout>
+                    <DimensionLayout dim="1">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <EmptySpace min="0" pref="100" max="32767" attributes="0"/>
+                      </Group>
+                    </DimensionLayout>
+                  </Layout>
+                </Container>
+                <Container class="javax.swing.JPanel" name="jPanelA">
+                  <Properties>
+                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                      <Color blue="cc" green="ff" red="0" type="rgb"/>
+                    </Property>
+                  </Properties>
+                  <Constraints>
+                    <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignCardLayout" value="org.netbeans.modules.form.compat2.layouts.DesignCardLayout$CardConstraintsDescription">
+                      <CardConstraints cardName="cardA"/>
+                    </Constraint>
+                  </Constraints>
+
+                  <Layout>
+                    <DimensionLayout dim="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                          <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
+                              <Group type="102" alignment="0" attributes="0">
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="jPanel6" min="-2" pref="613" max="-2" attributes="0"/>
+                                  <EmptySpace max="32767" attributes="0"/>
+                              </Group>
+                          </Group>
+                      </Group>
+                    </DimensionLayout>
+                    <DimensionLayout dim="1">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <EmptySpace min="0" pref="100" max="32767" attributes="0"/>
+                          <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
+                              <Group type="102" alignment="0" attributes="0">
+                                  <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
+                                  <Component id="jPanel6" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace pref="31" max="32767" attributes="0"/>
+                              </Group>
+                          </Group>
+                      </Group>
+                    </DimensionLayout>
+                  </Layout>
+                  <SubComponents>
+                    <Container class="javax.swing.JPanel" name="jPanel6">
+
+                      <Layout>
+                        <DimensionLayout dim="0">
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Component id="hlaLabel2" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="a5Prime2" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace max="32767" attributes="0"/>
+                                  <Component id="aExon9" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="aIntron9" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="aExon10" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="aIntron10" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="aExon11" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="aIntron11" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="aExon12" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="aIntron12" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="jTextField37" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="jTextField38" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="jTextField39" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="jTextField42" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="jTextField40" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="jTextField41" pref="0" max="32767" attributes="0"/>
+                                  <EmptySpace min="-2" pref="292" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                        </DimensionLayout>
+                        <DimensionLayout dim="1">
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="102" alignment="0" attributes="0">
+                                  <EmptySpace min="-2" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="a5Prime2" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="hlaLabel2" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="aIntron9" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="aExon9" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="aExon10" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="aIntron10" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="aExon11" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="aIntron11" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="aExon12" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="aIntron12" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jTextField37" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jTextField38" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jTextField39" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jTextField42" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jTextField40" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jTextField41" alignment="3" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace max="32767" attributes="0"/>
+                              </Group>
+                          </Group>
+                        </DimensionLayout>
+                      </Layout>
+                      <SubComponents>
+                        <Component class="javax.swing.JTextField" name="a5Prime2">
+                          <Properties>
+                            <Property name="text" type="java.lang.String" value="000"/>
+                          </Properties>
+                        </Component>
+                        <Component class="javax.swing.JTextField" name="aExon9">
+                          <Properties>
+                            <Property name="text" type="java.lang.String" value="000"/>
+                          </Properties>
+                        </Component>
+                        <Component class="javax.swing.JLabel" name="hlaLabel2">
+                          <Properties>
+                            <Property name="text" type="java.lang.String" value="HLA-Aw"/>
+                          </Properties>
+                        </Component>
+                        <Component class="javax.swing.JTextField" name="aIntron9">
+                          <Properties>
+                            <Property name="text" type="java.lang.String" value="000"/>
+                          </Properties>
+                        </Component>
+                        <Component class="javax.swing.JTextField" name="aExon10">
+                          <Properties>
+                            <Property name="text" type="java.lang.String" value="000"/>
+                          </Properties>
+                        </Component>
+                        <Component class="javax.swing.JTextField" name="aIntron10">
+                          <Properties>
+                            <Property name="text" type="java.lang.String" value="000"/>
+                          </Properties>
+                        </Component>
+                        <Component class="javax.swing.JTextField" name="aExon11">
+                          <Properties>
+                            <Property name="text" type="java.lang.String" value="000"/>
+                          </Properties>
+                        </Component>
+                        <Component class="javax.swing.JTextField" name="aIntron11">
+                          <Properties>
+                            <Property name="text" type="java.lang.String" value="000"/>
+                          </Properties>
+                        </Component>
+                        <Component class="javax.swing.JTextField" name="aExon12">
+                          <Properties>
+                            <Property name="text" type="java.lang.String" value="000"/>
+                          </Properties>
+                        </Component>
+                        <Component class="javax.swing.JTextField" name="aIntron12">
+                          <Properties>
+                            <Property name="text" type="java.lang.String" value="000"/>
+                          </Properties>
+                        </Component>
+                        <Component class="javax.swing.JTextField" name="jTextField37">
+                          <Properties>
+                            <Property name="text" type="java.lang.String" value="000"/>
+                          </Properties>
+                        </Component>
+                        <Component class="javax.swing.JTextField" name="jTextField38">
+                          <Properties>
+                            <Property name="text" type="java.lang.String" value="000"/>
+                          </Properties>
+                        </Component>
+                        <Component class="javax.swing.JTextField" name="jTextField39">
+                          <Properties>
+                            <Property name="text" type="java.lang.String" value="000"/>
+                          </Properties>
+                        </Component>
+                        <Component class="javax.swing.JTextField" name="jTextField40">
+                          <Properties>
+                            <Property name="text" type="java.lang.String" value="000"/>
+                          </Properties>
+                        </Component>
+                        <Component class="javax.swing.JTextField" name="jTextField41">
+                          <Properties>
+                            <Property name="horizontalAlignment" type="int" value="0"/>
+                            <Property name="text" type="java.lang.String" value="000"/>
+                            <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                              <Dimension value="[10, 26]"/>
+                            </Property>
+                          </Properties>
+                        </Component>
+                        <Component class="javax.swing.JTextField" name="jTextField42">
+                          <Properties>
+                            <Property name="text" type="java.lang.String" value="000"/>
+                          </Properties>
+                        </Component>
+                      </SubComponents>
+                    </Container>
+                  </SubComponents>
+                </Container>
+              </SubComponents>
+            </Container>
           </SubComponents>
         </Container>
       </SubComponents>
