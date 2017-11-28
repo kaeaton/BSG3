@@ -43,7 +43,7 @@ public class Neo4j {
             Neo4jDataIO neo4jIO = new Neo4jDataIO();
             neo4jIO.readCSVFile(locus, path.toFile());
             Neo4jLocusA hlaA = new Neo4jLocusA();
-            hlaA.parseLocusA(locus);
+            hlaA.parseLocus(locus);
             
             
         } catch (Exception ex) {

@@ -9,6 +9,7 @@ import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
+import java.lang.reflect.Constructor;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -42,6 +43,10 @@ public class Neo4jDataIO {
                 System.out.println(locusParser);
             }
             
+            Class<?> clazz = Class.forName("neo4j." + locusParser);
+            Constructor<?> ctor = clazz.getConstructor();
+            Object parser = ctor.newInstance();
+            
             // Read the File
             BufferedReader br = new BufferedReader(new FileReader(file));
             
@@ -50,7 +55,10 @@ public class Neo4jDataIO {
 
                 // use comma as separator
                 String[] gfeAlleles = line.split(csvSplitBy);
-
+                parser.parseLocus(gfeAlleles[1]);
+                
+                
+                
 //                System.out.println("GFE Allele: " + gfeAlleles[1]);
 
             }
