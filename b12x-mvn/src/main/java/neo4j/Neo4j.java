@@ -40,8 +40,8 @@ public class Neo4j {
                 Neo4jIncomingData parser = new Neo4jIncomingData();
                 parser.parseResponse(locus, incomingData, factory);
             }
-//            Neo4jDataIO neo4jIO = new Neo4jDataIO();
-//            neo4jIO.readCSVFile(path.toFile());
+            Neo4jDataIO neo4jIO = new Neo4jDataIO();
+            neo4jIO.readCSVFile(path.toFile());
             Neo4jLocusA hlaA = new Neo4jLocusA();
             hlaA.parseLocusA(locus);
             
