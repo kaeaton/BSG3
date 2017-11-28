@@ -63,6 +63,22 @@ public class B12xGUI extends javax.swing.JFrame {
         aExon8 = new javax.swing.JTextField();
         a3Prime = new javax.swing.JTextField();
         jLabelA5 = new javax.swing.JLabel();
+        jLabelAE1 = new javax.swing.JLabel();
+        jLabelAE2 = new javax.swing.JLabel();
+        jLabelAI1 = new javax.swing.JLabel();
+        jLabelAI2 = new javax.swing.JLabel();
+        jLabelAE3 = new javax.swing.JLabel();
+        jLabelAI3 = new javax.swing.JLabel();
+        jLabelAE4 = new javax.swing.JLabel();
+        jLabelAI4 = new javax.swing.JLabel();
+        jLabelAE5 = new javax.swing.JLabel();
+        jLabelAI5 = new javax.swing.JLabel();
+        jLabelAE6 = new javax.swing.JLabel();
+        jLabelAI6 = new javax.swing.JLabel();
+        jLabelAE7 = new javax.swing.JLabel();
+        jLabelAI7 = new javax.swing.JLabel();
+        jLabelAE8 = new javax.swing.JLabel();
+        jLabelA3 = new javax.swing.JLabel();
         jPanelB = new javax.swing.JPanel();
         jPanelEnterGfeB = new javax.swing.JPanel();
         b5Prime = new javax.swing.JTextField();
@@ -278,16 +294,114 @@ public class B12xGUI extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jLabelA5.setText("5' UTR");
+        TextIcon t1 = new TextIcon(jLabelA5, "5' UTR", TextIcon.Layout.HORIZONTAL);
+        RotatedIcon r1 = new RotatedIcon(t1, RotatedIcon.Rotate.DOWN);
+        jLabelA5.setIcon( r1 );
+
+        t1 = new TextIcon(jLabelAE1, "Exon 1", TextIcon.Layout.HORIZONTAL);
+        r1 = new RotatedIcon(t1, RotatedIcon.Rotate.DOWN);
+        jLabelAE1.setIcon( r1 );
+
+        t1 = new TextIcon(jLabelAE2, "Exon 2", TextIcon.Layout.HORIZONTAL);
+        r1 = new RotatedIcon(t1, RotatedIcon.Rotate.DOWN);
+        jLabelAE2.setIcon( r1 );
+
+        t1 = new TextIcon(jLabelAI1, "Intron 1", TextIcon.Layout.HORIZONTAL);
+        r1 = new RotatedIcon(t1, RotatedIcon.Rotate.DOWN);
+        jLabelAI1.setIcon( r1 );
+
+        t1 = new TextIcon(jLabelAI2, "Intron 2", TextIcon.Layout.HORIZONTAL);
+        r1 = new RotatedIcon(t1, RotatedIcon.Rotate.DOWN);
+        jLabelAI2.setIcon( r1 );
+
+        t1 = new TextIcon(jLabelAE3, "Exon 3", TextIcon.Layout.HORIZONTAL);
+        r1 = new RotatedIcon(t1, RotatedIcon.Rotate.DOWN);
+        jLabelAE3.setIcon( r1 );
+
+        t1 = new TextIcon(jLabelAI3, "Intron 3", TextIcon.Layout.HORIZONTAL);
+        r1 = new RotatedIcon(t1, RotatedIcon.Rotate.DOWN);
+        jLabelAI3.setIcon( r1 );
+
+        t1 = new TextIcon(jLabelAE4, "Exon 4", TextIcon.Layout.HORIZONTAL);
+        r1 = new RotatedIcon(t1, RotatedIcon.Rotate.DOWN);
+        jLabelAE4.setIcon( r1 );
+
+        t1 = new TextIcon(jLabelAI4, "Intron 4", TextIcon.Layout.HORIZONTAL);
+        r1 = new RotatedIcon(t1, RotatedIcon.Rotate.DOWN);
+        jLabelAI4.setIcon( r1 );
+
+        t1 = new TextIcon(jLabelAE5, "Exon 5", TextIcon.Layout.HORIZONTAL);
+        r1 = new RotatedIcon(t1, RotatedIcon.Rotate.DOWN);
+        jLabelAE5.setIcon( r1 );
+
+        t1 = new TextIcon(jLabelAI5, "Intron 5", TextIcon.Layout.HORIZONTAL);
+        r1 = new RotatedIcon(t1, RotatedIcon.Rotate.DOWN);
+        jLabelAI5.setIcon( r1 );
+
+        t1 = new TextIcon(jLabelAE6, "Exon 6", TextIcon.Layout.HORIZONTAL);
+        r1 = new RotatedIcon(t1, RotatedIcon.Rotate.DOWN);
+        jLabelAE6.setIcon( r1 );
+
+        t1 = new TextIcon(jLabelAI6, "Intron 6", TextIcon.Layout.HORIZONTAL);
+        r1 = new RotatedIcon(t1, RotatedIcon.Rotate.DOWN);
+        jLabelAI6.setIcon( r1 );
+
+        t1 = new TextIcon(jLabelAE7, "Exon 7", TextIcon.Layout.HORIZONTAL);
+        r1 = new RotatedIcon(t1, RotatedIcon.Rotate.DOWN);
+        jLabelAE7.setIcon( r1 );
+
+        t1 = new TextIcon(jLabelAI7, "Intron 7", TextIcon.Layout.HORIZONTAL);
+        r1 = new RotatedIcon(t1, RotatedIcon.Rotate.DOWN);
+        jLabelAI7.setIcon( r1 );
+
+        t1 = new TextIcon(jLabelAE8, "Exon 8", TextIcon.Layout.HORIZONTAL);
+        r1 = new RotatedIcon(t1, RotatedIcon.Rotate.DOWN);
+        jLabelAE8.setIcon( r1 );
+
+        t1 = new TextIcon(jLabelA3, "3' UTR", TextIcon.Layout.HORIZONTAL);
+        r1 = new RotatedIcon(t1, RotatedIcon.Rotate.DOWN);
+        jLabelA3.setIcon( r1 );
 
         javax.swing.GroupLayout jPanelALayout = new javax.swing.GroupLayout(jPanelA);
         jPanelA.setLayout(jPanelALayout);
         jPanelALayout.setHorizontalGroup(
             jPanelALayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanelALayout.createSequentialGroup()
-                .addGap(72, 72, 72)
-                .addComponent(jLabelA5)
-                .addContainerGap(790, Short.MAX_VALUE))
+                .addGap(82, 82, 82)
+                .addComponent(jLabelA5, javax.swing.GroupLayout.PREFERRED_SIZE, 17, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(27, 27, 27)
+                .addComponent(jLabelAE1, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jLabelAI1, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(27, 27, 27)
+                .addComponent(jLabelAE2, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jLabelAI2, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(27, 27, 27)
+                .addComponent(jLabelAE3, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jLabelAI3, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(26, 26, 26)
+                .addComponent(jLabelAE4, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(26, 26, 26)
+                .addComponent(jLabelAI4, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(26, 26, 26)
+                .addComponent(jLabelAE5, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jLabelAI5, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(27, 27, 27)
+                .addComponent(jLabelAE6, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jLabelAI6, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(27, 27, 27)
+                .addComponent(jLabelAE7, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jLabelAI7, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(26, 26, 26)
+                .addComponent(jLabelAE8, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(26, 26, 26)
+                .addComponent(jLabelA3, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(165, Short.MAX_VALUE))
             .addGroup(jPanelALayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanelALayout.createSequentialGroup()
                     .addGap(28, 28, 28)
@@ -296,10 +410,27 @@ public class B12xGUI extends javax.swing.JFrame {
         );
         jPanelALayout.setVerticalGroup(
             jPanelALayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanelALayout.createSequentialGroup()
-                .addGap(77, 77, 77)
-                .addComponent(jLabelA5)
-                .addContainerGap(79, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelALayout.createSequentialGroup()
+                .addContainerGap(75, Short.MAX_VALUE)
+                .addGroup(jPanelALayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabelA3, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabelAE8, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabelAI7, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabelAE7, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabelAI6, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabelAE6, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabelAI5, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabelAE5, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabelAI4, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabelAE4, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabelAI3, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabelAE3, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabelAI2, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabelAI1, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabelAE2, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabelAE1, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabelA5, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(48, 48, 48))
             .addGroup(jPanelALayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanelALayout.createSequentialGroup()
                     .addGap(31, 31, 31)
@@ -767,7 +898,23 @@ public class B12xGUI extends javax.swing.JFrame {
     private javax.swing.JLabel hlaLabel4;
     private javax.swing.JComboBox<String> hlaSelectNeo4j;
     private javax.swing.JComboBox<String> hlaSelectUpdate;
+    private javax.swing.JLabel jLabelA3;
     private javax.swing.JLabel jLabelA5;
+    private javax.swing.JLabel jLabelAE1;
+    private javax.swing.JLabel jLabelAE2;
+    private javax.swing.JLabel jLabelAE3;
+    private javax.swing.JLabel jLabelAE4;
+    private javax.swing.JLabel jLabelAE5;
+    private javax.swing.JLabel jLabelAE6;
+    private javax.swing.JLabel jLabelAE7;
+    private javax.swing.JLabel jLabelAE8;
+    private javax.swing.JLabel jLabelAI1;
+    private javax.swing.JLabel jLabelAI2;
+    private javax.swing.JLabel jLabelAI3;
+    private javax.swing.JLabel jLabelAI4;
+    private javax.swing.JLabel jLabelAI5;
+    private javax.swing.JLabel jLabelAI6;
+    private javax.swing.JLabel jLabelAI7;
     private javax.swing.JPanel jPanelA;
     private javax.swing.JPanel jPanelB;
     private javax.swing.JPanel jPanelC;

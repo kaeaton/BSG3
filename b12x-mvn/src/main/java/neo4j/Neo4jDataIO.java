@@ -19,7 +19,7 @@ public class Neo4jDataIO {
         
     }
     
-    public void readCSVFile(File file) throws IOException {
+    public void readCSVFile(String locus, File file) throws IOException {
         try {
             
             String line = "";
