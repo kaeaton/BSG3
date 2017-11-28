@@ -776,7 +776,7 @@ public class B12xGUI extends javax.swing.JFrame {
             Neo4j neo4j = new Neo4j(locus, path);
             neo4j.fetchData();
 
-            System.out.println("Gui running");
+            System.out.println("Gui running " + locus);
 
         } catch (Exception ex) {
             System.out.println(ex);

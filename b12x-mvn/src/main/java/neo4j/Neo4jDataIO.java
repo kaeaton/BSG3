@@ -9,6 +9,8 @@ import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 /**
  *
@@ -22,8 +24,23 @@ public class Neo4jDataIO {
     public void readCSVFile(String locus, File file) throws IOException {
         try {
             
+            String locusParser = "";
             String line = "";
             String csvSplitBy = ",";
+            
+            System.out.println(locus);
+
+            // Parse the locus to call class (no "-" allowed in class name)
+            Pattern p = Pattern.compile("^HLA-(\\w+)$");
+            System.out.println(p);
+            
+            Matcher m = p.matcher(locus);
+            System.out.println(m);
+            
+            if (m.find()) {
+                locusParser = "Neo4jLocus" + m.group(1);
+                System.out.println(locusParser);
+            }
             
             // Read the File
             BufferedReader br = new BufferedReader(new FileReader(file));
@@ -34,7 +51,7 @@ public class Neo4jDataIO {
                 // use comma as separator
                 String[] gfeAlleles = line.split(csvSplitBy);
 
-                System.out.println("GFE Allele: " + gfeAlleles[1]);
+//                System.out.println("GFE Allele: " + gfeAlleles[1]);
 
             }
             
