@@ -109,7 +109,7 @@ public class B12xGUI extends javax.swing.JFrame {
                 .addGroup(neo4jUpdateLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(hlaSelect, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(updateButton))
-                .addContainerGap(884, Short.MAX_VALUE))
+                .addContainerGap(359, Short.MAX_VALUE))
         );
 
         jTabbedPane2.addTab("Neo4j Update", neo4jUpdate);
@@ -128,38 +128,52 @@ public class B12xGUI extends javax.swing.JFrame {
             }
         });
 
+        a5Prime1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         a5Prime1.setText("000");
 
+        aExon5.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         aExon5.setText("000");
 
         hlaLabel1.setText("HLA-Aw");
 
+        aIntron5.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         aIntron5.setText("000");
 
+        aExon6.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         aExon6.setText("000");
 
+        aIntron6.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         aIntron6.setText("000");
 
+        aExon7.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         aExon7.setText("000");
 
+        aIntron7.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         aIntron7.setText("000");
 
+        aExon8.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         aExon8.setText("000");
 
+        aIntron8.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         aIntron8.setText("000");
 
+        jTextField31.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         jTextField31.setText("000");
 
+        jTextField32.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         jTextField32.setText("000");
 
+        jTextField33.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         jTextField33.setText("000");
 
+        jTextField34.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         jTextField34.setText("000");
 
         jTextField35.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         jTextField35.setText("000");
         jTextField35.setMaximumSize(new java.awt.Dimension(10, 26));
 
+        jTextField36.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         jTextField36.setText("000");
 
         javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
@@ -169,9 +183,9 @@ public class B12xGUI extends javax.swing.JFrame {
             .addGroup(jPanel5Layout.createSequentialGroup()
                 .addComponent(hlaLabel1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(a5Prime1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(a5Prime1, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(aExon5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(aExon5, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(aIntron5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -197,9 +211,12 @@ public class B12xGUI extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jTextField34, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jTextField35, javax.swing.GroupLayout.PREFERRED_SIZE, 1, Short.MAX_VALUE)
+                .addComponent(jTextField35, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
+
+        jPanel5Layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {a5Prime1, aExon5, aExon6, aExon7, aExon8, aIntron5, aIntron6, aIntron7, aIntron8, jTextField31, jTextField32, jTextField33, jTextField34, jTextField35, jTextField36});
+
         jPanel5Layout.setVerticalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel5Layout.createSequentialGroup()
@@ -392,12 +409,12 @@ public class B12xGUI extends javax.swing.JFrame {
                     .addGroup(neo4jLayout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(mainCardPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(1161, Short.MAX_VALUE))
+                .addContainerGap(54, Short.MAX_VALUE))
             .addGroup(neo4jLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(neo4jLayout.createSequentialGroup()
                     .addContainerGap()
                     .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(1160, Short.MAX_VALUE)))
+                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
         );
         neo4jLayout.setVerticalGroup(
             neo4jLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -408,12 +425,12 @@ public class B12xGUI extends javax.swing.JFrame {
                 .addComponent(mainCardPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(106, 106, 106)
                 .addComponent(goButton)
-                .addGap(457, 457, 457))
+                .addContainerGap())
             .addGroup(neo4jLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(neo4jLayout.createSequentialGroup()
                     .addGap(99, 99, 99)
                     .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(951, Short.MAX_VALUE)))
+                    .addContainerGap(282, Short.MAX_VALUE)))
         );
 
         jTabbedPane2.addTab("Neo4j", neo4j);
@@ -431,7 +448,7 @@ public class B12xGUI extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jTabbedPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jTabbedPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 451, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -474,15 +491,15 @@ public class B12xGUI extends javax.swing.JFrame {
         CardLayout card = (CardLayout)mainCardPanel.getLayout();
         switch (selectedLocus) {
             case "HLA-A":
-                card.show(mainCardPanel, "jPanelA");
+                card.show(mainCardPanel, "cardA");
                 System.out.println(selectedLocus);
                 break;
             case "HLA-B":
-                card.show(mainCardPanel, "jPanelB");
+                card.show(mainCardPanel, "cardB");
                 System.out.println(selectedLocus);
                 break;
             case "HLA-C":
-                card.show(mainCardPanel, "jPanelC");
+                card.show(mainCardPanel, "cardC");
                 System.out.println(selectedLocus);
                 break;
         }
