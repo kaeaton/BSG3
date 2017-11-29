@@ -34,10 +34,7 @@ public class Neo4jDataIO {
 
             // Parse the locus to call class (no "-" allowed in class name)
             Pattern p = Pattern.compile("^HLA-(\\w+)$");
-            System.out.println(p);
-            
             Matcher m = p.matcher(locus);
-            System.out.println(m);
             
             // Create class name
             if (m.find()) {
@@ -50,19 +47,26 @@ public class Neo4jDataIO {
             Constructor<?> ctr = parser.getConstructor();
             Object gfeParser = ctr.newInstance();
             
-            // Tell it that the method exists
+            // Tell it that the parseLocus method exists
             Method parse = parser.getDeclaredMethod("parseLocus", String.class);
-
             
             // Read the File
             BufferedReader br = new BufferedReader(new FileReader(file));
             
+            // Skip date stamp
             br.readLine();
+            
             while ((line = br.readLine()) != null) {
 
                 // use comma as separator
                 String[] gfeAlleles = line.split(csvSplitBy);
-                parse.invoke(gfeParser, gfeAlleles[1]);
+                
+                // Run the GFE portion through the parser
+                boolean results = (boolean)parse.invoke(gfeParser, gfeAlleles[1]);
+                if (results){
+                    System.out.println(line);
+
+                }
                 
                 
                 

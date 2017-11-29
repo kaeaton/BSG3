@@ -42,14 +42,14 @@ public class Neo4jLocusA {
     //        -(\d+)-(\d+)-(\d+)-(\d+)-(\d+)-(\d+)$
     int i = 0;
     
-    public void parseLocus(String gfe) {
-//        for (int i = 0; i < alleles.length; i++){
-            if (gfe.matches(locusARegexTest)){
-                i++;
-                System.out.println(gfe);
-                System.out.println(i);
-            }
-//        }
+    public boolean parseLocus(String gfe) {
+        if (gfe.matches(locusARegexTest)){
+//            i++;
+//            System.out.println(gfe);
+//            System.out.println(i);
+            return true;
+        }
+        return false;
     }
     
     
