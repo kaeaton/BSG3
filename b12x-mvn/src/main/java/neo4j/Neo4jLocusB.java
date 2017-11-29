@@ -32,7 +32,6 @@ public class Neo4jLocusB {
     //           E6    I6    3'   
     //           12    13    14
     //        -(\d+)-(\d+)-(\d+)$
-    int i = 0;
     
     public boolean parseLocus(String gfe) {
         if (gfe.matches(locusBRegexTest)){
