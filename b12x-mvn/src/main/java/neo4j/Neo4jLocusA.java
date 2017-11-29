@@ -40,13 +40,16 @@ public class Neo4jLocusA {
     //           E6    I6    E7    I7    E8    3'   
     //           12    13    14    15    16    17
     //        -(\d+)-(\d+)-(\d+)-(\d+)-(\d+)-(\d+)$
+    int i = 0;
     
-    public void parseLocus(String GFE) {
-        for (int i = 0; i < alleles.length; i++){
-            if (alleles[i].matches(locusARegexTest)){
-                System.out.println(alleles[i]);
+    public void parseLocus(String gfe) {
+//        for (int i = 0; i < alleles.length; i++){
+            if (gfe.matches(locusARegexTest)){
+                i++;
+                System.out.println(gfe);
+                System.out.println(i);
             }
-        }
+//        }
     }
     
     

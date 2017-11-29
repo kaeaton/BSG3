@@ -10,6 +10,7 @@ import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
 import java.lang.reflect.Constructor;
+import java.lang.reflect.Method;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -43,9 +44,18 @@ public class Neo4jDataIO {
                 System.out.println(locusParser);
             }
             
-            Class<?> clazz = Class.forName("neo4j." + locusParser);
-            Constructor<?> ctor = clazz.getConstructor();
-            Object parser = ctor.newInstance();
+//            Class<?> clazz = Class.forName("neo4j." + locusParser);
+            Class<?> parser = Class.forName("neo4j." + locusParser);
+            Method parse = parser.getDeclaredMethod("parseLocus", String.class);
+            
+            
+//            Class[] types = {Double.TYPE, this.getClass()};
+//            Constructor constructor = parser.getConstructor(types);
+//            
+//            Object instanceOfParser = constructor.newInstance();
+
+            Constructor<?> ctr = parser.getConstructor();
+            Object gfeParser = ctr.newInstance();
             
             // Read the File
             BufferedReader br = new BufferedReader(new FileReader(file));
@@ -55,7 +65,7 @@ public class Neo4jDataIO {
 
                 // use comma as separator
                 String[] gfeAlleles = line.split(csvSplitBy);
-                parser.parseLocus(gfeAlleles[1]);
+                parse.invoke(gfeParser, gfeAlleles[1]);
                 
                 
                 
