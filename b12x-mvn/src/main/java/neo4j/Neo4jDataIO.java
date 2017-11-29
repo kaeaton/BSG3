@@ -67,18 +67,13 @@ public class Neo4jDataIO {
                     System.out.println(line);
 
                 }
-                
-                
-                
-//                System.out.println("GFE Allele: " + gfeAlleles[1]);
-
             }
             
+            // Close the buffer
             br.close();
             
         } catch (Exception ex) {
             System.out.println(ex); 
         }
     }
-    
 }
