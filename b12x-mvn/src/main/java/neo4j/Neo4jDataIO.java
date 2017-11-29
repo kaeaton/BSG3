@@ -39,23 +39,20 @@ public class Neo4jDataIO {
             Matcher m = p.matcher(locus);
             System.out.println(m);
             
+            // Create class name
             if (m.find()) {
                 locusParser = "Neo4jLocus" + m.group(1);
                 System.out.println(locusParser);
             }
             
-//            Class<?> clazz = Class.forName("neo4j." + locusParser);
+            // Tell it that the name is a class and instantiate class
             Class<?> parser = Class.forName("neo4j." + locusParser);
-            Method parse = parser.getDeclaredMethod("parseLocus", String.class);
-            
-            
-//            Class[] types = {Double.TYPE, this.getClass()};
-//            Constructor constructor = parser.getConstructor(types);
-//            
-//            Object instanceOfParser = constructor.newInstance();
-
             Constructor<?> ctr = parser.getConstructor();
             Object gfeParser = ctr.newInstance();
+            
+            // Tell it that the method exists
+            Method parse = parser.getDeclaredMethod("parseLocus", String.class);
+
             
             // Read the File
             BufferedReader br = new BufferedReader(new FileReader(file));
