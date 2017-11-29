@@ -159,7 +159,7 @@
                         <DimensionLayout dim="0">
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="0" attributes="0">
-                                  <Component id="hlaLabel1" min="-2" max="-2" attributes="0"/>
+                                  <Component id="hlaALabel" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" attributes="0">
                                       <Component id="a5Prime" linkSize="1" min="-2" pref="28" max="-2" attributes="0"/>
@@ -306,7 +306,7 @@
                                   <EmptySpace min="-2" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="3" attributes="0">
                                       <Component id="a5Prime" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="hlaLabel1" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="hlaALabel" alignment="3" min="-2" max="-2" attributes="0"/>
                                       <Component id="aIntron1" alignment="3" min="-2" max="-2" attributes="0"/>
                                       <Component id="aExon1" alignment="3" min="-2" max="-2" attributes="0"/>
                                       <Component id="aExon2" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -350,6 +350,11 @@
                         </DimensionLayout>
                       </Layout>
                       <SubComponents>
+                        <Component class="javax.swing.JLabel" name="hlaALabel">
+                          <Properties>
+                            <Property name="text" type="java.lang.String" value="HLA-Aw"/>
+                          </Properties>
+                        </Component>
                         <Component class="javax.swing.JTextField" name="a5Prime">
                           <Properties>
                             <Property name="horizontalAlignment" type="int" value="0"/>
@@ -360,11 +365,6 @@
                           <Properties>
                             <Property name="horizontalAlignment" type="int" value="0"/>
                             <Property name="text" type="java.lang.String" value="000"/>
-                          </Properties>
-                        </Component>
-                        <Component class="javax.swing.JLabel" name="hlaLabel1">
-                          <Properties>
-                            <Property name="text" type="java.lang.String" value="HLA-Aw"/>
                           </Properties>
                         </Component>
                         <Component class="javax.swing.JTextField" name="aIntron1">
@@ -568,7 +568,7 @@
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace max="-2" attributes="0"/>
                               <Component id="jPanelEnterGfeB" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace pref="403" max="32767" attributes="0"/>
+                              <EmptySpace pref="338" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
@@ -577,7 +577,7 @@
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace max="-2" attributes="0"/>
                               <Component id="jPanelEnterGfeB" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace pref="46" max="32767" attributes="0"/>
+                              <EmptySpace pref="30" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
@@ -589,36 +589,120 @@
                         <DimensionLayout dim="0">
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="0" attributes="0">
-                                  <Component id="hlaLabel4" min="-2" max="-2" attributes="0"/>
+                                  <Component id="hlaBLabel" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="b5Prime" linkSize="2" min="-2" pref="28" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="b5Prime" linkSize="2" alignment="0" min="-2" pref="28" max="-2" attributes="0"/>
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
+                                          <Component id="jLabelB5" min="-2" pref="17" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
                                   <EmptySpace max="32767" attributes="0"/>
-                                  <Component id="aExon17" linkSize="2" min="-2" pref="28" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="bExon1" linkSize="2" alignment="0" min="-2" pref="28" max="-2" attributes="0"/>
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
+                                          <Component id="jLabelBE1" min="-2" pref="16" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
                                   <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="aIntron17" linkSize="2" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace min="-2" max="-2" attributes="0"/>
-                                  <Component id="aExon18" linkSize="2" min="-2" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="bIntron1" linkSize="2" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
+                                          <Component id="jLabelBI1" min="-2" pref="16" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
                                   <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="aIntron18" linkSize="2" min="-2" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="bExon2" linkSize="2" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
+                                          <Component id="jLabelBE2" min="-2" pref="16" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
                                   <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="aExon19" linkSize="2" min="-2" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="bIntron2" linkSize="2" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
+                                          <Component id="jLabelBI2" min="-2" pref="16" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
                                   <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="aIntron19" linkSize="2" min="-2" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="bExon3" linkSize="2" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
+                                          <Component id="jLabelBE3" min="-2" pref="16" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
                                   <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="aExon20" linkSize="2" min="-2" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="bIntron3" linkSize="2" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
+                                          <Component id="jLabelBI3" min="-2" pref="16" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
                                   <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="aIntron20" linkSize="2" min="-2" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="bExon4" linkSize="2" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
+                                          <Component id="jLabelBE4" min="-2" pref="16" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
                                   <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="jTextField49" linkSize="2" min="-2" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="bIntron4" linkSize="2" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
+                                          <Component id="jLabelBI4" min="-2" pref="16" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
                                   <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="jTextField50" linkSize="2" min="-2" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="bExon5" linkSize="2" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
+                                          <Component id="jLabelBE5" min="-2" pref="16" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
                                   <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="jTextField51" linkSize="2" min="-2" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="bIntron5" linkSize="2" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
+                                          <Component id="jLabelBI5" min="-2" pref="16" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
                                   <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="jTextField54" linkSize="2" min="-2" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="bExon6" linkSize="2" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
+                                          <Component id="jLabelBE6" min="-2" pref="16" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
                                   <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="jTextField52" linkSize="2" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace min="-2" pref="49" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="bIntron6" linkSize="2" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
+                                          <Component id="jLabelBI6" min="-2" pref="16" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Group type="102" attributes="0">
+                                          <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
+                                          <Component id="jLabelB3" min="-2" pref="16" max="-2" attributes="0"/>
+                                      </Group>
+                                      <Component id="b3prime" linkSize="2" min="-2" pref="33" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace min="-2" pref="44" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                         </DimensionLayout>
@@ -628,115 +712,202 @@
                                   <EmptySpace min="-2" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="3" attributes="0">
                                       <Component id="b5Prime" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="hlaLabel4" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="aIntron17" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="aExon17" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="aExon18" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="aIntron18" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="aExon19" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="aIntron19" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="aExon20" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="aIntron20" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jTextField49" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jTextField50" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jTextField51" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jTextField54" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jTextField52" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="hlaBLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="bIntron1" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="bExon1" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="bExon2" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="bIntron2" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="bExon3" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="bIntron3" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="bExon4" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="bIntron4" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="bExon5" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="bIntron5" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="bExon6" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="bIntron6" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="b3prime" alignment="3" min="-2" max="-2" attributes="0"/>
                                   </Group>
-                                  <EmptySpace pref="82" max="32767" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="jLabelB5" alignment="0" min="-2" pref="47" max="-2" attributes="0"/>
+                                      <Component id="jLabelBE1" alignment="0" min="-2" pref="47" max="-2" attributes="0"/>
+                                      <Component id="jLabelBI1" alignment="0" min="-2" pref="47" max="-2" attributes="0"/>
+                                      <Component id="jLabelBE2" alignment="0" min="-2" pref="47" max="-2" attributes="0"/>
+                                      <Component id="jLabelBI2" alignment="0" min="-2" pref="47" max="-2" attributes="0"/>
+                                      <Component id="jLabelB3" alignment="0" min="-2" pref="47" max="-2" attributes="0"/>
+                                      <Component id="jLabelBI6" alignment="0" min="-2" pref="47" max="-2" attributes="0"/>
+                                      <Component id="jLabelBE6" alignment="0" min="-2" pref="47" max="-2" attributes="0"/>
+                                      <Component id="jLabelBI5" alignment="0" min="-2" pref="47" max="-2" attributes="0"/>
+                                      <Component id="jLabelBE5" alignment="0" min="-2" pref="47" max="-2" attributes="0"/>
+                                      <Component id="jLabelBI4" alignment="0" min="-2" pref="47" max="-2" attributes="0"/>
+                                      <Component id="jLabelBE4" alignment="0" min="-2" pref="47" max="-2" attributes="0"/>
+                                      <Component id="jLabelBI3" alignment="0" min="-2" pref="47" max="-2" attributes="0"/>
+                                      <Component id="jLabelBE3" alignment="0" min="-2" pref="47" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace pref="45" max="32767" attributes="0"/>
                               </Group>
                           </Group>
                         </DimensionLayout>
                       </Layout>
                       <SubComponents>
+                        <Component class="javax.swing.JLabel" name="hlaBLabel">
+                          <Properties>
+                            <Property name="text" type="java.lang.String" value="HLA-Bw"/>
+                          </Properties>
+                        </Component>
                         <Component class="javax.swing.JTextField" name="b5Prime">
                           <Properties>
                             <Property name="horizontalAlignment" type="int" value="0"/>
                             <Property name="text" type="java.lang.String" value="000"/>
                           </Properties>
                         </Component>
-                        <Component class="javax.swing.JTextField" name="aExon17">
+                        <Component class="javax.swing.JTextField" name="bExon1">
                           <Properties>
                             <Property name="horizontalAlignment" type="int" value="0"/>
                             <Property name="text" type="java.lang.String" value="000"/>
                           </Properties>
                         </Component>
-                        <Component class="javax.swing.JLabel" name="hlaLabel4">
-                          <Properties>
-                            <Property name="text" type="java.lang.String" value="HLA-Bw"/>
-                          </Properties>
-                        </Component>
-                        <Component class="javax.swing.JTextField" name="aIntron17">
+                        <Component class="javax.swing.JTextField" name="bIntron1">
                           <Properties>
                             <Property name="horizontalAlignment" type="int" value="0"/>
                             <Property name="text" type="java.lang.String" value="000"/>
                           </Properties>
                         </Component>
-                        <Component class="javax.swing.JTextField" name="aExon18">
+                        <Component class="javax.swing.JTextField" name="bExon2">
                           <Properties>
                             <Property name="horizontalAlignment" type="int" value="0"/>
                             <Property name="text" type="java.lang.String" value="000"/>
                           </Properties>
                         </Component>
-                        <Component class="javax.swing.JTextField" name="aIntron18">
+                        <Component class="javax.swing.JTextField" name="bIntron2">
                           <Properties>
                             <Property name="horizontalAlignment" type="int" value="0"/>
                             <Property name="text" type="java.lang.String" value="000"/>
                           </Properties>
                         </Component>
-                        <Component class="javax.swing.JTextField" name="aExon19">
+                        <Component class="javax.swing.JTextField" name="bExon3">
                           <Properties>
                             <Property name="horizontalAlignment" type="int" value="0"/>
                             <Property name="text" type="java.lang.String" value="000"/>
                           </Properties>
                         </Component>
-                        <Component class="javax.swing.JTextField" name="aIntron19">
+                        <Component class="javax.swing.JTextField" name="bIntron3">
                           <Properties>
                             <Property name="horizontalAlignment" type="int" value="0"/>
                             <Property name="text" type="java.lang.String" value="000"/>
                           </Properties>
                         </Component>
-                        <Component class="javax.swing.JTextField" name="aExon20">
+                        <Component class="javax.swing.JTextField" name="bExon4">
                           <Properties>
                             <Property name="horizontalAlignment" type="int" value="0"/>
                             <Property name="text" type="java.lang.String" value="000"/>
                           </Properties>
                         </Component>
-                        <Component class="javax.swing.JTextField" name="aIntron20">
+                        <Component class="javax.swing.JTextField" name="bIntron4">
                           <Properties>
                             <Property name="horizontalAlignment" type="int" value="0"/>
                             <Property name="text" type="java.lang.String" value="000"/>
                           </Properties>
                         </Component>
-                        <Component class="javax.swing.JTextField" name="jTextField49">
+                        <Component class="javax.swing.JTextField" name="bExon5">
                           <Properties>
                             <Property name="horizontalAlignment" type="int" value="0"/>
                             <Property name="text" type="java.lang.String" value="000"/>
                           </Properties>
                         </Component>
-                        <Component class="javax.swing.JTextField" name="jTextField50">
+                        <Component class="javax.swing.JTextField" name="bIntron5">
                           <Properties>
                             <Property name="horizontalAlignment" type="int" value="0"/>
                             <Property name="text" type="java.lang.String" value="000"/>
                           </Properties>
                         </Component>
-                        <Component class="javax.swing.JTextField" name="jTextField51">
+                        <Component class="javax.swing.JTextField" name="bExon6">
                           <Properties>
                             <Property name="horizontalAlignment" type="int" value="0"/>
                             <Property name="text" type="java.lang.String" value="000"/>
                           </Properties>
                         </Component>
-                        <Component class="javax.swing.JTextField" name="jTextField54">
+                        <Component class="javax.swing.JTextField" name="bIntron6">
                           <Properties>
                             <Property name="horizontalAlignment" type="int" value="0"/>
                             <Property name="text" type="java.lang.String" value="000"/>
                           </Properties>
                         </Component>
-                        <Component class="javax.swing.JTextField" name="jTextField52">
+                        <Component class="javax.swing.JTextField" name="b3prime">
                           <Properties>
                             <Property name="horizontalAlignment" type="int" value="0"/>
                             <Property name="text" type="java.lang.String" value="000"/>
                           </Properties>
+                        </Component>
+                        <Component class="javax.swing.JLabel" name="jLabelB5">
+                          <AuxValues>
+                            <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="TextIcon t1B = new TextIcon(jLabelB5, &quot;5&apos; UTR&quot;, TextIcon.Layout.HORIZONTAL);&#xa;RotatedIcon r1B = new RotatedIcon(t1B, RotatedIcon.Rotate.DOWN);&#xa;jLabelB5.setIcon( r1B );"/>
+                          </AuxValues>
+                        </Component>
+                        <Component class="javax.swing.JLabel" name="jLabelBE1">
+                          <AuxValues>
+                            <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1B = new TextIcon(jLabelBE1, &quot;Exon 1&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1B = new RotatedIcon(t1B, RotatedIcon.Rotate.DOWN);&#xa;jLabelBE1.setIcon( r1B );"/>
+                          </AuxValues>
+                        </Component>
+                        <Component class="javax.swing.JLabel" name="jLabelBI1">
+                          <AuxValues>
+                            <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1B = new TextIcon(jLabelBI1, &quot;Intron 1&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1B = new RotatedIcon(t1B, RotatedIcon.Rotate.DOWN);&#xa;jLabelBI1.setIcon( r1B );"/>
+                          </AuxValues>
+                        </Component>
+                        <Component class="javax.swing.JLabel" name="jLabelBE2">
+                          <AuxValues>
+                            <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1B = new TextIcon(jLabelBE2, &quot;Exon 2&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1B = new RotatedIcon(t1B, RotatedIcon.Rotate.DOWN);&#xa;jLabelBE2.setIcon( r1B );"/>
+                          </AuxValues>
+                        </Component>
+                        <Component class="javax.swing.JLabel" name="jLabelBI2">
+                          <AuxValues>
+                            <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1B = new TextIcon(jLabelBI2, &quot;Intron 2&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1B = new RotatedIcon(t1B, RotatedIcon.Rotate.DOWN);&#xa;jLabelBI2.setIcon( r1B );"/>
+                          </AuxValues>
+                        </Component>
+                        <Component class="javax.swing.JLabel" name="jLabelBE3">
+                          <AuxValues>
+                            <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1B = new TextIcon(jLabelBE3, &quot;Exon 3&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1B = new RotatedIcon(t1B, RotatedIcon.Rotate.DOWN);&#xa;jLabelBE3.setIcon( r1B );"/>
+                          </AuxValues>
+                        </Component>
+                        <Component class="javax.swing.JLabel" name="jLabelBI3">
+                          <AuxValues>
+                            <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1B = new TextIcon(jLabelBI3, &quot;Intron 3&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1B = new RotatedIcon(t1B, RotatedIcon.Rotate.DOWN);&#xa;jLabelBI3.setIcon( r1B );"/>
+                          </AuxValues>
+                        </Component>
+                        <Component class="javax.swing.JLabel" name="jLabelBE4">
+                          <AuxValues>
+                            <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1B = new TextIcon(jLabelBE4, &quot;Exon 4&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1B = new RotatedIcon(t1B, RotatedIcon.Rotate.DOWN);&#xa;jLabelBE4.setIcon( r1B );"/>
+                          </AuxValues>
+                        </Component>
+                        <Component class="javax.swing.JLabel" name="jLabelBI4">
+                          <AuxValues>
+                            <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1B = new TextIcon(jLabelBI4, &quot;Intron 4&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1B = new RotatedIcon(t1B, RotatedIcon.Rotate.DOWN);&#xa;jLabelBI4.setIcon( r1B );"/>
+                          </AuxValues>
+                        </Component>
+                        <Component class="javax.swing.JLabel" name="jLabelBE5">
+                          <AuxValues>
+                            <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1B = new TextIcon(jLabelBE5, &quot;Exon 5&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1B = new RotatedIcon(t1B, RotatedIcon.Rotate.DOWN);&#xa;jLabelBE5.setIcon( r1B );"/>
+                          </AuxValues>
+                        </Component>
+                        <Component class="javax.swing.JLabel" name="jLabelBI5">
+                          <AuxValues>
+                            <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1B = new TextIcon(jLabelBI5, &quot;Intron 5&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1B = new RotatedIcon(t1B, RotatedIcon.Rotate.DOWN);&#xa;jLabelBI5.setIcon( r1B );"/>
+                          </AuxValues>
+                        </Component>
+                        <Component class="javax.swing.JLabel" name="jLabelBE6">
+                          <AuxValues>
+                            <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1B = new TextIcon(jLabelBE6, &quot;Exon 6&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1B = new RotatedIcon(t1B, RotatedIcon.Rotate.DOWN);&#xa;jLabelBE6.setIcon( r1B );"/>
+                          </AuxValues>
+                        </Component>
+                        <Component class="javax.swing.JLabel" name="jLabelBI6">
+                          <AuxValues>
+                            <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1B = new TextIcon(jLabelBI6, &quot;Intron 6&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1B = new RotatedIcon(t1B, RotatedIcon.Rotate.DOWN);&#xa;jLabelBI6.setIcon( r1B );"/>
+                          </AuxValues>
+                        </Component>
+                        <Component class="javax.swing.JLabel" name="jLabelB3">
+                          <AuxValues>
+                            <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1B = new TextIcon(jLabelB3, &quot;3&apos; UTR&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1B = new RotatedIcon(t1B, RotatedIcon.Rotate.DOWN);&#xa;jLabelB3.setIcon( r1B );"/>
+                          </AuxValues>
                         </Component>
                       </SubComponents>
                     </Container>
