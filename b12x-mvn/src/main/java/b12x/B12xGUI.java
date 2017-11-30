@@ -38,6 +38,7 @@ public class B12xGUI extends javax.swing.JFrame {
         neo4j = new javax.swing.JPanel();
         goButton = new javax.swing.JToggleButton();
         hlaSelectNeo4j = new javax.swing.JComboBox<>();
+        jLabel1 = new javax.swing.JLabel();
         mainCardPanel = new javax.swing.JPanel();
         jPanelA = new javax.swing.JPanel();
         jPanelEnterGfeA = new javax.swing.JPanel();
@@ -164,62 +165,47 @@ public class B12xGUI extends javax.swing.JFrame {
             }
         });
 
+        jLabel1.setText("Enter in the terms you are looking for. (Zero is a valid term.)  Empty boxes function as wildcards.");
+
         mainCardPanel.setLayout(new java.awt.CardLayout());
 
         hlaALabel.setText("HLA-Aw");
 
         a5Prime.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        a5Prime.setText("000");
 
         aExon1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        aExon1.setText("000");
 
         aIntron1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        aIntron1.setText("000");
 
         aExon2.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        aExon2.setText("000");
 
         aIntron2.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        aIntron2.setText("000");
 
         aExon3.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        aExon3.setText("000");
 
         aIntron3.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        aIntron3.setText("000");
 
         aExon4.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        aExon4.setText("000");
 
         aIntron4.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        aIntron4.setText("000");
 
         aExon5.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        aExon5.setText("000");
 
         aIntron5.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        aIntron5.setText("000");
 
         aExon6.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        aExon6.setText("000");
 
         aIntron6.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        aIntron6.setText("000");
 
         aExon7.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        aExon7.setText("000");
 
         aIntron7.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        aIntron7.setText("000");
         aIntron7.setMaximumSize(new java.awt.Dimension(10, 26));
 
         aExon8.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        aExon8.setText("000");
         aExon8.setMaximumSize(new java.awt.Dimension(10, 26));
 
         a3Prime.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        a3Prime.setText("000");
         a3Prime.setMaximumSize(new java.awt.Dimension(10, 26));
 
         TextIcon t1 = new TextIcon(jLabelA5, "5' UTR", TextIcon.Layout.HORIZONTAL);
@@ -398,7 +384,7 @@ public class B12xGUI extends javax.swing.JFrame {
                         .addGap(10, 10, 10)
                         .addComponent(jLabelA3, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(a3Prime, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(22, 22, 22))
+                .addContainerGap())
         );
 
         jPanelEnterGfeALayout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {a5Prime, aExon1, aExon2, aExon3, aExon4, aExon5, aExon6, aExon7, aIntron1, aIntron2, aIntron3, aIntron4, aIntron5, aIntron6, aIntron7});
@@ -455,7 +441,7 @@ public class B12xGUI extends javax.swing.JFrame {
             .addGroup(jPanelALayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jPanelEnterGfeA, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(242, Short.MAX_VALUE))
+                .addContainerGap(254, Short.MAX_VALUE))
         );
         jPanelALayout.setVerticalGroup(
             jPanelALayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -470,46 +456,37 @@ public class B12xGUI extends javax.swing.JFrame {
         hlaBLabel.setText("HLA-Bw");
 
         b5Prime.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        b5Prime.setText("000");
 
         bExon1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        bExon1.setText("000");
+        bExon1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bExon1ActionPerformed(evt);
+            }
+        });
 
         bIntron1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        bIntron1.setText("000");
 
         bExon2.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        bExon2.setText("000");
 
         bIntron2.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        bIntron2.setText("000");
 
         bExon3.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        bExon3.setText("000");
 
         bIntron3.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        bIntron3.setText("000");
 
         bExon4.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        bExon4.setText("000");
 
         bIntron4.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        bIntron4.setText("000");
 
         bExon5.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        bExon5.setText("000");
 
         bIntron5.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        bIntron5.setText("000");
 
         bExon6.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        bExon6.setText("000");
 
         bIntron6.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        bIntron6.setText("000");
 
         b3prime.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        b3prime.setText("000");
 
         TextIcon t1B = new TextIcon(jLabelB5, "5' UTR", TextIcon.Layout.HORIZONTAL);
         RotatedIcon r1B = new RotatedIcon(t1B, RotatedIcon.Rotate.DOWN);
@@ -723,55 +700,38 @@ public class B12xGUI extends javax.swing.JFrame {
         hlaCLabel.setText("HLA-Cw");
 
         c5Prime.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        c5Prime.setText("000");
 
         cExon1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        cExon1.setText("000");
 
         cIntron1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        cIntron1.setText("000");
 
         cExon2.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        cExon2.setText("000");
 
         cIntron2.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        cIntron2.setText("000");
 
         cExon3.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        cExon3.setText("000");
 
         cIntron3.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        cIntron3.setText("000");
 
         cExon4.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        cExon4.setText("000");
 
         cIntron4.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        cIntron4.setText("000");
 
         cExon5.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        cExon5.setText("000");
 
         cIntron5.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        cIntron5.setText("000");
 
         cExon6.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        cExon6.setText("000");
 
         cIntron6.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        cIntron6.setText("000");
 
         cExon7.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        cExon7.setText("000");
 
         cIntron7.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        cIntron7.setText("000");
 
         cExon8.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        cExon8.setText("000");
 
         c3Prime.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        c3Prime.setText("000");
         c3Prime.setMaximumSize(new java.awt.Dimension(10, 26));
 
         TextIcon t1C = new TextIcon(jLabelC5, "5' UTR", TextIcon.Layout.HORIZONTAL);
@@ -1031,19 +991,23 @@ public class B12xGUI extends javax.swing.JFrame {
                     .addGroup(neo4jLayout.createSequentialGroup()
                         .addGroup(neo4jLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(neo4jLayout.createSequentialGroup()
-                                .addGap(32, 32, 32)
-                                .addComponent(hlaSelectNeo4j, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(neo4jLayout.createSequentialGroup()
                                 .addGap(383, 383, 383)
-                                .addComponent(goButton)))
+                                .addComponent(goButton))
+                            .addGroup(neo4jLayout.createSequentialGroup()
+                                .addGap(32, 32, 32)
+                                .addComponent(hlaSelectNeo4j, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 626, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         neo4jLayout.setVerticalGroup(
             neo4jLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, neo4jLayout.createSequentialGroup()
-                .addGap(45, 45, 45)
-                .addComponent(hlaSelectNeo4j, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(40, Short.MAX_VALUE)
+                .addGroup(neo4jLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(hlaSelectNeo4j, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(mainCardPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(112, 112, 112)
@@ -1159,6 +1123,10 @@ public class B12xGUI extends javax.swing.JFrame {
                 break;
         }
     }//GEN-LAST:event_hlaSelectNeo4jActionPerformed
+
+    private void bExon1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bExon1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_bExon1ActionPerformed
     
     /**
      * @param args the command line arguments
@@ -1250,6 +1218,7 @@ public class B12xGUI extends javax.swing.JFrame {
     private javax.swing.JLabel hlaCLabel;
     private javax.swing.JComboBox<String> hlaSelectNeo4j;
     private javax.swing.JComboBox<String> hlaSelectUpdate;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabelA3;
     private javax.swing.JLabel jLabelA5;
     private javax.swing.JLabel jLabelAE1;
