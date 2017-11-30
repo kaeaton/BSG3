@@ -3,9 +3,10 @@ package b12x;
 import neo4j.Neo4j;
 
 import java.awt.CardLayout;
-import java.awt.TextField;
+import java.awt.Component;
 import java.nio.file.*;
-import java.util.ArrayList;
+import javax.swing.JPanel;
+import javax.swing.JTextField;
 
 
 /*
@@ -45,23 +46,23 @@ public class B12xGUI extends javax.swing.JFrame {
         jPanelA = new javax.swing.JPanel();
         jPanelEnterGfeA = new javax.swing.JPanel();
         hlaALabel = new javax.swing.JLabel();
-        a5Prime = new javax.swing.JTextField();
-        aExon1 = new javax.swing.JTextField();
-        aIntron1 = new javax.swing.JTextField();
-        aExon2 = new javax.swing.JTextField();
-        aIntron2 = new javax.swing.JTextField();
-        aExon3 = new javax.swing.JTextField();
-        aIntron3 = new javax.swing.JTextField();
-        aExon4 = new javax.swing.JTextField();
-        aIntron4 = new javax.swing.JTextField();
-        aExon5 = new javax.swing.JTextField();
-        aIntron5 = new javax.swing.JTextField();
-        aExon6 = new javax.swing.JTextField();
-        aIntron6 = new javax.swing.JTextField();
-        aExon7 = new javax.swing.JTextField();
-        aIntron7 = new javax.swing.JTextField();
-        aExon8 = new javax.swing.JTextField();
-        a3Prime = new javax.swing.JTextField();
+        a5Prime_1 = new javax.swing.JTextField();
+        aExon1_2 = new javax.swing.JTextField();
+        aIntron1_3 = new javax.swing.JTextField();
+        aExon2_4 = new javax.swing.JTextField();
+        aIntron2_5 = new javax.swing.JTextField();
+        aExon3_6 = new javax.swing.JTextField();
+        aIntron3_7 = new javax.swing.JTextField();
+        aExon4_8 = new javax.swing.JTextField();
+        aIntron4_9 = new javax.swing.JTextField();
+        aExon5_10 = new javax.swing.JTextField();
+        aIntron5_11 = new javax.swing.JTextField();
+        aExon6_12 = new javax.swing.JTextField();
+        aIntron6_13 = new javax.swing.JTextField();
+        aExon7_14 = new javax.swing.JTextField();
+        aIntron7_15 = new javax.swing.JTextField();
+        aExon8_16 = new javax.swing.JTextField();
+        a3Prime_17 = new javax.swing.JTextField();
         jLabelA5 = new javax.swing.JLabel();
         jLabelA3 = new javax.swing.JLabel();
         jLabelAE8 = new javax.swing.JLabel();
@@ -175,42 +176,42 @@ public class B12xGUI extends javax.swing.JFrame {
 
         hlaALabel.setText("HLA-Aw");
 
-        a5Prime.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        a5Prime_1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
 
-        aExon1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        aExon1_2.setHorizontalAlignment(javax.swing.JTextField.CENTER);
 
-        aIntron1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        aIntron1_3.setHorizontalAlignment(javax.swing.JTextField.CENTER);
 
-        aExon2.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        aExon2_4.setHorizontalAlignment(javax.swing.JTextField.CENTER);
 
-        aIntron2.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        aIntron2_5.setHorizontalAlignment(javax.swing.JTextField.CENTER);
 
-        aExon3.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        aExon3_6.setHorizontalAlignment(javax.swing.JTextField.CENTER);
 
-        aIntron3.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        aIntron3_7.setHorizontalAlignment(javax.swing.JTextField.CENTER);
 
-        aExon4.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        aExon4_8.setHorizontalAlignment(javax.swing.JTextField.CENTER);
 
-        aIntron4.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        aIntron4_9.setHorizontalAlignment(javax.swing.JTextField.CENTER);
 
-        aExon5.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        aExon5_10.setHorizontalAlignment(javax.swing.JTextField.CENTER);
 
-        aIntron5.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        aIntron5_11.setHorizontalAlignment(javax.swing.JTextField.CENTER);
 
-        aExon6.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        aExon6_12.setHorizontalAlignment(javax.swing.JTextField.CENTER);
 
-        aIntron6.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        aIntron6_13.setHorizontalAlignment(javax.swing.JTextField.CENTER);
 
-        aExon7.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        aExon7_14.setHorizontalAlignment(javax.swing.JTextField.CENTER);
 
-        aIntron7.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        aIntron7.setMaximumSize(new java.awt.Dimension(10, 26));
+        aIntron7_15.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        aIntron7_15.setMaximumSize(new java.awt.Dimension(10, 26));
 
-        aExon8.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        aExon8.setMaximumSize(new java.awt.Dimension(10, 26));
+        aExon8_16.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        aExon8_16.setMaximumSize(new java.awt.Dimension(10, 26));
 
-        a3Prime.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        a3Prime.setMaximumSize(new java.awt.Dimension(10, 26));
+        a3Prime_17.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        a3Prime_17.setMaximumSize(new java.awt.Dimension(10, 26));
 
         TextIcon t1 = new TextIcon(jLabelA5, "5' UTR", TextIcon.Layout.HORIZONTAL);
         RotatedIcon r1 = new RotatedIcon(t1, RotatedIcon.Rotate.DOWN);
@@ -288,97 +289,97 @@ public class B12xGUI extends javax.swing.JFrame {
                 .addComponent(hlaALabel)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanelEnterGfeALayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(a5Prime, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(a5Prime_1, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanelEnterGfeALayout.createSequentialGroup()
                         .addGap(10, 10, 10)
                         .addComponent(jLabelA5, javax.swing.GroupLayout.PREFERRED_SIZE, 17, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanelEnterGfeALayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(aExon1, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(aExon1_2, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanelEnterGfeALayout.createSequentialGroup()
                         .addGap(10, 10, 10)
                         .addComponent(jLabelAE1, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanelEnterGfeALayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(aIntron1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(aIntron1_3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanelEnterGfeALayout.createSequentialGroup()
                         .addGap(10, 10, 10)
                         .addComponent(jLabelAI1, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanelEnterGfeALayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(aExon2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(aExon2_4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanelEnterGfeALayout.createSequentialGroup()
                         .addGap(10, 10, 10)
                         .addComponent(jLabelAE2, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanelEnterGfeALayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(aIntron2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(aIntron2_5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanelEnterGfeALayout.createSequentialGroup()
                         .addGap(10, 10, 10)
                         .addComponent(jLabelAI2, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanelEnterGfeALayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(aExon3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(aExon3_6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanelEnterGfeALayout.createSequentialGroup()
                         .addGap(10, 10, 10)
                         .addComponent(jLabelAI3, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanelEnterGfeALayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(aIntron3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(aIntron3_7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanelEnterGfeALayout.createSequentialGroup()
                         .addGap(10, 10, 10)
                         .addComponent(jLabelAE3, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanelEnterGfeALayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(aExon4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(aExon4_8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanelEnterGfeALayout.createSequentialGroup()
                         .addGap(10, 10, 10)
                         .addComponent(jLabelAE4, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanelEnterGfeALayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(aIntron4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(aIntron4_9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanelEnterGfeALayout.createSequentialGroup()
                         .addGap(10, 10, 10)
                         .addComponent(jLabelAI4, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanelEnterGfeALayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(aExon5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(aExon5_10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanelEnterGfeALayout.createSequentialGroup()
                         .addGap(10, 10, 10)
                         .addComponent(jLabelAE5, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanelEnterGfeALayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(aIntron5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(aIntron5_11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanelEnterGfeALayout.createSequentialGroup()
                         .addGap(10, 10, 10)
                         .addComponent(jLabelAI5, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanelEnterGfeALayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(aExon6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(aExon6_12, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanelEnterGfeALayout.createSequentialGroup()
                         .addGap(10, 10, 10)
                         .addComponent(jLabelAE6, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanelEnterGfeALayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(aIntron6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(aIntron6_13, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanelEnterGfeALayout.createSequentialGroup()
                         .addGap(10, 10, 10)
                         .addComponent(jLabelAI6, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanelEnterGfeALayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(aExon7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(aExon7_14, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanelEnterGfeALayout.createSequentialGroup()
                         .addGap(10, 10, 10)
                         .addComponent(jLabelAE7, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanelEnterGfeALayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(aIntron7, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(aIntron7_15, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanelEnterGfeALayout.createSequentialGroup()
                         .addGap(10, 10, 10)
                         .addComponent(jLabelAI7, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanelEnterGfeALayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(aExon8, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(aExon8_16, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanelEnterGfeALayout.createSequentialGroup()
                         .addGap(10, 10, 10)
                         .addComponent(jLabelAE8, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)))
@@ -387,35 +388,35 @@ public class B12xGUI extends javax.swing.JFrame {
                     .addGroup(jPanelEnterGfeALayout.createSequentialGroup()
                         .addGap(10, 10, 10)
                         .addComponent(jLabelA3, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(a3Prime, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(a3Prime_17, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap())
         );
 
-        jPanelEnterGfeALayout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {a5Prime, aExon1, aExon2, aExon3, aExon4, aExon5, aExon6, aExon7, aIntron1, aIntron2, aIntron3, aIntron4, aIntron5, aIntron6, aIntron7});
+        jPanelEnterGfeALayout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {a5Prime_1, aExon1_2, aExon2_4, aExon3_6, aExon4_8, aExon5_10, aExon6_12, aExon7_14, aIntron1_3, aIntron2_5, aIntron3_7, aIntron4_9, aIntron5_11, aIntron6_13, aIntron7_15});
 
         jPanelEnterGfeALayout.setVerticalGroup(
             jPanelEnterGfeALayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanelEnterGfeALayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanelEnterGfeALayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(a5Prime, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(a5Prime_1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(hlaALabel)
-                    .addComponent(aIntron1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(aExon1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(aExon2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(aIntron2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(aExon3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(aIntron3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(aExon4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(aIntron4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(aExon5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(aIntron5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(aExon6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(aIntron6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(aExon7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(aIntron7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(aExon8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(a3Prime, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(aIntron1_3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(aExon1_2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(aExon2_4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(aIntron2_5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(aExon3_6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(aIntron3_7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(aExon4_8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(aIntron4_9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(aExon5_10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(aIntron5_11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(aExon6_12, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(aIntron6_13, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(aExon7_14, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(aIntron7_15, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(aExon8_16, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(a3Prime_17, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanelEnterGfeALayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabelA5, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -1099,11 +1100,23 @@ public class B12xGUI extends javax.swing.JFrame {
             Neo4j neo4j = new Neo4j(locus, path);
             neo4j.fetchData();
 
-            String textFieldValue1 = a5Prime.getText();
+            String textFieldValue1 = a5Prime_1.getText();
             System.out.println("A 5' - " + textFieldValue1);
-            String textFieldValue2 = aExon1.getText();
+            String textFieldValue2 = aExon1_2.getText();
             System.out.println("A Exon 1 - " + textFieldValue2);
 
+//            for (Component C : this.getComponents()) {    
+//                if (C instanceof JTextField || C instanceof JTextArea){
+//                    ((JTextComponent) C).setText(""); //abstract superclass
+//                }
+//            }
+
+            for (Component component : jPanelEnterGfeA.getComponents()) {    
+                if (component instanceof JTextField){
+                    System.out.println(((JTextField) component).getText());
+//                    ((JTextComponent) C).setText(""); //abstract superclass
+                }
+            }
             
             System.out.println("Gui running " + locus);
 
@@ -1188,23 +1201,23 @@ public class B12xGUI extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JTextField a3Prime;
-    private javax.swing.JTextField a5Prime;
-    private javax.swing.JTextField aExon1;
-    private javax.swing.JTextField aExon2;
-    private javax.swing.JTextField aExon3;
-    private javax.swing.JTextField aExon4;
-    private javax.swing.JTextField aExon5;
-    private javax.swing.JTextField aExon6;
-    private javax.swing.JTextField aExon7;
-    private javax.swing.JTextField aExon8;
-    private javax.swing.JTextField aIntron1;
-    private javax.swing.JTextField aIntron2;
-    private javax.swing.JTextField aIntron3;
-    private javax.swing.JTextField aIntron4;
-    private javax.swing.JTextField aIntron5;
-    private javax.swing.JTextField aIntron6;
-    private javax.swing.JTextField aIntron7;
+    private javax.swing.JTextField a3Prime_17;
+    private javax.swing.JTextField a5Prime_1;
+    private javax.swing.JTextField aExon1_2;
+    private javax.swing.JTextField aExon2_4;
+    private javax.swing.JTextField aExon3_6;
+    private javax.swing.JTextField aExon4_8;
+    private javax.swing.JTextField aExon5_10;
+    private javax.swing.JTextField aExon6_12;
+    private javax.swing.JTextField aExon7_14;
+    private javax.swing.JTextField aExon8_16;
+    private javax.swing.JTextField aIntron1_3;
+    private javax.swing.JTextField aIntron2_5;
+    private javax.swing.JTextField aIntron3_7;
+    private javax.swing.JTextField aIntron4_9;
+    private javax.swing.JTextField aIntron5_11;
+    private javax.swing.JTextField aIntron6_13;
+    private javax.swing.JTextField aIntron7_15;
     private javax.swing.JTextField b3prime;
     private javax.swing.JTextField b5Prime;
     private javax.swing.JTextField bExon1;
@@ -1305,10 +1318,5 @@ public class B12xGUI extends javax.swing.JFrame {
     private javax.swing.JPanel neo4jUpdate;
     private javax.swing.JToggleButton updateButton;
     // End of variables declaration//GEN-END:variables
-
-    ArrayList<TextField> hlaATerms = new ArrayList<TextField>();
-    hlaATerms.add(a5Prime);
-    
-    a5Prime.getText().isEmpty();
 
 }
