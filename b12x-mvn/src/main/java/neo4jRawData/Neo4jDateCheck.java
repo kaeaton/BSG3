@@ -34,13 +34,17 @@ public class Neo4jDateCheck {
     }
     
     public LocalDate getFileDate(File file) throws IOException {
-        // Get file date
-        BufferedReader br = new BufferedReader(new FileReader(file));
-        String line = br.readLine();
-        System.out.println(line);
-        br.close();
-        LocalDate fileDate = LocalDate.parse(line); 
-        return fileDate;
+//        try {
+            BufferedReader br = new BufferedReader(new FileReader(file));
+            String line = br.readLine();
+            System.out.println("Last updated: " + line);
+            br.close();
+            LocalDate fileDate = LocalDate.parse(line); 
+            return fileDate;
+//        } catch (Exception ex) {
+//            System.out.println(ex); 
+//        }
+//        return fileData;
     }
     
     public boolean checkDate(File file) throws IOException {
@@ -49,12 +53,7 @@ public class Neo4jDateCheck {
             LocalDate expirationDate = LocalDate.now().minus(1, ChronoUnit.MONTHS);
             System.out.println(expirationDate);
             
-//            // Get file date
-//            BufferedReader br = new BufferedReader(new FileReader(file));
-//            String line = br.readLine();
-//            System.out.println(line);
-//            br.close();
-//            LocalDate fileDate = LocalDate.parse(line);
+            // Get file date
             LocalDate fileDate = getFileDate(file);
 
             // compare file date to expiration date

@@ -17,8 +17,12 @@ public class Neo4jLocusB {
     private String locusBRegex = "^HLA-Bw(\\d+)-(\\d+)-(\\d+)-(\\d+)-(\\d+)"
             + "-(\\d+)-(\\d+)-(\\d+)-(\\d+)-(\\d+)-(\\d+)-(\\d+)-(\\d+)-(\\d+)$";
     
-    private String locusBRegexTest = "^HLA-Bw(\\d+)-(\\d+)-(\\d+)-(\\d+)-(\\d+)"
-            + "-(1)-(\\d+)-(\\d+)-(\\d+)-(\\d+)-(\\d+)-(\\d+)-(\\d+)-(\\d+)$";
+    private String locusBRegexConfusionTest = "^HLA-Bw(\\d+)-(\\d+)-(\\d+)"
+            + "-(\\d+)-(\\d+)-(\\d+)-(\\d+)-(\\d+)-(\\d+)-(\\d+)-(\\d+)-(\\d+)"
+            + "-(\\d+)-(\\d+)-(\\d+)+(\\d+)+(\\d+)$";
+    
+    private String locusBRegexTest = "^HLA-Bw(\\d+)-1-1-(\\d+)-(\\d+)"
+            + "-(\\d+)-(\\d+)-(\\d+)-(\\d+)-(\\d+)-(\\d+)-(\\d+)-(\\d+)-(\\d+)$";
     
     public Neo4jLocusB () {
         
