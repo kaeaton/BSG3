@@ -33,19 +33,30 @@ public class Neo4jDateCheck {
 //        fileLocation = fileLoc;
     }
     
+    public LocalDate getFileDate(File file) throws IOException {
+        // Get file date
+        BufferedReader br = new BufferedReader(new FileReader(file));
+        String line = br.readLine();
+        System.out.println(line);
+        br.close();
+        LocalDate fileDate = LocalDate.parse(line); 
+        return fileDate;
+    }
+    
     public boolean checkDate(File file) throws IOException {
         try {
             // Set expiration date
             LocalDate expirationDate = LocalDate.now().minus(1, ChronoUnit.MONTHS);
             System.out.println(expirationDate);
             
-            // Get file date
-            BufferedReader br = new BufferedReader(new FileReader(file));
-            String line = br.readLine();
-            System.out.println(line);
-            br.close();
-            LocalDate fileDate = LocalDate.parse(line);
-            
+//            // Get file date
+//            BufferedReader br = new BufferedReader(new FileReader(file));
+//            String line = br.readLine();
+//            System.out.println(line);
+//            br.close();
+//            LocalDate fileDate = LocalDate.parse(line);
+            LocalDate fileDate = getFileDate(file);
+
             // compare file date to expiration date
             if (fileDate.isBefore(expirationDate)){
                 System.out.println("expired");

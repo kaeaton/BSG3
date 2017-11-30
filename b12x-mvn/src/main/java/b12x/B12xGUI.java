@@ -1015,7 +1015,7 @@ public class B12xGUI extends javax.swing.JFrame {
                 .addGap(52, 52, 52))
         );
 
-        jTabbedPane2.addTab("Neo4j", neo4j);
+        jTabbedPane2.addTab("Neo4j GFE Search", neo4j);
 
         hlaSelectUpdate.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "HLA-A", "HLA-B", "HLA-C" }));
 
@@ -1098,7 +1098,7 @@ public class B12xGUI extends javax.swing.JFrame {
                     + "neo4j_" + locus + "_Download.csv");
 
             Neo4j neo4j = new Neo4j(locus, path);
-            neo4j.fetchData();
+            neo4j.dataUpdate();
         } catch (Exception ex) {
             System.out.println(ex);
         }
