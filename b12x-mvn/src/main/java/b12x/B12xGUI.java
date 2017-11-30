@@ -3,7 +3,9 @@ package b12x;
 import neo4j.Neo4j;
 
 import java.awt.CardLayout;
+import java.awt.TextField;
 import java.nio.file.*;
+import java.util.ArrayList;
 
 
 /*
@@ -1083,6 +1085,8 @@ public class B12xGUI extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+
+    
     private void goButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_goButtonActionPerformed
         try {
             String locus = hlaSelectNeo4j.getSelectedItem().toString();
@@ -1095,6 +1099,12 @@ public class B12xGUI extends javax.swing.JFrame {
             Neo4j neo4j = new Neo4j(locus, path);
             neo4j.fetchData();
 
+            String textFieldValue1 = a5Prime.getText();
+            System.out.println("A 5' - " + textFieldValue1);
+            String textFieldValue2 = aExon1.getText();
+            System.out.println("A Exon 1 - " + textFieldValue2);
+
+            
             System.out.println("Gui running " + locus);
 
         } catch (Exception ex) {
@@ -1295,4 +1305,10 @@ public class B12xGUI extends javax.swing.JFrame {
     private javax.swing.JPanel neo4jUpdate;
     private javax.swing.JToggleButton updateButton;
     // End of variables declaration//GEN-END:variables
+
+    ArrayList<TextField> hlaATerms = new ArrayList<TextField>();
+    hlaATerms.add(a5Prime);
+    
+    a5Prime.getText().isEmpty();
+
 }
