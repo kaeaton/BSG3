@@ -177,41 +177,58 @@ public class B12xGUI extends javax.swing.JFrame {
         hlaALabel.setText("HLA-Aw");
 
         a5Prime_1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        a5Prime_1.setName("1"); // NOI18N
 
         aExon1_2.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        aExon1_2.setName("2"); // NOI18N
 
         aIntron1_3.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        aIntron1_3.setName("3"); // NOI18N
 
         aExon2_4.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        aExon2_4.setName("4"); // NOI18N
 
         aIntron2_5.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        aIntron2_5.setName("5"); // NOI18N
 
         aExon3_6.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        aExon3_6.setName("6"); // NOI18N
 
         aIntron3_7.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        aIntron3_7.setName("7"); // NOI18N
 
         aExon4_8.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        aExon4_8.setName("8"); // NOI18N
 
         aIntron4_9.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        aIntron4_9.setName("9"); // NOI18N
 
         aExon5_10.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        aExon5_10.setName("10"); // NOI18N
 
         aIntron5_11.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        aIntron5_11.setName("11"); // NOI18N
 
         aExon6_12.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        aExon6_12.setName("12"); // NOI18N
 
         aIntron6_13.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        aIntron6_13.setName("13"); // NOI18N
 
         aExon7_14.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        aExon7_14.setName("14"); // NOI18N
 
         aIntron7_15.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         aIntron7_15.setMaximumSize(new java.awt.Dimension(10, 26));
+        aIntron7_15.setName("15"); // NOI18N
 
         aExon8_16.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         aExon8_16.setMaximumSize(new java.awt.Dimension(10, 26));
+        aExon8_16.setName("16"); // NOI18N
 
         a3Prime_17.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         a3Prime_17.setMaximumSize(new java.awt.Dimension(10, 26));
+        a3Prime_17.setName("17"); // NOI18N
 
         TextIcon t1 = new TextIcon(jLabelA5, "5' UTR", TextIcon.Layout.HORIZONTAL);
         RotatedIcon r1 = new RotatedIcon(t1, RotatedIcon.Rotate.DOWN);
@@ -1113,8 +1130,13 @@ public class B12xGUI extends javax.swing.JFrame {
 
             for (Component component : jPanelEnterGfeA.getComponents()) {    
                 if (component instanceof JTextField){
-                    System.out.println(((JTextField) component).getText());
-//                    ((JTextComponent) C).setText(""); //abstract superclass
+                    System.out.println(component.getName() + " - "
+                            + ((JTextField) component).getText());
+
+                    // Class that takes current search string, and data from the 
+                    // textfield, does a regex swap based on group # located in 
+                    // each jtextfield component's name.
+
                 }
             }
             
