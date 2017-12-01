@@ -1117,22 +1117,12 @@ public class B12xGUI extends javax.swing.JFrame {
             Neo4j neo4j = new Neo4j(locus, path);
             neo4j.fetchData();
 
-            String textFieldValue1 = a5Prime_1.getText();
-            System.out.println("A 5' - " + textFieldValue1);
-            String textFieldValue2 = aExon1_2.getText();
-            System.out.println("A Exon 1 - " + textFieldValue2);
-
-//            for (Component C : this.getComponents()) {    
-//                if (C instanceof JTextField || C instanceof JTextArea){
-//                    ((JTextComponent) C).setText(""); //abstract superclass
-//                }
-//            }
-
             String locusARegex = "^HLA-Aw(\\d+)-(\\d+)-(\\d+)-(\\d+)-(\\d+)"
             + "-(\\d+)-(\\d+)-(\\d+)-(\\d+)-(\\d+)-(\\d+)-(\\d+)-(\\d+)-(\\d+)"
             + "-(\\d+)-(\\d+)-(\\d+)$";
             
             String currentRegex = locusARegex;
+            String newRegex = "";
 
             for (Component component : jPanelEnterGfeA.getComponents()) {    
                 if (component instanceof JTextField && !((JTextField)component).getText().isEmpty()){
@@ -1146,13 +1136,13 @@ public class B12xGUI extends javax.swing.JFrame {
                     // textfield, does a regex swap based on group # located in 
                     // each jtextfield component's name.
                     Neo4jRegexGroupSwapper swapper = new Neo4jRegexGroupSwapper();
-                    currentRegex = swapper.createSearchRegex(currentRegex, regexGroup, type);
+                    newRegex = swapper.createSearchRegex(currentRegex, regexGroup, type);
 
                 }
             }
             
             System.out.println("Gui running " + locus);
-            System.out.println("Current Regex " + currentRegex);
+            System.out.println("New Regex " + newRegex);
 
         } catch (Exception ex) {
             System.out.println(ex);
