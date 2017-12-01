@@ -5,8 +5,7 @@
  */
 package neo4j;
 
-import java.util.regex.Pattern;
-import java.util.regex.Matcher;
+
 
 /**
  *
@@ -35,10 +34,7 @@ public class Neo4jLocusA {
     //           12    13    14    15    16    17
     //        -(\d+)-(\d+)-(\d+)-(\d+)-(\d+)-(\d+)$
     
-    public String createSearchRegex(String regex, int regexGroup, String type){
-        
-        return regex;
-    }
+
     
     public boolean parseLocus(String gfe) {
         if (gfe.matches(locusARegexTest)){
