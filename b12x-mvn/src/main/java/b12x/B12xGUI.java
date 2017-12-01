@@ -1135,7 +1135,7 @@ public class B12xGUI extends javax.swing.JFrame {
             String currentRegex = locusARegex;
 
             for (Component component : jPanelEnterGfeA.getComponents()) {    
-                if (component instanceof JTextField){
+                if (component instanceof JTextField && !((JTextField)component).getText().isEmpty()){
                     System.out.println(component.getName() + " - "
                             + ((JTextField) component).getText());
                     int regexGroup = Integer.parseInt(component.getName());
