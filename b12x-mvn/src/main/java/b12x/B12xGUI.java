@@ -1132,7 +1132,8 @@ public class B12xGUI extends javax.swing.JFrame {
                 if (component instanceof JTextField){
                     System.out.println(component.getName() + " - "
                             + ((JTextField) component).getText());
-
+                    int regexGroup = Integer.parseInt(component.getName());
+                    String type = ((JTextField)component).getText();
                     // Class that takes current search string, and data from the 
                     // textfield, does a regex swap based on group # located in 
                     // each jtextfield component's name.
