@@ -1121,28 +1121,32 @@ public class B12xGUI extends javax.swing.JFrame {
             + "-(\\d+)-(\\d+)-(\\d+)-(\\d+)-(\\d+)-(\\d+)-(\\d+)-(\\d+)-(\\d+)"
             + "-(\\d+)-(\\d+)-(\\d+)$";
             
-            String currentRegex = locusARegex;
-            String newRegex = "";
+            String currentRegex = "^" + locus + "w";
 
             for (Component component : jPanelEnterGfeA.getComponents()) {    
-                if (component instanceof JTextField && !((JTextField)component).getText().isEmpty()){
-                    System.out.println(component.getName() + " - "
-                            + ((JTextField) component).getText());
-                    int regexGroup = Integer.parseInt(component.getName());
-                    String type = ((JTextField)component).getText();
+                if (component instanceof JTextField){
+                    if (((JTextField)component).getText().isEmpty()){
+                        currentRegex = currentRegex.concat("(\\d+)-");
+                    } else {
+//                    System.out.println(component.getName() + " - "
+//                            + ((JTextField) component).getText());
+//                    int regexGroup = Integer.parseInt(component.getName());
+                        currentRegex = currentRegex.concat(((JTextField)component).getText());
+                    }
                     
                     
                     // Class that takes current search string, and data from the 
                     // textfield, does a regex swap based on group # located in 
                     // each jtextfield component's name.
-                    Neo4jRegexGroupSwapper swapper = new Neo4jRegexGroupSwapper();
-                    newRegex = swapper.createSearchRegex(currentRegex, regexGroup, type);
+//                    Neo4jRegexGroupSwapper swapper = new Neo4jRegexGroupSwapper();
+//                    currentRegex = swapper.createSearchRegex(currentRegex, regexGroup, type);
+                    System.out.println("Current Regex " + currentRegex);
 
                 }
             }
-            
+            String finalRegex = currentRegex.substring(0, (currentRegex.length() - 1)).concat("$");
             System.out.println("Gui running " + locus);
-            System.out.println("New Regex " + newRegex);
+            System.out.println("Final Regex " + finalRegex);
 
         } catch (Exception ex) {
             System.out.println(ex);
