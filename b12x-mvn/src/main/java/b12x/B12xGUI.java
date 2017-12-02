@@ -1122,6 +1122,7 @@ public class B12xGUI extends javax.swing.JFrame {
             + "-(\\d+)-(\\d+)-(\\d+)$";
             
             String currentRegex = "^" + locus + "w";
+            String finalRegex;
 
             for (Component component : jPanelEnterGfeA.getComponents()) {    
                 if (component instanceof JTextField){
@@ -1131,20 +1132,16 @@ public class B12xGUI extends javax.swing.JFrame {
 //                    System.out.println(component.getName() + " - "
 //                            + ((JTextField) component).getText());
 //                    int regexGroup = Integer.parseInt(component.getName());
-                        currentRegex = currentRegex.concat(((JTextField)component).getText());
+                        currentRegex = currentRegex.concat(((JTextField)component).getText() + "-");
                     }
-                    
-                    
-                    // Class that takes current search string, and data from the 
-                    // textfield, does a regex swap based on group # located in 
-                    // each jtextfield component's name.
-//                    Neo4jRegexGroupSwapper swapper = new Neo4jRegexGroupSwapper();
-//                    currentRegex = swapper.createSearchRegex(currentRegex, regexGroup, type);
-                    System.out.println("Current Regex " + currentRegex);
-
                 }
             }
-            String finalRegex = currentRegex.substring(0, (currentRegex.length() - 1)).concat("$");
+            
+            if (currentRegex.matches("^.+\\d$")){
+                finalRegex = currentRegex.concat("$");
+            } else {
+                finalRegex = currentRegex.substring(0, (currentRegex.length() - 1)).concat("$");
+            }
             System.out.println("Gui running " + locus);
             System.out.println("Final Regex " + finalRegex);
 
