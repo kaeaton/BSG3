@@ -1183,11 +1183,6 @@ public class B12xGUI extends javax.swing.JFrame {
             }
             
             // Check for extraneous dash at the end and close regex
-//            if (currentRegex.matches("^.+\\d$")){
-//                finalRegex = currentRegex.concat("$");
-//            } else {
-//                finalRegex = currentRegex.substring(0, (currentRegex.length() - 1)).concat("$");
-//            }
             if (currentRegex.matches("^.+-$")){
                 finalRegex = currentRegex.substring(0, (currentRegex.length() - 1)).concat("$");
             } else {
