@@ -7,6 +7,11 @@ import java.awt.Component;
 import java.nio.file.*;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+
+
 
 
 /*
@@ -177,7 +182,7 @@ public class B12xGUI extends javax.swing.JFrame {
         hlaALabel.setText("HLA-Aw");
 
         a5Prime_1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        a5Prime_1.setName("1"); // NOI18N
+        a5Prime_1.setName("18"); // NOI18N
 
         aExon1_2.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         aExon1_2.setName("2"); // NOI18N
@@ -1123,19 +1128,34 @@ public class B12xGUI extends javax.swing.JFrame {
             
             String currentRegex = "^" + locus + "w";
             String finalRegex;
+            ArrayList<Component> typeFields = new ArrayList();
 
+            // Find the text fields and add to array
             for (Component component : jPanelEnterGfeA.getComponents()) {    
                 if (component instanceof JTextField){
-                    if (((JTextField)component).getText().isEmpty()){
-                        currentRegex = currentRegex.concat("(\\d+)-");
-                    } else {
-//                    System.out.println(component.getName() + " - "
-//                            + ((JTextField) component).getText());
-//                    int regexGroup = Integer.parseInt(component.getName());
-                        currentRegex = currentRegex.concat(((JTextField)component).getText() + "-");
-                    }
+                    typeFields.add(component);
                 }
             }
+            for (int i = 0; i < typeFields.size(); i++){
+                System.out.println(((JTextField)typeFields.get(i)).getName());
+            }
+            // Sort the list by name to check/keep the order 
+            Collections.sort(typeFields, Comparator.comparingInt(Integer.parseInt(JTextField::getName)));
+            for (int i = 0; i < typeFields.size(); i++){
+                System.out.println(((JTextField)typeFields.get(i)).getName());
+            }
+            //Comparator.comparingInt(Component ::getName())
+            
+//                    if (((JTextField)component).getText().isEmpty()){
+//                        currentRegex = currentRegex.concat("(\\d+)-");
+//                    } else {
+////                    System.out.println(component.getName() + " - "
+////                            + ((JTextField) component).getText());
+////                    int regexGroup = Integer.parseInt(component.getName());
+//                        currentRegex = currentRegex.concat(((JTextField)component).getText() + "-");
+//                    }
+//                }
+//            }
             
             if (currentRegex.matches("^.+\\d$")){
                 finalRegex = currentRegex.concat("$");
