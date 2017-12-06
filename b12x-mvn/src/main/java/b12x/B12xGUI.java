@@ -45,14 +45,18 @@ public class B12xGUI extends javax.swing.JFrame {
     private void initComponents() {
 
         jTabbedPane2 = new javax.swing.JTabbedPane();
+        neo4jUpdate = new javax.swing.JPanel();
+        hlaSelectUpdate = new javax.swing.JComboBox<>();
+        updateButton = new javax.swing.JToggleButton();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
         neo4j = new javax.swing.JPanel();
         goButton = new javax.swing.JToggleButton();
         hlaSelectNeo4j = new javax.swing.JComboBox<>();
         jLabel1 = new javax.swing.JLabel();
         mainCardPanel = new javax.swing.JPanel();
-        jPanelA = new javax.swing.JPanel();
         jPanelEnterGfeA = new javax.swing.JPanel();
-        hlaALabel = new javax.swing.JLabel();
+        hlaALabel2 = new javax.swing.JLabel();
         a00_WS = new javax.swing.JTextField();
         a01_5Prime = new javax.swing.JTextField();
         a02_Exon1 = new javax.swing.JTextField();
@@ -83,12 +87,12 @@ public class B12xGUI extends javax.swing.JFrame {
         jLabelAE5 = new javax.swing.JLabel();
         jLabelAI4 = new javax.swing.JLabel();
         jLabelAE4 = new javax.swing.JLabel();
-        jLabelAE3 = new javax.swing.JLabel();
+        jLabelAI3 = new javax.swing.JLabel();
         jLabelAI2 = new javax.swing.JLabel();
         jLabelAE2 = new javax.swing.JLabel();
         jLabelAI1 = new javax.swing.JLabel();
         jLabelAE1 = new javax.swing.JLabel();
-        jLabelAI3 = new javax.swing.JLabel();
+        jLabelAE3 = new javax.swing.JLabel();
         jPanelB = new javax.swing.JPanel();
         jPanelEnterGfeB = new javax.swing.JPanel();
         hlaBLabel = new javax.swing.JLabel();
@@ -157,15 +161,54 @@ public class B12xGUI extends javax.swing.JFrame {
         jLabelCI7 = new javax.swing.JLabel();
         jLabelCE8 = new javax.swing.JLabel();
         jLabelC3 = new javax.swing.JLabel();
-        neo4jUpdate = new javax.swing.JPanel();
-        hlaSelectUpdate = new javax.swing.JComboBox<>();
-        updateButton = new javax.swing.JToggleButton();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("B12x Search Generator");
         setAlwaysOnTop(true);
+
+        hlaSelectUpdate.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "HLA-A", "HLA-B", "HLA-C" }));
+
+        updateButton.setText("Update Neo4j Records");
+        updateButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                updateButtonActionPerformed(evt);
+            }
+        });
+
+        jLabel2.setText("The allele data is automatically updated if the data is more than 30 days old when you run the GFE search. ");
+
+        jLabel3.setText("This tool is for forcing a data update before that time is up. ");
+
+        javax.swing.GroupLayout neo4jUpdateLayout = new javax.swing.GroupLayout(neo4jUpdate);
+        neo4jUpdate.setLayout(neo4jUpdateLayout);
+        neo4jUpdateLayout.setHorizontalGroup(
+            neo4jUpdateLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(neo4jUpdateLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(neo4jUpdateLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 686, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(neo4jUpdateLayout.createSequentialGroup()
+                        .addComponent(hlaSelectUpdate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(100, 100, 100)
+                        .addComponent(updateButton))
+                    .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 686, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(374, Short.MAX_VALUE))
+        );
+        neo4jUpdateLayout.setVerticalGroup(
+            neo4jUpdateLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(neo4jUpdateLayout.createSequentialGroup()
+                .addGap(9, 9, 9)
+                .addComponent(jLabel2)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel3)
+                .addGap(18, 18, 18)
+                .addGroup(neo4jUpdateLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(hlaSelectUpdate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(updateButton))
+                .addContainerGap(339, Short.MAX_VALUE))
+        );
+
+        jTabbedPane2.addTab("Neo4j Update", neo4jUpdate);
 
         neo4j.setName(""); // NOI18N
 
@@ -187,9 +230,9 @@ public class B12xGUI extends javax.swing.JFrame {
 
         mainCardPanel.setLayout(new java.awt.CardLayout());
 
-        jPanelEnterGfeA.setName("jPanelEnterGFEA"); // NOI18N
+        jPanelEnterGfeA.setName("jPanelEnterGfeA"); // NOI18N
 
-        hlaALabel.setText("HLA-A");
+        hlaALabel2.setText("HLA-A");
 
         a00_WS.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         a00_WS.setText("w");
@@ -302,9 +345,9 @@ public class B12xGUI extends javax.swing.JFrame {
         r1 = new RotatedIcon(t1, RotatedIcon.Rotate.DOWN);
         jLabelAE4.setIcon( r1 );
 
-        t1 = new TextIcon(jLabelAE3, "Intron 3", TextIcon.Layout.HORIZONTAL);
+        t1 = new TextIcon(jLabelAI3, "Intron 3", TextIcon.Layout.HORIZONTAL);
         r1 = new RotatedIcon(t1, RotatedIcon.Rotate.DOWN);
-        jLabelAE3.setIcon( r1 );
+        jLabelAI3.setIcon( r1 );
 
         t1 = new TextIcon(jLabelAI2, "Intron 2", TextIcon.Layout.HORIZONTAL);
         r1 = new RotatedIcon(t1, RotatedIcon.Rotate.DOWN);
@@ -322,46 +365,50 @@ public class B12xGUI extends javax.swing.JFrame {
         r1 = new RotatedIcon(t1, RotatedIcon.Rotate.DOWN);
         jLabelAE1.setIcon( r1 );
 
-        t1 = new TextIcon(jLabelAI3, "Exon 3", TextIcon.Layout.HORIZONTAL);
+        t1 = new TextIcon(jLabelAE3, "Exon 3", TextIcon.Layout.HORIZONTAL);
         r1 = new RotatedIcon(t1, RotatedIcon.Rotate.DOWN);
-        jLabelAI3.setIcon( r1 );
+        jLabelAE3.setIcon( r1 );
 
         javax.swing.GroupLayout jPanelEnterGfeALayout = new javax.swing.GroupLayout(jPanelEnterGfeA);
         jPanelEnterGfeA.setLayout(jPanelEnterGfeALayout);
         jPanelEnterGfeALayout.setHorizontalGroup(
             jPanelEnterGfeALayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanelEnterGfeALayout.createSequentialGroup()
-                .addComponent(hlaALabel)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap()
+                .addComponent(hlaALabel2)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanelEnterGfeALayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(a00_WS, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanelEnterGfeALayout.createSequentialGroup()
-                        .addGap(10, 10, 10)
-                        .addComponent(jLabelAW, javax.swing.GroupLayout.PREFERRED_SIZE, 17, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGap(6, 6, 6)
+                        .addComponent(jLabelAW, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGroup(jPanelEnterGfeALayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(a01_5Prime, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanelEnterGfeALayout.createSequentialGroup()
-                        .addGap(10, 10, 10)
-                        .addComponent(jLabelA5, javax.swing.GroupLayout.PREFERRED_SIZE, 17, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(16, 16, 16)
+                        .addComponent(jLabelA5, javax.swing.GroupLayout.PREFERRED_SIZE, 17, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanelEnterGfeALayout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(a01_5Prime, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanelEnterGfeALayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(a02_Exon1, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanelEnterGfeALayout.createSequentialGroup()
                         .addGap(10, 10, 10)
                         .addComponent(jLabelAE1, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanelEnterGfeALayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(a03_Intron1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(jPanelEnterGfeALayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(jPanelEnterGfeALayout.createSequentialGroup()
-                        .addGap(10, 10, 10)
-                        .addComponent(jLabelAI1, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanelEnterGfeALayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(a04_Exon2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(16, 16, 16)
+                        .addComponent(jLabelAI1, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanelEnterGfeALayout.createSequentialGroup()
-                        .addGap(10, 10, 10)
-                        .addComponent(jLabelAE2, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(a03_Intron1)))
+                .addGroup(jPanelEnterGfeALayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(jPanelEnterGfeALayout.createSequentialGroup()
+                        .addGap(16, 16, 16)
+                        .addComponent(jLabelAE2, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanelEnterGfeALayout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(a04_Exon2)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanelEnterGfeALayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(a05_Intron2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -373,13 +420,13 @@ public class B12xGUI extends javax.swing.JFrame {
                     .addComponent(a06_Exon3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanelEnterGfeALayout.createSequentialGroup()
                         .addGap(10, 10, 10)
-                        .addComponent(jLabelAI3, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(jLabelAE3, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanelEnterGfeALayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(a07_Intron3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanelEnterGfeALayout.createSequentialGroup()
                         .addGap(10, 10, 10)
-                        .addComponent(jLabelAE3, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(jLabelAI3, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanelEnterGfeALayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(a08_Exon4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -440,10 +487,10 @@ public class B12xGUI extends javax.swing.JFrame {
                         .addGap(10, 10, 10)
                         .addComponent(jLabelA3, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(a17_3Prime, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap())
+                .addContainerGap(243, Short.MAX_VALUE))
         );
 
-        jPanelEnterGfeALayout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {a01_5Prime, a02_Exon1, a03_Intron1, a04_Exon2, a05_Intron2, a06_Exon3, a07_Intron3, a08_Exon4, a09_Intron4, a10_Exon5, a11_Intron5, a12_Exon6, a13_Intron6, a14_Exon7, a15_Intron7});
+        jPanelEnterGfeALayout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {a01_5Prime, a02_Exon1, a03_Intron1, a04_Exon2, a05_Intron2, a06_Exon3, a07_Intron3, a08_Exon4, a09_Intron4, a10_Exon5, a11_Intron5, a12_Exon6, a13_Intron6, a14_Exon7, a15_Intron7, a16_Exon8, a17_3Prime});
 
         jPanelEnterGfeALayout.setVerticalGroup(
             jPanelEnterGfeALayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -453,11 +500,11 @@ public class B12xGUI extends javax.swing.JFrame {
                     .addGroup(jPanelEnterGfeALayout.createSequentialGroup()
                         .addComponent(a00_WS, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabelAW, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addComponent(jLabelAW, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanelEnterGfeALayout.createSequentialGroup()
                         .addGroup(jPanelEnterGfeALayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(a01_5Prime, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(hlaALabel)
+                            .addComponent(hlaALabel2)
                             .addComponent(a03_Intron1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(a02_Exon1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(a04_Exon2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -491,30 +538,12 @@ public class B12xGUI extends javax.swing.JFrame {
                             .addComponent(jLabelAE5, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabelAI4, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabelAE4, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabelAE3, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabelAI3, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(0, 33, Short.MAX_VALUE)))
-                .addContainerGap())
+                            .addComponent(jLabelAI3, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabelAE3, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap(24, Short.MAX_VALUE))
         );
 
-        javax.swing.GroupLayout jPanelALayout = new javax.swing.GroupLayout(jPanelA);
-        jPanelA.setLayout(jPanelALayout);
-        jPanelALayout.setHorizontalGroup(
-            jPanelALayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanelALayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jPanelEnterGfeA, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(228, Short.MAX_VALUE))
-        );
-        jPanelALayout.setVerticalGroup(
-            jPanelALayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanelALayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jPanelEnterGfeA, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGap(31, 31, 31))
-        );
-
-        mainCardPanel.add(jPanelA, "cardA");
+        mainCardPanel.add(jPanelEnterGfeA, "cardA");
 
         jPanelB.setName("jPanelEnterGFEB"); // NOI18N
 
@@ -766,7 +795,7 @@ public class B12xGUI extends javax.swing.JFrame {
             .addGroup(jPanelBLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jPanelEnterGfeB, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(338, Short.MAX_VALUE))
+                .addContainerGap(393, Short.MAX_VALUE))
         );
         jPanelBLayout.setVerticalGroup(
             jPanelBLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -779,6 +808,8 @@ public class B12xGUI extends javax.swing.JFrame {
         mainCardPanel.add(jPanelB, "cardB");
 
         jPanelC.setName("jPanelEnterGFEC"); // NOI18N
+
+        jPanelEnterGfeC.setName("jPanelEnterGfeC"); // NOI18N
 
         hlaCLabel.setText("HLA-Cw");
 
@@ -1067,7 +1098,7 @@ public class B12xGUI extends javax.swing.JFrame {
             .addGroup(jPanelCLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jPanelEnterGfeC, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(254, Short.MAX_VALUE))
+                .addContainerGap(312, Short.MAX_VALUE))
         );
         jPanelCLayout.setVerticalGroup(
             jPanelCLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1083,12 +1114,12 @@ public class B12xGUI extends javax.swing.JFrame {
         neo4j.setLayout(neo4jLayout);
         neo4jLayout.setHorizontalGroup(
             neo4jLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(neo4jLayout.createSequentialGroup()
-                .addGroup(neo4jLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(neo4jLayout.createSequentialGroup()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, neo4jLayout.createSequentialGroup()
+                .addGroup(neo4jLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, neo4jLayout.createSequentialGroup()
                         .addGap(20, 20, 20)
                         .addComponent(mainCardPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(neo4jLayout.createSequentialGroup()
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, neo4jLayout.createSequentialGroup()
                         .addGroup(neo4jLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(neo4jLayout.createSequentialGroup()
                                 .addGap(383, 383, 383)
@@ -1104,62 +1135,18 @@ public class B12xGUI extends javax.swing.JFrame {
         neo4jLayout.setVerticalGroup(
             neo4jLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, neo4jLayout.createSequentialGroup()
-                .addContainerGap(40, Short.MAX_VALUE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(neo4jLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(hlaSelectNeo4j, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(mainCardPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(112, 112, 112)
+                .addGap(118, 118, 118)
                 .addComponent(goButton)
                 .addGap(52, 52, 52))
         );
 
         jTabbedPane2.addTab("Neo4j GFE Search", neo4j);
-
-        hlaSelectUpdate.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "HLA-A", "HLA-B", "HLA-C" }));
-
-        updateButton.setText("Update Neo4j Records");
-        updateButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                updateButtonActionPerformed(evt);
-            }
-        });
-
-        jLabel2.setText("The allele data is automatically updated if the data is more than 30 days old when you run the GFE search. ");
-
-        jLabel3.setText("This tool is for forcing a data update before that time is up. ");
-
-        javax.swing.GroupLayout neo4jUpdateLayout = new javax.swing.GroupLayout(neo4jUpdate);
-        neo4jUpdate.setLayout(neo4jUpdateLayout);
-        neo4jUpdateLayout.setHorizontalGroup(
-            neo4jUpdateLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(neo4jUpdateLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(neo4jUpdateLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 686, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(neo4jUpdateLayout.createSequentialGroup()
-                        .addComponent(hlaSelectUpdate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(100, 100, 100)
-                        .addComponent(updateButton))
-                    .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 686, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(307, Short.MAX_VALUE))
-        );
-        neo4jUpdateLayout.setVerticalGroup(
-            neo4jUpdateLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(neo4jUpdateLayout.createSequentialGroup()
-                .addGap(9, 9, 9)
-                .addComponent(jLabel2)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel3)
-                .addGap(18, 18, 18)
-                .addGroup(neo4jUpdateLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(hlaSelectUpdate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(updateButton))
-                .addContainerGap(339, Short.MAX_VALUE))
-        );
-
-        jTabbedPane2.addTab("Neo4j Update", neo4jUpdate);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -1183,86 +1170,6 @@ public class B12xGUI extends javax.swing.JFrame {
 
 
     
-    private void goButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_goButtonActionPerformed
-        try {
-            String locus = hlaSelectNeo4j.getSelectedItem().toString();
-            String parsedLocus = LocusNameParser.parseLocus(locus);
-            String neo4jLocation = "";
-            Path dataPath = Paths.get(System.getProperty("user.home") 
-                    + System.getProperty("file.separator") + "Documents" 
-                    + System.getProperty("file.separator") + "BSGData"
-                    + System.getProperty("file.separator")
-                    + "neo4j_" + locus + "_Download.csv");
-            
-            
-
-//            Neo4j neo4j = new Neo4j(locus, dataPath);
-//            neo4j.fetchData();
-
-            System.out.println(parsedLocus);
-
-//            String locusARegex = "^HLA-Aw(\\d+)-(\\d+)-(\\d+)-(\\d+)-(\\d+)"
-//            + "-(\\d+)-(\\d+)-(\\d+)-(\\d+)-(\\d+)-(\\d+)-(\\d+)-(\\d+)-(\\d+)"
-//            + "-(\\d+)-(\\d+)-(\\d+)$";
-            
-            String panelName = "jPanelEnterGFE" + parsedLocus;
-            Component currentGfePanel = jPanelEnterGfeA;
-            String currentRegex = "^" + locus;
-            String finalRegex;
-            ArrayList<JTextField> typeFields = new ArrayList();
-
-            // Find the right GFE entry panel
-            
-            for (Component component : neo4j.getComponents()) {
-                if (component.getName() == panelName){
-                    currentGfePanel = component;
-                }
-            }
-            
-            // Find the text fields and add to array
-//            for (Component component : jPanelEnterGfeA.getComponents()) {    
-            for (Component component : ((JPanel)currentGfePanel).getComponents()) {    
-                if (component instanceof JTextField){
-                    typeFields.add((JTextField)component);
-                }
-            }
-
-            // Sort the array list by name to check/keep the order 
-            Collections.sort(typeFields, Comparator.comparing(JTextField::getName));
-
-            // Special rules for textfield 00
-            if (typeFields.get(0).getText().isEmpty()){
-                currentRegex = currentRegex.concat("w");
-            } else {
-                currentRegex = currentRegex.concat(typeFields.get(0).getText());
-            }
-            
-            // For each textfield add regex or specified term to currentRegex
-            for (int i = 1; i < typeFields.size(); i++){
-//                System.out.println(((JTextField)typeFields.get(i)).getName());
-
-                if (typeFields.get(i).getText().isEmpty()){
-                    currentRegex = currentRegex.concat("(\\d+)-");
-                } else {
-                    currentRegex = currentRegex.concat(typeFields.get(i).getText() + "-");
-                }
-            }
-            
-            // Check for extraneous dash at the end and close regex
-            if (currentRegex.matches("^.+-$")){
-                finalRegex = currentRegex.substring(0, (currentRegex.length() - 1));//.concat("$");
-            } else {
-                finalRegex = currentRegex;//.concat("$");
-            }
-            
-            System.out.println("Gui running " + locus);
-            System.out.println("Final Regex " + finalRegex);
-
-        } catch (Exception ex) {
-            System.out.println(ex);
-        }        // TODO add your handling code here:
-    }//GEN-LAST:event_goButtonActionPerformed
-
     private void updateButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_updateButtonActionPerformed
         try {
             String locus = hlaSelectUpdate.getSelectedItem().toString();
@@ -1280,25 +1187,6 @@ public class B12xGUI extends javax.swing.JFrame {
         
     }//GEN-LAST:event_updateButtonActionPerformed
 
-    private void hlaSelectNeo4jActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_hlaSelectNeo4jActionPerformed
-        String selectedLocus = (String)hlaSelectNeo4j.getSelectedItem();
-        CardLayout card = (CardLayout)mainCardPanel.getLayout();
-        switch (selectedLocus) {
-            case "HLA-A":
-                card.show(mainCardPanel, "cardA");
-                System.out.println(selectedLocus);
-                break;
-            case "HLA-B":
-                card.show(mainCardPanel, "cardB");
-                System.out.println(selectedLocus);
-                break;
-            case "HLA-C":
-                card.show(mainCardPanel, "cardC");
-                System.out.println(selectedLocus);
-                break;
-        }
-    }//GEN-LAST:event_hlaSelectNeo4jActionPerformed
-
     private void b02_Exon1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b02_Exon1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_b02_Exon1ActionPerformed
@@ -1306,6 +1194,103 @@ public class B12xGUI extends javax.swing.JFrame {
     private void a00_WSActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_a00_WSActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_a00_WSActionPerformed
+
+    private void hlaSelectNeo4jActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_hlaSelectNeo4jActionPerformed
+        String selectedLocus = (String)hlaSelectNeo4j.getSelectedItem();
+        CardLayout card = (CardLayout)mainCardPanel.getLayout();
+        switch (selectedLocus) {
+            case "HLA-A":
+            card.show(mainCardPanel, "cardA");
+            System.out.println(selectedLocus);
+            break;
+            case "HLA-B":
+            card.show(mainCardPanel, "cardB");
+            System.out.println(selectedLocus);
+            break;
+            case "HLA-C":
+            card.show(mainCardPanel, "cardC");
+            System.out.println(selectedLocus);
+            break;
+        }
+    }//GEN-LAST:event_hlaSelectNeo4jActionPerformed
+
+    private void goButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_goButtonActionPerformed
+        try {
+            String locus = hlaSelectNeo4j.getSelectedItem().toString();
+            String parsedLocus = LocusNameParser.parseLocus(locus);
+            String neo4jLocation = "";
+            Path dataPath = Paths.get(System.getProperty("user.home")
+                + System.getProperty("file.separator") + "Documents"
+                + System.getProperty("file.separator") + "BSGData"
+                + System.getProperty("file.separator")
+                + "neo4j_" + locus + "_Download.csv");
+
+            //            Neo4j neo4j = new Neo4j(locus, dataPath);
+            //            neo4j.fetchData();
+
+            System.out.println(parsedLocus);
+
+            //            String locusARegex = "^HLA-Aw(\\d+)-(\\d+)-(\\d+)-(\\d+)-(\\d+)"
+            //            + "-(\\d+)-(\\d+)-(\\d+)-(\\d+)-(\\d+)-(\\d+)-(\\d+)-(\\d+)-(\\d+)"
+            //            + "-(\\d+)-(\\d+)-(\\d+)$";
+
+            String panelName = "jPanelEnterGFE" + parsedLocus;
+            Component currentGfePanel = jPanelEnterGfeB;
+            String currentRegex = "^" + locus;
+            String finalRegex;
+            ArrayList<JTextField> typeFields = new ArrayList();
+
+            // Find the right GFE entry panel
+
+            for (Component component : mainCardPanel.getComponents()) {
+                if (component.getName().equals(panelName)){
+                    currentGfePanel = component;
+                }
+            }
+
+            // Find the text fields and add to array
+            //            for (Component component : jPanelEnterGfeA.getComponents()) {
+                for (Component component : ((JPanel)currentGfePanel).getComponents()) {
+                    if (component instanceof JTextField){
+                        typeFields.add((JTextField)component);
+                    }
+                }
+
+                // Sort the array list by name to check/keep the order
+                Collections.sort(typeFields, Comparator.comparing(JTextField::getName));
+
+                // Special rules for textfield 00
+                if (typeFields.get(0).getText().isEmpty()){
+                    currentRegex = currentRegex.concat("w");
+                } else {
+                    currentRegex = currentRegex.concat(typeFields.get(0).getText());
+                }
+
+                // For each textfield add regex or specified term to currentRegex
+                for (int i = 1; i < typeFields.size(); i++){
+                    //                System.out.println(((JTextField)typeFields.get(i)).getName());
+
+                    if (typeFields.get(i).getText().isEmpty()){
+                        currentRegex = currentRegex.concat("(\\d+)-");
+                    } else {
+                        currentRegex = currentRegex.concat(typeFields.get(i).getText() + "-");
+                    }
+                }
+
+                // Check for extraneous dash at the end and close regex
+                if (currentRegex.matches("^.+-$")){
+                    finalRegex = currentRegex.substring(0, (currentRegex.length() - 1));//.concat("$");
+                } else {
+                    finalRegex = currentRegex;//.concat("$");
+                }
+
+                System.out.println("Gui running " + locus);
+                System.out.println("Final Regex " + finalRegex);
+
+            } catch (Exception ex) {
+                System.out.println(ex);
+            }        // TODO add your handling code here:
+    }//GEN-LAST:event_goButtonActionPerformed
     
     /**
      * @param args the command line arguments
@@ -1393,7 +1378,7 @@ public class B12xGUI extends javax.swing.JFrame {
     private javax.swing.JTextField c16_Exon8;
     private javax.swing.JTextField c17_3Prime;
     private javax.swing.JToggleButton goButton;
-    private javax.swing.JLabel hlaALabel;
+    private javax.swing.JLabel hlaALabel2;
     private javax.swing.JLabel hlaBLabel;
     private javax.swing.JLabel hlaCLabel;
     private javax.swing.JComboBox<String> hlaSelectNeo4j;
@@ -1450,7 +1435,6 @@ public class B12xGUI extends javax.swing.JFrame {
     private javax.swing.JLabel jLabelCI6;
     private javax.swing.JLabel jLabelCI7;
     private javax.swing.JLabel jLabelE7;
-    private javax.swing.JPanel jPanelA;
     private javax.swing.JPanel jPanelB;
     private javax.swing.JPanel jPanelC;
     private javax.swing.JPanel jPanelEnterGfeA;
