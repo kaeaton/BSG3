@@ -167,6 +167,8 @@ public class B12xGUI extends javax.swing.JFrame {
         setTitle("B12x Search Generator");
         setAlwaysOnTop(true);
 
+        neo4j.setName(""); // NOI18N
+
         goButton.setText("Go");
         goButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -515,6 +517,8 @@ public class B12xGUI extends javax.swing.JFrame {
         mainCardPanel.add(jPanelA, "cardA");
 
         jPanelB.setName("jPanelEnterGFEB"); // NOI18N
+
+        jPanelEnterGfeB.setName("jPanelEnterGfeB"); // NOI18N
 
         hlaBLabel.setText("HLA-Bw");
 
@@ -1202,13 +1206,22 @@ public class B12xGUI extends javax.swing.JFrame {
 //            + "-(\\d+)-(\\d+)-(\\d+)$";
             
             String panelName = "jPanelEnterGFE" + parsedLocus;
+            Component currentGfePanel = jPanelEnterGfeA;
             String currentRegex = "^" + locus;
             String finalRegex;
             ArrayList<JTextField> typeFields = new ArrayList();
 
+            // Find the right GFE entry panel
+            
+            for (Component component : neo4j.getComponents()) {
+                if (component.getName() == panelName){
+                    currentGfePanel = component;
+                }
+            }
+            
             // Find the text fields and add to array
-            for (Component component : jPanelEnterGfeA.getComponents()) {    
-//            for (Component component : Component.getName(panelName).getComponents()) {    
+//            for (Component component : jPanelEnterGfeA.getComponents()) {    
+            for (Component component : ((JPanel)currentGfePanel).getComponents()) {    
                 if (component instanceof JTextField){
                     typeFields.add((JTextField)component);
                 }
