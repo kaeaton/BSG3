@@ -12,12 +12,12 @@ import java.util.regex.Pattern;
  *
  * @author kaeaton
  */
-public class LocusParser {
-    public LocusParser (){
+public class LocusNameParser {
+    public LocusNameParser (){
 
     }
     
-    public String parseLocus(String locus){
+    static String parseLocus(String locus){
         String parsedLocus = "";
         Pattern p = Pattern.compile("^HLA-(\\w+)$");
         Matcher m = p.matcher(locus);
