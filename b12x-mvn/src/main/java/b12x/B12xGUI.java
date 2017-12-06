@@ -10,6 +10,8 @@ import javax.swing.JTextField;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
+import java.util.HashMap;
+import java.util.Map;
 
 
 
@@ -182,6 +184,8 @@ public class B12xGUI extends javax.swing.JFrame {
         jLabel1.setText("Enter in the terms you are looking for. (Zero is a valid term.)  Empty boxes function as wildcards.");
 
         mainCardPanel.setLayout(new java.awt.CardLayout());
+
+        jPanelEnterGfeA.setName("jPanelEnterGFEA"); // NOI18N
 
         hlaALabel.setText("HLA-A");
 
@@ -510,6 +514,8 @@ public class B12xGUI extends javax.swing.JFrame {
 
         mainCardPanel.add(jPanelA, "cardA");
 
+        jPanelB.setName("jPanelEnterGFEB"); // NOI18N
+
         hlaBLabel.setText("HLA-Bw");
 
         b01_5Prime.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -767,6 +773,8 @@ public class B12xGUI extends javax.swing.JFrame {
         );
 
         mainCardPanel.add(jPanelB, "cardB");
+
+        jPanelC.setName("jPanelEnterGFEC"); // NOI18N
 
         hlaCLabel.setText("HLA-Cw");
 
@@ -1174,25 +1182,33 @@ public class B12xGUI extends javax.swing.JFrame {
     private void goButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_goButtonActionPerformed
         try {
             String locus = hlaSelectNeo4j.getSelectedItem().toString();
+            String parsedLocus = LocusNameParser.parseLocus(locus);
             String neo4jLocation = "";
-            Path path = Paths.get(System.getProperty("user.home") 
+            Path dataPath = Paths.get(System.getProperty("user.home") 
                     + System.getProperty("file.separator") + "Documents" 
-                    + System.getProperty("file.separator") 
+                    + System.getProperty("file.separator") + "BSGData"
+                    + System.getProperty("file.separator")
                     + "neo4j_" + locus + "_Download.csv");
+            
+            
 
-            Neo4j neo4j = new Neo4j(locus, path);
-            neo4j.fetchData();
-//
+//            Neo4j neo4j = new Neo4j(locus, dataPath);
+//            neo4j.fetchData();
+
+            System.out.println(parsedLocus);
+
 //            String locusARegex = "^HLA-Aw(\\d+)-(\\d+)-(\\d+)-(\\d+)-(\\d+)"
 //            + "-(\\d+)-(\\d+)-(\\d+)-(\\d+)-(\\d+)-(\\d+)-(\\d+)-(\\d+)-(\\d+)"
 //            + "-(\\d+)-(\\d+)-(\\d+)$";
             
+            String panelName = "jPanelEnterGFE" + parsedLocus;
             String currentRegex = "^" + locus;
             String finalRegex;
             ArrayList<JTextField> typeFields = new ArrayList();
 
             // Find the text fields and add to array
             for (Component component : jPanelEnterGfeA.getComponents()) {    
+//            for (Component component : Component.getName(panelName).getComponents()) {    
                 if (component instanceof JTextField){
                     typeFields.add((JTextField)component);
                 }
@@ -1221,9 +1237,9 @@ public class B12xGUI extends javax.swing.JFrame {
             
             // Check for extraneous dash at the end and close regex
             if (currentRegex.matches("^.+-$")){
-                finalRegex = currentRegex.substring(0, (currentRegex.length() - 1)).concat("$");
+                finalRegex = currentRegex.substring(0, (currentRegex.length() - 1));//.concat("$");
             } else {
-                finalRegex = currentRegex.concat("$");
+                finalRegex = currentRegex;//.concat("$");
             }
             
             System.out.println("Gui running " + locus);
