@@ -46,8 +46,8 @@ public class B12x extends SwingWorker<Void, String> {
                     + System.getProperty("file.separator") 
                     + "neo4j_" + locus + "_Download.csv");
 
-            Neo4j neo4j = new Neo4j(locus, path);
-            neo4j.fetchData();
+//            Neo4j neo4j = new Neo4j(locus, path);
+//            neo4j.fetchData();
             
         } catch (Exception ex) {
             System.out.println(ex);

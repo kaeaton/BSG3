@@ -1196,11 +1196,13 @@ public class B12xGUI extends javax.swing.JFrame {
             String locus = hlaSelectUpdate.getSelectedItem().toString();
             String neo4jLocation = "";
             Path path = Paths.get(System.getProperty("user.home") 
-                    + System.getProperty("file.separator") + "Documents" 
+                    + System.getProperty("file.separator") + "Documents"
+                    + System.getProperty("file.separator") + "BSGData"
                     + System.getProperty("file.separator") 
                     + "neo4j_" + locus + "_Download.csv");
+            String regex = "";
 
-            Neo4j neo4j = new Neo4j(locus, path);
+            Neo4j neo4j = new Neo4j(locus, path, regex);
             neo4j.dataUpdate();
         } catch (Exception ex) {
             System.out.println(ex);
@@ -1235,41 +1237,30 @@ public class B12xGUI extends javax.swing.JFrame {
         try {
             String locus = hlaSelectNeo4j.getSelectedItem().toString();
             String parsedLocus = LocusNameParser.parseLocus(locus);
-            String neo4jLocation = "";
+//            String neo4jLocation = "";
             Path dataPath = Paths.get(System.getProperty("user.home")
                 + System.getProperty("file.separator") + "Documents"
                 + System.getProperty("file.separator") + "BSGData"
                 + System.getProperty("file.separator")
                 + "neo4j_" + locus + "_Download.csv");
 
-            //            Neo4j neo4j = new Neo4j(locus, dataPath);
-            //            neo4j.fetchData();
-
-            System.out.println(parsedLocus);
-
-            //            String locusARegex = "^HLA-Aw(\\d+)-(\\d+)-(\\d+)-(\\d+)-(\\d+)"
-            //            + "-(\\d+)-(\\d+)-(\\d+)-(\\d+)-(\\d+)-(\\d+)-(\\d+)-(\\d+)-(\\d+)"
-            //            + "-(\\d+)-(\\d+)-(\\d+)$";
-
             String panelName = "jPanelEnterGfe" + parsedLocus;
-            
             System.out.println("panelName " + panelName);
 
-            Component currentGfePanel = jPanelEnterGfeB;
+            Component currentGfePanel = jPanelEnterGfeA;
             String currentRegex = "^" + locus;
             String finalRegex;
             ArrayList<JTextField> typeFields = new ArrayList();
 
             // Find the right GFE entry panel
-
             for (Component component : mainCardPanel.getComponents()) {
                 if (component.getName().equals(panelName)){
                     currentGfePanel = component;
                 }
             }
 
-        // Find the text fields and add to array
-        //            for (Component component : jPanelEnterGfeA.getComponents()) {
+            // Find the text fields and add to array
+//            for (Component component : jPanelEnterGfeA.getComponents()) {
             for (Component component : ((JPanel)currentGfePanel).getComponents()) {
                 if (component instanceof JTextField){
                     typeFields.add((JTextField)component);
@@ -1306,6 +1297,10 @@ public class B12xGUI extends javax.swing.JFrame {
 
             System.out.println("Gui running " + locus);
             System.out.println("Final Regex " + finalRegex);
+            
+            Neo4j neo4j = new Neo4j(locus, dataPath, finalRegex);
+            neo4j.execute();
+            
 
         } catch (Exception ex) {
             System.out.println(ex);

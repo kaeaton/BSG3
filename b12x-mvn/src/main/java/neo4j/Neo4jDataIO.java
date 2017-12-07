@@ -23,7 +23,7 @@ public class Neo4jDataIO {
         
     }
     
-    public void readCSVFile(String locus, File file) throws IOException {
+    static void readCSVFile(String locus, File file, String regex) throws IOException {
         try {
             
             String locusParser = "";
@@ -31,6 +31,7 @@ public class Neo4jDataIO {
             String csvSplitBy = ",";
             
             System.out.println(locus);
+            System.out.println("Made it to DataIO: " + regex);
 
             // Parse the locus to call class (no "-" allowed in class name)
             Pattern p = Pattern.compile("^HLA-(\\w+)$");
@@ -63,7 +64,7 @@ public class Neo4jDataIO {
                 
                 // Run the GFE portion through the parser
                 boolean results = (boolean)parse.invoke(gfeParser, gfeAlleles[1]);
-                if (results){
+                if (line.matches(regex)){
                     System.out.println(line);
 
                 }

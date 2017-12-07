@@ -11,23 +11,27 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.net.URL;
 import java.nio.file.*;
+import javax.swing.SwingWorker;
 
 
-public class Neo4j {
+public class Neo4j  extends SwingWorker<String, String> {
     
     private final String locus;
     private final Path path;
     private final URL neo4jURL = new URL("http://neo4j.b12x.org/db/data/transaction/commit");
+    private final String regex;
     private JsonFactory factory;
 
 //    private String request;
     
-    public Neo4j(String incomingLocus, Path incomingPath) throws IOException {
+    public Neo4j(String incomingLocus, Path incomingPath, String incomingRegex) throws IOException {
         locus = incomingLocus;
-        path = Paths.get(System.getProperty("user.home") 
-                    + System.getProperty("file.separator") + "Documents" 
-                    + System.getProperty("file.separator") 
-                    + "neo4j_" + locus + "_Download.csv");
+        path = incomingPath;
+        regex = incomingRegex;
+//        path = Paths.get(System.getProperty("user.home") 
+//                    + System.getProperty("file.separator") + "Documents" 
+//                    + System.getProperty("file.separator") 
+//                    + "neo4j_" + locus + "_Download.csv");
         factory = new JsonFactory();
     }
         
@@ -48,7 +52,9 @@ public class Neo4j {
         }
     }
     
-    public void fetchData() throws IOException {
+    @Override
+    protected String doInBackground() throws IOException {
+//    public void fetchData() throws IOException {
         try {
 //            Neo4jRequest request = new Neo4jRequest(locus, factory);
 //            Neo4jHttp neo4jHttp = new Neo4jHttp();
@@ -59,8 +65,7 @@ public class Neo4j {
 //                Neo4jIncomingData parser = new Neo4jIncomingData();
 //                parser.parseResponse(locus, incomingData, factory);
             }
-            Neo4jDataIO neo4jIO = new Neo4jDataIO();
-            neo4jIO.readCSVFile(locus, path.toFile());
+            Neo4jDataIO.readCSVFile(locus, path.toFile(), regex);
 //            Neo4jLocusA hlaA = new Neo4jLocusA();
 //            hlaA.parseLocus(locus);
             
@@ -68,7 +73,7 @@ public class Neo4j {
         } catch (Exception ex) {
             System.out.println(ex);
         }
-//        return null;
+        return null;
     }
     
 }

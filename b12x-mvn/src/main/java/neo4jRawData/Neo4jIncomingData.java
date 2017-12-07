@@ -34,8 +34,11 @@ public class Neo4jIncomingData {
 //            ObjectMapper mapper = new ObjectMapper();
             File neo4jRaw = new File(System.getProperty("user.home") 
                     + System.getProperty("file.separator") + "Documents" 
+                    + System.getProperty("file.separator") + "BSGData"
                     + System.getProperty("file.separator") 
                     + "neo4j_" + locus + "_Download.csv");
+            neo4jRaw.getParentFile().mkdir();
+            neo4jRaw.createNewFile();
             BufferedWriter writer = new BufferedWriter(new FileWriter(neo4jRaw));
             
             LocalDate date = LocalDate.now();

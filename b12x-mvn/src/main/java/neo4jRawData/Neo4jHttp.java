@@ -5,26 +5,12 @@
  */
 package neo4jRawData;
 
-import com.fasterxml.jackson.core.JsonFactory;
-import com.fasterxml.jackson.core.JsonGenerator;
-import com.fasterxml.jackson.core.JsonParser;
-import com.fasterxml.jackson.core.JsonToken;
-//import java.net.URL;
-import java.io.BufferedReader;
-//import java.io.DataInputStream;
-//import java.io.File;
 import java.io.InputStream;
-import java.io.InputStreamReader;
 import java.io.IOException;
-import java.io.OutputStream;
 import java.io.OutputStreamWriter;
 import java.net.HttpURLConnection;
 import java.net.URL;
 
-/**
- *
- * @author katrinaeaton
- */
 public class Neo4jHttp {
     
     private InputStream incomingData;
