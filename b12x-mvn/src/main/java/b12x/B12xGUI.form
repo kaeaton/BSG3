@@ -968,7 +968,7 @@
                               <Component id="hlaCLabel" min="-2" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="2" attributes="0">
-                                  <Component id="c00_WS" alignment="2" pref="90" max="32767" attributes="0"/>
+                                  <Component id="c00_WS" alignment="2" min="-2" pref="24" max="-2" attributes="0"/>
                                   <Component id="jLabelCW" alignment="2" min="-2" pref="22" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace min="-2" pref="2" max="-2" attributes="0"/>
@@ -1027,7 +1027,7 @@
                                   </Group>
                                   <Component id="c07_Intron3" linkSize="8" min="-2" max="-2" attributes="0"/>
                               </Group>
-                              <EmptySpace pref="75" max="32767" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Component id="c08_Exon4" linkSize="8" min="-2" max="-2" attributes="0"/>
                                   <Group type="102" alignment="0" attributes="0">
@@ -1107,7 +1107,7 @@
                                   </Group>
                                   <Component id="c17_3Prime" linkSize="8" min="-2" max="-2" attributes="0"/>
                               </Group>
-                              <EmptySpace pref="253" max="32767" attributes="0"/>
+                              <EmptySpace pref="387" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
