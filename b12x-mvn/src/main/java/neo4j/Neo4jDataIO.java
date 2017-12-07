@@ -5,6 +5,8 @@
  */
 package neo4j;
 
+import b12x.B12xGUI;
+
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
@@ -33,23 +35,23 @@ public class Neo4jDataIO {
             System.out.println(locus);
             System.out.println("Made it to DataIO: " + regex);
 
-            // Parse the locus to call class (no "-" allowed in class name)
-            Pattern p = Pattern.compile("^HLA-(\\w+)$");
-            Matcher m = p.matcher(locus);
-            
-            // Create class name
-            if (m.find()) {
-                locusParser = "Neo4jLocus" + m.group(1);
-                System.out.println(locusParser);
-            }
-            
-            // Tell it that the name is a class and instantiate class
-            Class<?> parser = Class.forName("neo4j." + locusParser);
-            Constructor<?> ctr = parser.getConstructor();
-            Object gfeParser = ctr.newInstance();
-            
-            // Tell it that the parseLocus method exists
-            Method parse = parser.getDeclaredMethod("parseLocus", String.class);
+//            // Parse the locus to call class (no "-" allowed in class name)
+//            Pattern p = Pattern.compile("^HLA-(\\w+)$");
+//            Matcher m = p.matcher(locus);
+//            
+//            // Create class name
+//            if (m.find()) {
+//                locusParser = "Neo4jLocus" + m.group(1);
+//                System.out.println(locusParser);
+//            }
+//            
+//            // Tell it that the name is a class and instantiate class
+//            Class<?> parser = Class.forName("neo4j." + locusParser);
+//            Constructor<?> ctr = parser.getConstructor();
+//            Object gfeParser = ctr.newInstance();
+//            
+//            // Tell it that the parseLocus method exists
+//            Method parse = parser.getDeclaredMethod("parseLocus", String.class);
             
             // Read the File
             BufferedReader br = new BufferedReader(new FileReader(file));
@@ -63,9 +65,11 @@ public class Neo4jDataIO {
                 String[] gfeAlleles = line.split(csvSplitBy);
                 
                 // Run the GFE portion through the parser
-                boolean results = (boolean)parse.invoke(gfeParser, gfeAlleles[1]);
+//                boolean results = (boolean)parse.invoke(gfeParser, gfeAlleles[1]);
                 if (gfeAlleles[1].matches(regex)){
                     System.out.println(line);
+                    B12xGUI.neo4jResults.append(line);
+                    B12xGUI.neo4jResults.append(System.lineSeparator());
 
                 }
             }

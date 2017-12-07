@@ -159,7 +159,7 @@ public class B12xGUI extends javax.swing.JFrame {
         jLabelCE8 = new javax.swing.JLabel();
         jLabelC3 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTextArea1 = new javax.swing.JTextArea();
+        neo4jResults = new javax.swing.JTextArea();
         neo4jUpdate = new javax.swing.JPanel();
         hlaSelectUpdate = new javax.swing.JComboBox<>();
         updateButton = new javax.swing.JToggleButton();
@@ -1082,9 +1082,9 @@ public class B12xGUI extends javax.swing.JFrame {
 
         mainCardPanel.add(jPanelEnterGfeC, "cardC");
 
-        jTextArea1.setColumns(20);
-        jTextArea1.setRows(5);
-        jScrollPane1.setViewportView(jTextArea1);
+        neo4jResults.setColumns(20);
+        neo4jResults.setRows(5);
+        jScrollPane1.setViewportView(neo4jResults);
 
         javax.swing.GroupLayout neo4jLayout = new javax.swing.GroupLayout(neo4j);
         neo4j.setLayout(neo4jLayout);
@@ -1298,6 +1298,7 @@ public class B12xGUI extends javax.swing.JFrame {
             System.out.println("Gui running " + locus);
             System.out.println("Final Regex " + finalRegex);
             
+            neo4jResults.setText("");
             Neo4j neo4j = new Neo4j(locus, dataPath, finalRegex);
             neo4j.execute();
             
@@ -1463,9 +1464,9 @@ public class B12xGUI extends javax.swing.JFrame {
     private javax.swing.JPanel jPanelEnterGfeC;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTabbedPane jTabbedPane2;
-    private javax.swing.JTextArea jTextArea1;
     private javax.swing.JPanel mainCardPanel;
     private javax.swing.JPanel neo4j;
+    public static javax.swing.JTextArea neo4jResults;
     private javax.swing.JPanel neo4jUpdate;
     private javax.swing.JToggleButton updateButton;
     // End of variables declaration//GEN-END:variables
