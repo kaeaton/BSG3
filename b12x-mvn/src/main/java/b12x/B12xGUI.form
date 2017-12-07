@@ -35,9 +35,9 @@
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="1" attributes="0">
-              <EmptySpace max="32767" attributes="0"/>
-              <Component id="jTabbedPane2" min="-2" pref="451" max="-2" attributes="0"/>
-              <EmptySpace max="32767" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="jTabbedPane2" max="32767" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -62,45 +62,44 @@
           <Layout>
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="1" attributes="0">
+                  <Group type="102" attributes="0">
+                      <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="1" attributes="0">
+                          <Component id="mainCardPanel" alignment="0" pref="1234" max="32767" attributes="0"/>
                           <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
-                              <Component id="mainCardPanel" pref="0" max="32767" attributes="0"/>
-                          </Group>
-                          <Group type="102" alignment="0" attributes="0">
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Group type="102" attributes="0">
-                                      <EmptySpace min="-2" pref="383" max="-2" attributes="0"/>
-                                      <Component id="goButton" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
-                                      <Component id="hlaSelectNeo4j" min="-2" pref="90" max="-2" attributes="0"/>
-                                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                                      <Component id="instructions" min="-2" pref="626" max="-2" attributes="0"/>
-                                  </Group>
-                              </Group>
+                              <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
+                              <Component id="hlaSelectNeo4j" min="-2" pref="90" max="-2" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Component id="instructions" min="-2" pref="626" max="-2" attributes="0"/>
                               <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                           </Group>
                       </Group>
-                      <EmptySpace max="-2" attributes="0"/>
+                      <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="216" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="2" attributes="0">
+                          <Component id="jScrollPane1" alignment="2" min="-2" pref="762" max="-2" attributes="0"/>
+                          <Component id="goButton" alignment="2" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="1" attributes="0">
-                      <EmptySpace max="32767" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="hlaSelectNeo4j" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="instructions" alignment="3" max="32767" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="mainCardPanel" min="-2" pref="170" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="118" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
+                      <Component id="jScrollPane1" min="-2" pref="215" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
                       <Component id="goButton" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="52" max="-2" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -306,7 +305,7 @@
                                   </Group>
                                   <Component id="a17_3Prime" linkSize="5" alignment="0" min="-2" pref="33" max="-2" attributes="0"/>
                               </Group>
-                              <EmptySpace pref="254" max="32767" attributes="0"/>
+                              <EmptySpace pref="448" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
@@ -583,453 +582,6 @@
                     <Component class="javax.swing.JLabel" name="jLabelAE3">
                       <AuxValues>
                         <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1 = new TextIcon(jLabelAE3, &quot;Exon 3&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1 = new RotatedIcon(t1, RotatedIcon.Rotate.DOWN);&#xa;jLabelAE3.setIcon( r1 );"/>
-                      </AuxValues>
-                    </Component>
-                  </SubComponents>
-                </Container>
-                <Container class="javax.swing.JPanel" name="jPanelEnterGfeC">
-                  <Properties>
-                    <Property name="name" type="java.lang.String" value="jPanelEnterGfeC" noResource="true"/>
-                  </Properties>
-                  <Constraints>
-                    <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignCardLayout" value="org.netbeans.modules.form.compat2.layouts.DesignCardLayout$CardConstraintsDescription">
-                      <CardConstraints cardName="cardC"/>
-                    </Constraint>
-                  </Constraints>
-
-                  <Layout>
-                    <DimensionLayout dim="0">
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" attributes="0">
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="hlaCLabel" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="2" attributes="0">
-                                  <Component id="c00_WS" alignment="2" pref="26" max="32767" attributes="0"/>
-                                  <Component id="jLabelCW" alignment="2" min="-2" pref="22" max="-2" attributes="0"/>
-                              </Group>
-                              <EmptySpace min="-2" pref="2" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="c01_5Prime" linkSize="8" min="-2" max="-2" attributes="0"/>
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
-                                      <Component id="jLabelC5" min="-2" pref="22" max="-2" attributes="0"/>
-                                  </Group>
-                              </Group>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="c02_Exon1" linkSize="8" min="-2" max="-2" attributes="0"/>
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
-                                      <Component id="jLabelCE1" min="-2" pref="21" max="-2" attributes="0"/>
-                                  </Group>
-                              </Group>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="c03_Intron1" linkSize="8" min="-2" max="-2" attributes="0"/>
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
-                                      <Component id="jLabelCI1" min="-2" pref="21" max="-2" attributes="0"/>
-                                  </Group>
-                              </Group>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="c04_Exon2" linkSize="8" min="-2" max="-2" attributes="0"/>
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
-                                      <Component id="jLabelCE2" min="-2" pref="21" max="-2" attributes="0"/>
-                                  </Group>
-                              </Group>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="c05_Intron2" linkSize="8" min="-2" max="-2" attributes="0"/>
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
-                                      <Component id="jLabelCI2" min="-2" pref="21" max="-2" attributes="0"/>
-                                  </Group>
-                              </Group>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="c06_Exon3" linkSize="8" min="-2" max="-2" attributes="0"/>
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
-                                      <Component id="jLabelCE3" min="-2" pref="22" max="-2" attributes="0"/>
-                                  </Group>
-                              </Group>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
-                                      <Component id="jLabelCI3" min="-2" pref="21" max="-2" attributes="0"/>
-                                  </Group>
-                                  <Component id="c07_Intron3" linkSize="8" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                              <EmptySpace pref="9" max="32767" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="c08_Exon4" linkSize="8" min="-2" max="-2" attributes="0"/>
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
-                                      <Component id="jLabelCE4" min="-2" pref="21" max="-2" attributes="0"/>
-                                  </Group>
-                              </Group>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="c09_Intron4" linkSize="8" min="-2" max="-2" attributes="0"/>
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
-                                      <Component id="jLabelCI4" min="-2" pref="21" max="-2" attributes="0"/>
-                                  </Group>
-                              </Group>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
-                                      <Component id="jLabelCE5" min="-2" pref="21" max="-2" attributes="0"/>
-                                  </Group>
-                                  <Component id="c10_Exon5" linkSize="8" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="c11_Intron5" linkSize="8" min="-2" max="-2" attributes="0"/>
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
-                                      <Component id="jLabelCI5" min="-2" pref="21" max="-2" attributes="0"/>
-                                  </Group>
-                              </Group>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="c12_Exon6" linkSize="8" min="-2" max="-2" attributes="0"/>
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
-                                      <Component id="jLabelCE6" min="-2" pref="21" max="-2" attributes="0"/>
-                                  </Group>
-                              </Group>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="c13_Intron6" linkSize="8" min="-2" max="-2" attributes="0"/>
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
-                                      <Component id="jLabelCI6" min="-2" pref="21" max="-2" attributes="0"/>
-                                  </Group>
-                              </Group>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="c14_Exon7" linkSize="8" min="-2" pref="22" max="-2" attributes="0"/>
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
-                                      <Component id="jLabelCE7" min="-2" pref="21" max="-2" attributes="0"/>
-                                  </Group>
-                              </Group>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="c15_Intron7" linkSize="8" min="-2" pref="22" max="-2" attributes="0"/>
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
-                                      <Component id="jLabelCI7" min="-2" pref="21" max="-2" attributes="0"/>
-                                  </Group>
-                              </Group>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="c16_Exon8" linkSize="8" min="-2" pref="40" max="-2" attributes="0"/>
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
-                                      <Component id="jLabelCE8" min="-2" pref="21" max="-2" attributes="0"/>
-                                  </Group>
-                              </Group>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
-                                      <Component id="jLabelC3" min="-2" pref="22" max="-2" attributes="0"/>
-                                  </Group>
-                                  <Component id="c17_3Prime" linkSize="8" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                              <EmptySpace pref="189" max="32767" attributes="0"/>
-                          </Group>
-                      </Group>
-                    </DimensionLayout>
-                    <DimensionLayout dim="1">
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" attributes="0">
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="hlaCLabel" alignment="3" min="-2" pref="20" max="-2" attributes="0"/>
-                                  <Component id="c01_5Prime" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="c02_Exon1" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="c03_Intron1" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="c04_Exon2" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="c05_Intron2" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="c06_Exon3" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="c07_Intron3" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="c08_Exon4" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="c16_Exon8" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="c14_Exon7" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="c15_Intron7" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="c17_3Prime" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="c09_Intron4" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="c10_Exon5" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="c11_Intron5" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="c12_Exon6" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="c13_Intron6" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="c00_WS" alignment="3" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Group type="102" attributes="0">
-                                      <Group type="103" groupAlignment="1" attributes="0">
-                                          <Group type="103" groupAlignment="0" attributes="0">
-                                              <Component id="jLabelC3" linkSize="9" min="-2" pref="60" max="-2" attributes="0"/>
-                                              <Group type="102" alignment="1" attributes="0">
-                                                  <EmptySpace max="-2" attributes="0"/>
-                                                  <Group type="103" groupAlignment="0" attributes="0">
-                                                      <Component id="jLabelCI7" linkSize="9" alignment="1" min="-2" max="-2" attributes="0"/>
-                                                      <Component id="jLabelCE8" linkSize="9" alignment="1" min="-2" max="-2" attributes="0"/>
-                                                  </Group>
-                                              </Group>
-                                          </Group>
-                                          <Component id="jLabelCE7" linkSize="9" min="-2" max="-2" attributes="0"/>
-                                          <Component id="jLabelCI6" linkSize="9" min="-2" max="-2" attributes="0"/>
-                                          <Component id="jLabelCE6" linkSize="9" min="-2" max="-2" attributes="0"/>
-                                      </Group>
-                                      <EmptySpace max="32767" attributes="0"/>
-                                  </Group>
-                                  <Group type="102" alignment="1" attributes="0">
-                                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                                      <Group type="103" groupAlignment="0" attributes="0">
-                                          <Group type="103" groupAlignment="0" attributes="0">
-                                              <Component id="jLabelCI5" linkSize="9" alignment="1" min="-2" max="-2" attributes="0"/>
-                                              <Component id="jLabelCE5" linkSize="9" alignment="1" min="-2" max="-2" attributes="0"/>
-                                              <Component id="jLabelCI4" linkSize="9" alignment="1" min="-2" max="-2" attributes="0"/>
-                                              <Component id="jLabelCE4" linkSize="9" alignment="1" min="-2" max="-2" attributes="0"/>
-                                              <Component id="jLabelCI3" linkSize="9" alignment="1" min="-2" max="-2" attributes="0"/>
-                                              <Component id="jLabelCE3" linkSize="9" alignment="1" min="-2" max="-2" attributes="0"/>
-                                              <Component id="jLabelCI2" linkSize="9" alignment="1" min="-2" max="-2" attributes="0"/>
-                                              <Component id="jLabelCE2" linkSize="9" alignment="1" min="-2" max="-2" attributes="0"/>
-                                              <Component id="jLabelCI1" linkSize="9" alignment="1" min="-2" max="-2" attributes="0"/>
-                                              <Component id="jLabelCE1" linkSize="9" alignment="1" min="-2" max="-2" attributes="0"/>
-                                          </Group>
-                                          <Component id="jLabelC5" linkSize="9" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      </Group>
-                                      <EmptySpace min="-2" pref="76" max="-2" attributes="0"/>
-                                  </Group>
-                                  <Group type="102" alignment="1" attributes="0">
-                                      <EmptySpace max="32767" attributes="0"/>
-                                      <Component id="jLabelCW" min="-2" pref="99" max="-2" attributes="0"/>
-                                      <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
-                                  </Group>
-                              </Group>
-                          </Group>
-                      </Group>
-                    </DimensionLayout>
-                  </Layout>
-                  <SubComponents>
-                    <Component class="javax.swing.JLabel" name="hlaCLabel">
-                      <Properties>
-                        <Property name="text" type="java.lang.String" value="HLA-C"/>
-                      </Properties>
-                    </Component>
-                    <Component class="javax.swing.JTextField" name="c00_WS">
-                      <Properties>
-                        <Property name="horizontalAlignment" type="int" value="0"/>
-                        <Property name="text" type="java.lang.String" value="w"/>
-                        <Property name="name" type="java.lang.String" value="00" noResource="true"/>
-                      </Properties>
-                    </Component>
-                    <Component class="javax.swing.JTextField" name="c01_5Prime">
-                      <Properties>
-                        <Property name="horizontalAlignment" type="int" value="0"/>
-                        <Property name="name" type="java.lang.String" value="01" noResource="true"/>
-                      </Properties>
-                    </Component>
-                    <Component class="javax.swing.JTextField" name="c02_Exon1">
-                      <Properties>
-                        <Property name="horizontalAlignment" type="int" value="0"/>
-                        <Property name="name" type="java.lang.String" value="02" noResource="true"/>
-                      </Properties>
-                    </Component>
-                    <Component class="javax.swing.JTextField" name="c03_Intron1">
-                      <Properties>
-                        <Property name="horizontalAlignment" type="int" value="0"/>
-                        <Property name="name" type="java.lang.String" value="03" noResource="true"/>
-                      </Properties>
-                    </Component>
-                    <Component class="javax.swing.JTextField" name="c04_Exon2">
-                      <Properties>
-                        <Property name="horizontalAlignment" type="int" value="0"/>
-                        <Property name="name" type="java.lang.String" value="04" noResource="true"/>
-                      </Properties>
-                    </Component>
-                    <Component class="javax.swing.JTextField" name="c05_Intron2">
-                      <Properties>
-                        <Property name="horizontalAlignment" type="int" value="0"/>
-                        <Property name="name" type="java.lang.String" value="05" noResource="true"/>
-                      </Properties>
-                    </Component>
-                    <Component class="javax.swing.JTextField" name="c06_Exon3">
-                      <Properties>
-                        <Property name="horizontalAlignment" type="int" value="0"/>
-                        <Property name="name" type="java.lang.String" value="06" noResource="true"/>
-                      </Properties>
-                    </Component>
-                    <Component class="javax.swing.JTextField" name="c07_Intron3">
-                      <Properties>
-                        <Property name="horizontalAlignment" type="int" value="0"/>
-                        <Property name="name" type="java.lang.String" value="07" noResource="true"/>
-                      </Properties>
-                    </Component>
-                    <Component class="javax.swing.JTextField" name="c08_Exon4">
-                      <Properties>
-                        <Property name="horizontalAlignment" type="int" value="0"/>
-                        <Property name="name" type="java.lang.String" value="08" noResource="true"/>
-                      </Properties>
-                    </Component>
-                    <Component class="javax.swing.JTextField" name="c09_Intron4">
-                      <Properties>
-                        <Property name="horizontalAlignment" type="int" value="0"/>
-                        <Property name="name" type="java.lang.String" value="09" noResource="true"/>
-                      </Properties>
-                    </Component>
-                    <Component class="javax.swing.JTextField" name="c10_Exon5">
-                      <Properties>
-                        <Property name="horizontalAlignment" type="int" value="0"/>
-                        <Property name="name" type="java.lang.String" value="10" noResource="true"/>
-                      </Properties>
-                    </Component>
-                    <Component class="javax.swing.JTextField" name="c11_Intron5">
-                      <Properties>
-                        <Property name="horizontalAlignment" type="int" value="0"/>
-                        <Property name="name" type="java.lang.String" value="11" noResource="true"/>
-                      </Properties>
-                    </Component>
-                    <Component class="javax.swing.JTextField" name="c12_Exon6">
-                      <Properties>
-                        <Property name="horizontalAlignment" type="int" value="0"/>
-                        <Property name="name" type="java.lang.String" value="12" noResource="true"/>
-                      </Properties>
-                      <Events>
-                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="c12_Exon6ActionPerformed"/>
-                      </Events>
-                    </Component>
-                    <Component class="javax.swing.JTextField" name="c13_Intron6">
-                      <Properties>
-                        <Property name="horizontalAlignment" type="int" value="0"/>
-                        <Property name="name" type="java.lang.String" value="13" noResource="true"/>
-                      </Properties>
-                    </Component>
-                    <Component class="javax.swing.JTextField" name="c14_Exon7">
-                      <Properties>
-                        <Property name="horizontalAlignment" type="int" value="0"/>
-                        <Property name="name" type="java.lang.String" value="14" noResource="true"/>
-                      </Properties>
-                    </Component>
-                    <Component class="javax.swing.JTextField" name="c15_Intron7">
-                      <Properties>
-                        <Property name="horizontalAlignment" type="int" value="0"/>
-                        <Property name="name" type="java.lang.String" value="15" noResource="true"/>
-                      </Properties>
-                    </Component>
-                    <Component class="javax.swing.JTextField" name="c16_Exon8">
-                      <Properties>
-                        <Property name="horizontalAlignment" type="int" value="0"/>
-                        <Property name="name" type="java.lang.String" value="16" noResource="true"/>
-                      </Properties>
-                    </Component>
-                    <Component class="javax.swing.JTextField" name="c17_3Prime">
-                      <Properties>
-                        <Property name="horizontalAlignment" type="int" value="0"/>
-                        <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-                          <Dimension value="[10, 26]"/>
-                        </Property>
-                        <Property name="name" type="java.lang.String" value="17" noResource="true"/>
-                      </Properties>
-                    </Component>
-                    <Component class="javax.swing.JLabel" name="jLabelCW">
-                      <AuxValues>
-                        <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="TextIcon t1C = new TextIcon(jLabelCW, &quot;Workshop Status&quot;, TextIcon.Layout.HORIZONTAL);&#xa;RotatedIcon r1C = new RotatedIcon(t1C, RotatedIcon.Rotate.DOWN);&#xa;jLabelCW.setIcon( r1C );"/>
-                      </AuxValues>
-                    </Component>
-                    <Component class="javax.swing.JLabel" name="jLabelC5">
-                      <AuxValues>
-                        <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="t1C = new TextIcon(jLabelC5, &quot;5&apos; UTR&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1C = new RotatedIcon(t1C, RotatedIcon.Rotate.DOWN);&#xa;jLabelC5.setIcon( r1C );"/>
-                      </AuxValues>
-                    </Component>
-                    <Component class="javax.swing.JLabel" name="jLabelCE1">
-                      <AuxValues>
-                        <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="t1C = new TextIcon(jLabelCE1, &quot;Exon 1&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1C = new RotatedIcon(t1C, RotatedIcon.Rotate.DOWN);&#xa;jLabelCE1.setIcon( r1C );"/>
-                      </AuxValues>
-                    </Component>
-                    <Component class="javax.swing.JLabel" name="jLabelCI1">
-                      <AuxValues>
-                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1C = new TextIcon(jLabelCI1, &quot;Intron 1&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1C = new RotatedIcon(t1C, RotatedIcon.Rotate.DOWN);&#xa;jLabelCI1.setIcon( r1C );"/>
-                      </AuxValues>
-                    </Component>
-                    <Component class="javax.swing.JLabel" name="jLabelCE2">
-                      <AuxValues>
-                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1C = new TextIcon(jLabelCE2, &quot;Exon 2&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1C = new RotatedIcon(t1C, RotatedIcon.Rotate.DOWN);&#xa;jLabelCE2.setIcon( r1C );"/>
-                      </AuxValues>
-                    </Component>
-                    <Component class="javax.swing.JLabel" name="jLabelCI2">
-                      <AuxValues>
-                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1C = new TextIcon(jLabelCI2, &quot;Intron 2&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1C = new RotatedIcon(t1C, RotatedIcon.Rotate.DOWN);&#xa;jLabelCI2.setIcon( r1C );"/>
-                      </AuxValues>
-                    </Component>
-                    <Component class="javax.swing.JLabel" name="jLabelCE3">
-                      <AuxValues>
-                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1C = new TextIcon(jLabelCE3, &quot;Exon 3&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1C = new RotatedIcon(t1C, RotatedIcon.Rotate.DOWN);&#xa;jLabelCE3.setIcon( r1C );"/>
-                      </AuxValues>
-                    </Component>
-                    <Component class="javax.swing.JLabel" name="jLabelCI3">
-                      <AuxValues>
-                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1C = new TextIcon(jLabelCI3, &quot;Intron 3&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1C = new RotatedIcon(t1C, RotatedIcon.Rotate.DOWN);&#xa;jLabelCI3.setIcon( r1C );"/>
-                      </AuxValues>
-                    </Component>
-                    <Component class="javax.swing.JLabel" name="jLabelCE4">
-                      <AuxValues>
-                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1C = new TextIcon(jLabelCE4, &quot;Exon 4&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1C = new RotatedIcon(t1C, RotatedIcon.Rotate.DOWN);&#xa;jLabelCE4.setIcon( r1C );"/>
-                      </AuxValues>
-                    </Component>
-                    <Component class="javax.swing.JLabel" name="jLabelCI4">
-                      <AuxValues>
-                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1C = new TextIcon(jLabelCI4, &quot;Intron 4&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1C = new RotatedIcon(t1C, RotatedIcon.Rotate.DOWN);&#xa;jLabelCI4.setIcon( r1C );"/>
-                      </AuxValues>
-                    </Component>
-                    <Component class="javax.swing.JLabel" name="jLabelCE5">
-                      <AuxValues>
-                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1C = new TextIcon(jLabelCE5, &quot;Exon 5&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1C = new RotatedIcon(t1C, RotatedIcon.Rotate.DOWN);&#xa;jLabelCE5.setIcon( r1C );"/>
-                      </AuxValues>
-                    </Component>
-                    <Component class="javax.swing.JLabel" name="jLabelCI5">
-                      <AuxValues>
-                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1C = new TextIcon(jLabelCI5, &quot;Intron 5&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1C = new RotatedIcon(t1C, RotatedIcon.Rotate.DOWN);&#xa;jLabelCI5.setIcon( r1C );"/>
-                      </AuxValues>
-                    </Component>
-                    <Component class="javax.swing.JLabel" name="jLabelCE6">
-                      <AuxValues>
-                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1C = new TextIcon(jLabelCE6, &quot;Exon 6&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1C = new RotatedIcon(t1C, RotatedIcon.Rotate.DOWN);&#xa;jLabelCE6.setIcon( r1C );"/>
-                      </AuxValues>
-                    </Component>
-                    <Component class="javax.swing.JLabel" name="jLabelCI6">
-                      <AuxValues>
-                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1C = new TextIcon(jLabelCI6, &quot;Intron 6&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1C = new RotatedIcon(t1C, RotatedIcon.Rotate.DOWN);&#xa;jLabelCI6.setIcon( r1C );"/>
-                      </AuxValues>
-                    </Component>
-                    <Component class="javax.swing.JLabel" name="jLabelCE7">
-                      <AuxValues>
-                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1C = new TextIcon(jLabelCE7, &quot;Exon 7&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1C = new RotatedIcon(t1C, RotatedIcon.Rotate.DOWN);&#xa;jLabelCE7.setIcon( r1C );"/>
-                      </AuxValues>
-                    </Component>
-                    <Component class="javax.swing.JLabel" name="jLabelCI7">
-                      <AuxValues>
-                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1C = new TextIcon(jLabelCI7, &quot;Intron 7&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1C = new RotatedIcon(t1C, RotatedIcon.Rotate.DOWN);&#xa;jLabelCI7.setIcon( r1C );"/>
-                      </AuxValues>
-                    </Component>
-                    <Component class="javax.swing.JLabel" name="jLabelCE8">
-                      <AuxValues>
-                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1C = new TextIcon(jLabelCE8, &quot;Exon 8&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1C = new RotatedIcon(t1C, RotatedIcon.Rotate.DOWN);&#xa;jLabelCE8.setIcon( r1C );"/>
-                      </AuxValues>
-                    </Component>
-                    <Component class="javax.swing.JLabel" name="jLabelC3">
-                      <AuxValues>
-                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1C = new TextIcon(jLabelC3, &quot;3&apos; UTR&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1C = new RotatedIcon(t1C, RotatedIcon.Rotate.DOWN);&#xa;jLabelC3.setIcon( r1C );"/>
                       </AuxValues>
                     </Component>
                   </SubComponents>
@@ -1398,6 +950,468 @@
                     </Component>
                   </SubComponents>
                 </Container>
+                <Container class="javax.swing.JPanel" name="jPanelEnterGfeC">
+                  <Properties>
+                    <Property name="name" type="java.lang.String" value="jPanelEnterGfeC" noResource="true"/>
+                  </Properties>
+                  <Constraints>
+                    <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignCardLayout" value="org.netbeans.modules.form.compat2.layouts.DesignCardLayout$CardConstraintsDescription">
+                      <CardConstraints cardName="cardC"/>
+                    </Constraint>
+                  </Constraints>
+
+                  <Layout>
+                    <DimensionLayout dim="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" attributes="0">
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="hlaCLabel" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="2" attributes="0">
+                                  <Component id="c00_WS" alignment="2" pref="90" max="32767" attributes="0"/>
+                                  <Component id="jLabelCW" alignment="2" min="-2" pref="22" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace min="-2" pref="2" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="c01_5Prime" linkSize="8" min="-2" max="-2" attributes="0"/>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
+                                      <Component id="jLabelC5" min="-2" pref="22" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="c02_Exon1" linkSize="8" min="-2" max="-2" attributes="0"/>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
+                                      <Component id="jLabelCE1" min="-2" pref="21" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="c03_Intron1" linkSize="8" min="-2" max="-2" attributes="0"/>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
+                                      <Component id="jLabelCI1" min="-2" pref="21" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="c04_Exon2" linkSize="8" min="-2" max="-2" attributes="0"/>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
+                                      <Component id="jLabelCE2" min="-2" pref="21" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="c05_Intron2" linkSize="8" min="-2" max="-2" attributes="0"/>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
+                                      <Component id="jLabelCI2" min="-2" pref="21" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="c06_Exon3" linkSize="8" min="-2" max="-2" attributes="0"/>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
+                                      <Component id="jLabelCE3" min="-2" pref="22" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
+                                      <Component id="jLabelCI3" min="-2" pref="21" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Component id="c07_Intron3" linkSize="8" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace pref="75" max="32767" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="c08_Exon4" linkSize="8" min="-2" max="-2" attributes="0"/>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
+                                      <Component id="jLabelCE4" min="-2" pref="21" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="c09_Intron4" linkSize="8" min="-2" max="-2" attributes="0"/>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
+                                      <Component id="jLabelCI4" min="-2" pref="21" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
+                                      <Component id="jLabelCE5" min="-2" pref="21" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Component id="c10_Exon5" linkSize="8" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="c11_Intron5" linkSize="8" min="-2" max="-2" attributes="0"/>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
+                                      <Component id="jLabelCI5" min="-2" pref="21" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="c12_Exon6" linkSize="8" min="-2" max="-2" attributes="0"/>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
+                                      <Component id="jLabelCE6" min="-2" pref="21" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="c13_Intron6" linkSize="8" min="-2" max="-2" attributes="0"/>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
+                                      <Component id="jLabelCI6" min="-2" pref="21" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="c14_Exon7" linkSize="8" min="-2" pref="22" max="-2" attributes="0"/>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
+                                      <Component id="jLabelCE7" min="-2" pref="21" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="c15_Intron7" linkSize="8" min="-2" pref="22" max="-2" attributes="0"/>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
+                                      <Component id="jLabelCI7" min="-2" pref="21" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="c16_Exon8" linkSize="8" min="-2" pref="40" max="-2" attributes="0"/>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
+                                      <Component id="jLabelCE8" min="-2" pref="21" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
+                                      <Component id="jLabelC3" min="-2" pref="22" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Component id="c17_3Prime" linkSize="8" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace pref="253" max="32767" attributes="0"/>
+                          </Group>
+                      </Group>
+                    </DimensionLayout>
+                    <DimensionLayout dim="1">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" attributes="0">
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="hlaCLabel" alignment="3" min="-2" pref="20" max="-2" attributes="0"/>
+                                  <Component id="c01_5Prime" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="c02_Exon1" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="c03_Intron1" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="c04_Exon2" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="c05_Intron2" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="c06_Exon3" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="c07_Intron3" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="c08_Exon4" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="c16_Exon8" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="c14_Exon7" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="c15_Intron7" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="c17_3Prime" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="c09_Intron4" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="c10_Exon5" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="c11_Intron5" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="c12_Exon6" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="c13_Intron6" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="c00_WS" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="102" attributes="0">
+                                      <Group type="103" groupAlignment="1" attributes="0">
+                                          <Group type="103" groupAlignment="0" attributes="0">
+                                              <Component id="jLabelC3" linkSize="9" min="-2" pref="60" max="-2" attributes="0"/>
+                                              <Group type="102" alignment="1" attributes="0">
+                                                  <EmptySpace max="-2" attributes="0"/>
+                                                  <Group type="103" groupAlignment="0" attributes="0">
+                                                      <Component id="jLabelCI7" linkSize="9" alignment="1" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="jLabelCE8" linkSize="9" alignment="1" min="-2" max="-2" attributes="0"/>
+                                                  </Group>
+                                              </Group>
+                                          </Group>
+                                          <Component id="jLabelCE7" linkSize="9" min="-2" max="-2" attributes="0"/>
+                                          <Component id="jLabelCI6" linkSize="9" min="-2" max="-2" attributes="0"/>
+                                          <Component id="jLabelCE6" linkSize="9" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace max="32767" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" alignment="1" attributes="0">
+                                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Group type="103" groupAlignment="0" attributes="0">
+                                              <Component id="jLabelCI5" linkSize="9" alignment="1" min="-2" max="-2" attributes="0"/>
+                                              <Component id="jLabelCE5" linkSize="9" alignment="1" min="-2" max="-2" attributes="0"/>
+                                              <Component id="jLabelCI4" linkSize="9" alignment="1" min="-2" max="-2" attributes="0"/>
+                                              <Component id="jLabelCE4" linkSize="9" alignment="1" min="-2" max="-2" attributes="0"/>
+                                              <Component id="jLabelCI3" linkSize="9" alignment="1" min="-2" max="-2" attributes="0"/>
+                                              <Component id="jLabelCE3" linkSize="9" alignment="1" min="-2" max="-2" attributes="0"/>
+                                              <Component id="jLabelCI2" linkSize="9" alignment="1" min="-2" max="-2" attributes="0"/>
+                                              <Component id="jLabelCE2" linkSize="9" alignment="1" min="-2" max="-2" attributes="0"/>
+                                              <Component id="jLabelCI1" linkSize="9" alignment="1" min="-2" max="-2" attributes="0"/>
+                                              <Component id="jLabelCE1" linkSize="9" alignment="1" min="-2" max="-2" attributes="0"/>
+                                          </Group>
+                                          <Component id="jLabelC5" linkSize="9" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace min="-2" pref="76" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" alignment="1" attributes="0">
+                                      <EmptySpace max="32767" attributes="0"/>
+                                      <Component id="jLabelCW" min="-2" pref="99" max="-2" attributes="0"/>
+                                      <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                          </Group>
+                      </Group>
+                    </DimensionLayout>
+                  </Layout>
+                  <SubComponents>
+                    <Component class="javax.swing.JLabel" name="hlaCLabel">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="HLA-C"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JTextField" name="c00_WS">
+                      <Properties>
+                        <Property name="horizontalAlignment" type="int" value="0"/>
+                        <Property name="text" type="java.lang.String" value="w"/>
+                        <Property name="name" type="java.lang.String" value="00" noResource="true"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JTextField" name="c01_5Prime">
+                      <Properties>
+                        <Property name="horizontalAlignment" type="int" value="0"/>
+                        <Property name="name" type="java.lang.String" value="01" noResource="true"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JTextField" name="c02_Exon1">
+                      <Properties>
+                        <Property name="horizontalAlignment" type="int" value="0"/>
+                        <Property name="name" type="java.lang.String" value="02" noResource="true"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JTextField" name="c03_Intron1">
+                      <Properties>
+                        <Property name="horizontalAlignment" type="int" value="0"/>
+                        <Property name="name" type="java.lang.String" value="03" noResource="true"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JTextField" name="c04_Exon2">
+                      <Properties>
+                        <Property name="horizontalAlignment" type="int" value="0"/>
+                        <Property name="name" type="java.lang.String" value="04" noResource="true"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JTextField" name="c05_Intron2">
+                      <Properties>
+                        <Property name="horizontalAlignment" type="int" value="0"/>
+                        <Property name="name" type="java.lang.String" value="05" noResource="true"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JTextField" name="c06_Exon3">
+                      <Properties>
+                        <Property name="horizontalAlignment" type="int" value="0"/>
+                        <Property name="name" type="java.lang.String" value="06" noResource="true"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JTextField" name="c07_Intron3">
+                      <Properties>
+                        <Property name="horizontalAlignment" type="int" value="0"/>
+                        <Property name="name" type="java.lang.String" value="07" noResource="true"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JTextField" name="c08_Exon4">
+                      <Properties>
+                        <Property name="horizontalAlignment" type="int" value="0"/>
+                        <Property name="name" type="java.lang.String" value="08" noResource="true"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JTextField" name="c09_Intron4">
+                      <Properties>
+                        <Property name="horizontalAlignment" type="int" value="0"/>
+                        <Property name="name" type="java.lang.String" value="09" noResource="true"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JTextField" name="c10_Exon5">
+                      <Properties>
+                        <Property name="horizontalAlignment" type="int" value="0"/>
+                        <Property name="name" type="java.lang.String" value="10" noResource="true"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JTextField" name="c11_Intron5">
+                      <Properties>
+                        <Property name="horizontalAlignment" type="int" value="0"/>
+                        <Property name="name" type="java.lang.String" value="11" noResource="true"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JTextField" name="c12_Exon6">
+                      <Properties>
+                        <Property name="horizontalAlignment" type="int" value="0"/>
+                        <Property name="name" type="java.lang.String" value="12" noResource="true"/>
+                      </Properties>
+                      <Events>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="c12_Exon6ActionPerformed"/>
+                      </Events>
+                    </Component>
+                    <Component class="javax.swing.JTextField" name="c13_Intron6">
+                      <Properties>
+                        <Property name="horizontalAlignment" type="int" value="0"/>
+                        <Property name="name" type="java.lang.String" value="13" noResource="true"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JTextField" name="c14_Exon7">
+                      <Properties>
+                        <Property name="horizontalAlignment" type="int" value="0"/>
+                        <Property name="name" type="java.lang.String" value="14" noResource="true"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JTextField" name="c15_Intron7">
+                      <Properties>
+                        <Property name="horizontalAlignment" type="int" value="0"/>
+                        <Property name="name" type="java.lang.String" value="15" noResource="true"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JTextField" name="c16_Exon8">
+                      <Properties>
+                        <Property name="horizontalAlignment" type="int" value="0"/>
+                        <Property name="name" type="java.lang.String" value="16" noResource="true"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JTextField" name="c17_3Prime">
+                      <Properties>
+                        <Property name="horizontalAlignment" type="int" value="0"/>
+                        <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                          <Dimension value="[10, 26]"/>
+                        </Property>
+                        <Property name="name" type="java.lang.String" value="17" noResource="true"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="jLabelCW">
+                      <AuxValues>
+                        <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="TextIcon t1C = new TextIcon(jLabelCW, &quot;Workshop Status&quot;, TextIcon.Layout.HORIZONTAL);&#xa;RotatedIcon r1C = new RotatedIcon(t1C, RotatedIcon.Rotate.DOWN);&#xa;jLabelCW.setIcon( r1C );"/>
+                      </AuxValues>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="jLabelC5">
+                      <AuxValues>
+                        <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="t1C = new TextIcon(jLabelC5, &quot;5&apos; UTR&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1C = new RotatedIcon(t1C, RotatedIcon.Rotate.DOWN);&#xa;jLabelC5.setIcon( r1C );"/>
+                      </AuxValues>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="jLabelCE1">
+                      <AuxValues>
+                        <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="t1C = new TextIcon(jLabelCE1, &quot;Exon 1&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1C = new RotatedIcon(t1C, RotatedIcon.Rotate.DOWN);&#xa;jLabelCE1.setIcon( r1C );"/>
+                      </AuxValues>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="jLabelCI1">
+                      <AuxValues>
+                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1C = new TextIcon(jLabelCI1, &quot;Intron 1&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1C = new RotatedIcon(t1C, RotatedIcon.Rotate.DOWN);&#xa;jLabelCI1.setIcon( r1C );"/>
+                      </AuxValues>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="jLabelCE2">
+                      <AuxValues>
+                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1C = new TextIcon(jLabelCE2, &quot;Exon 2&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1C = new RotatedIcon(t1C, RotatedIcon.Rotate.DOWN);&#xa;jLabelCE2.setIcon( r1C );"/>
+                      </AuxValues>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="jLabelCI2">
+                      <AuxValues>
+                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1C = new TextIcon(jLabelCI2, &quot;Intron 2&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1C = new RotatedIcon(t1C, RotatedIcon.Rotate.DOWN);&#xa;jLabelCI2.setIcon( r1C );"/>
+                      </AuxValues>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="jLabelCE3">
+                      <AuxValues>
+                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1C = new TextIcon(jLabelCE3, &quot;Exon 3&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1C = new RotatedIcon(t1C, RotatedIcon.Rotate.DOWN);&#xa;jLabelCE3.setIcon( r1C );"/>
+                      </AuxValues>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="jLabelCI3">
+                      <AuxValues>
+                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1C = new TextIcon(jLabelCI3, &quot;Intron 3&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1C = new RotatedIcon(t1C, RotatedIcon.Rotate.DOWN);&#xa;jLabelCI3.setIcon( r1C );"/>
+                      </AuxValues>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="jLabelCE4">
+                      <AuxValues>
+                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1C = new TextIcon(jLabelCE4, &quot;Exon 4&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1C = new RotatedIcon(t1C, RotatedIcon.Rotate.DOWN);&#xa;jLabelCE4.setIcon( r1C );"/>
+                      </AuxValues>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="jLabelCI4">
+                      <AuxValues>
+                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1C = new TextIcon(jLabelCI4, &quot;Intron 4&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1C = new RotatedIcon(t1C, RotatedIcon.Rotate.DOWN);&#xa;jLabelCI4.setIcon( r1C );"/>
+                      </AuxValues>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="jLabelCE5">
+                      <AuxValues>
+                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1C = new TextIcon(jLabelCE5, &quot;Exon 5&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1C = new RotatedIcon(t1C, RotatedIcon.Rotate.DOWN);&#xa;jLabelCE5.setIcon( r1C );"/>
+                      </AuxValues>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="jLabelCI5">
+                      <AuxValues>
+                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1C = new TextIcon(jLabelCI5, &quot;Intron 5&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1C = new RotatedIcon(t1C, RotatedIcon.Rotate.DOWN);&#xa;jLabelCI5.setIcon( r1C );"/>
+                      </AuxValues>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="jLabelCE6">
+                      <AuxValues>
+                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1C = new TextIcon(jLabelCE6, &quot;Exon 6&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1C = new RotatedIcon(t1C, RotatedIcon.Rotate.DOWN);&#xa;jLabelCE6.setIcon( r1C );"/>
+                      </AuxValues>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="jLabelCI6">
+                      <AuxValues>
+                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1C = new TextIcon(jLabelCI6, &quot;Intron 6&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1C = new RotatedIcon(t1C, RotatedIcon.Rotate.DOWN);&#xa;jLabelCI6.setIcon( r1C );"/>
+                      </AuxValues>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="jLabelCE7">
+                      <AuxValues>
+                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1C = new TextIcon(jLabelCE7, &quot;Exon 7&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1C = new RotatedIcon(t1C, RotatedIcon.Rotate.DOWN);&#xa;jLabelCE7.setIcon( r1C );"/>
+                      </AuxValues>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="jLabelCI7">
+                      <AuxValues>
+                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1C = new TextIcon(jLabelCI7, &quot;Intron 7&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1C = new RotatedIcon(t1C, RotatedIcon.Rotate.DOWN);&#xa;jLabelCI7.setIcon( r1C );"/>
+                      </AuxValues>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="jLabelCE8">
+                      <AuxValues>
+                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1C = new TextIcon(jLabelCE8, &quot;Exon 8&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1C = new RotatedIcon(t1C, RotatedIcon.Rotate.DOWN);&#xa;jLabelCE8.setIcon( r1C );"/>
+                      </AuxValues>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="jLabelC3">
+                      <AuxValues>
+                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1C = new TextIcon(jLabelC3, &quot;3&apos; UTR&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1C = new RotatedIcon(t1C, RotatedIcon.Rotate.DOWN);&#xa;jLabelC3.setIcon( r1C );"/>
+                      </AuxValues>
+                    </Component>
+                  </SubComponents>
+                </Container>
+              </SubComponents>
+            </Container>
+            <Container class="javax.swing.JScrollPane" name="jScrollPane1">
+              <AuxValues>
+                <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+              </AuxValues>
+
+              <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+              <SubComponents>
+                <Component class="javax.swing.JTextArea" name="jTextArea1">
+                  <Properties>
+                    <Property name="columns" type="int" value="20"/>
+                    <Property name="rows" type="int" value="5"/>
+                  </Properties>
+                </Component>
               </SubComponents>
             </Container>
           </SubComponents>
@@ -1425,7 +1439,7 @@
                           </Group>
                           <Component id="jLabel3" min="-2" pref="686" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace pref="374" max="32767" attributes="0"/>
+                      <EmptySpace pref="558" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -1441,7 +1455,7 @@
                           <Component id="hlaSelectUpdate" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="updateButton" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace pref="339" max="32767" attributes="0"/>
+                      <EmptySpace pref="396" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
