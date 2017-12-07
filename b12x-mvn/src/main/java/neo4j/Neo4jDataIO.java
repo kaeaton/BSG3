@@ -64,7 +64,7 @@ public class Neo4jDataIO {
                 
                 // Run the GFE portion through the parser
                 boolean results = (boolean)parse.invoke(gfeParser, gfeAlleles[1]);
-                if (line.matches(regex)){
+                if (gfeAlleles[1].matches(regex)){
                     System.out.println(line);
 
                 }

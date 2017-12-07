@@ -1290,9 +1290,9 @@ public class B12xGUI extends javax.swing.JFrame {
 
             // Check for extraneous dash at the end and close regex
             if (currentRegex.matches("^.+-$")){
-                finalRegex = currentRegex.substring(0, (currentRegex.length() - 1));//.concat("$");
+                finalRegex = currentRegex.substring(0, (currentRegex.length() - 1)).concat("$");
             } else {
-                finalRegex = currentRegex;//.concat("$");
+                finalRegex = currentRegex.concat("$");
             }
 
             System.out.println("Gui running " + locus);
