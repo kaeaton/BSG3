@@ -69,7 +69,7 @@ public class Neo4jDataIO {
             // Skip date stamp
 //            br.readLine();
             
-            
+            int i = 0;
             while ((line = br.readLine()) != null) {
 
                 // use comma as separator
@@ -81,10 +81,13 @@ public class Neo4jDataIO {
                     System.out.println(line);
                     B12xGUI.neo4jResults.append(line);
                     B12xGUI.neo4jResults.append(System.lineSeparator());
+                    i++;
 
                 }
             }
             
+            B12xGUI.neo4jResults.append("Total Results: " + i);
+
             // Close the buffer
             br.close();
             
