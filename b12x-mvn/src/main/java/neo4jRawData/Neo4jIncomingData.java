@@ -44,7 +44,7 @@ public class Neo4jIncomingData {
             LocalDate date = LocalDate.now();
             writer.write(date.toString() + System.lineSeparator());
             
-            Map<String, String> neo4jPairs = new HashMap<String, String>();
+            TreeMap<String, String> neo4jPairs = new TreeMap<String, String>();
 //            Object json = mapper.readValue(httpResult, Object.class);
 //            File neo4jRaw = new File(System.getProperty("user.home") + System.getProperty("file.separator") + "Documents" + System.getProperty("file.separator") + "neo4jRawData.json");
 //            mapper.writerWithDefaultPrettyPrinter().writeValue(neo4jRaw, json);  
