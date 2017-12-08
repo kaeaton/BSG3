@@ -165,7 +165,7 @@ public class B12xGUI extends javax.swing.JFrame {
         jRadioButtonCSV = new javax.swing.JRadioButton();
         jRadioButtonTSV = new javax.swing.JRadioButton();
         jRadioButtonPretty = new javax.swing.JRadioButton();
-        jCheckBox1 = new javax.swing.JCheckBox();
+        jCheckBoxNeo4jSaveToFile = new javax.swing.JCheckBox();
         neo4jUpdate = new javax.swing.JPanel();
         hlaSelectUpdate = new javax.swing.JComboBox<>();
         updateButton = new javax.swing.JToggleButton();
@@ -1093,6 +1093,7 @@ public class B12xGUI extends javax.swing.JFrame {
         jScrollPane1.setViewportView(neo4jResults);
 
         buttonGroupNeo4jOutput.add(jRadioButtonCSV);
+        jRadioButtonCSV.setSelected(true);
         jRadioButtonCSV.setText("CSV");
 
         buttonGroupNeo4jOutput.add(jRadioButtonTSV);
@@ -1101,7 +1102,7 @@ public class B12xGUI extends javax.swing.JFrame {
         buttonGroupNeo4jOutput.add(jRadioButtonPretty);
         jRadioButtonPretty.setText("Pretty");
 
-        jCheckBox1.setText("Save to file");
+        jCheckBoxNeo4jSaveToFile.setText("Save to file");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -1115,7 +1116,7 @@ public class B12xGUI extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jRadioButtonPretty)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 451, Short.MAX_VALUE)
-                .addComponent(jCheckBox1)
+                .addComponent(jCheckBoxNeo4jSaveToFile)
                 .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
@@ -1126,7 +1127,7 @@ public class B12xGUI extends javax.swing.JFrame {
                     .addComponent(jRadioButtonCSV)
                     .addComponent(jRadioButtonTSV)
                     .addComponent(jRadioButtonPretty)
-                    .addComponent(jCheckBox1))
+                    .addComponent(jCheckBoxNeo4jSaveToFile))
                 .addContainerGap())
         );
 
@@ -1459,7 +1460,7 @@ public class B12xGUI extends javax.swing.JFrame {
     private javax.swing.JComboBox<String> hlaSelectNeo4j;
     private javax.swing.JComboBox<String> hlaSelectUpdate;
     private javax.swing.JLabel instructions;
-    private javax.swing.JCheckBox jCheckBox1;
+    private javax.swing.JCheckBox jCheckBoxNeo4jSaveToFile;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabelA3;

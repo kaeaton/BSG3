@@ -13,6 +13,7 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.lang.reflect.Constructor;
 import java.lang.reflect.Method;
+import java.time.LocalDateTime;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -56,8 +57,17 @@ public class Neo4jDataIO {
             // Read the File
             BufferedReader br = new BufferedReader(new FileReader(file));
             
+            // Headers
+            String timeStamp = LocalDateTime.now().toString();
+            B12xGUI.neo4jResults.append("File generated at: " + timeStamp);
+            B12xGUI.neo4jResults.append(System.lineSeparator());
+            B12xGUI.neo4jResults.append(locus + " data downloaded: " + br.readLine());
+            B12xGUI.neo4jResults.append(System.lineSeparator());
+            
+            
             // Skip date stamp
-            br.readLine();
+//            br.readLine();
+            
             
             while ((line = br.readLine()) != null) {
 
