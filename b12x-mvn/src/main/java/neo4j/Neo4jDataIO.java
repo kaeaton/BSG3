@@ -61,6 +61,7 @@ public class Neo4jDataIO {
             String timeStamp = LocalDateTime.now().toString();
             B12xGUI.neo4jResults.append("File generated at: " + timeStamp);
             B12xGUI.neo4jResults.append(System.lineSeparator());
+            B12xGUI.neo4jResults.append("Data source: http://neo4j.b12x.org - ");
             B12xGUI.neo4jResults.append(locus + " data downloaded: " + br.readLine());
             B12xGUI.neo4jResults.append(System.lineSeparator());
             
