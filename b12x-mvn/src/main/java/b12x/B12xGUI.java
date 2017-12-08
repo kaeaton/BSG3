@@ -44,6 +44,7 @@ public class B12xGUI extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        buttonGroupNeo4jOutput = new javax.swing.ButtonGroup();
         jTabbedPane2 = new javax.swing.JTabbedPane();
         neo4j = new javax.swing.JPanel();
         goButton = new javax.swing.JToggleButton();
@@ -160,6 +161,11 @@ public class B12xGUI extends javax.swing.JFrame {
         jLabelC3 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         neo4jResults = new javax.swing.JTextArea();
+        jPanel1 = new javax.swing.JPanel();
+        jRadioButtonCSV = new javax.swing.JRadioButton();
+        jRadioButtonTSV = new javax.swing.JRadioButton();
+        jRadioButtonPretty = new javax.swing.JRadioButton();
+        jCheckBox1 = new javax.swing.JCheckBox();
         neo4jUpdate = new javax.swing.JPanel();
         hlaSelectUpdate = new javax.swing.JComboBox<>();
         updateButton = new javax.swing.JToggleButton();
@@ -1086,6 +1092,44 @@ public class B12xGUI extends javax.swing.JFrame {
         neo4jResults.setRows(5);
         jScrollPane1.setViewportView(neo4jResults);
 
+        buttonGroupNeo4jOutput.add(jRadioButtonCSV);
+        jRadioButtonCSV.setText("CSV");
+
+        buttonGroupNeo4jOutput.add(jRadioButtonTSV);
+        jRadioButtonTSV.setText("TSV");
+
+        buttonGroupNeo4jOutput.add(jRadioButtonPretty);
+        jRadioButtonPretty.setText("Pretty");
+
+        jCheckBox1.setText("Save to file");
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jRadioButtonCSV)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jRadioButtonTSV)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jRadioButtonPretty)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 451, Short.MAX_VALUE)
+                .addComponent(jCheckBox1)
+                .addContainerGap())
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap(71, Short.MAX_VALUE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jRadioButtonCSV)
+                    .addComponent(jRadioButtonTSV)
+                    .addComponent(jRadioButtonPretty)
+                    .addComponent(jCheckBox1))
+                .addContainerGap())
+        );
+
         javax.swing.GroupLayout neo4jLayout = new javax.swing.GroupLayout(neo4j);
         neo4j.setLayout(neo4jLayout);
         neo4jLayout.setHorizontalGroup(
@@ -1102,10 +1146,15 @@ public class B12xGUI extends javax.swing.JFrame {
                         .addGap(0, 0, Short.MAX_VALUE)))
                 .addGap(10, 10, 10))
             .addGroup(neo4jLayout.createSequentialGroup()
-                .addGap(216, 216, 216)
-                .addGroup(neo4jLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 762, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(goButton))
+                .addGroup(neo4jLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(neo4jLayout.createSequentialGroup()
+                        .addGap(212, 212, 212)
+                        .addGroup(neo4jLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
+                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 762, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(goButton)))
+                    .addGroup(neo4jLayout.createSequentialGroup()
+                        .addGap(213, 213, 213)
+                        .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         neo4jLayout.setVerticalGroup(
@@ -1117,10 +1166,13 @@ public class B12xGUI extends javax.swing.JFrame {
                     .addComponent(instructions, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(mainCardPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(29, 29, 29)
+                .addGap(45, 45, 45)
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 215, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(goButton))
+                .addComponent(goButton)
+                .addContainerGap())
         );
 
         jTabbedPane2.addTab("Neo4j GFE Search", neo4j);
@@ -1164,7 +1216,7 @@ public class B12xGUI extends javax.swing.JFrame {
                 .addGroup(neo4jUpdateLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(hlaSelectUpdate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(updateButton))
-                .addContainerGap(396, Short.MAX_VALUE))
+                .addContainerGap(522, Short.MAX_VALUE))
         );
 
         jTabbedPane2.addTab("Neo4j Update", neo4jUpdate);
@@ -1381,6 +1433,7 @@ public class B12xGUI extends javax.swing.JFrame {
     private javax.swing.JTextField b12_Exon6;
     private javax.swing.JTextField b13_Intron6;
     private javax.swing.JTextField b14_Exon7;
+    private javax.swing.ButtonGroup buttonGroupNeo4jOutput;
     private javax.swing.JTextField c00_WS;
     private javax.swing.JTextField c01_5Prime;
     private javax.swing.JTextField c02_Exon1;
@@ -1406,6 +1459,7 @@ public class B12xGUI extends javax.swing.JFrame {
     private javax.swing.JComboBox<String> hlaSelectNeo4j;
     private javax.swing.JComboBox<String> hlaSelectUpdate;
     private javax.swing.JLabel instructions;
+    private javax.swing.JCheckBox jCheckBox1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabelA3;
@@ -1459,9 +1513,13 @@ public class B12xGUI extends javax.swing.JFrame {
     private javax.swing.JLabel jLabelCI7;
     private javax.swing.JLabel jLabelCW;
     private javax.swing.JLabel jLabelE7;
+    private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanelEnterGfeA;
     private javax.swing.JPanel jPanelEnterGfeB;
     private javax.swing.JPanel jPanelEnterGfeC;
+    private javax.swing.JRadioButton jRadioButtonCSV;
+    private javax.swing.JRadioButton jRadioButtonPretty;
+    private javax.swing.JRadioButton jRadioButtonTSV;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTabbedPane jTabbedPane2;
     private javax.swing.JPanel mainCardPanel;
