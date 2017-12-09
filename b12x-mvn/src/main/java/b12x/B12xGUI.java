@@ -454,7 +454,7 @@ public class B12xGUI extends javax.swing.JFrame {
                         .addGap(10, 10, 10)
                         .addComponent(jLabelA3, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(a17_3Prime, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(448, Short.MAX_VALUE))
+                .addContainerGap(237, Short.MAX_VALUE))
         );
 
         jPanelEnterGfeALayout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {a01_5Prime, a02_Exon1, a03_Intron1, a04_Exon2, a05_Intron2, a06_Exon3, a07_Intron3, a08_Exon4, a09_Intron4, a10_Exon5, a11_Intron5, a12_Exon6, a13_Intron6, a14_Exon7, a15_Intron7, a16_Exon8, a17_3Prime});
@@ -1020,7 +1020,7 @@ public class B12xGUI extends javax.swing.JFrame {
                         .addGap(10, 10, 10)
                         .addComponent(jLabelC3, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(c17_3Prime, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(387, Short.MAX_VALUE))
+                .addContainerGap(177, Short.MAX_VALUE))
         );
 
         jPanelEnterGfeCLayout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {c01_5Prime, c02_Exon1, c03_Intron1, c04_Exon2, c05_Intron2, c06_Exon3, c07_Intron3, c08_Exon4, c09_Intron4, c10_Exon5, c11_Intron5, c12_Exon6, c13_Intron6, c14_Exon7, c15_Intron7, c16_Exon8, c17_3Prime});
@@ -1141,18 +1141,12 @@ public class B12xGUI extends javax.swing.JFrame {
         neo4jLayout.setHorizontalGroup(
             neo4jLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(neo4jLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(neo4jLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(mainCardPanel, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 1234, Short.MAX_VALUE)
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, neo4jLayout.createSequentialGroup()
-                        .addGap(12, 12, 12)
+                .addGroup(neo4jLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(neo4jLayout.createSequentialGroup()
+                        .addGap(18, 18, 18)
                         .addComponent(hlaSelectNeo4j, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
-                        .addComponent(instructions, javax.swing.GroupLayout.PREFERRED_SIZE, 626, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, Short.MAX_VALUE)))
-                .addGap(10, 10, 10))
-            .addGroup(neo4jLayout.createSequentialGroup()
-                .addGroup(neo4jLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(instructions, javax.swing.GroupLayout.PREFERRED_SIZE, 626, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(neo4jLayout.createSequentialGroup()
                         .addGap(212, 212, 212)
                         .addGroup(neo4jLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
@@ -1160,8 +1154,9 @@ public class B12xGUI extends javax.swing.JFrame {
                             .addComponent(goButton)))
                     .addGroup(neo4jLayout.createSequentialGroup()
                         .addGap(213, 213, 213)
-                        .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(mainCardPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 1034, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(14, Short.MAX_VALUE))
         );
         neo4jLayout.setVerticalGroup(
             neo4jLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1209,7 +1204,7 @@ public class B12xGUI extends javax.swing.JFrame {
                         .addGap(100, 100, 100)
                         .addComponent(updateButton))
                     .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 686, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(558, Short.MAX_VALUE))
+                .addContainerGap(356, Short.MAX_VALUE))
         );
         neo4jUpdateLayout.setVerticalGroup(
             neo4jUpdateLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1233,7 +1228,7 @@ public class B12xGUI extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jTabbedPane2)
+                .addComponent(jTabbedPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 1069, Short.MAX_VALUE)
                 .addContainerGap())
         );
         layout.setVerticalGroup(

@@ -34,7 +34,7 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace max="-2" attributes="0"/>
-              <Component id="jTabbedPane2" max="32767" attributes="0"/>
+              <Component id="jTabbedPane2" pref="1069" max="32767" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
           </Group>
       </Group>
@@ -70,21 +70,13 @@
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" attributes="0">
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="1" attributes="0">
-                          <Component id="mainCardPanel" alignment="0" pref="1234" max="32767" attributes="0"/>
-                          <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" attributes="0">
+                              <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
                               <Component id="hlaSelectNeo4j" min="-2" pref="90" max="-2" attributes="0"/>
                               <EmptySpace type="separate" max="-2" attributes="0"/>
                               <Component id="instructions" min="-2" pref="626" max="-2" attributes="0"/>
-                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                           </Group>
-                      </Group>
-                      <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
-                  </Group>
-                  <Group type="102" attributes="0">
-                      <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" attributes="0">
                               <EmptySpace min="-2" pref="212" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="2" attributes="0">
@@ -96,8 +88,9 @@
                               <EmptySpace min="-2" pref="213" max="-2" attributes="0"/>
                               <Component id="jPanel1" min="-2" max="-2" attributes="0"/>
                           </Group>
+                          <Component id="mainCardPanel" alignment="0" min="-2" pref="1034" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace max="32767" attributes="0"/>
+                      <EmptySpace pref="14" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -323,7 +316,7 @@
                                   </Group>
                                   <Component id="a17_3Prime" linkSize="5" alignment="0" min="-2" pref="33" max="-2" attributes="0"/>
                               </Group>
-                              <EmptySpace pref="448" max="32767" attributes="0"/>
+                              <EmptySpace pref="237" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
@@ -1125,7 +1118,7 @@
                                   </Group>
                                   <Component id="c17_3Prime" linkSize="8" min="-2" max="-2" attributes="0"/>
                               </Group>
-                              <EmptySpace pref="387" max="32767" attributes="0"/>
+                              <EmptySpace pref="177" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
@@ -1539,7 +1532,7 @@
                           </Group>
                           <Component id="jLabel3" min="-2" pref="686" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace pref="558" max="32767" attributes="0"/>
+                      <EmptySpace pref="356" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>

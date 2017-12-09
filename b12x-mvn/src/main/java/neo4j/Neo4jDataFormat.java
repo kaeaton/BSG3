@@ -32,7 +32,7 @@ public class Neo4jDataFormat {
     
     static void prettyFormat(boolean toFile, String line){
         String[] gfeAllele = line.split(csvSplitBy);
-        B12xGUI.neo4jResults.append(String.format("%-30s", gfeAllele[0]));
+        B12xGUI.neo4jResults.append(String.format("%-25s", gfeAllele[0]));
         B12xGUI.neo4jResults.append(gfeAllele[1]);
         B12xGUI.neo4jResults.append(System.lineSeparator());
     }
