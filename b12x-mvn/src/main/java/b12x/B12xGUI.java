@@ -4,6 +4,7 @@ import neo4j.*;
 
 import java.awt.CardLayout;
 import java.awt.Component;
+import java.awt.Font;
 import java.nio.file.*;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
@@ -1090,16 +1091,20 @@ public class B12xGUI extends javax.swing.JFrame {
 
         neo4jResults.setColumns(20);
         neo4jResults.setRows(5);
+        neo4jResults.setFont(new Font("monospaced", Font.PLAIN, 12));
         jScrollPane1.setViewportView(neo4jResults);
 
         buttonGroupNeo4jOutput.add(jRadioButtonCSV);
+        jRadioButtonCSV.setActionCommand("CSV");
         jRadioButtonCSV.setSelected(true);
         jRadioButtonCSV.setText("CSV");
 
         buttonGroupNeo4jOutput.add(jRadioButtonTSV);
+        jRadioButtonTSV.setActionCommand("TSV");
         jRadioButtonTSV.setText("TSV");
 
         buttonGroupNeo4jOutput.add(jRadioButtonPretty);
+        jRadioButtonPretty.setActionCommand("Pretty");
         jRadioButtonPretty.setText("Pretty");
 
         jCheckBoxNeo4jSaveToFile.setText("Save to file");
@@ -1434,7 +1439,7 @@ public class B12xGUI extends javax.swing.JFrame {
     private javax.swing.JTextField b12_Exon6;
     private javax.swing.JTextField b13_Intron6;
     private javax.swing.JTextField b14_Exon7;
-    private javax.swing.ButtonGroup buttonGroupNeo4jOutput;
+    public static javax.swing.ButtonGroup buttonGroupNeo4jOutput;
     private javax.swing.JTextField c00_WS;
     private javax.swing.JTextField c01_5Prime;
     private javax.swing.JTextField c02_Exon1;
@@ -1460,7 +1465,7 @@ public class B12xGUI extends javax.swing.JFrame {
     private javax.swing.JComboBox<String> hlaSelectNeo4j;
     private javax.swing.JComboBox<String> hlaSelectUpdate;
     private javax.swing.JLabel instructions;
-    private javax.swing.JCheckBox jCheckBoxNeo4jSaveToFile;
+    public static javax.swing.JCheckBox jCheckBoxNeo4jSaveToFile;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabelA3;
@@ -1518,9 +1523,9 @@ public class B12xGUI extends javax.swing.JFrame {
     private javax.swing.JPanel jPanelEnterGfeA;
     private javax.swing.JPanel jPanelEnterGfeB;
     private javax.swing.JPanel jPanelEnterGfeC;
-    private javax.swing.JRadioButton jRadioButtonCSV;
-    private javax.swing.JRadioButton jRadioButtonPretty;
-    private javax.swing.JRadioButton jRadioButtonTSV;
+    public javax.swing.JRadioButton jRadioButtonCSV;
+    public javax.swing.JRadioButton jRadioButtonPretty;
+    public javax.swing.JRadioButton jRadioButtonTSV;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTabbedPane jTabbedPane2;
     private javax.swing.JPanel mainCardPanel;

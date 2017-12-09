@@ -26,12 +26,15 @@ public class Neo4jDataIO {
         
     }
     
-    static void readCSVFile(String locus, File file, String regex) throws IOException {
+    public void readCSVFile(String locus, File file, String regex) throws IOException {
         try {
             
             String locusParser = "";
             String line = "";
             String csvSplitBy = ",";
+            boolean writeToFile = B12xGUI.jCheckBoxNeo4jSaveToFile.isSelected();
+            
+            
             
             System.out.println(locus);
             System.out.println("Made it to DataIO: " + regex);
@@ -65,9 +68,7 @@ public class Neo4jDataIO {
             B12xGUI.neo4jResults.append(locus + " data downloaded: " + br.readLine());
             B12xGUI.neo4jResults.append(System.lineSeparator());
             
-            
-            // Skip date stamp
-//            br.readLine();
+//            System.out.println(B12xGUI.buttonGroupNeo4jOutput.getSelection().getActionCommand());
             
             int i = 0;
             while ((line = br.readLine()) != null) {
@@ -78,15 +79,31 @@ public class Neo4jDataIO {
                 // Run the GFE portion through the parser
 //                boolean results = (boolean)parse.invoke(gfeParser, gfeAlleles[1]);
                 if (gfeAlleles[1].matches(regex)){
-                    System.out.println(line);
-                    B12xGUI.neo4jResults.append(line);
-                    B12xGUI.neo4jResults.append(System.lineSeparator());
+
+                    
+                    switch (B12xGUI.buttonGroupNeo4jOutput.getSelection().getActionCommand()){
+                        case "CSV":
+                            Neo4jDataFormat.csvFormat(writeToFile, line);
+                            break;
+                        case "TSV":
+                            Neo4jDataFormat.tsvFormat(writeToFile, line);
+                            break;
+                        case "Pretty":
+                            Neo4jDataFormat.prettyFormat(writeToFile, line);
+                            break;
+                    }
+
+//                    B12xGUI.neo4jResults.append(line);
+//                    B12xGUI.neo4jResults.append(System.lineSeparator());
                     i++;
 
                 }
             }
-            
-            B12xGUI.neo4jResults.append("Total Results: " + i);
+            if (i == 0){
+                B12xGUI.neo4jResults.append("No results found");
+            } else {
+                B12xGUI.neo4jResults.append("Total Results: " + i);
+            }
 
             // Close the buffer
             br.close();

@@ -65,7 +65,8 @@ public class Neo4j  extends SwingWorker<String, String> {
 //                Neo4jIncomingData parser = new Neo4jIncomingData();
 //                parser.parseResponse(locus, incomingData, factory);
             }
-            Neo4jDataIO.readCSVFile(locus, path.toFile(), regex);
+            Neo4jDataIO parseData = new Neo4jDataIO();
+            parseData.readCSVFile(locus, path.toFile(), regex);
 //            Neo4jLocusA hlaA = new Neo4jLocusA();
 //            hlaA.parseLocus(locus);
             

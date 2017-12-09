@@ -3,6 +3,9 @@
 <Form version="1.5" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
   <NonVisualComponents>
     <Component class="javax.swing.ButtonGroup" name="buttonGroupNeo4jOutput">
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="9"/>
+      </AuxValues>
     </Component>
   </NonVisualComponents>
   <Properties>
@@ -1427,6 +1430,7 @@
                     <Property name="rows" type="int" value="5"/>
                   </Properties>
                   <AuxValues>
+                    <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="neo4jResults.setFont(new Font(&quot;monospaced&quot;, Font.PLAIN, 12));"/>
                     <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="9"/>
                   </AuxValues>
                 </Component>
@@ -1468,33 +1472,45 @@
               <SubComponents>
                 <Component class="javax.swing.JRadioButton" name="jRadioButtonCSV">
                   <Properties>
-                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor" postCode="jRadioButtonCSV.setActionCommand(&quot;CSV&quot;);">
                       <ComponentRef name="buttonGroupNeo4jOutput"/>
                     </Property>
                     <Property name="selected" type="boolean" value="true"/>
                     <Property name="text" type="java.lang.String" value="CSV"/>
                   </Properties>
+                  <AuxValues>
+                    <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+                  </AuxValues>
                 </Component>
                 <Component class="javax.swing.JRadioButton" name="jRadioButtonTSV">
                   <Properties>
-                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor" postCode="jRadioButtonTSV.setActionCommand(&quot;TSV&quot;);">
                       <ComponentRef name="buttonGroupNeo4jOutput"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="TSV"/>
                   </Properties>
+                  <AuxValues>
+                    <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+                  </AuxValues>
                 </Component>
                 <Component class="javax.swing.JRadioButton" name="jRadioButtonPretty">
                   <Properties>
-                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor" postCode="jRadioButtonPretty.setActionCommand(&quot;Pretty&quot;);">
                       <ComponentRef name="buttonGroupNeo4jOutput"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="Pretty"/>
                   </Properties>
+                  <AuxValues>
+                    <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+                  </AuxValues>
                 </Component>
                 <Component class="javax.swing.JCheckBox" name="jCheckBoxNeo4jSaveToFile">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Save to file"/>
                   </Properties>
+                  <AuxValues>
+                    <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="9"/>
+                  </AuxValues>
                 </Component>
               </SubComponents>
             </Container>
