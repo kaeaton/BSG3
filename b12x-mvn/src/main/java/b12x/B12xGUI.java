@@ -48,7 +48,8 @@ public class B12xGUI extends javax.swing.JFrame {
         buttonGroupNeo4jOutput = new javax.swing.ButtonGroup();
         jTabbedPane2 = new javax.swing.JTabbedPane();
         neo4j = new javax.swing.JPanel();
-        goButton = new javax.swing.JToggleButton();
+        neo4jSearchButton = new javax.swing.JButton();
+        neo4jSearchCancelButton = new javax.swing.JButton();
         hlaSelectNeo4j = new javax.swing.JComboBox<>();
         instructions = new javax.swing.JLabel();
         mainCardPanel = new javax.swing.JPanel();
@@ -169,7 +170,8 @@ public class B12xGUI extends javax.swing.JFrame {
         jCheckBoxNeo4jSaveToFile = new javax.swing.JCheckBox();
         neo4jUpdate = new javax.swing.JPanel();
         hlaSelectUpdate = new javax.swing.JComboBox<>();
-        updateButton = new javax.swing.JToggleButton();
+        neo4jUpdateButton = new javax.swing.JButton();
+        neo4jUpdateCancelButton = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
 
@@ -179,10 +181,17 @@ public class B12xGUI extends javax.swing.JFrame {
 
         neo4j.setName(""); // NOI18N
 
-        goButton.setText("Go");
-        goButton.addActionListener(new java.awt.event.ActionListener() {
+        neo4jSearchButton.setText("Search");
+        neo4jSearchButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                goButtonActionPerformed(evt);
+                neo4jSearchButtonActionPerformed(evt);
+            }
+        });
+
+        neo4jSearchCancelButton.setText("Cancel");
+        neo4jSearchCancelButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                neo4jSearchCancelButtonActionPerformed(evt);
             }
         });
 
@@ -1149,14 +1158,17 @@ public class B12xGUI extends javax.swing.JFrame {
                         .addComponent(instructions, javax.swing.GroupLayout.PREFERRED_SIZE, 626, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(neo4jLayout.createSequentialGroup()
                         .addGap(212, 212, 212)
-                        .addGroup(neo4jLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
-                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 762, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(goButton)))
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 762, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(neo4jLayout.createSequentialGroup()
                         .addGap(213, 213, 213)
                         .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(mainCardPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 1034, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(14, Short.MAX_VALUE))
+                    .addComponent(mainCardPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 1034, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(neo4jLayout.createSequentialGroup()
+                        .addGap(474, 474, 474)
+                        .addComponent(neo4jSearchButton)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(neo4jSearchCancelButton)))
+                .addContainerGap(30, Short.MAX_VALUE))
         );
         neo4jLayout.setVerticalGroup(
             neo4jLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1171,19 +1183,27 @@ public class B12xGUI extends javax.swing.JFrame {
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 215, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(goButton)
-                .addContainerGap())
+                .addGap(17, 17, 17)
+                .addGroup(neo4jLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(neo4jSearchButton)
+                    .addComponent(neo4jSearchCancelButton)))
         );
 
         jTabbedPane2.addTab("Neo4j GFE Search", neo4j);
 
         hlaSelectUpdate.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "HLA-A", "HLA-B", "HLA-C" }));
 
-        updateButton.setText("Update Neo4j Records");
-        updateButton.addActionListener(new java.awt.event.ActionListener() {
+        neo4jUpdateButton.setText("Update Neo4j Records");
+        neo4jUpdateButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                updateButtonActionPerformed(evt);
+                neo4jUpdateButtonActionPerformed(evt);
+            }
+        });
+
+        neo4jUpdateCancelButton.setText("Cancel");
+        neo4jUpdateCancelButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                neo4jUpdateCancelButtonActionPerformed(evt);
             }
         });
 
@@ -1196,15 +1216,20 @@ public class B12xGUI extends javax.swing.JFrame {
         neo4jUpdateLayout.setHorizontalGroup(
             neo4jUpdateLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(neo4jUpdateLayout.createSequentialGroup()
-                .addContainerGap()
                 .addGroup(neo4jUpdateLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 686, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(neo4jUpdateLayout.createSequentialGroup()
-                        .addComponent(hlaSelectUpdate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(100, 100, 100)
-                        .addComponent(updateButton))
-                    .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 686, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(356, Short.MAX_VALUE))
+                        .addContainerGap()
+                        .addGroup(neo4jUpdateLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 686, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(neo4jUpdateLayout.createSequentialGroup()
+                                .addComponent(hlaSelectUpdate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(83, 83, 83)
+                                .addComponent(neo4jUpdateButton))
+                            .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 686, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(neo4jUpdateLayout.createSequentialGroup()
+                        .addGap(484, 484, 484)
+                        .addComponent(neo4jUpdateCancelButton)))
+                .addContainerGap(368, Short.MAX_VALUE))
         );
         neo4jUpdateLayout.setVerticalGroup(
             neo4jUpdateLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1216,8 +1241,9 @@ public class B12xGUI extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addGroup(neo4jUpdateLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(hlaSelectUpdate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(updateButton))
-                .addContainerGap(522, Short.MAX_VALUE))
+                    .addComponent(neo4jUpdateButton))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 507, Short.MAX_VALUE)
+                .addComponent(neo4jUpdateCancelButton))
         );
 
         jTabbedPane2.addTab("Neo4j Update", neo4jUpdate);
@@ -1228,7 +1254,7 @@ public class B12xGUI extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jTabbedPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 1069, Short.MAX_VALUE)
+                .addComponent(jTabbedPane2)
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -1244,25 +1270,6 @@ public class B12xGUI extends javax.swing.JFrame {
 
 
     
-    private void updateButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_updateButtonActionPerformed
-        try {
-            String locus = hlaSelectUpdate.getSelectedItem().toString();
-            String neo4jLocation = "";
-            Path path = Paths.get(System.getProperty("user.home") 
-                    + System.getProperty("file.separator") + "Documents"
-                    + System.getProperty("file.separator") + "BSGData"
-                    + System.getProperty("file.separator") 
-                    + "neo4j_" + locus + "_Download.csv");
-            String regex = "";
-
-            Neo4j neo4j = new Neo4j(locus, path, regex);
-            neo4j.dataUpdate();
-        } catch (Exception ex) {
-            System.out.println(ex);
-        }
-        
-    }//GEN-LAST:event_updateButtonActionPerformed
-
     private void a00_WSActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_a00_WSActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_a00_WSActionPerformed
@@ -1286,8 +1293,12 @@ public class B12xGUI extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_hlaSelectNeo4jActionPerformed
 
-    private void goButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_goButtonActionPerformed
-        try {
+    private void c12_Exon6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_c12_Exon6ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_c12_Exon6ActionPerformed
+
+    private void neo4jSearchButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_neo4jSearchButtonActionPerformed
+            try {
             String locus = hlaSelectNeo4j.getSelectedItem().toString();
             String parsedLocus = LocusNameParser.parseLocus(locus);
 //            String neo4jLocation = "";
@@ -1359,11 +1370,35 @@ public class B12xGUI extends javax.swing.JFrame {
         } catch (Exception ex) {
             System.out.println(ex);
         }        // TODO add your handling code here:
-    }//GEN-LAST:event_goButtonActionPerformed
+                                      
 
-    private void c12_Exon6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_c12_Exon6ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_c12_Exon6ActionPerformed
+    }//GEN-LAST:event_neo4jSearchButtonActionPerformed
+
+    private void neo4jUpdateButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_neo4jUpdateButtonActionPerformed
+                try {
+            String locus = hlaSelectUpdate.getSelectedItem().toString();
+            String neo4jLocation = "";
+            Path path = Paths.get(System.getProperty("user.home") 
+                    + System.getProperty("file.separator") + "Documents"
+                    + System.getProperty("file.separator") + "BSGData"
+                    + System.getProperty("file.separator") 
+                    + "neo4j_" + locus + "_Download.csv");
+            String regex = "";
+
+            Neo4j neo4j = new Neo4j(locus, path, regex);
+            neo4j.dataUpdate();
+        } catch (Exception ex) {
+            System.out.println(ex);
+        }
+    }//GEN-LAST:event_neo4jUpdateButtonActionPerformed
+
+    private void neo4jUpdateCancelButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_neo4jUpdateCancelButtonActionPerformed
+        System.exit(0);
+    }//GEN-LAST:event_neo4jUpdateCancelButtonActionPerformed
+
+    private void neo4jSearchCancelButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_neo4jSearchCancelButtonActionPerformed
+        System.exit(0);
+    }//GEN-LAST:event_neo4jSearchCancelButtonActionPerformed
     
     /**
      * @param args the command line arguments
@@ -1453,7 +1488,6 @@ public class B12xGUI extends javax.swing.JFrame {
     private javax.swing.JTextField c15_Intron7;
     private javax.swing.JTextField c16_Exon8;
     private javax.swing.JTextField c17_3Prime;
-    private javax.swing.JToggleButton goButton;
     private javax.swing.JLabel hlaALabel2;
     private javax.swing.JLabel hlaBLabel;
     private javax.swing.JLabel hlaCLabel;
@@ -1526,8 +1560,11 @@ public class B12xGUI extends javax.swing.JFrame {
     private javax.swing.JPanel mainCardPanel;
     private javax.swing.JPanel neo4j;
     public static javax.swing.JTextArea neo4jResults;
+    private javax.swing.JButton neo4jSearchButton;
+    private javax.swing.JButton neo4jSearchCancelButton;
     private javax.swing.JPanel neo4jUpdate;
-    private javax.swing.JToggleButton updateButton;
+    private javax.swing.JButton neo4jUpdateButton;
+    private javax.swing.JButton neo4jUpdateCancelButton;
     // End of variables declaration//GEN-END:variables
 
 }
