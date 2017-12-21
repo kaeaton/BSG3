@@ -48,8 +48,7 @@ public class B12xGUI extends javax.swing.JFrame {
         buttonGroupNeo4jOutput = new javax.swing.ButtonGroup();
         jTabbedPane2 = new javax.swing.JTabbedPane();
         neo4j = new javax.swing.JPanel();
-        gfeSearchButton = new javax.swing.JButton();
-        gfeCancelButton = new javax.swing.JButton();
+        goButton = new javax.swing.JToggleButton();
         hlaSelectNeo4j = new javax.swing.JComboBox<>();
         instructions = new javax.swing.JLabel();
         mainCardPanel = new javax.swing.JPanel();
@@ -170,10 +169,9 @@ public class B12xGUI extends javax.swing.JFrame {
         jCheckBoxNeo4jSaveToFile = new javax.swing.JCheckBox();
         neo4jUpdate = new javax.swing.JPanel();
         hlaSelectUpdate = new javax.swing.JComboBox<>();
+        updateButton = new javax.swing.JToggleButton();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
-        updateNeo4jData = new javax.swing.JButton();
-        updateNeo4jCancel = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("B12x Search Generator");
@@ -181,17 +179,10 @@ public class B12xGUI extends javax.swing.JFrame {
 
         neo4j.setName(""); // NOI18N
 
-        gfeSearchButton.setText("Search");
-        gfeSearchButton.addActionListener(new java.awt.event.ActionListener() {
+        goButton.setText("Go");
+        goButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                gfeSearchButtonActionPerformed(evt);
-            }
-        });
-
-        gfeCancelButton.setText("Cancel");
-        gfeCancelButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                gfeCancelButtonActionPerformed(evt);
+                goButtonActionPerformed(evt);
             }
         });
 
@@ -1152,22 +1143,19 @@ public class B12xGUI extends javax.swing.JFrame {
             .addGroup(neo4jLayout.createSequentialGroup()
                 .addGroup(neo4jLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(neo4jLayout.createSequentialGroup()
-                        .addGap(212, 212, 212)
-                        .addGroup(neo4jLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
-                            .addGroup(neo4jLayout.createSequentialGroup()
-                                .addComponent(gfeSearchButton)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(gfeCancelButton))
-                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 762, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addComponent(mainCardPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 1034, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(neo4jLayout.createSequentialGroup()
-                        .addGap(213, 213, 213)
-                        .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(neo4jLayout.createSequentialGroup()
                         .addGap(18, 18, 18)
                         .addComponent(hlaSelectNeo4j, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
-                        .addComponent(instructions, javax.swing.GroupLayout.PREFERRED_SIZE, 626, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(instructions, javax.swing.GroupLayout.PREFERRED_SIZE, 626, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(neo4jLayout.createSequentialGroup()
+                        .addGap(212, 212, 212)
+                        .addGroup(neo4jLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
+                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 762, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(goButton)))
+                    .addGroup(neo4jLayout.createSequentialGroup()
+                        .addGap(213, 213, 213)
+                        .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(mainCardPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 1034, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(14, Short.MAX_VALUE))
         );
         neo4jLayout.setVerticalGroup(
@@ -1184,9 +1172,7 @@ public class B12xGUI extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 215, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(neo4jLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(gfeCancelButton)
-                    .addComponent(gfeSearchButton))
+                .addComponent(goButton)
                 .addContainerGap())
         );
 
@@ -1194,23 +1180,16 @@ public class B12xGUI extends javax.swing.JFrame {
 
         hlaSelectUpdate.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "HLA-A", "HLA-B", "HLA-C" }));
 
+        updateButton.setText("Update Neo4j Records");
+        updateButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                updateButtonActionPerformed(evt);
+            }
+        });
+
         jLabel2.setText("The allele data is automatically updated if the data is more than 30 days old when you run the GFE search. ");
 
         jLabel3.setText("This tool is for forcing a data update before that time is up. ");
-
-        updateNeo4jData.setText("Update Neo4j Records");
-        updateNeo4jData.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                updateNeo4jDataActionPerformed(evt);
-            }
-        });
-
-        updateNeo4jCancel.setText("Cancel");
-        updateNeo4jCancel.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                updateNeo4jCancelActionPerformed(evt);
-            }
-        });
 
         javax.swing.GroupLayout neo4jUpdateLayout = new javax.swing.GroupLayout(neo4jUpdate);
         neo4jUpdate.setLayout(neo4jUpdateLayout);
@@ -1220,16 +1199,12 @@ public class B12xGUI extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(neo4jUpdateLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 686, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 686, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(neo4jUpdateLayout.createSequentialGroup()
                         .addComponent(hlaSelectUpdate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(98, 98, 98)
-                        .addComponent(updateNeo4jData)))
+                        .addGap(100, 100, 100)
+                        .addComponent(updateButton))
+                    .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 686, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(356, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, neo4jUpdateLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(updateNeo4jCancel)
-                .addGap(467, 467, 467))
         );
         neo4jUpdateLayout.setVerticalGroup(
             neo4jUpdateLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1241,10 +1216,8 @@ public class B12xGUI extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addGroup(neo4jUpdateLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(hlaSelectUpdate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(updateNeo4jData))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 487, Short.MAX_VALUE)
-                .addComponent(updateNeo4jCancel)
-                .addContainerGap())
+                    .addComponent(updateButton))
+                .addContainerGap(522, Short.MAX_VALUE))
         );
 
         jTabbedPane2.addTab("Neo4j Update", neo4jUpdate);
@@ -1255,7 +1228,7 @@ public class B12xGUI extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jTabbedPane2)
+                .addComponent(jTabbedPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 1069, Short.MAX_VALUE)
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -1271,6 +1244,25 @@ public class B12xGUI extends javax.swing.JFrame {
 
 
     
+    private void updateButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_updateButtonActionPerformed
+        try {
+            String locus = hlaSelectUpdate.getSelectedItem().toString();
+            String neo4jLocation = "";
+            Path path = Paths.get(System.getProperty("user.home") 
+                    + System.getProperty("file.separator") + "Documents"
+                    + System.getProperty("file.separator") + "BSGData"
+                    + System.getProperty("file.separator") 
+                    + "neo4j_" + locus + "_Download.csv");
+            String regex = "";
+
+            Neo4j neo4j = new Neo4j(locus, path, regex);
+            neo4j.dataUpdate();
+        } catch (Exception ex) {
+            System.out.println(ex);
+        }
+        
+    }//GEN-LAST:event_updateButtonActionPerformed
+
     private void a00_WSActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_a00_WSActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_a00_WSActionPerformed
@@ -1294,15 +1286,11 @@ public class B12xGUI extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_hlaSelectNeo4jActionPerformed
 
-    private void c12_Exon6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_c12_Exon6ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_c12_Exon6ActionPerformed
-
-    private void gfeSearchButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_gfeSearchButtonActionPerformed
+    private void goButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_goButtonActionPerformed
         try {
             String locus = hlaSelectNeo4j.getSelectedItem().toString();
             String parsedLocus = LocusNameParser.parseLocus(locus);
-            //            String neo4jLocation = "";
+//            String neo4jLocation = "";
             Path dataPath = Paths.get(System.getProperty("user.home")
                 + System.getProperty("file.separator") + "Documents"
                 + System.getProperty("file.separator") + "BSGData"
@@ -1325,78 +1313,57 @@ public class B12xGUI extends javax.swing.JFrame {
             }
 
             // Find the text fields and add to array
-            //            for (Component component : jPanelEnterGfeA.getComponents()) {
-                for (Component component : ((JPanel)currentGfePanel).getComponents()) {
-                    if (component instanceof JTextField){
-                        typeFields.add((JTextField)component);
-                    }
+//            for (Component component : jPanelEnterGfeA.getComponents()) {
+            for (Component component : ((JPanel)currentGfePanel).getComponents()) {
+                if (component instanceof JTextField){
+                    typeFields.add((JTextField)component);
                 }
+            }
 
-                // Sort the array list by name to check/keep the order
-                Collections.sort(typeFields, Comparator.comparing(JTextField::getName));
+            // Sort the array list by name to check/keep the order
+            Collections.sort(typeFields, Comparator.comparing(JTextField::getName));
 
-                // Special rules for textfield 00
-                if (typeFields.get(0).getText().isEmpty()){
-                    currentRegex = currentRegex.concat("w");
+            // Special rules for textfield 00
+            if (typeFields.get(0).getText().isEmpty()){
+                currentRegex = currentRegex.concat("w");
+            } else {
+                currentRegex = currentRegex.concat(typeFields.get(0).getText());
+            }
+
+            // For each textfield add regex or specified term to currentRegex
+            for (int i = 1; i < typeFields.size(); i++){
+                //                System.out.println(((JTextField)typeFields.get(i)).getName());
+
+                if (typeFields.get(i).getText().isEmpty()){
+                    currentRegex = currentRegex.concat("(\\d+)-");
                 } else {
-                    currentRegex = currentRegex.concat(typeFields.get(0).getText());
+                    currentRegex = currentRegex.concat(typeFields.get(i).getText() + "-");
                 }
+            }
 
-                // For each textfield add regex or specified term to currentRegex
-                for (int i = 1; i < typeFields.size(); i++){
-                    //                System.out.println(((JTextField)typeFields.get(i)).getName());
+            // Check for extraneous dash at the end and close regex
+            if (currentRegex.matches("^.+-$")){
+                finalRegex = currentRegex.substring(0, (currentRegex.length() - 1)).concat("$");
+            } else {
+                finalRegex = currentRegex.concat("$");
+            }
 
-                    if (typeFields.get(i).getText().isEmpty()){
-                        currentRegex = currentRegex.concat("(\\d+)-");
-                    } else {
-                        currentRegex = currentRegex.concat(typeFields.get(i).getText() + "-");
-                    }
-                }
+            System.out.println("Gui running " + locus);
+            System.out.println("Final Regex " + finalRegex);
+            
+            neo4jResults.setText("");
+            Neo4j neo4j = new Neo4j(locus, dataPath, finalRegex);
+            neo4j.execute();
+            
 
-                // Check for extraneous dash at the end and close regex
-                if (currentRegex.matches("^.+-$")){
-                    finalRegex = currentRegex.substring(0, (currentRegex.length() - 1)).concat("$");
-                } else {
-                    finalRegex = currentRegex.concat("$");
-                }
-
-                System.out.println("Gui running " + locus);
-                System.out.println("Final Regex " + finalRegex);
-
-                neo4jResults.setText("");
-                Neo4j neo4j = new Neo4j(locus, dataPath, finalRegex);
-                neo4j.execute();
-
-            } catch (Exception ex) {
-                System.out.println(ex);
-            } 
-    }//GEN-LAST:event_gfeSearchButtonActionPerformed
-
-    private void gfeCancelButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_gfeCancelButtonActionPerformed
-        System.exit(0);
-    }//GEN-LAST:event_gfeCancelButtonActionPerformed
-
-    private void updateNeo4jDataActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_updateNeo4jDataActionPerformed
-        try {
-            String locus = hlaSelectUpdate.getSelectedItem().toString();
-            String neo4jLocation = "";
-            Path path = Paths.get(System.getProperty("user.home") 
-                    + System.getProperty("file.separator") + "Documents"
-                    + System.getProperty("file.separator") + "BSGData"
-                    + System.getProperty("file.separator") 
-                    + "neo4j_" + locus + "_Download.csv");
-            String regex = "";
-
-            Neo4j neo4j = new Neo4j(locus, path, regex);
-            neo4j.dataUpdate();
         } catch (Exception ex) {
             System.out.println(ex);
-        }
-    }//GEN-LAST:event_updateNeo4jDataActionPerformed
+        }        // TODO add your handling code here:
+    }//GEN-LAST:event_goButtonActionPerformed
 
-    private void updateNeo4jCancelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_updateNeo4jCancelActionPerformed
-        System.exit(0);
-    }//GEN-LAST:event_updateNeo4jCancelActionPerformed
+    private void c12_Exon6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_c12_Exon6ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_c12_Exon6ActionPerformed
     
     /**
      * @param args the command line arguments
@@ -1486,8 +1453,7 @@ public class B12xGUI extends javax.swing.JFrame {
     private javax.swing.JTextField c15_Intron7;
     private javax.swing.JTextField c16_Exon8;
     private javax.swing.JTextField c17_3Prime;
-    private javax.swing.JButton gfeCancelButton;
-    private javax.swing.JButton gfeSearchButton;
+    private javax.swing.JToggleButton goButton;
     private javax.swing.JLabel hlaALabel2;
     private javax.swing.JLabel hlaBLabel;
     private javax.swing.JLabel hlaCLabel;
@@ -1561,8 +1527,7 @@ public class B12xGUI extends javax.swing.JFrame {
     private javax.swing.JPanel neo4j;
     public static javax.swing.JTextArea neo4jResults;
     private javax.swing.JPanel neo4jUpdate;
-    private javax.swing.JButton updateNeo4jCancel;
-    private javax.swing.JButton updateNeo4jData;
+    private javax.swing.JToggleButton updateButton;
     // End of variables declaration//GEN-END:variables
 
 }
