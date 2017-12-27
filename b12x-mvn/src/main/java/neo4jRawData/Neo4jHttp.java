@@ -5,6 +5,7 @@
  */
 package neo4jRawData;
 
+import b12x.B12xGUI;
 import java.io.InputStream;
 import java.io.IOException;
 import java.io.OutputStreamWriter;
@@ -44,6 +45,7 @@ public class Neo4jHttp {
                 incomingData = connection.getInputStream();
             }
         } catch (Exception ex) {
+            B12xGUI.neo4jResults.append(ex.toString());
             System.out.println(ex);
         }
         return incomingData;
