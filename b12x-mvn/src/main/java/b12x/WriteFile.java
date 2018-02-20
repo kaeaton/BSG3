@@ -9,9 +9,11 @@ package b12x;
  *
  * @author katrinaeaton
  */
-public class WriteToFile {
-    public WriteToFile () {
+public class WriteFile {
+    public WriteFile () {
         
     }
+    
+    
     
 }

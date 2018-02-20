@@ -37,5 +37,4 @@ public class Neo4jDataFormat {
         B12xGUI.neo4jResults.append(System.lineSeparator());
     }
 
-    
 }
