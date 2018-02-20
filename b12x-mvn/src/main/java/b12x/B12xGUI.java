@@ -1304,6 +1304,7 @@ public class B12xGUI extends javax.swing.JFrame {
 //            String neo4jLocation = "";
             Path dataPath = Paths.get(System.getProperty("user.home")
                 + System.getProperty("file.separator") + "Documents"
+                + System.getProperty("file.separator") + "BSG"
                 + System.getProperty("file.separator") + "BSGData"
                 + System.getProperty("file.separator")
                 + "neo4j_" + locus + "_Download.csv");
@@ -1380,6 +1381,7 @@ public class B12xGUI extends javax.swing.JFrame {
             String neo4jLocation = "";
             Path path = Paths.get(System.getProperty("user.home") 
                     + System.getProperty("file.separator") + "Documents"
+                    + System.getProperty("file.separator") + "BSG"
                     + System.getProperty("file.separator") + "BSGData"
                     + System.getProperty("file.separator") 
                     + "neo4j_" + locus + "_Download.csv");
