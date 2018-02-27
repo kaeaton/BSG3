@@ -5,6 +5,7 @@
  */
 package b12x;
 
+import java.time.LocalDate;
 /**
  *
  * @author katrinaeaton
@@ -14,6 +15,17 @@ public class WriteFile {
         
     }
     
+    public static void fileWriter(String locus, String fileType) {
+        
+        LocalDate timeStamp = LocalDate.now();
+        String fileName = System.getProperty("user.home")
+                + System.getProperty("file.separator") + "Documents"
+                + System.getProperty("file.separator") + "BSG"
+                + System.getProperty("file.separator") 
+                + timeStamp + "_" + locus + "." + fileType;
+        
+        System.out.println(fileName);
+    }
     
     
 }
