@@ -6,6 +6,8 @@ import java.awt.CardLayout;
 import java.awt.Component;
 import java.awt.Font;
 import java.nio.file.*;
+import javax.swing.event.DocumentListener;
+import javax.swing.text.Document;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 import java.util.ArrayList;
@@ -44,6 +46,7 @@ public class B12xGUI extends javax.swing.JFrame {
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
+        bindingGroup = new org.jdesktop.beansbinding.BindingGroup();
 
         buttonGroupNeo4jOutput = new javax.swing.ButtonGroup();
         jTabbedPane2 = new javax.swing.JTabbedPane();
@@ -1100,172 +1103,203 @@ public class B12xGUI extends javax.swing.JFrame {
 
         neo4jResults.setColumns(20);
         neo4jResults.setRows(5);
+
+        org.jdesktop.beansbinding.Binding binding = org.jdesktop.beansbinding.Bindings.createAutoBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, neo4jResults, org.jdesktop.beansbinding.ELProperty.create("${document}"), neo4jResults, org.jdesktop.beansbinding.BeanProperty.create("document"));
+        bindingGroup.addBinding(binding);
+
         neo4jResults.setFont(new Font("monospaced", Font.PLAIN, 12));
-        jScrollPane1.setViewportView(neo4jResults);
+        //Document document = neo4jResults.getDocument();
+        //document.addDocumentListener(new DocumentListener() {
+            //    @Override
+            //    public void insertUpdate(DocumentEvent e) {
+                //        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+                //    }
+            //
+            //    @Override
+            //    public void removeUpdate(DocumentEvent e) {
+                //        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+                //    }
+            //
+            //    @Override
+            //    public void changedUpdate(DocumentEvent e) {
+                //        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+                //    }
+            //});
+    neo4jResults.addInputMethodListener(new java.awt.event.InputMethodListener() {
+        public void caretPositionChanged(java.awt.event.InputMethodEvent evt) {
+        }
+        public void inputMethodTextChanged(java.awt.event.InputMethodEvent evt) {
+            neo4jResultsInputMethodTextChanged(evt);
+        }
+    });
+    jScrollPane1.setViewportView(neo4jResults);
 
-        buttonGroupNeo4jOutput.add(jRadioButtonCSV);
-        jRadioButtonCSV.setActionCommand("CSV");
-        jRadioButtonCSV.setSelected(true);
-        jRadioButtonCSV.setText("CSV");
+    buttonGroupNeo4jOutput.add(jRadioButtonCSV);
+    jRadioButtonCSV.setActionCommand("CSV");
+    jRadioButtonCSV.setSelected(true);
+    jRadioButtonCSV.setText("CSV");
 
-        buttonGroupNeo4jOutput.add(jRadioButtonTSV);
-        jRadioButtonTSV.setActionCommand("TSV");
-        jRadioButtonTSV.setText("TSV");
+    buttonGroupNeo4jOutput.add(jRadioButtonTSV);
+    jRadioButtonTSV.setActionCommand("TSV");
+    jRadioButtonTSV.setText("TSV");
 
-        buttonGroupNeo4jOutput.add(jRadioButtonPretty);
-        jRadioButtonPretty.setActionCommand("Pretty");
-        jRadioButtonPretty.setText("Pretty");
+    buttonGroupNeo4jOutput.add(jRadioButtonPretty);
+    jRadioButtonPretty.setActionCommand("Pretty");
+    jRadioButtonPretty.setText("Pretty");
+    jRadioButtonPretty.setActionCommand("txt");
 
-        jCheckBoxNeo4jSaveToFile.setText("Save to file");
+    jCheckBoxNeo4jSaveToFile.setText("Save to file");
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
+    javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+    jPanel1.setLayout(jPanel1Layout);
+    jPanel1Layout.setHorizontalGroup(
+        jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        .addGroup(jPanel1Layout.createSequentialGroup()
+            .addContainerGap()
+            .addComponent(jRadioButtonCSV)
+            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+            .addComponent(jRadioButtonTSV)
+            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+            .addComponent(jRadioButtonPretty)
+            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 451, Short.MAX_VALUE)
+            .addComponent(jCheckBoxNeo4jSaveToFile)
+            .addContainerGap())
+    );
+    jPanel1Layout.setVerticalGroup(
+        jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+            .addContainerGap(71, Short.MAX_VALUE)
+            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                 .addComponent(jRadioButtonCSV)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jRadioButtonTSV)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jRadioButtonPretty)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 451, Short.MAX_VALUE)
-                .addComponent(jCheckBoxNeo4jSaveToFile)
-                .addContainerGap())
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(71, Short.MAX_VALUE)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jRadioButtonCSV)
-                    .addComponent(jRadioButtonTSV)
-                    .addComponent(jRadioButtonPretty)
-                    .addComponent(jCheckBoxNeo4jSaveToFile))
-                .addContainerGap())
-        );
+                .addComponent(jCheckBoxNeo4jSaveToFile))
+            .addContainerGap())
+    );
 
-        javax.swing.GroupLayout neo4jLayout = new javax.swing.GroupLayout(neo4j);
-        neo4j.setLayout(neo4jLayout);
-        neo4jLayout.setHorizontalGroup(
-            neo4jLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(neo4jLayout.createSequentialGroup()
-                .addGroup(neo4jLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(neo4jLayout.createSequentialGroup()
-                        .addGap(18, 18, 18)
-                        .addComponent(hlaSelectNeo4j, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(instructions, javax.swing.GroupLayout.PREFERRED_SIZE, 626, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(neo4jLayout.createSequentialGroup()
-                        .addGap(212, 212, 212)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 762, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(neo4jLayout.createSequentialGroup()
-                        .addGap(213, 213, 213)
-                        .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(mainCardPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 1034, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(neo4jLayout.createSequentialGroup()
-                        .addGap(474, 474, 474)
-                        .addComponent(neo4jSearchButton)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(neo4jSearchCancelButton)))
-                .addContainerGap(30, Short.MAX_VALUE))
-        );
-        neo4jLayout.setVerticalGroup(
-            neo4jLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, neo4jLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(neo4jLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(hlaSelectNeo4j, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(instructions, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(mainCardPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(45, 45, 45)
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 215, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(17, 17, 17)
-                .addGroup(neo4jLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+    javax.swing.GroupLayout neo4jLayout = new javax.swing.GroupLayout(neo4j);
+    neo4j.setLayout(neo4jLayout);
+    neo4jLayout.setHorizontalGroup(
+        neo4jLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        .addGroup(neo4jLayout.createSequentialGroup()
+            .addGroup(neo4jLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(neo4jLayout.createSequentialGroup()
+                    .addGap(18, 18, 18)
+                    .addComponent(hlaSelectNeo4j, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(18, 18, 18)
+                    .addComponent(instructions, javax.swing.GroupLayout.PREFERRED_SIZE, 626, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(neo4jLayout.createSequentialGroup()
+                    .addGap(212, 212, 212)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 762, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(neo4jLayout.createSequentialGroup()
+                    .addGap(213, 213, 213)
+                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(mainCardPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 1034, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(neo4jLayout.createSequentialGroup()
+                    .addGap(474, 474, 474)
                     .addComponent(neo4jSearchButton)
+                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                     .addComponent(neo4jSearchCancelButton)))
-        );
+            .addContainerGap(30, Short.MAX_VALUE))
+    );
+    neo4jLayout.setVerticalGroup(
+        neo4jLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, neo4jLayout.createSequentialGroup()
+            .addContainerGap()
+            .addGroup(neo4jLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addComponent(hlaSelectNeo4j, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(instructions, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+            .addComponent(mainCardPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGap(45, 45, 45)
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 215, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGap(17, 17, 17)
+            .addGroup(neo4jLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addComponent(neo4jSearchButton)
+                .addComponent(neo4jSearchCancelButton)))
+    );
 
-        jTabbedPane2.addTab("Neo4j GFE Search", neo4j);
+    jTabbedPane2.addTab("Neo4j GFE Search", neo4j);
 
-        hlaSelectUpdate.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "HLA-A", "HLA-B", "HLA-C" }));
+    hlaSelectUpdate.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "HLA-A", "HLA-B", "HLA-C" }));
 
-        neo4jUpdateButton.setText("Update Neo4j Records");
-        neo4jUpdateButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                neo4jUpdateButtonActionPerformed(evt);
-            }
-        });
+    neo4jUpdateButton.setText("Update Neo4j Records");
+    neo4jUpdateButton.addActionListener(new java.awt.event.ActionListener() {
+        public void actionPerformed(java.awt.event.ActionEvent evt) {
+            neo4jUpdateButtonActionPerformed(evt);
+        }
+    });
 
-        neo4jUpdateCancelButton.setText("Cancel");
-        neo4jUpdateCancelButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                neo4jUpdateCancelButtonActionPerformed(evt);
-            }
-        });
+    neo4jUpdateCancelButton.setText("Cancel");
+    neo4jUpdateCancelButton.addActionListener(new java.awt.event.ActionListener() {
+        public void actionPerformed(java.awt.event.ActionEvent evt) {
+            neo4jUpdateCancelButtonActionPerformed(evt);
+        }
+    });
 
-        jLabel2.setText("The allele data is automatically updated if the data is more than 30 days old when you run the GFE search. ");
+    jLabel2.setText("The allele data is automatically updated if the data is more than 30 days old when you run the GFE search. ");
 
-        jLabel3.setText("This tool is for forcing a data update before that time is up. ");
+    jLabel3.setText("This tool is for forcing a data update before that time is up. ");
 
-        javax.swing.GroupLayout neo4jUpdateLayout = new javax.swing.GroupLayout(neo4jUpdate);
-        neo4jUpdate.setLayout(neo4jUpdateLayout);
-        neo4jUpdateLayout.setHorizontalGroup(
-            neo4jUpdateLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(neo4jUpdateLayout.createSequentialGroup()
-                .addGroup(neo4jUpdateLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(neo4jUpdateLayout.createSequentialGroup()
-                        .addContainerGap()
-                        .addGroup(neo4jUpdateLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 686, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(neo4jUpdateLayout.createSequentialGroup()
-                                .addComponent(hlaSelectUpdate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(83, 83, 83)
-                                .addComponent(neo4jUpdateButton))
-                            .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 686, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(neo4jUpdateLayout.createSequentialGroup()
-                        .addGap(484, 484, 484)
-                        .addComponent(neo4jUpdateCancelButton)))
-                .addContainerGap(368, Short.MAX_VALUE))
-        );
-        neo4jUpdateLayout.setVerticalGroup(
-            neo4jUpdateLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(neo4jUpdateLayout.createSequentialGroup()
-                .addGap(9, 9, 9)
-                .addComponent(jLabel2)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel3)
-                .addGap(18, 18, 18)
-                .addGroup(neo4jUpdateLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(hlaSelectUpdate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(neo4jUpdateButton))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 507, Short.MAX_VALUE)
-                .addComponent(neo4jUpdateCancelButton))
-        );
+    javax.swing.GroupLayout neo4jUpdateLayout = new javax.swing.GroupLayout(neo4jUpdate);
+    neo4jUpdate.setLayout(neo4jUpdateLayout);
+    neo4jUpdateLayout.setHorizontalGroup(
+        neo4jUpdateLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        .addGroup(neo4jUpdateLayout.createSequentialGroup()
+            .addGroup(neo4jUpdateLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(neo4jUpdateLayout.createSequentialGroup()
+                    .addContainerGap()
+                    .addGroup(neo4jUpdateLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 686, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(neo4jUpdateLayout.createSequentialGroup()
+                            .addComponent(hlaSelectUpdate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGap(83, 83, 83)
+                            .addComponent(neo4jUpdateButton))
+                        .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 686, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGroup(neo4jUpdateLayout.createSequentialGroup()
+                    .addGap(484, 484, 484)
+                    .addComponent(neo4jUpdateCancelButton)))
+            .addContainerGap(368, Short.MAX_VALUE))
+    );
+    neo4jUpdateLayout.setVerticalGroup(
+        neo4jUpdateLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        .addGroup(neo4jUpdateLayout.createSequentialGroup()
+            .addGap(9, 9, 9)
+            .addComponent(jLabel2)
+            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+            .addComponent(jLabel3)
+            .addGap(18, 18, 18)
+            .addGroup(neo4jUpdateLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addComponent(hlaSelectUpdate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(neo4jUpdateButton))
+            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 507, Short.MAX_VALUE)
+            .addComponent(neo4jUpdateCancelButton))
+    );
 
-        jTabbedPane2.addTab("Neo4j Update", neo4jUpdate);
+    jTabbedPane2.addTab("Neo4j Update", neo4jUpdate);
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jTabbedPane2)
-                .addContainerGap())
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jTabbedPane2)
-                .addContainerGap())
-        );
+    javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+    getContentPane().setLayout(layout);
+    layout.setHorizontalGroup(
+        layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        .addGroup(layout.createSequentialGroup()
+            .addContainerGap()
+            .addComponent(jTabbedPane2)
+            .addContainerGap())
+    );
+    layout.setVerticalGroup(
+        layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+            .addContainerGap()
+            .addComponent(jTabbedPane2)
+            .addContainerGap())
+    );
 
-        pack();
+    bindingGroup.bind();
+
+    pack();
     }// </editor-fold>//GEN-END:initComponents
 
 
@@ -1401,7 +1435,27 @@ public class B12xGUI extends javax.swing.JFrame {
     private void neo4jSearchCancelButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_neo4jSearchCancelButtonActionPerformed
         System.exit(0);
     }//GEN-LAST:event_neo4jSearchCancelButtonActionPerformed
+
+    private void neo4jResultsInputMethodTextChanged(java.awt.event.InputMethodEvent evt) {//GEN-FIRST:event_neo4jResultsInputMethodTextChanged
+        if(jCheckBoxNeo4jSaveToFile.isSelected()){
+            System.out.println("The write to file box is selected and the text box knows it.");
+        }// TODO add your handling code here:
+    }//GEN-LAST:event_neo4jResultsInputMethodTextChanged
     
+//    public void neo4jResults.getDocument();
+//    DocumentListener(new DocumentListener() {
+//  public void changedUpdate(DocumentEvent e) {
+//    warn();
+//  }
+//  public void removeUpdate(DocumentEvent e) {
+//    warn();
+//  }
+//  public void insertUpdate(DocumentEvent e) {
+//    warn();
+//  }
+//});
+       
+            
     /**
      * @param args the command line arguments
      */
@@ -1567,6 +1621,7 @@ public class B12xGUI extends javax.swing.JFrame {
     private javax.swing.JPanel neo4jUpdate;
     private javax.swing.JButton neo4jUpdateButton;
     private javax.swing.JButton neo4jUpdateCancelButton;
+    private org.jdesktop.beansbinding.BindingGroup bindingGroup;
     // End of variables declaration//GEN-END:variables
 
 }
