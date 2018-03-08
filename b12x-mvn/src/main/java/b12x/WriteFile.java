@@ -24,7 +24,7 @@ public class WriteFile {
                 + System.getProperty("file.separator") + "Documents"
                 + System.getProperty("file.separator") + "BSG"
                 + System.getProperty("file.separator") 
-                + dateStamp + "_" + timeStamp + "_"
+                + dateStamp + "_" //+ timeStamp + "_"
                 + locus + "." + fileType;
         
         System.out.println(fileName);
