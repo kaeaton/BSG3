@@ -25,50 +25,23 @@ public class Neo4jDataFormat {
         
     }
     
-    static void csvFormat(boolean toFile, String line, BufferedWriter bw){
-        try {
-            if(toFile == true){
-                bw.append(line);
-                bw.append(System.lineSeparator());
-            }
-        } catch (Exception ex) {
-            System.out.println(ex);
-        } finally {
-            B12xGUI.neo4jResults.append(line);
-            B12xGUI.neo4jResults.append(System.lineSeparator());
-        }
+    static void csvFormat(String line){
+        B12xGUI.neo4jResults.append(line);
+        B12xGUI.neo4jResults.append(System.lineSeparator());
     }
     
-    static void tsvFormat(boolean toFile, String line, BufferedWriter bw){
+    static void tsvFormat(String line){
         String[] gfeAllele = line.split(csvSplitBy);
-        try {
-            if(toFile == true){
-                bw.append(gfeAllele[0]+ "\t" + gfeAllele[1]);
-                bw.append(System.lineSeparator());
-            }
-        } catch (Exception ex) {
-            System.out.println(ex);
-        } finally {
-            B12xGUI.neo4jResults.append(gfeAllele[0]+ "\t" + gfeAllele[1]);
-            B12xGUI.neo4jResults.append(System.lineSeparator());
-        }
+        B12xGUI.neo4jResults.append(gfeAllele[0]+ "\t" + gfeAllele[1]);
+        B12xGUI.neo4jResults.append(System.lineSeparator());
+
     }
     
-    static void prettyFormat(boolean toFile, String line, BufferedWriter bw){
+    static void prettyFormat(String line){
         String[] gfeAllele = line.split(csvSplitBy);
-        try {
-            if(toFile == true){
-                bw.append(String.format("%-25s", gfeAllele[0]));
-                bw.append(gfeAllele[1]);
-                bw.append(System.lineSeparator());
-            }
-        } catch (Exception ex) {
-            System.out.println(ex);
-        } finally {
-            B12xGUI.neo4jResults.append(String.format("%-25s", gfeAllele[0]));
-            B12xGUI.neo4jResults.append(gfeAllele[1]);
-            B12xGUI.neo4jResults.append(System.lineSeparator());
-        }
+        B12xGUI.neo4jResults.append(String.format("%-25s", gfeAllele[0]));
+        B12xGUI.neo4jResults.append(gfeAllele[1]);
+        B12xGUI.neo4jResults.append(System.lineSeparator());
     }
 
 }

@@ -5,6 +5,7 @@
  */
 package b12x;
 
+import java.time.format.DateTimeFormatter;
 import java.time.LocalDate;
 import java.time.LocalTime;
 /**
@@ -16,15 +17,18 @@ public class WriteFile {
         
     }
     
-    public static String fileWriter(String locus, String fileType) {
+    public static String fileName(String locus, String fileType) {
         
+        DateTimeFormatter dtf = DateTimeFormatter.ofPattern("HH:mm:a");
+
         LocalDate dateStamp = LocalDate.now();
-        LocalTime timeStamp = LocalTime.now();
+        String timeStamp = LocalTime.now().format(dtf)
+                                    .toString().replaceAll(":", "-");
         String fileName = System.getProperty("user.home")
                 + System.getProperty("file.separator") + "Documents"
                 + System.getProperty("file.separator") + "BSG"
                 + System.getProperty("file.separator") 
-                + dateStamp + "_" //+ timeStamp + "_"
+                + dateStamp + "_" + timeStamp + "_"
                 + locus + "." + fileType;
         
         System.out.println(fileName);
