@@ -90,21 +90,7 @@ public class Neo4jDataIO {
             br.close();
             
             if(writeToFile){
-                String text = B12xGUI.neo4jResults.getText();
-                String filePath = WriteFile.fileName(locus, dataType);
-
-                File destinationFile = new File(filePath);
-
-                // if file doesnt exists, then create it
-                if (!destinationFile.exists()) {
-                    destinationFile.createNewFile();
-                }
-
-                FileWriter fw = new FileWriter(destinationFile.getAbsoluteFile());
-                BufferedWriter bw = new BufferedWriter(fw);
-
-                bw.write(text);
-                bw.close();
+                WriteFile.writeToFile(locus, dataType);
             }
         } catch (Exception ex) {
             System.out.println(ex); 

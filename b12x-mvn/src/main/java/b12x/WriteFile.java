@@ -5,6 +5,9 @@
  */
 package b12x;
 
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileWriter;
 import java.time.format.DateTimeFormatter;
 import java.time.LocalDate;
 import java.time.LocalTime;
@@ -34,6 +37,28 @@ public class WriteFile {
         System.out.println(fileName);
         
         return fileName;
+    }
+    
+    public static void writeToFile(String locus, String dataType){
+        try {
+            String text = B12xGUI.neo4jResults.getText();
+//            String filePath = fileName(locus, dataType);
+
+            File destinationFile = new File(fileName(locus, dataType));
+
+            // if file doesnt exists, then create it
+            if (!destinationFile.exists()) {
+                destinationFile.createNewFile();
+            }
+
+            FileWriter fw = new FileWriter(destinationFile.getAbsoluteFile());
+            BufferedWriter bw = new BufferedWriter(fw);
+
+            bw.write(text);
+            bw.close();
+        } catch (Exception ex) {
+            System.out.println(ex);
+        }
     }
     
     
