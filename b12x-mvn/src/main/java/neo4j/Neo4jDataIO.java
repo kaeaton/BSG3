@@ -89,6 +89,7 @@ public class Neo4jDataIO {
             // Close the buffer
             br.close();
             
+            // Write contents of textbox to file
             if(writeToFile){
                 WriteFile.writeToFile(locus, dataType);
             }

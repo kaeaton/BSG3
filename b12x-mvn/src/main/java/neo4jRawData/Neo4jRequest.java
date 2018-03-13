@@ -22,10 +22,17 @@ public class Neo4jRequest {
     
     public String formNeo4jRequest() throws IOException {
         try {
-            request = ("MATCH (h:IMGT)-[r1:HAS_GFE]-(g:GFE) " +
-                        "WHERE h.locus = \"" + locus + "\" " +
-                        "AND r1.status = \"Expected\" " +
-                        "RETURN h.name, g.name");
+            char quote = '"';
+            request = ("MATCH (n:IMGT_HLA)-[r:HAS_GFE]-(g:GFE) " +
+                        "WHERE n.locus = " + quote + locus + quote + " " +
+//                        "AND r.status = " + quote + "Expected" + quote + " " +
+                        "RETURN n.name, g.name");
+            
+//            Old request
+//            request = ("MATCH (h:IMGT)-[r1:HAS_GFE]-(g:GFE) " +
+//                        "WHERE h.locus = \"" + locus + "\" " +
+//                        "AND r1.status = \"Expected\" " +
+//                        "RETURN h.name, g.name");
             
             JsonGenerator generator = factory.createGenerator(writer);
 
