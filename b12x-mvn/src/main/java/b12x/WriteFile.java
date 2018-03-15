@@ -22,11 +22,10 @@ public class WriteFile {
     
     public static String fileName(String locus, String fileType) {
         
-        DateTimeFormatter dtf = DateTimeFormatter.ofPattern("HH:mm:a");
+        DateTimeFormatter dtf = DateTimeFormatter.ofPattern("HH-mm-ss");
 
         LocalDate dateStamp = LocalDate.now();
-        String timeStamp = LocalTime.now().format(dtf)
-                                    .toString().replaceAll(":", "-");
+        String timeStamp = LocalTime.now().format(dtf).toString();
         String fileName = System.getProperty("user.home")
                 + System.getProperty("file.separator") + "Documents"
                 + System.getProperty("file.separator") + "BSG"
