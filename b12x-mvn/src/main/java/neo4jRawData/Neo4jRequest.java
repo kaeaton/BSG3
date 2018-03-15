@@ -10,14 +10,14 @@ import java.nio.charset.Charset;
 
 public class Neo4jRequest {
     
-    private String locus;
+    private String locus, version, request;
     private JsonFactory factory;
-    private String request;
     private StringWriter writer = new StringWriter();
     
-    public Neo4jRequest(String incomingLocus, JsonFactory parentFactory){
+    public Neo4jRequest(String incomingLocus, String currentVersion, JsonFactory parentFactory){
         locus = incomingLocus;
         factory = parentFactory;
+        version = currentVersion;
     }
     
     public String formNeo4jRequest() throws IOException {
@@ -25,8 +25,8 @@ public class Neo4jRequest {
             char quote = '"';
             request = ("MATCH (n:IMGT_HLA)-[r:HAS_GFE]-(g:GFE) " +
                         "WHERE n.locus = " + quote + locus + quote + " " +
-//                        "AND r.status = " + quote + "Expected" + quote + " " +
-                        "RETURN n.name, g.name");
+                        "AND r.imgt_release = " + quote + "3.31.0" + quote +
+                        " RETURN n.name, g.name");
             
 //            Old request
 //            request = ("MATCH (h:IMGT)-[r1:HAS_GFE]-(g:GFE) " +

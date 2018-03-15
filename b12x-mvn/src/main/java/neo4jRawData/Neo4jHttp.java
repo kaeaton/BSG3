@@ -32,7 +32,7 @@ public class Neo4jHttp {
             connection.setRequestProperty("Accept", "application/json");
             connection.setRequestProperty("Content-Type", "application/json");
             connection.setRequestProperty("X-Stream", "true");
-            connection.setRequestProperty("Authorization", "Basic a2VhdG9uOmNob3JpMTc=");
+            connection.setRequestProperty("Authorization",***REMOVED***);
             
             // Send our request
             OutputStreamWriter wr = new OutputStreamWriter(connection.getOutputStream());
@@ -40,7 +40,8 @@ public class Neo4jHttp {
             wr.flush();
             
             // Did we get a response?
-            int httpResult = connection.getResponseCode(); 
+            int httpResult = connection.getResponseCode();
+            System.out.println("http response code: " + httpResult);
             if (httpResult == HttpURLConnection.HTTP_OK) {
                 incomingData = connection.getInputStream();
             }

@@ -16,10 +16,9 @@ import javax.swing.SwingWorker;
 
 public class Neo4j  extends SwingWorker<String, String> {
     
-    private final String locus;
+    private final String locus, regex, version;
     private final Path path;
     private final URL neo4jURL = new URL("http://neo4j.b12x.org/db/data/transaction/commit");
-    private final String regex;
     private JsonFactory factory;
 
 //    private String request;
@@ -28,6 +27,7 @@ public class Neo4j  extends SwingWorker<String, String> {
         locus = incomingLocus;
         path = incomingPath;
         regex = incomingRegex;
+        version = "3.31.0";
 //        path = Paths.get(System.getProperty("user.home") 
 //                    + System.getProperty("file.separator") + "Documents" 
 //                    + System.getProperty("file.separator") 
@@ -38,7 +38,7 @@ public class Neo4j  extends SwingWorker<String, String> {
     
     public void dataUpdate() throws IOException {
         try {
-            Neo4jRequest request = new Neo4jRequest(locus, factory);
+            Neo4jRequest request = new Neo4jRequest(locus, version, factory);
             Neo4jHttp neo4jHttp = new Neo4jHttp();
             InputStream incomingData = neo4jHttp.makeCall(neo4jURL, request.formNeo4jRequest());
             Neo4jIncomingData parser = new Neo4jIncomingData();
