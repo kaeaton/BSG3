@@ -31,7 +31,7 @@ public class Neo4jIncomingData {
         try {
             
             // Write raw data to file
-            ObjectMapper mapper = new ObjectMapper();
+//            ObjectMapper mapper = new ObjectMapper();
             File neo4jRaw = new File(System.getProperty("user.home") 
                     + System.getProperty("file.separator") + "Documents" 
                     + System.getProperty("file.separator") + "BSG"
@@ -47,7 +47,7 @@ public class Neo4jIncomingData {
             writer.write(date.toString() + System.lineSeparator());
             
             TreeMap<String, String> neo4jPairs = new TreeMap<String, String>();
-            Object json = mapper.readValue(httpResult, Object.class);
+//            Object json = mapper.readValue(httpResult, Object.class);
 //            Object json = mapper.readValue(httpResult, Object.class);
 
 //            File neo4jRaw = new File(System.getProperty("user.home") + System.getProperty("file.separator") + "Documents" + System.getProperty("file.separator") + "neo4jRawData.json");

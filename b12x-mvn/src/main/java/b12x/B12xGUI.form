@@ -741,13 +741,21 @@
                                       <Component id="jLabelBI6" min="-2" pref="23" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
+                              <EmptySpace min="-2" pref="6" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="b14_Exon7" alignment="0" min="-2" pref="40" max="-2" attributes="0"/>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
+                                      <Component id="jLabelE7" min="-2" pref="21" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
                               <EmptySpace max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="102" attributes="0">
                                       <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
-                                      <Component id="jLabelE7" min="-2" pref="21" max="-2" attributes="0"/>
+                                      <Component id="jLabelB3" min="-2" pref="21" max="-2" attributes="0"/>
                                   </Group>
-                                  <Component id="b14_Exon7" linkSize="6" min="-2" max="-2" attributes="0"/>
+                                  <Component id="b15_3Prime" linkSize="6" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace min="-2" pref="716" max="-2" attributes="0"/>
                           </Group>
@@ -772,8 +780,9 @@
                                   <Component id="b11_Intron5" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="b12_Exon6" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="b13_Intron6" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="b14_Exon7" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="b15_3Prime" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="b00_ws" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="b14_Exon7" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
@@ -792,6 +801,7 @@
                                       <Component id="jLabelBE1" alignment="0" max="32767" attributes="0"/>
                                       <Component id="jLabelE7" max="32767" attributes="0"/>
                                       <Component id="jLabelB5" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="jLabelB3" alignment="1" max="32767" attributes="0"/>
                                   </Group>
                                   <Component id="jLabelBW" min="-2" pref="103" max="-2" attributes="0"/>
                               </Group>
@@ -897,6 +907,12 @@
                         <Property name="name" type="java.lang.String" value="14" noResource="true"/>
                       </Properties>
                     </Component>
+                    <Component class="javax.swing.JTextField" name="b15_3Prime">
+                      <Properties>
+                        <Property name="horizontalAlignment" type="int" value="0"/>
+                        <Property name="name" type="java.lang.String" value="14" noResource="true"/>
+                      </Properties>
+                    </Component>
                     <Component class="javax.swing.JLabel" name="jLabelBW">
                       <AuxValues>
                         <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="TextIcon t1B = new TextIcon(jLabelBW, &quot;Workshop Status&quot;, TextIcon.Layout.HORIZONTAL);&#xa;RotatedIcon r1B = new RotatedIcon(t1B, RotatedIcon.Rotate.DOWN);&#xa;jLabelBW.setIcon( r1B );"/>
@@ -970,6 +986,11 @@
                     <Component class="javax.swing.JLabel" name="jLabelE7">
                       <AuxValues>
                         <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1B = new TextIcon(jLabelE7, &quot;Exon 7&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1B = new RotatedIcon(t1B, RotatedIcon.Rotate.DOWN);&#xa;jLabelE7.setIcon( r1B );"/>
+                      </AuxValues>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="jLabelB3">
+                      <AuxValues>
+                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1B = new TextIcon(jLabelB3, &quot;3&apos; UTR&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1B = new RotatedIcon(t1B, RotatedIcon.Rotate.DOWN);&#xa;jLabelB3.setIcon( r1B );"/>
                       </AuxValues>
                     </Component>
                   </SubComponents>
