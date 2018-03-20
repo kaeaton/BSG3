@@ -60,6 +60,12 @@ public class Neo4j  extends SwingWorker<String, String> {
 //            Neo4jHttp neo4jHttp = new Neo4jHttp();
 //            InputStream incomingData = neo4jHttp.makeCall(neo4jURL, request.formNeo4jRequest());
             Neo4jDateCheck dataCheck = new Neo4jDateCheck();
+            if (!path.toFile().exists()){
+                System.out.println("The file does not exist.");
+                path.toFile().getParentFile().mkdirs();
+                path.toFile().createNewFile();
+                dataUpdate();
+            }
             if (dataCheck.checkDate(path.toFile()) != true){
                 dataUpdate();
 //                Neo4jIncomingData parser = new Neo4jIncomingData();

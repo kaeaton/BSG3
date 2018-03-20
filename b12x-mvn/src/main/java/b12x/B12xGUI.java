@@ -1349,7 +1349,7 @@ public class B12xGUI extends javax.swing.JFrame {
     }//GEN-LAST:event_c12_Exon6ActionPerformed
 
     private void neo4jSearchButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_neo4jSearchButtonActionPerformed
-            try {
+        try {
             String locus = hlaSelectNeo4j.getSelectedItem().toString();
             String parsedLocus = LocusNameParser.parseLocus(locus);
 //            String neo4jLocation = "";
