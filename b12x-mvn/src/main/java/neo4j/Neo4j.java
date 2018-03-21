@@ -1,10 +1,7 @@
 
 package neo4j;
 
-import neo4jRawData.Neo4jHttp;
-import neo4jRawData.Neo4jRequest;
-import neo4jRawData.Neo4jIncomingData;
-import neo4jRawData.Neo4jDateCheck;
+import neo4jRawData.*;
 import com.fasterxml.jackson.core.JsonFactory;
 import java.io.File;
 import java.io.IOException;
@@ -38,10 +35,25 @@ public class Neo4j  extends SwingWorker<String, String> {
     
     public void dataUpdate() throws IOException {
         try {
-            Neo4jRequest request = new Neo4jRequest(locus, version, factory);
+            // set up the call
             Neo4jHttp neo4jHttp = new Neo4jHttp();
-            InputStream incomingData = neo4jHttp.makeCall(neo4jURL, request.formNeo4jRequest());
             Neo4jIncomingData parser = new Neo4jIncomingData();
+            
+            // determine the most recent version
+            // create the request and send it
+            Neo4jVersionRequest whatVersion = new Neo4jVersionRequest(factory);
+            InputStream incomingVersionData = neo4jHttp
+                    .makeCall(neo4jURL, whatVersion.formNeo4jVersionRequest());
+            
+            // recieve the version data and parse it
+            parser.parseVersion(incomingVersionData, factory);
+            
+            // retrieve the data
+            // create the request and send it
+            Neo4jRequest request = new Neo4jRequest(locus, version, factory);
+            InputStream incomingData = neo4jHttp.makeCall(neo4jURL, request.formNeo4jRequest());
+            
+            // recieve data and parse it
             parser.parseResponse(locus, incomingData, factory);
             
             // Check to see if this is working
@@ -54,28 +66,26 @@ public class Neo4j  extends SwingWorker<String, String> {
     
     @Override
     protected String doInBackground() throws IOException {
-//    public void fetchData() throws IOException {
         try {
-//            Neo4jRequest request = new Neo4jRequest(locus, factory);
-//            Neo4jHttp neo4jHttp = new Neo4jHttp();
-//            InputStream incomingData = neo4jHttp.makeCall(neo4jURL, request.formNeo4jRequest());
-            Neo4jDateCheck dataCheck = new Neo4jDateCheck();
-            if (!path.toFile().exists()){
+            
+            // do the directories exist? if not create them and get data
+            if (!path.toFile().exists())
+            {
                 System.out.println("The file does not exist.");
                 path.toFile().getParentFile().mkdirs();
                 path.toFile().createNewFile();
                 dataUpdate();
             }
-            if (dataCheck.checkDate(path.toFile()) != true){
+            
+            // if the data exists, check the date on it
+            // if older than 30 days old, redownload it.
+            Neo4jDateCheck dataCheck = new Neo4jDateCheck();
+            if (dataCheck.checkDate(path.toFile()) != true)
+            {
                 dataUpdate();
-//                Neo4jIncomingData parser = new Neo4jIncomingData();
-//                parser.parseResponse(locus, incomingData, factory);
             }
             Neo4jDataIO parseData = new Neo4jDataIO();
             parseData.readCSVFile(locus, path.toFile(), regex);
-//            Neo4jLocusA hlaA = new Neo4jLocusA();
-//            hlaA.parseLocus(locus);
-            
             
         } catch (Exception ex) {
             System.out.println(ex);
