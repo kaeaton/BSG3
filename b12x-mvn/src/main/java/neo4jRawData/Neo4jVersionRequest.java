@@ -31,10 +31,11 @@ public class Neo4jVersionRequest {
             request = "MATCH (n) WHERE " 
                     + "EXISTS(n.imgt_release) RETURN DISTINCT " 
                     + quote + "node" + quote + "as element, " 
-                    + "n.imgt_release AS imgt_release " 
+                    + "n.imgt_release AS imgt_release LIMIT 1 " 
                     + "UNION ALL MATCH ()-[r]-() WHERE EXISTS(r.imgt_release) "
                     + "RETURN DISTINCT " + quote + "relationship" + quote 
-                    + "AS element, r.imgt_release AS imgt_release ORDER BY DESC";
+                    + "AS element, r.imgt_release AS imgt_release "
+                    + "ORDER BY r.imgt_release DESC LIMIT 1";
             
 //             MATCH (n) WHERE EXISTS(n.imgt_release) 
 //             RETURN DISTINCT "node" as element, n.imgt_release 
@@ -43,6 +44,8 @@ public class Neo4jVersionRequest {
 //             AS element, r.imgt_release AS imgt_release
 
 //          Set descending, limit 2
+//          MATCH (n) WHERE EXISTS(n.imgt_release) RETURN DISTINCT "node" as element, n.imgt_release AS imgt_release LIMIT 2 UNION ALL MATCH ()-[r]-() WHERE EXISTS(r.imgt_release) RETURN DISTINCT "relationship" AS element, r.imgt_release AS imgt_release ORDER BY r.imgt_release DESC LIMIT 2
+//          Set descending, limit 1
 //          MATCH (n) WHERE EXISTS(n.imgt_release) RETURN DISTINCT "node" as element, n.imgt_release AS imgt_release LIMIT 2 UNION ALL MATCH ()-[r]-() WHERE EXISTS(r.imgt_release) RETURN DISTINCT "relationship" AS element, r.imgt_release AS imgt_release ORDER BY r.imgt_release DESC LIMIT 2
             
             JsonGenerator generator = factory.createGenerator(writer);
