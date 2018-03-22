@@ -20,8 +20,8 @@ public class WriteFile {
         
     }
     
-    public static String fileName(String locus, String fileType) {
-        
+    public static String fileName(String locus, String version, String fileType) 
+    {
         DateTimeFormatter dtf = DateTimeFormatter.ofPattern("HH-mm-ss");
 
         LocalDate dateStamp = LocalDate.now();
@@ -29,21 +29,23 @@ public class WriteFile {
         String fileName = System.getProperty("user.home")
                 + System.getProperty("file.separator") + "Documents"
                 + System.getProperty("file.separator") + "BSG"
-                + System.getProperty("file.separator") 
-                + dateStamp + "_" + timeStamp + "_"
-                + locus + "." + fileType;
+                + System.getProperty("file.separator") + locus 
+//                + ".v" + version.replaceAll("\\.", "-") 
+                + "." + dateStamp + "." + timeStamp
+                + "." + fileType;
         
         System.out.println(fileName);
         
         return fileName;
     }
     
-    public static void writeToFile(String locus, String dataType){
+    public static void writeToFile(String locus, String version, String dataType)
+    {
         try {
             String text = B12xGUI.neo4jResults.getText();
 //            String filePath = fileName(locus, dataType);
 
-            File destinationFile = new File(fileName(locus, dataType));
+            File destinationFile = new File(fileName(locus, version, dataType));
 
             // if file doesnt exists, then create it
             if (!destinationFile.exists()) {

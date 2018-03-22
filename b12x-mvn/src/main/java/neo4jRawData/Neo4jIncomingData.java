@@ -27,31 +27,26 @@ public class Neo4jIncomingData {
 
     }
     
-    public void parseResponse(String locus, InputStream httpResult, JsonFactory factory) throws IOException {
+    public void parseResponse(String locus, String version, InputStream httpResult, JsonFactory factory) throws IOException {
         try {
             
-            // Write raw data to file
-//            ObjectMapper mapper = new ObjectMapper();
             File neo4jRaw = new File(System.getProperty("user.home") 
                     + System.getProperty("file.separator") + "Documents" 
                     + System.getProperty("file.separator") + "BSG"
                     + System.getProperty("file.separator") + "BSGData"
                     + System.getProperty("file.separator") 
-                    + "neo4j_" + locus + "_Download.csv");
-//            neo4jRaw.getParentFile().mkdir();
+                    + "neo4j_" + locus // + "_" + version 
+                    + "_Download.csv");
             neo4jRaw.createNewFile();
 
             BufferedWriter writer = new BufferedWriter(new FileWriter(neo4jRaw));
             
             LocalDate date = LocalDate.now();
             writer.write(date.toString() + System.lineSeparator());
+            writer.write(version + System.lineSeparator());
+
             
             TreeMap<String, String> neo4jPairs = new TreeMap<String, String>();
-//            Object json = mapper.readValue(httpResult, Object.class);
-//            Object json = mapper.readValue(httpResult, Object.class);
-
-//            File neo4jRaw = new File(System.getProperty("user.home") + System.getProperty("file.separator") + "Documents" + System.getProperty("file.separator") + "neo4jRawData.json");
-//            mapper.writerWithDefaultPrettyPrinter().writeValue(neo4jRaw, json);  
             
             JsonParser parser = factory.createParser(httpResult);
             
@@ -99,6 +94,17 @@ public class Neo4jIncomingData {
                         + System.lineSeparator());  
             }  
             writer.close();
+            
+            //Debugging tools
+            // Write raw data to file to see structure
+//            ObjectMapper mapper = new ObjectMapper();
+//            Object json = mapper.readValue(httpResult, Object.class);
+//            File neo4jRaw = new File(System.getProperty("user.home") 
+//                            + System.getProperty("file.separator") 
+//                            + "Documents" + System.getProperty("file.separator")
+//                            + "neo4jRaw" + locus + "Data.json");
+//            mapper.writerWithDefaultPrettyPrinter().writeValue(neo4jRaw, json);  
+            
         } catch (Exception ex) {
             System.out.println(ex);
         }

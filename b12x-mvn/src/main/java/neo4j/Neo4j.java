@@ -13,18 +13,21 @@ import javax.swing.SwingWorker;
 
 public class Neo4j  extends SwingWorker<String, String> {
     
-    private final String locus, regex, version;
+    private final String locus, regex;
+    private String version;
     private final Path path;
     private final URL neo4jURL = new URL("http://neo4j.b12x.org/db/data/transaction/commit");
     private JsonFactory factory;
 
 //    private String request;
     
-    public Neo4j(String incomingLocus, Path incomingPath, String incomingRegex) throws IOException {
+    public Neo4j(String incomingLocus, Path incomingPath, String incomingRegex) 
+            throws IOException 
+    {
         locus = incomingLocus;
         path = incomingPath;
         regex = incomingRegex;
-        version = "3.31.0";
+//        version = "3.31.0";
 //        path = Paths.get(System.getProperty("user.home") 
 //                    + System.getProperty("file.separator") + "Documents" 
 //                    + System.getProperty("file.separator") 
@@ -37,6 +40,8 @@ public class Neo4j  extends SwingWorker<String, String> {
         try {
             // set up the call
             Neo4jHttp neo4jHttp = new Neo4jHttp();
+            
+            // set up for parsing the incoming data
             Neo4jIncomingData parser = new Neo4jIncomingData();
             
             // determine the most recent version
@@ -46,7 +51,7 @@ public class Neo4j  extends SwingWorker<String, String> {
                     .makeCall(neo4jURL, whatVersion.formNeo4jVersionRequest());
             
             // recieve the version data and parse it
-            parser.parseVersion(incomingVersionData, factory);
+            version = parser.parseVersion(incomingVersionData, factory);
             
             // retrieve the data
             // create the request and send it
@@ -54,10 +59,10 @@ public class Neo4j  extends SwingWorker<String, String> {
             InputStream incomingData = neo4jHttp.makeCall(neo4jURL, request.formNeo4jRequest());
             
             // recieve data and parse it
-            parser.parseResponse(locus, incomingData, factory);
+            parser.parseResponse(locus, version, incomingData, factory);
             
             // Check to see if this is working
-            Neo4jDateCheck dataCheck = new Neo4jDateCheck();
+            Neo4jFileCheck dataCheck = new Neo4jFileCheck();
             dataCheck.getFileDate(path.toFile());
         } catch (Exception ex) {
             System.out.println(ex);
@@ -79,7 +84,7 @@ public class Neo4j  extends SwingWorker<String, String> {
             
             // if the data exists, check the date on it
             // if older than 30 days old, redownload it.
-            Neo4jDateCheck dataCheck = new Neo4jDateCheck();
+            Neo4jFileCheck dataCheck = new Neo4jFileCheck();
             if (dataCheck.checkDate(path.toFile()) != true)
             {
                 dataUpdate();

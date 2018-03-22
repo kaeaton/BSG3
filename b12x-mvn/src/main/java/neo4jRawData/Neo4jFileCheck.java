@@ -20,14 +20,14 @@ import java.util.Date;
  *
  * @author kaeaton
  */
-public class Neo4jDateCheck {
+public class Neo4jFileCheck {
     
 //    private final String locus;
 //    private final String fileLocation;
 //    private boolean fileExists = false;
 //    private boolean currentDate = false;
     
-    public Neo4jDateCheck() throws IOException {
+    public Neo4jFileCheck() throws IOException {
 //        String incomingLocus, String fileLoc
 //        locus = incomingLocus;
 //        fileLocation = fileLoc;

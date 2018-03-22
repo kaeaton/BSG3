@@ -45,12 +45,15 @@ public class Neo4jDataIO {
             // Read the File
             BufferedReader br = new BufferedReader(new FileReader(file));
             String fileDate = br.readLine();
+            String version = br.readLine();
             
             // Headers
             B12xGUI.neo4jResults.append("File generated at: " + timeStamp);
             B12xGUI.neo4jResults.append(System.lineSeparator());
             B12xGUI.neo4jResults.append("Data source: http://neo4j.b12x.org - ");
             B12xGUI.neo4jResults.append(locus + " data downloaded: " + fileDate);
+            B12xGUI.neo4jResults.append(System.lineSeparator());
+            B12xGUI.neo4jResults.append("IMGT/HLA Database Version " + version);
             B12xGUI.neo4jResults.append(System.lineSeparator());
 
             // Write the data
@@ -91,7 +94,7 @@ public class Neo4jDataIO {
             
             // Write contents of textbox to file
             if(writeToFile){
-                WriteFile.writeToFile(locus, dataType);
+                WriteFile.writeToFile(locus, version, dataType);
             }
         } catch (Exception ex) {
             System.out.println(ex); 

@@ -1358,7 +1358,8 @@ public class B12xGUI extends javax.swing.JFrame {
                 + System.getProperty("file.separator") + "BSG"
                 + System.getProperty("file.separator") + "BSGData"
                 + System.getProperty("file.separator")
-                + "neo4j_" + locus + "_Download.csv");
+                + "neo4j_" + locus // + "_" + version
+                + "_Download.csv");
 
             String panelName = "jPanelEnterGfe" + parsedLocus;
             System.out.println("panelName " + panelName);
@@ -1435,7 +1436,8 @@ public class B12xGUI extends javax.swing.JFrame {
                     + System.getProperty("file.separator") + "BSG"
                     + System.getProperty("file.separator") + "BSGData"
                     + System.getProperty("file.separator") 
-                    + "neo4j_" + locus + "_Download.csv");
+                    + "neo4j_" + locus // + "_" + version
+                    + "_Download.csv");
             String regex = "";
 
             Neo4j neo4j = new Neo4j(locus, path, regex);
