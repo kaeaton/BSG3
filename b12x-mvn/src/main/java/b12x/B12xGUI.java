@@ -166,6 +166,36 @@ public class B12xGUI extends javax.swing.JFrame {
         jLabelCI7 = new javax.swing.JLabel();
         jLabelCE8 = new javax.swing.JLabel();
         jLabelC3 = new javax.swing.JLabel();
+        jPanelEnterGfeDRB1 = new javax.swing.JPanel();
+        hlaDRB1Label1 = new javax.swing.JLabel();
+        drb100_WS = new javax.swing.JTextField();
+        drb101_5Prime = new javax.swing.JTextField();
+        drb102_Exon1 = new javax.swing.JTextField();
+        drb103_Intron1 = new javax.swing.JTextField();
+        drb104_Exon2 = new javax.swing.JTextField();
+        drb105_Intron2 = new javax.swing.JTextField();
+        drb106_Exon3 = new javax.swing.JTextField();
+        drb107_Intron3 = new javax.swing.JTextField();
+        drb108_Exon4 = new javax.swing.JTextField();
+        drb109_Intron4 = new javax.swing.JTextField();
+        drb110_Exon5 = new javax.swing.JTextField();
+        drb111_Intron5 = new javax.swing.JTextField();
+        drb112_Exon6 = new javax.swing.JTextField();
+        drb113_3Prime = new javax.swing.JTextField();
+        jLabelDRB1W = new javax.swing.JLabel();
+        jLabelDRB15 = new javax.swing.JLabel();
+        jLabelDRB1E1 = new javax.swing.JLabel();
+        jLabelDRB1I1 = new javax.swing.JLabel();
+        jLabelDRB1E2 = new javax.swing.JLabel();
+        jLabelDRB1I2 = new javax.swing.JLabel();
+        jLabelDRB1E3 = new javax.swing.JLabel();
+        jLabelDRB1I3 = new javax.swing.JLabel();
+        jLabelDRB1E4 = new javax.swing.JLabel();
+        jLabelDRB1I4 = new javax.swing.JLabel();
+        jLabelDRB1E5 = new javax.swing.JLabel();
+        jLabelDRB1I5 = new javax.swing.JLabel();
+        jLabelDRB1E6 = new javax.swing.JLabel();
+        jLabelDRB13 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         neo4jResults = new javax.swing.JTextArea();
         jPanel1 = new javax.swing.JPanel();
@@ -200,7 +230,7 @@ public class B12xGUI extends javax.swing.JFrame {
             }
         });
 
-        hlaSelectNeo4j.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "HLA-A", "HLA-B", "HLA-C" }));
+        hlaSelectNeo4j.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "HLA-A", "HLA-B", "HLA-C", "HLA-DRB1" }));
         hlaSelectNeo4j.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 hlaSelectNeo4jActionPerformed(evt);
@@ -794,7 +824,7 @@ public class B12xGUI extends javax.swing.JFrame {
                         .addComponent(jLabelB5, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jLabelB3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addComponent(jLabelBW, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(30, Short.MAX_VALUE))
+                .addContainerGap(29, Short.MAX_VALUE))
         );
 
         mainCardPanel.add(jPanelEnterGfeB, "cardB");
@@ -947,12 +977,13 @@ public class B12xGUI extends javax.swing.JFrame {
                 .addGroup(jPanelEnterGfeCLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
                     .addComponent(c00_WS, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabelCW, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(2, 2, 2)
                 .addGroup(jPanelEnterGfeCLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(c01_5Prime, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanelEnterGfeCLayout.createSequentialGroup()
-                        .addGap(10, 10, 10)
-                        .addComponent(jLabelC5, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(12, 12, 12)
+                        .addComponent(jLabelC5, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanelEnterGfeCLayout.createSequentialGroup()
+                        .addGap(2, 2, 2)
+                        .addComponent(c01_5Prime, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanelEnterGfeCLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(c02_Exon1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -1052,7 +1083,7 @@ public class B12xGUI extends javax.swing.JFrame {
                 .addContainerGap(177, Short.MAX_VALUE))
         );
 
-        jPanelEnterGfeCLayout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {c01_5Prime, c02_Exon1, c03_Intron1, c04_Exon2, c05_Intron2, c06_Exon3, c07_Intron3, c08_Exon4, c09_Intron4, c10_Exon5, c11_Intron5, c12_Exon6, c13_Intron6, c14_Exon7, c15_Intron7, c16_Exon8, c17_3Prime});
+        jPanelEnterGfeCLayout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {c02_Exon1, c03_Intron1, c04_Exon2, c05_Intron2, c06_Exon3, c07_Intron3, c08_Exon4, c09_Intron4, c10_Exon5, c11_Intron5, c12_Exon6, c13_Intron6, c14_Exon7, c15_Intron7, c16_Exon8, c17_3Prime});
 
         jPanelEnterGfeCLayout.setVerticalGroup(
             jPanelEnterGfeCLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1118,6 +1149,265 @@ public class B12xGUI extends javax.swing.JFrame {
 
         mainCardPanel.add(jPanelEnterGfeC, "cardC");
 
+        jPanelEnterGfeDRB1.setName("jPanelEnterGfeDRB1"); // NOI18N
+
+        hlaDRB1Label1.setText("HLA-DRB1");
+
+        drb100_WS.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        drb100_WS.setText("w");
+        drb100_WS.setName("00"); // NOI18N
+
+        drb101_5Prime.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        drb101_5Prime.setName("01"); // NOI18N
+
+        drb102_Exon1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        drb102_Exon1.setName("02"); // NOI18N
+
+        drb103_Intron1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        drb103_Intron1.setName("03"); // NOI18N
+
+        drb104_Exon2.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        drb104_Exon2.setName("04"); // NOI18N
+
+        drb105_Intron2.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        drb105_Intron2.setName("05"); // NOI18N
+
+        drb106_Exon3.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        drb106_Exon3.setName("06"); // NOI18N
+
+        drb107_Intron3.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        drb107_Intron3.setName("07"); // NOI18N
+
+        drb108_Exon4.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        drb108_Exon4.setName("08"); // NOI18N
+
+        drb109_Intron4.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        drb109_Intron4.setName("09"); // NOI18N
+
+        drb110_Exon5.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        drb110_Exon5.setName("10"); // NOI18N
+
+        drb111_Intron5.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        drb111_Intron5.setName("11"); // NOI18N
+
+        drb112_Exon6.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        drb112_Exon6.setName("12"); // NOI18N
+        drb112_Exon6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                drb112_Exon6ActionPerformed(evt);
+            }
+        });
+
+        drb113_3Prime.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        drb113_3Prime.setMaximumSize(new java.awt.Dimension(10, 26));
+        drb113_3Prime.setName("17"); // NOI18N
+
+        TextIcon t1DRB1 = new TextIcon(jLabelDRB1W, "Workshop Status", TextIcon.Layout.HORIZONTAL);
+        RotatedIcon r1DRB1 = new RotatedIcon(t1DRB1, RotatedIcon.Rotate.DOWN);
+        jLabelDRB1W.setIcon( r1DRB1 );
+
+        t1DRB1 = new TextIcon(jLabelDRB15, "5' UTR", TextIcon.Layout.HORIZONTAL);
+        r1DRB1 = new RotatedIcon(t1DRB1, RotatedIcon.Rotate.DOWN);
+        jLabelDRB15.setIcon( r1DRB1 );
+
+        t1DRB1 = new TextIcon(jLabelDRB1E1, "Exon 1", TextIcon.Layout.HORIZONTAL);
+        r1DRB1 = new RotatedIcon(t1DRB1, RotatedIcon.Rotate.DOWN);
+        jLabelDRB1E1.setIcon( r1DRB1 );
+
+        t1DRB1 = new TextIcon(jLabelDRB1I1, "Intron 1", TextIcon.Layout.HORIZONTAL);
+        r1DRB1 = new RotatedIcon(t1DRB1, RotatedIcon.Rotate.DOWN);
+        jLabelDRB1I1.setIcon( r1DRB1 );
+
+        t1DRB1 = new TextIcon(jLabelDRB1E2, "Exon 2", TextIcon.Layout.HORIZONTAL);
+        r1DRB1 = new RotatedIcon(t1DRB1, RotatedIcon.Rotate.DOWN);
+        jLabelDRB1E2.setIcon( r1DRB1 );
+
+        t1DRB1 = new TextIcon(jLabelDRB1I2, "Intron 2", TextIcon.Layout.HORIZONTAL);
+        r1DRB1 = new RotatedIcon(t1DRB1, RotatedIcon.Rotate.DOWN);
+        jLabelDRB1I2.setIcon( r1DRB1 );
+
+        t1DRB1 = new TextIcon(jLabelDRB1E3, "Exon 3", TextIcon.Layout.HORIZONTAL);
+        r1DRB1 = new RotatedIcon(t1DRB1, RotatedIcon.Rotate.DOWN);
+        jLabelDRB1E3.setIcon( r1DRB1 );
+
+        t1DRB1 = new TextIcon(jLabelDRB1I3, "Intron 3", TextIcon.Layout.HORIZONTAL);
+        r1DRB1 = new RotatedIcon(t1DRB1, RotatedIcon.Rotate.DOWN);
+        jLabelDRB1I3.setIcon( r1DRB1 );
+
+        t1DRB1 = new TextIcon(jLabelDRB1E4, "Exon 4", TextIcon.Layout.HORIZONTAL);
+        r1DRB1 = new RotatedIcon(t1DRB1, RotatedIcon.Rotate.DOWN);
+        jLabelDRB1E4.setIcon( r1DRB1 );
+
+        t1DRB1 = new TextIcon(jLabelDRB1I4, "Intron 4", TextIcon.Layout.HORIZONTAL);
+        r1DRB1 = new RotatedIcon(t1DRB1, RotatedIcon.Rotate.DOWN);
+        jLabelDRB1I4.setIcon( r1DRB1 );
+
+        t1DRB1 = new TextIcon(jLabelDRB1E5, "Exon 5", TextIcon.Layout.HORIZONTAL);
+        r1DRB1 = new RotatedIcon(t1DRB1, RotatedIcon.Rotate.DOWN);
+        jLabelDRB1E5.setIcon( r1DRB1 );
+
+        t1DRB1 = new TextIcon(jLabelDRB1I5, "Intron 5", TextIcon.Layout.HORIZONTAL);
+        r1DRB1 = new RotatedIcon(t1DRB1, RotatedIcon.Rotate.DOWN);
+        jLabelDRB1I5.setIcon( r1DRB1 );
+
+        t1DRB1 = new TextIcon(jLabelDRB1E6, "Exon 6", TextIcon.Layout.HORIZONTAL);
+        r1DRB1 = new RotatedIcon(t1DRB1, RotatedIcon.Rotate.DOWN);
+        jLabelDRB1E6.setIcon( r1DRB1 );
+
+        t1DRB1 = new TextIcon(jLabelDRB13, "3' UTR", TextIcon.Layout.HORIZONTAL);
+        r1DRB1 = new RotatedIcon(t1DRB1, RotatedIcon.Rotate.DOWN);
+        jLabelDRB13.setIcon( r1DRB1 );
+
+        javax.swing.GroupLayout jPanelEnterGfeDRB1Layout = new javax.swing.GroupLayout(jPanelEnterGfeDRB1);
+        jPanelEnterGfeDRB1.setLayout(jPanelEnterGfeDRB1Layout);
+        jPanelEnterGfeDRB1Layout.setHorizontalGroup(
+            jPanelEnterGfeDRB1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanelEnterGfeDRB1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(hlaDRB1Label1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanelEnterGfeDRB1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(drb100_WS, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabelDRB1W, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(jPanelEnterGfeDRB1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanelEnterGfeDRB1Layout.createSequentialGroup()
+                        .addGap(12, 12, 12)
+                        .addComponent(jLabelDRB15, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanelEnterGfeDRB1Layout.createSequentialGroup()
+                        .addGap(2, 2, 2)
+                        .addComponent(drb101_5Prime, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanelEnterGfeDRB1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(drb102_Exon1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jPanelEnterGfeDRB1Layout.createSequentialGroup()
+                        .addGap(10, 10, 10)
+                        .addComponent(jLabelDRB1E1, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanelEnterGfeDRB1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(drb103_Intron1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jPanelEnterGfeDRB1Layout.createSequentialGroup()
+                        .addGap(10, 10, 10)
+                        .addComponent(jLabelDRB1I1, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanelEnterGfeDRB1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(drb104_Exon2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jPanelEnterGfeDRB1Layout.createSequentialGroup()
+                        .addGap(10, 10, 10)
+                        .addComponent(jLabelDRB1E2, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanelEnterGfeDRB1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(drb105_Intron2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jPanelEnterGfeDRB1Layout.createSequentialGroup()
+                        .addGap(10, 10, 10)
+                        .addComponent(jLabelDRB1I2, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanelEnterGfeDRB1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(drb106_Exon3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jPanelEnterGfeDRB1Layout.createSequentialGroup()
+                        .addGap(10, 10, 10)
+                        .addComponent(jLabelDRB1E3, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanelEnterGfeDRB1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanelEnterGfeDRB1Layout.createSequentialGroup()
+                        .addGap(10, 10, 10)
+                        .addComponent(jLabelDRB1I3, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(drb107_Intron3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanelEnterGfeDRB1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(drb108_Exon4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jPanelEnterGfeDRB1Layout.createSequentialGroup()
+                        .addGap(6, 6, 6)
+                        .addComponent(jLabelDRB1E4, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanelEnterGfeDRB1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(drb109_Intron4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jPanelEnterGfeDRB1Layout.createSequentialGroup()
+                        .addGap(10, 10, 10)
+                        .addComponent(jLabelDRB1I4, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanelEnterGfeDRB1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanelEnterGfeDRB1Layout.createSequentialGroup()
+                        .addGap(10, 10, 10)
+                        .addComponent(jLabelDRB1E5, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(drb110_Exon5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanelEnterGfeDRB1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(drb111_Intron5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jPanelEnterGfeDRB1Layout.createSequentialGroup()
+                        .addGap(10, 10, 10)
+                        .addComponent(jLabelDRB1I5, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanelEnterGfeDRB1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(drb112_Exon6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jPanelEnterGfeDRB1Layout.createSequentialGroup()
+                        .addGap(10, 10, 10)
+                        .addComponent(jLabelDRB1E6, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanelEnterGfeDRB1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanelEnterGfeDRB1Layout.createSequentialGroup()
+                        .addGap(10, 10, 10)
+                        .addComponent(jLabelDRB13, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(drb113_3Prime, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(337, Short.MAX_VALUE))
+        );
+
+        jPanelEnterGfeDRB1Layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {drb101_5Prime, drb102_Exon1, drb103_Intron1, drb104_Exon2, drb105_Intron2, drb106_Exon3, drb107_Intron3, drb108_Exon4, drb109_Intron4, drb110_Exon5, drb111_Intron5, drb112_Exon6, drb113_3Prime});
+
+        jPanelEnterGfeDRB1Layout.setVerticalGroup(
+            jPanelEnterGfeDRB1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanelEnterGfeDRB1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanelEnterGfeDRB1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanelEnterGfeDRB1Layout.createSequentialGroup()
+                        .addComponent(drb113_3Prime, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jLabelDRB13, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addGroup(jPanelEnterGfeDRB1Layout.createSequentialGroup()
+                        .addGroup(jPanelEnterGfeDRB1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(hlaDRB1Label1, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(drb101_5Prime, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(drb102_Exon1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(drb103_Intron1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(drb104_Exon2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(drb105_Intron2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(drb106_Exon3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(drb107_Intron3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(drb108_Exon4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(drb109_Intron4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(drb110_Exon5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(drb111_Intron5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(drb112_Exon6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(drb100_WS, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(jPanelEnterGfeDRB1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelEnterGfeDRB1Layout.createSequentialGroup()
+                                .addGap(0, 0, Short.MAX_VALUE)
+                                .addGroup(jPanelEnterGfeDRB1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(jPanelEnterGfeDRB1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(jLabelDRB1I5, javax.swing.GroupLayout.Alignment.TRAILING)
+                                        .addComponent(jLabelDRB1E5, javax.swing.GroupLayout.Alignment.TRAILING)
+                                        .addComponent(jLabelDRB1I4, javax.swing.GroupLayout.Alignment.TRAILING)
+                                        .addComponent(jLabelDRB1E4, javax.swing.GroupLayout.Alignment.TRAILING)
+                                        .addComponent(jLabelDRB1I3, javax.swing.GroupLayout.Alignment.TRAILING)
+                                        .addComponent(jLabelDRB1E3, javax.swing.GroupLayout.Alignment.TRAILING)
+                                        .addComponent(jLabelDRB1I2, javax.swing.GroupLayout.Alignment.TRAILING)
+                                        .addComponent(jLabelDRB1E2, javax.swing.GroupLayout.Alignment.TRAILING)
+                                        .addComponent(jLabelDRB1I1, javax.swing.GroupLayout.Alignment.TRAILING)
+                                        .addComponent(jLabelDRB1E1, javax.swing.GroupLayout.Alignment.TRAILING))
+                                    .addComponent(jLabelDRB15))
+                                .addGap(76, 76, 76))
+                            .addGroup(jPanelEnterGfeDRB1Layout.createSequentialGroup()
+                                .addGroup(jPanelEnterGfeDRB1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabelDRB1E6)
+                                    .addGroup(jPanelEnterGfeDRB1Layout.createSequentialGroup()
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(jLabelDRB1W, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))))
+        );
+
+        jPanelEnterGfeDRB1Layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {jLabelDRB13, jLabelDRB15, jLabelDRB1E1, jLabelDRB1E2, jLabelDRB1E3, jLabelDRB1E4, jLabelDRB1E5, jLabelDRB1E6, jLabelDRB1I1, jLabelDRB1I2, jLabelDRB1I3, jLabelDRB1I4, jLabelDRB1I5, jLabelDRB1W});
+
+        mainCardPanel.add(jPanelEnterGfeDRB1, "cardDRB1");
+
         neo4jResults.setColumns(20);
         neo4jResults.setRows(5);
 
@@ -1143,10 +1433,10 @@ public class B12xGUI extends javax.swing.JFrame {
                 //    }
             //});
     neo4jResults.addInputMethodListener(new java.awt.event.InputMethodListener() {
-        public void caretPositionChanged(java.awt.event.InputMethodEvent evt) {
-        }
         public void inputMethodTextChanged(java.awt.event.InputMethodEvent evt) {
             neo4jResultsInputMethodTextChanged(evt);
+        }
+        public void caretPositionChanged(java.awt.event.InputMethodEvent evt) {
         }
     });
     jScrollPane1.setViewportView(neo4jResults);
@@ -1228,7 +1518,7 @@ public class B12xGUI extends javax.swing.JFrame {
                 .addComponent(instructions, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
             .addComponent(mainCardPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
-            .addGap(45, 45, 45)
+            .addGap(63, 63, 63)
             .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
             .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 215, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -1291,7 +1581,7 @@ public class B12xGUI extends javax.swing.JFrame {
             .addGroup(neo4jUpdateLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                 .addComponent(hlaSelectUpdate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addComponent(neo4jUpdateButton))
-            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 507, Short.MAX_VALUE)
+            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 516, Short.MAX_VALUE)
             .addComponent(neo4jUpdateCancelButton))
     );
 
@@ -1339,6 +1629,10 @@ public class B12xGUI extends javax.swing.JFrame {
             break;
             case "HLA-C":
             card.show(mainCardPanel, "cardC");
+            System.out.println(selectedLocus);
+            break;
+            case "HLA-DRB1":
+            card.show(mainCardPanel, "cardDRB1");
             System.out.println(selectedLocus);
             break;
         }
@@ -1460,6 +1754,10 @@ public class B12xGUI extends javax.swing.JFrame {
             System.out.println("The write to file box is selected and the text box knows it.");
         }// TODO add your handling code here:
     }//GEN-LAST:event_neo4jResultsInputMethodTextChanged
+
+    private void drb112_Exon6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_drb112_Exon6ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_drb112_Exon6ActionPerformed
     
 //    public void neo4jResults.getDocument();
 //    DocumentListener(new DocumentListener() {
@@ -1564,9 +1862,24 @@ public class B12xGUI extends javax.swing.JFrame {
     private javax.swing.JTextField c15_Intron7;
     private javax.swing.JTextField c16_Exon8;
     private javax.swing.JTextField c17_3Prime;
+    private javax.swing.JTextField drb100_WS;
+    private javax.swing.JTextField drb101_5Prime;
+    private javax.swing.JTextField drb102_Exon1;
+    private javax.swing.JTextField drb103_Intron1;
+    private javax.swing.JTextField drb104_Exon2;
+    private javax.swing.JTextField drb105_Intron2;
+    private javax.swing.JTextField drb106_Exon3;
+    private javax.swing.JTextField drb107_Intron3;
+    private javax.swing.JTextField drb108_Exon4;
+    private javax.swing.JTextField drb109_Intron4;
+    private javax.swing.JTextField drb110_Exon5;
+    private javax.swing.JTextField drb111_Intron5;
+    private javax.swing.JTextField drb112_Exon6;
+    private javax.swing.JTextField drb113_3Prime;
     private javax.swing.JLabel hlaALabel2;
     private javax.swing.JLabel hlaBLabel;
     private javax.swing.JLabel hlaCLabel;
+    private javax.swing.JLabel hlaDRB1Label1;
     private javax.swing.JComboBox<String> hlaSelectNeo4j;
     private javax.swing.JComboBox<String> hlaSelectUpdate;
     private javax.swing.JLabel instructions;
@@ -1624,11 +1937,26 @@ public class B12xGUI extends javax.swing.JFrame {
     private javax.swing.JLabel jLabelCI6;
     private javax.swing.JLabel jLabelCI7;
     private javax.swing.JLabel jLabelCW;
+    private javax.swing.JLabel jLabelDRB13;
+    private javax.swing.JLabel jLabelDRB15;
+    private javax.swing.JLabel jLabelDRB1E1;
+    private javax.swing.JLabel jLabelDRB1E2;
+    private javax.swing.JLabel jLabelDRB1E3;
+    private javax.swing.JLabel jLabelDRB1E4;
+    private javax.swing.JLabel jLabelDRB1E5;
+    private javax.swing.JLabel jLabelDRB1E6;
+    private javax.swing.JLabel jLabelDRB1I1;
+    private javax.swing.JLabel jLabelDRB1I2;
+    private javax.swing.JLabel jLabelDRB1I3;
+    private javax.swing.JLabel jLabelDRB1I4;
+    private javax.swing.JLabel jLabelDRB1I5;
+    private javax.swing.JLabel jLabelDRB1W;
     private javax.swing.JLabel jLabelE7;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanelEnterGfeA;
     private javax.swing.JPanel jPanelEnterGfeB;
     private javax.swing.JPanel jPanelEnterGfeC;
+    private javax.swing.JPanel jPanelEnterGfeDRB1;
     public javax.swing.JRadioButton jRadioButtonCSV;
     public javax.swing.JRadioButton jRadioButtonPretty;
     public javax.swing.JRadioButton jRadioButtonTSV;

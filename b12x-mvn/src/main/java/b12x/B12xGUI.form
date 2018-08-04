@@ -107,7 +107,7 @@
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="mainCardPanel" min="-2" pref="170" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="45" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="63" max="-2" attributes="0"/>
                       <Component id="jPanel1" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="jScrollPane1" min="-2" pref="215" max="-2" attributes="0"/>
@@ -140,10 +140,11 @@
             <Component class="javax.swing.JComboBox" name="hlaSelectNeo4j">
               <Properties>
                 <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-                  <StringArray count="3">
+                  <StringArray count="4">
                     <StringItem index="0" value="HLA-A"/>
                     <StringItem index="1" value="HLA-B"/>
                     <StringItem index="2" value="HLA-C"/>
+                    <StringItem index="3" value="HLA-DRB1"/>
                   </StringArray>
                 </Property>
               </Properties>
@@ -805,7 +806,7 @@
                                   </Group>
                                   <Component id="jLabelBW" min="-2" pref="103" max="-2" attributes="0"/>
                               </Group>
-                              <EmptySpace pref="30" max="32767" attributes="0"/>
+                              <EmptySpace pref="29" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
@@ -1016,12 +1017,14 @@
                                   <Component id="c00_WS" alignment="2" min="-2" pref="24" max="-2" attributes="0"/>
                                   <Component id="jLabelCW" alignment="2" min="-2" pref="22" max="-2" attributes="0"/>
                               </Group>
-                              <EmptySpace min="-2" pref="2" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="c01_5Prime" linkSize="8" min="-2" max="-2" attributes="0"/>
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
+                                  <Group type="102" attributes="0">
+                                      <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
                                       <Component id="jLabelC5" min="-2" pref="22" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" attributes="0">
+                                      <EmptySpace min="-2" pref="2" max="-2" attributes="0"/>
+                                      <Component id="c01_5Prime" min="-2" pref="40" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                               <EmptySpace max="-2" attributes="0"/>
@@ -1442,6 +1445,370 @@
                     </Component>
                   </SubComponents>
                 </Container>
+                <Container class="javax.swing.JPanel" name="jPanelEnterGfeDRB1">
+                  <Properties>
+                    <Property name="name" type="java.lang.String" value="jPanelEnterGfeDRB1" noResource="true"/>
+                  </Properties>
+                  <Constraints>
+                    <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignCardLayout" value="org.netbeans.modules.form.compat2.layouts.DesignCardLayout$CardConstraintsDescription">
+                      <CardConstraints cardName="cardDRB1"/>
+                    </Constraint>
+                  </Constraints>
+
+                  <Layout>
+                    <DimensionLayout dim="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="hlaDRB1Label1" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="1" attributes="0">
+                                  <Component id="drb100_WS" min="-2" pref="24" max="-2" attributes="0"/>
+                                  <Component id="jLabelDRB1W" min="-2" pref="22" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
+                                      <Component id="jLabelDRB15" min="-2" pref="22" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <EmptySpace min="-2" pref="2" max="-2" attributes="0"/>
+                                      <Component id="drb101_5Prime" linkSize="11" min="-2" pref="40" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="drb102_Exon1" linkSize="11" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
+                                      <Component id="jLabelDRB1E1" min="-2" pref="21" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="drb103_Intron1" linkSize="11" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
+                                      <Component id="jLabelDRB1I1" min="-2" pref="21" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="drb104_Exon2" linkSize="11" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
+                                      <Component id="jLabelDRB1E2" min="-2" pref="21" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="drb105_Intron2" linkSize="11" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
+                                      <Component id="jLabelDRB1I2" min="-2" pref="21" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="drb106_Exon3" linkSize="11" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
+                                      <Component id="jLabelDRB1E3" min="-2" pref="22" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
+                                      <Component id="jLabelDRB1I3" min="-2" pref="21" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Component id="drb107_Intron3" linkSize="11" alignment="0" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="drb108_Exon4" linkSize="11" min="-2" max="-2" attributes="0"/>
+                                  <Group type="102" attributes="0">
+                                      <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
+                                      <Component id="jLabelDRB1E4" min="-2" pref="21" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                              <EmptySpace min="-2" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="drb109_Intron4" linkSize="11" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
+                                      <Component id="jLabelDRB1I4" min="-2" pref="21" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
+                                      <Component id="jLabelDRB1E5" min="-2" pref="21" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Component id="drb110_Exon5" linkSize="11" alignment="0" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="drb111_Intron5" linkSize="11" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
+                                      <Component id="jLabelDRB1I5" min="-2" pref="21" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="drb112_Exon6" linkSize="11" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
+                                      <Component id="jLabelDRB1E6" min="-2" pref="21" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
+                                      <Component id="jLabelDRB13" min="-2" pref="22" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Component id="drb113_3Prime" linkSize="11" alignment="0" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace pref="337" max="32767" attributes="0"/>
+                          </Group>
+                      </Group>
+                    </DimensionLayout>
+                    <DimensionLayout dim="1">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="102" attributes="0">
+                                      <Component id="drb113_3Prime" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jLabelDRB13" linkSize="10" min="-2" pref="60" max="-2" attributes="0"/>
+                                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" attributes="0">
+                                      <Group type="103" groupAlignment="3" attributes="0">
+                                          <Component id="hlaDRB1Label1" alignment="3" min="-2" pref="20" max="-2" attributes="0"/>
+                                          <Component id="drb101_5Prime" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="drb102_Exon1" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="drb103_Intron1" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="drb104_Exon2" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="drb105_Intron2" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="drb106_Exon3" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="drb107_Intron3" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="drb108_Exon4" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="drb109_Intron4" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="drb110_Exon5" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="drb111_Intron5" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="drb112_Exon6" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="drb100_WS" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Group type="102" alignment="1" attributes="0">
+                                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                                              <Group type="103" groupAlignment="0" attributes="0">
+                                                  <Group type="103" alignment="0" groupAlignment="0" attributes="0">
+                                                      <Component id="jLabelDRB1I5" linkSize="10" alignment="1" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="jLabelDRB1E5" linkSize="10" alignment="1" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="jLabelDRB1I4" linkSize="10" alignment="1" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="jLabelDRB1E4" linkSize="10" alignment="1" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="jLabelDRB1I3" linkSize="10" alignment="1" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="jLabelDRB1E3" linkSize="10" alignment="1" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="jLabelDRB1I2" linkSize="10" alignment="1" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="jLabelDRB1E2" linkSize="10" alignment="1" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="jLabelDRB1I1" linkSize="10" alignment="1" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="jLabelDRB1E1" linkSize="10" alignment="1" min="-2" max="-2" attributes="0"/>
+                                                  </Group>
+                                                  <Component id="jLabelDRB15" linkSize="10" alignment="0" min="-2" max="-2" attributes="0"/>
+                                              </Group>
+                                              <EmptySpace min="-2" pref="76" max="-2" attributes="0"/>
+                                          </Group>
+                                          <Group type="102" attributes="0">
+                                              <Group type="103" groupAlignment="0" attributes="0">
+                                                  <Component id="jLabelDRB1E6" linkSize="10" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                  <Group type="102" alignment="0" attributes="0">
+                                                      <EmptySpace max="-2" attributes="0"/>
+                                                      <Component id="jLabelDRB1W" linkSize="10" min="-2" pref="99" max="-2" attributes="0"/>
+                                                  </Group>
+                                              </Group>
+                                              <EmptySpace max="32767" attributes="0"/>
+                                          </Group>
+                                      </Group>
+                                  </Group>
+                              </Group>
+                          </Group>
+                      </Group>
+                    </DimensionLayout>
+                  </Layout>
+                  <SubComponents>
+                    <Component class="javax.swing.JLabel" name="hlaDRB1Label1">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="HLA-DRB1"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JTextField" name="drb100_WS">
+                      <Properties>
+                        <Property name="horizontalAlignment" type="int" value="0"/>
+                        <Property name="text" type="java.lang.String" value="w"/>
+                        <Property name="name" type="java.lang.String" value="00" noResource="true"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JTextField" name="drb101_5Prime">
+                      <Properties>
+                        <Property name="horizontalAlignment" type="int" value="0"/>
+                        <Property name="name" type="java.lang.String" value="01" noResource="true"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JTextField" name="drb102_Exon1">
+                      <Properties>
+                        <Property name="horizontalAlignment" type="int" value="0"/>
+                        <Property name="name" type="java.lang.String" value="02" noResource="true"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JTextField" name="drb103_Intron1">
+                      <Properties>
+                        <Property name="horizontalAlignment" type="int" value="0"/>
+                        <Property name="name" type="java.lang.String" value="03" noResource="true"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JTextField" name="drb104_Exon2">
+                      <Properties>
+                        <Property name="horizontalAlignment" type="int" value="0"/>
+                        <Property name="name" type="java.lang.String" value="04" noResource="true"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JTextField" name="drb105_Intron2">
+                      <Properties>
+                        <Property name="horizontalAlignment" type="int" value="0"/>
+                        <Property name="name" type="java.lang.String" value="05" noResource="true"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JTextField" name="drb106_Exon3">
+                      <Properties>
+                        <Property name="horizontalAlignment" type="int" value="0"/>
+                        <Property name="name" type="java.lang.String" value="06" noResource="true"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JTextField" name="drb107_Intron3">
+                      <Properties>
+                        <Property name="horizontalAlignment" type="int" value="0"/>
+                        <Property name="name" type="java.lang.String" value="07" noResource="true"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JTextField" name="drb108_Exon4">
+                      <Properties>
+                        <Property name="horizontalAlignment" type="int" value="0"/>
+                        <Property name="name" type="java.lang.String" value="08" noResource="true"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JTextField" name="drb109_Intron4">
+                      <Properties>
+                        <Property name="horizontalAlignment" type="int" value="0"/>
+                        <Property name="name" type="java.lang.String" value="09" noResource="true"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JTextField" name="drb110_Exon5">
+                      <Properties>
+                        <Property name="horizontalAlignment" type="int" value="0"/>
+                        <Property name="name" type="java.lang.String" value="10" noResource="true"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JTextField" name="drb111_Intron5">
+                      <Properties>
+                        <Property name="horizontalAlignment" type="int" value="0"/>
+                        <Property name="name" type="java.lang.String" value="11" noResource="true"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JTextField" name="drb112_Exon6">
+                      <Properties>
+                        <Property name="horizontalAlignment" type="int" value="0"/>
+                        <Property name="name" type="java.lang.String" value="12" noResource="true"/>
+                      </Properties>
+                      <Events>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="drb112_Exon6ActionPerformed"/>
+                      </Events>
+                    </Component>
+                    <Component class="javax.swing.JTextField" name="drb113_3Prime">
+                      <Properties>
+                        <Property name="horizontalAlignment" type="int" value="0"/>
+                        <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                          <Dimension value="[10, 26]"/>
+                        </Property>
+                        <Property name="name" type="java.lang.String" value="17" noResource="true"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="jLabelDRB1W">
+                      <AuxValues>
+                        <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="TextIcon t1DRB1 = new TextIcon(jLabelDRB1W, &quot;Workshop Status&quot;, TextIcon.Layout.HORIZONTAL);&#xa;RotatedIcon r1DRB1 = new RotatedIcon(t1DRB1, RotatedIcon.Rotate.DOWN);&#xa;jLabelDRB1W.setIcon( r1DRB1 );"/>
+                      </AuxValues>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="jLabelDRB15">
+                      <AuxValues>
+                        <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="t1DRB1 = new TextIcon(jLabelDRB15, &quot;5&apos; UTR&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1DRB1 = new RotatedIcon(t1DRB1, RotatedIcon.Rotate.DOWN);&#xa;jLabelDRB15.setIcon( r1DRB1 );"/>
+                      </AuxValues>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="jLabelDRB1E1">
+                      <AuxValues>
+                        <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="t1DRB1 = new TextIcon(jLabelDRB1E1, &quot;Exon 1&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1DRB1 = new RotatedIcon(t1DRB1, RotatedIcon.Rotate.DOWN);&#xa;jLabelDRB1E1.setIcon( r1DRB1 );"/>
+                      </AuxValues>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="jLabelDRB1I1">
+                      <AuxValues>
+                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1DRB1 = new TextIcon(jLabelDRB1I1, &quot;Intron 1&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1DRB1 = new RotatedIcon(t1DRB1, RotatedIcon.Rotate.DOWN);&#xa;jLabelDRB1I1.setIcon( r1DRB1 );"/>
+                      </AuxValues>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="jLabelDRB1E2">
+                      <AuxValues>
+                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1DRB1 = new TextIcon(jLabelDRB1E2, &quot;Exon 2&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1DRB1 = new RotatedIcon(t1DRB1, RotatedIcon.Rotate.DOWN);&#xa;jLabelDRB1E2.setIcon( r1DRB1 );"/>
+                      </AuxValues>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="jLabelDRB1I2">
+                      <AuxValues>
+                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1DRB1 = new TextIcon(jLabelDRB1I2, &quot;Intron 2&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1DRB1 = new RotatedIcon(t1DRB1, RotatedIcon.Rotate.DOWN);&#xa;jLabelDRB1I2.setIcon( r1DRB1 );"/>
+                      </AuxValues>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="jLabelDRB1E3">
+                      <AuxValues>
+                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1DRB1 = new TextIcon(jLabelDRB1E3, &quot;Exon 3&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1DRB1 = new RotatedIcon(t1DRB1, RotatedIcon.Rotate.DOWN);&#xa;jLabelDRB1E3.setIcon( r1DRB1 );"/>
+                      </AuxValues>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="jLabelDRB1I3">
+                      <AuxValues>
+                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1DRB1 = new TextIcon(jLabelDRB1I3, &quot;Intron 3&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1DRB1 = new RotatedIcon(t1DRB1, RotatedIcon.Rotate.DOWN);&#xa;jLabelDRB1I3.setIcon( r1DRB1 );"/>
+                      </AuxValues>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="jLabelDRB1E4">
+                      <AuxValues>
+                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1DRB1 = new TextIcon(jLabelDRB1E4, &quot;Exon 4&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1DRB1 = new RotatedIcon(t1DRB1, RotatedIcon.Rotate.DOWN);&#xa;jLabelDRB1E4.setIcon( r1DRB1 );"/>
+                      </AuxValues>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="jLabelDRB1I4">
+                      <AuxValues>
+                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1DRB1 = new TextIcon(jLabelDRB1I4, &quot;Intron 4&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1DRB1 = new RotatedIcon(t1DRB1, RotatedIcon.Rotate.DOWN);&#xa;jLabelDRB1I4.setIcon( r1DRB1 );"/>
+                      </AuxValues>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="jLabelDRB1E5">
+                      <AuxValues>
+                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1DRB1 = new TextIcon(jLabelDRB1E5, &quot;Exon 5&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1DRB1 = new RotatedIcon(t1DRB1, RotatedIcon.Rotate.DOWN);&#xa;jLabelDRB1E5.setIcon( r1DRB1 );"/>
+                      </AuxValues>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="jLabelDRB1I5">
+                      <AuxValues>
+                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1DRB1 = new TextIcon(jLabelDRB1I5, &quot;Intron 5&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1DRB1 = new RotatedIcon(t1DRB1, RotatedIcon.Rotate.DOWN);&#xa;jLabelDRB1I5.setIcon( r1DRB1 );"/>
+                      </AuxValues>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="jLabelDRB1E6">
+                      <AuxValues>
+                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1DRB1 = new TextIcon(jLabelDRB1E6, &quot;Exon 6&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1DRB1 = new RotatedIcon(t1DRB1, RotatedIcon.Rotate.DOWN);&#xa;jLabelDRB1E6.setIcon( r1DRB1 );"/>
+                      </AuxValues>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="jLabelDRB13">
+                      <AuxValues>
+                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1DRB1 = new TextIcon(jLabelDRB13, &quot;3&apos; UTR&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1DRB1 = new RotatedIcon(t1DRB1, RotatedIcon.Rotate.DOWN);&#xa;jLabelDRB13.setIcon( r1DRB1 );"/>
+                      </AuxValues>
+                    </Component>
+                  </SubComponents>
+                </Container>
               </SubComponents>
             </Container>
             <Container class="javax.swing.JScrollPane" name="jScrollPane1">
@@ -1597,7 +1964,7 @@
                           <Component id="hlaSelectUpdate" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="neo4jUpdateButton" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace pref="507" max="32767" attributes="0"/>
+                      <EmptySpace pref="516" max="32767" attributes="0"/>
                       <Component id="neo4jUpdateCancelButton" min="-2" max="-2" attributes="0"/>
                   </Group>
               </Group>
