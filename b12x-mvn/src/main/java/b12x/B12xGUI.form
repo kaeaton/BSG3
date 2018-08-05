@@ -2086,7 +2086,7 @@
                 </Container>
                 <Container class="javax.swing.JPanel" name="jPanelEnterGfeDQB1">
                   <Properties>
-                    <Property name="name" type="java.lang.String" value="cardDQB1" noResource="true"/>
+                    <Property name="name" type="java.lang.String" value="jPanelEnterGfeDQB1" noResource="true"/>
                   </Properties>
                   <Constraints>
                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignCardLayout" value="org.netbeans.modules.form.compat2.layouts.DesignCardLayout$CardConstraintsDescription">
@@ -2097,15 +2097,356 @@
                   <Layout>
                     <DimensionLayout dim="0">
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <EmptySpace min="0" pref="1034" max="32767" attributes="0"/>
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="hlaDQB1Label" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="1" attributes="0">
+                                  <Component id="dqb100_WS" alignment="1" min="-2" pref="24" max="-2" attributes="0"/>
+                                  <Component id="jLabelDQB1W" alignment="1" min="-2" pref="22" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
+                                      <Component id="jLabelDQB15" min="-2" pref="22" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <EmptySpace min="-2" pref="2" max="-2" attributes="0"/>
+                                      <Component id="dqb101_5Prime" linkSize="14" min="-2" pref="40" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="dqb102_Exon1" linkSize="14" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
+                                      <Component id="jLabelDQB1E1" min="-2" pref="21" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="dqb103_Intron1" linkSize="14" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
+                                      <Component id="jLabelDQB1I1" min="-2" pref="21" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="dqb104_Exon2" linkSize="14" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
+                                      <Component id="jLabelDQB1E2" min="-2" pref="21" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="dqb105_Intron2" linkSize="14" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
+                                      <Component id="jLabelDQB1I2" min="-2" pref="21" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="dqb106_Exon3" linkSize="14" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
+                                      <Component id="jLabelDQB1E3" min="-2" pref="22" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
+                                      <Component id="jLabelDQB1I3" min="-2" pref="21" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Component id="dqb107_Intron3" linkSize="14" alignment="0" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="dqb108_Exon4" linkSize="14" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
+                                      <Component id="jLabelDQB1E4" min="-2" pref="21" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                              <EmptySpace min="-2" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="dqb109_Intron4" linkSize="14" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
+                                      <Component id="jLabelDQB1I4" min="-2" pref="21" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
+                                      <Component id="jLabelDQB1E5" min="-2" pref="21" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Component id="dqb110_Exon5" linkSize="14" alignment="0" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="dqb111_Intron5" linkSize="14" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
+                                      <Component id="jLabelDQB1I5" min="-2" pref="21" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="dqb112_Exon6" linkSize="14" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
+                                      <Component id="jLabelDQB1E6" min="-2" pref="21" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
+                                      <Component id="jLabelDQB13" min="-2" pref="22" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Component id="dqb113_3Prime" linkSize="14" alignment="0" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace pref="335" max="32767" attributes="0"/>
+                          </Group>
                       </Group>
                     </DimensionLayout>
                     <DimensionLayout dim="1">
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <EmptySpace min="0" pref="170" max="32767" attributes="0"/>
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Component id="dqb113_3Prime" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jLabelDQB13" linkSize="15" min="-2" pref="60" max="-2" attributes="0"/>
+                                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Group type="103" groupAlignment="3" attributes="0">
+                                          <Component id="hlaDQB1Label" alignment="3" min="-2" pref="20" max="-2" attributes="0"/>
+                                          <Component id="dqb101_5Prime" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="dqb102_Exon1" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="dqb103_Intron1" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="dqb104_Exon2" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="dqb105_Intron2" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="dqb106_Exon3" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="dqb107_Intron3" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="dqb108_Exon4" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="dqb109_Intron4" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="dqb110_Exon5" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="dqb111_Intron5" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="dqb112_Exon6" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="dqb100_WS" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Group type="102" alignment="1" attributes="0">
+                                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                                              <Group type="103" groupAlignment="0" attributes="0">
+                                                  <Group type="103" alignment="0" groupAlignment="0" attributes="0">
+                                                      <Component id="jLabelDQB1I5" linkSize="15" alignment="1" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="jLabelDQB1E5" linkSize="15" alignment="1" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="jLabelDQB1I4" linkSize="15" alignment="1" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="jLabelDQB1E4" linkSize="15" alignment="1" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="jLabelDQB1I3" linkSize="15" alignment="1" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="jLabelDQB1E3" linkSize="15" alignment="1" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="jLabelDQB1I2" linkSize="15" alignment="1" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="jLabelDQB1E2" linkSize="15" alignment="1" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="jLabelDQB1I1" linkSize="15" alignment="1" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="jLabelDQB1E1" linkSize="15" alignment="1" min="-2" max="-2" attributes="0"/>
+                                                  </Group>
+                                                  <Component id="jLabelDQB15" linkSize="15" alignment="0" min="-2" max="-2" attributes="0"/>
+                                              </Group>
+                                              <EmptySpace min="-2" pref="76" max="-2" attributes="0"/>
+                                          </Group>
+                                          <Group type="102" alignment="0" attributes="0">
+                                              <Group type="103" groupAlignment="0" attributes="0">
+                                                  <Component id="jLabelDQB1E6" linkSize="15" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                  <Group type="102" alignment="0" attributes="0">
+                                                      <EmptySpace max="-2" attributes="0"/>
+                                                      <Component id="jLabelDQB1W" linkSize="15" min="-2" pref="99" max="-2" attributes="0"/>
+                                                  </Group>
+                                              </Group>
+                                              <EmptySpace max="32767" attributes="0"/>
+                                          </Group>
+                                      </Group>
+                                  </Group>
+                              </Group>
+                          </Group>
                       </Group>
                     </DimensionLayout>
                   </Layout>
+                  <SubComponents>
+                    <Component class="javax.swing.JLabel" name="hlaDQB1Label">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="HLA-DQB1"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JTextField" name="dqb100_WS">
+                      <Properties>
+                        <Property name="horizontalAlignment" type="int" value="0"/>
+                        <Property name="text" type="java.lang.String" value="w"/>
+                        <Property name="name" type="java.lang.String" value="00" noResource="true"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JTextField" name="dqb101_5Prime">
+                      <Properties>
+                        <Property name="horizontalAlignment" type="int" value="0"/>
+                        <Property name="name" type="java.lang.String" value="01" noResource="true"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JTextField" name="dqb102_Exon1">
+                      <Properties>
+                        <Property name="horizontalAlignment" type="int" value="0"/>
+                        <Property name="name" type="java.lang.String" value="02" noResource="true"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JTextField" name="dqb103_Intron1">
+                      <Properties>
+                        <Property name="horizontalAlignment" type="int" value="0"/>
+                        <Property name="name" type="java.lang.String" value="03" noResource="true"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JTextField" name="dqb104_Exon2">
+                      <Properties>
+                        <Property name="horizontalAlignment" type="int" value="0"/>
+                        <Property name="name" type="java.lang.String" value="04" noResource="true"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JTextField" name="dqb105_Intron2">
+                      <Properties>
+                        <Property name="horizontalAlignment" type="int" value="0"/>
+                        <Property name="name" type="java.lang.String" value="05" noResource="true"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JTextField" name="dqb106_Exon3">
+                      <Properties>
+                        <Property name="horizontalAlignment" type="int" value="0"/>
+                        <Property name="name" type="java.lang.String" value="06" noResource="true"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JTextField" name="dqb107_Intron3">
+                      <Properties>
+                        <Property name="horizontalAlignment" type="int" value="0"/>
+                        <Property name="name" type="java.lang.String" value="07" noResource="true"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JTextField" name="dqb108_Exon4">
+                      <Properties>
+                        <Property name="horizontalAlignment" type="int" value="0"/>
+                        <Property name="name" type="java.lang.String" value="08" noResource="true"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JTextField" name="dqb109_Intron4">
+                      <Properties>
+                        <Property name="horizontalAlignment" type="int" value="0"/>
+                        <Property name="name" type="java.lang.String" value="09" noResource="true"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JTextField" name="dqb110_Exon5">
+                      <Properties>
+                        <Property name="horizontalAlignment" type="int" value="0"/>
+                        <Property name="name" type="java.lang.String" value="10" noResource="true"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JTextField" name="dqb111_Intron5">
+                      <Properties>
+                        <Property name="horizontalAlignment" type="int" value="0"/>
+                        <Property name="name" type="java.lang.String" value="11" noResource="true"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JTextField" name="dqb112_Exon6">
+                      <Properties>
+                        <Property name="horizontalAlignment" type="int" value="0"/>
+                        <Property name="name" type="java.lang.String" value="12" noResource="true"/>
+                      </Properties>
+                      <Events>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="dqb112_Exon6ActionPerformed"/>
+                      </Events>
+                    </Component>
+                    <Component class="javax.swing.JTextField" name="dqb113_3Prime">
+                      <Properties>
+                        <Property name="horizontalAlignment" type="int" value="0"/>
+                        <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                          <Dimension value="[10, 26]"/>
+                        </Property>
+                        <Property name="name" type="java.lang.String" value="17" noResource="true"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="jLabelDQB1W">
+                      <AuxValues>
+                        <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="TextIcon t1DQB1 = new TextIcon(jLabelDQB1W, &quot;Workshop Status&quot;, TextIcon.Layout.HORIZONTAL);&#xa;RotatedIcon r1DQB1 = new RotatedIcon(t1DQB1, RotatedIcon.Rotate.DOWN);&#xa;jLabelDQB1W.setIcon( r1DQB1 );"/>
+                      </AuxValues>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="jLabelDQB15">
+                      <AuxValues>
+                        <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="t1DQB1 = new TextIcon(jLabelDQB15, &quot;5&apos; UTR&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1DQB1 = new RotatedIcon(t1DQB1, RotatedIcon.Rotate.DOWN);&#xa;jLabelDQB15.setIcon( r1DQB1 );"/>
+                      </AuxValues>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="jLabelDQB1E1">
+                      <AuxValues>
+                        <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="t1DQB1 = new TextIcon(jLabelDQB1E1, &quot;Exon 1&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1DQB1 = new RotatedIcon(t1DQB1, RotatedIcon.Rotate.DOWN);&#xa;jLabelDQB1E1.setIcon( r1DQB1 );"/>
+                      </AuxValues>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="jLabelDQB1I1">
+                      <AuxValues>
+                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1DQB1 = new TextIcon(jLabelDQB1I1, &quot;Intron 1&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1DQB1 = new RotatedIcon(t1DQB1, RotatedIcon.Rotate.DOWN);&#xa;jLabelDQB1I1.setIcon( r1DQB1 );"/>
+                      </AuxValues>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="jLabelDQB1E2">
+                      <AuxValues>
+                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1DQB1 = new TextIcon(jLabelDQB1E2, &quot;Exon 2&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1DQB1 = new RotatedIcon(t1DQB1, RotatedIcon.Rotate.DOWN);&#xa;jLabelDQB1E2.setIcon( r1DQB1 );"/>
+                      </AuxValues>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="jLabelDQB1I2">
+                      <AuxValues>
+                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1DQB1 = new TextIcon(jLabelDQB1I2, &quot;Intron 2&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1DQB1 = new RotatedIcon(t1DQB1, RotatedIcon.Rotate.DOWN);&#xa;jLabelDQB1I2.setIcon( r1DQB1 );"/>
+                      </AuxValues>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="jLabelDQB1E3">
+                      <AuxValues>
+                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1DQB1 = new TextIcon(jLabelDQB1E3, &quot;Exon 3&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1DQB1 = new RotatedIcon(t1DQB1, RotatedIcon.Rotate.DOWN);&#xa;jLabelDQB1E3.setIcon( r1DQB1 );"/>
+                      </AuxValues>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="jLabelDQB1I3">
+                      <AuxValues>
+                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1DQB1 = new TextIcon(jLabelDQB1I3, &quot;Intron 3&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1DQB1 = new RotatedIcon(t1DQB1, RotatedIcon.Rotate.DOWN);&#xa;jLabelDQB1I3.setIcon( r1DQB1 );"/>
+                      </AuxValues>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="jLabelDQB1E4">
+                      <AuxValues>
+                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1DQB1 = new TextIcon(jLabelDQB1E4, &quot;Exon 4&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1DQB1 = new RotatedIcon(t1DQB1, RotatedIcon.Rotate.DOWN);&#xa;jLabelDQB1E4.setIcon( r1DQB1 );"/>
+                      </AuxValues>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="jLabelDQB1I4">
+                      <AuxValues>
+                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1DQB1 = new TextIcon(jLabelDQB1I4, &quot;Intron 4&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1DQB1 = new RotatedIcon(t1DQB1, RotatedIcon.Rotate.DOWN);&#xa;jLabelDQB1I4.setIcon( r1DQB1 );"/>
+                      </AuxValues>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="jLabelDQB1E5">
+                      <AuxValues>
+                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1DQB1 = new TextIcon(jLabelDQB1E5, &quot;Exon 5&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1DQB1 = new RotatedIcon(t1DQB1, RotatedIcon.Rotate.DOWN);&#xa;jLabelDQB1E5.setIcon( r1DQB1 );"/>
+                      </AuxValues>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="jLabelDQB1I5">
+                      <AuxValues>
+                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1DQB1 = new TextIcon(jLabelDQB1I5, &quot;Intron 5&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1DQB1 = new RotatedIcon(t1DQB1, RotatedIcon.Rotate.DOWN);&#xa;jLabelDQB1I5.setIcon( r1DQB1 );"/>
+                      </AuxValues>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="jLabelDQB1E6">
+                      <AuxValues>
+                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1DQB1 = new TextIcon(jLabelDQB1E6, &quot;Exon 6&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1DQB1 = new RotatedIcon(t1DQB1, RotatedIcon.Rotate.DOWN);&#xa;jLabelDQB1E6.setIcon( r1DQB1 );"/>
+                      </AuxValues>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="jLabelDQB13">
+                      <AuxValues>
+                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1DQB1 = new TextIcon(jLabelDQB13, &quot;3&apos; UTR&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1DQB1 = new RotatedIcon(t1DQB1, RotatedIcon.Rotate.DOWN);&#xa;jLabelDQB13.setIcon( r1DQB1 );"/>
+                      </AuxValues>
+                    </Component>
+                  </SubComponents>
                 </Container>
               </SubComponents>
             </Container>
