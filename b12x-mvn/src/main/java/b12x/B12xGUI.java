@@ -2180,10 +2180,10 @@ public class B12xGUI extends javax.swing.JFrame {
             for (Component component : mainCardPanel.getComponents()) {
                 if (component.getName().equals(panelName)){
                     currentGfePanel = component;
+                } else {
+                    System.out.println("cannot find panel by that name");
                 }
             }
-
-            System.out.println("Found the GFE panel");
             
             // Find the text fields and add to array
 //            for (Component component : jPanelEnterGfeA.getComponents()) {
