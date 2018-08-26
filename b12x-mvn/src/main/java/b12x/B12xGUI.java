@@ -360,7 +360,7 @@ public class B12xGUI extends javax.swing.JFrame {
             }
         });
 
-        hlaSelectNeo4j.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "HLA-A", "HLA-B", "HLA-C", "HLA-DQA1", "HLA-DQB1", "HLA-DPA1", "HLA-DPB1", "HLA-DRB1", "HLA-DRB3" }));
+        hlaSelectNeo4j.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "HLA-A", "HLA-B", "HLA-C", "HLA-DPA1", "HLA-DPB1", "HLA-DQA1", "HLA-DQB1", "HLA-DRB1", "HLA-DRB3" }));
         hlaSelectNeo4j.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 hlaSelectNeo4jActionPerformed(evt);
@@ -2757,7 +2757,7 @@ public class B12xGUI extends javax.swing.JFrame {
 
     jTabbedPane2.addTab("Neo4j GFE Search", neo4j);
 
-    hlaSelectUpdate.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "HLA-A", "HLA-B", "HLA-C", "HLA-DRB1", "HLA-DQA1", "HLA-DQB1", "HLA-DPA1", "HLA-DPB1" }));
+    hlaSelectUpdate.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "HLA-A", "HLA-B", "HLA-C", "HLA-DPA1", "HLA-DPB1", "HLA-DQA1", "HLA-DQB1", "HLA-DRB1", "HLA-DRB3", " " }));
 
     neo4jUpdateButton.setText("Update Neo4j Records");
     neo4jUpdateButton.addActionListener(new java.awt.event.ActionListener() {
