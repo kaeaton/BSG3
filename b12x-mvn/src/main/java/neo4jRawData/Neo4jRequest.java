@@ -26,6 +26,9 @@ public class Neo4jRequest {
     public String formNeo4jRequest() throws IOException {
         try {
             char quote = '"';
+            
+//          request string: MATCH (n:IMGT_HLA)-[r:HAS_GFE]-(g:GFE) WHERE n.locus = "locus" AND r.imgt_release = "version" RETURN n.name, g.name
+                 
             request = ("MATCH (n:IMGT_HLA)-[r:HAS_GFE]-(g:GFE) " +
                         "WHERE n.locus = " + quote + locus + quote + " " +
                         "AND r.imgt_release = " + quote + version + quote +
