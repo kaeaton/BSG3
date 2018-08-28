@@ -3438,7 +3438,7 @@ public class B12xGUI extends javax.swing.JFrame {
                 + System.getProperty("file.separator") + "BSG"
                 + System.getProperty("file.separator") + "BSGData"
                 + System.getProperty("file.separator")
-                + "neo4j_" + locus // + "_" + version
+                + "neo4j_" + locus
                 + "_Download.csv");
 
             String panelName = "jPanelEnterGfe" + parsedLocus;
@@ -3570,21 +3570,10 @@ public class B12xGUI extends javax.swing.JFrame {
 try {
             String locus = hlaSelectNeo4j.getSelectedItem().toString();
             String parsedLocus = LocusNameParser.parseLocus(locus);
-//            String neo4jLocation = "";
-//            Path dataPath = Paths.get(System.getProperty("user.home")
-//                + System.getProperty("file.separator") + "Documents"
-//                + System.getProperty("file.separator") + "BSG"
-//                + System.getProperty("file.separator") + "BSGData"
-//                + System.getProperty("file.separator")
-//                + "neo4j_" + locus // + "_" + version
-//                + "_Download.csv");
-
             String panelName = "jPanelEnterGfe" + parsedLocus;
             System.out.println("panelName " + panelName);
 
             Component currentGfePanel = jPanelEnterGfeA;
-//            String currentRegex = "^" + locus;
-//            String finalRegex;
             ArrayList<JTextField> typeFields = new ArrayList();
             
             System.out.println("variables set");
@@ -3600,7 +3589,6 @@ try {
             }
             
             // Find the text fields and add to array
-//            for (Component component : jPanelEnterGfeA.getComponents()) {
             for (Component component : ((JPanel)currentGfePanel).getComponents()) {
                 if (component instanceof JTextField){
                     System.out.println(component);
@@ -3611,31 +3599,13 @@ try {
             // Sort the array list by name to check/keep the order
             Collections.sort(typeFields, Comparator.comparing(JTextField::getName));
 
-            // Special rules for textfield 00
-//            if (typeFields.get(0).getText().isEmpty()){
-                typeFields.get(0).setText("w");
-//            }
+            // Set textfield 00 to "w"
+            typeFields.get(0).setText("w");
 
-            // For each textfield add regex or specified term to currentRegex
+            // Set each remaining textfield to empty
             for (int i = 1; i < typeFields.size(); i++){
-                //                System.out.println(((JTextField)typeFields.get(i)).getName());
                 typeFields.get(i).setText("");
             }
-
-            // Check for extraneous dash at the end and close regex
-//            if (currentRegex.matches("^.+-$")){
-//                finalRegex = currentRegex.substring(0, (currentRegex.length() - 1)).concat("$");
-//            } else {
-//                finalRegex = currentRegex.concat("$");
-//            }
-
-            System.out.println("Gui running " + locus);
-//            System.out.println("Final Regex " + finalRegex);
-            
-//            neo4jResults.setText("");
-//            Neo4j neo4j = new Neo4j(locus, dataPath, finalRegex);
-//            neo4j.execute();
-            
 
         } catch (Exception ex) {
             System.out.println(ex);
