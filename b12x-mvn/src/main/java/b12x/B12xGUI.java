@@ -3567,7 +3567,7 @@ public class B12xGUI extends javax.swing.JFrame {
     }//GEN-LAST:event_drb512_Exon6ActionPerformed
 
     private void jButtonResetSearchTermsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonResetSearchTermsActionPerformed
-try {
+        try {
             String locus = hlaSelectNeo4j.getSelectedItem().toString();
             String parsedLocus = LocusNameParser.parseLocus(locus);
             String panelName = "jPanelEnterGfe" + parsedLocus;
