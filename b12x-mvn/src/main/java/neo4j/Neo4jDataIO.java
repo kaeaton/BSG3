@@ -29,7 +29,19 @@ public class Neo4jDataIO {
         
     }
     
-    public void readCSVFile(String locus, File file, String regex) throws IOException {
+    public String RegexToGFE(String locus, String regex){
+        String headerSearchString = locus;
+        
+        //find the w or anything else that might be there
+        Pattern p = Pattern.compile(locus + "\\w+");
+            
+            
+
+        return headerSearchString;
+    }
+    
+    
+    public void readCSVFile(String locus, File file, String regex, String searchString) throws IOException {
         try {
             
             String line,
@@ -52,6 +64,8 @@ public class Neo4jDataIO {
             B12xGUI.neo4jResults.append(System.lineSeparator());
             B12xGUI.neo4jResults.append("Data source: http://neo4j.b12x.org - ");
             B12xGUI.neo4jResults.append(locus + " data downloaded: " + fileDate);
+            B12xGUI.neo4jResults.append(System.lineSeparator());
+            B12xGUI.neo4jResults.append("Search parameters: " + searchString);
             B12xGUI.neo4jResults.append(System.lineSeparator());
             B12xGUI.neo4jResults.append("IMGT/HLA Database Version " + version);
             B12xGUI.neo4jResults.append(System.lineSeparator());

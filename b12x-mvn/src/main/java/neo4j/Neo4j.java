@@ -13,7 +13,7 @@ import javax.swing.SwingWorker;
 
 public class Neo4j  extends SwingWorker<String, String> {
     
-    private final String locus, regex;
+    private final String locus, regex, searchString;
     private String version;
     private final Path path;
     private final URL neo4jURL = new URL("http://neo4j.b12x.org/db/data/transaction/commit");
@@ -21,12 +21,13 @@ public class Neo4j  extends SwingWorker<String, String> {
 
 //    private String request;
     
-    public Neo4j(String incomingLocus, Path incomingPath, String incomingRegex) 
+    public Neo4j(String incomingLocus, Path incomingPath, String incomingRegex, String incomingSearchString) 
             throws IOException 
     {
         locus = incomingLocus;
         path = incomingPath;
         regex = incomingRegex;
+        searchString = incomingSearchString;
 //        version = "3.31.0";
 //        path = Paths.get(System.getProperty("user.home") 
 //                    + System.getProperty("file.separator") + "Documents" 
@@ -90,7 +91,7 @@ public class Neo4j  extends SwingWorker<String, String> {
                 dataUpdate();
             }
             Neo4jDataIO parseData = new Neo4jDataIO();
-            parseData.readCSVFile(locus, path.toFile(), regex);
+            parseData.readCSVFile(locus, path.toFile(), regex, searchString);
             
         } catch (Exception ex) {
             System.out.println(ex);
