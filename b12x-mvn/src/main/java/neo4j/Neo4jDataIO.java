@@ -28,7 +28,7 @@ public class Neo4jDataIO {
     public Neo4jDataIO(){
         
     }
-    
+
     public void readCSVFile(String locus, File file, String regex, String searchString) throws IOException {
         try {
             
@@ -53,7 +53,7 @@ public class Neo4jDataIO {
             B12xGUI.neo4jResults.append("Data source: http://neo4j.b12x.org - ");
             B12xGUI.neo4jResults.append(locus + " data downloaded: " + fileDate);
             B12xGUI.neo4jResults.append(System.lineSeparator());
-            B12xGUI.neo4jResults.append("Search terms: " + searchString);
+            B12xGUI.neo4jResults.append("Search parameters: " + searchString);
             B12xGUI.neo4jResults.append(System.lineSeparator());
             B12xGUI.neo4jResults.append("IMGT/HLA Database Version " + version);
             B12xGUI.neo4jResults.append(System.lineSeparator());
