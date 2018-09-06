@@ -419,9 +419,6 @@
                         <Property name="text" type="java.lang.String" value="w"/>
                         <Property name="name" type="java.lang.String" value="00" noResource="true"/>
                       </Properties>
-                      <Events>
-                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="a00_WSActionPerformed"/>
-                      </Events>
                     </Component>
                     <Component class="javax.swing.JTextField" name="a01_5Prime">
                       <Properties>
@@ -536,92 +533,92 @@
                     </Component>
                     <Component class="javax.swing.JLabel" name="jLabelAW">
                       <AuxValues>
-                        <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="TextIcon t1 = new b12x.TextIcon(jLabelAW, &quot;Workshop Status&quot;, TextIcon.Layout.HORIZONTAL);&#xa;RotatedIcon r1 = new RotatedIcon(t1, RotatedIcon.Rotate.DOWN);&#xa;jLabelAW.setIcon( r1 );"/>
+                        <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="b12x.TextIcon t1 = new b12x.TextIcon(jLabelAW, &quot;Workshop Status&quot;, b12x.TextIcon.Layout.HORIZONTAL);&#xa;b12x.RotatedIcon r1 = new b12x.RotatedIcon(t1, b12x.RotatedIcon.Rotate.DOWN);&#xa;jLabelAW.setIcon( r1 );"/>
                       </AuxValues>
                     </Component>
                     <Component class="javax.swing.JLabel" name="jLabelA5">
                       <AuxValues>
-                        <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="t1 = new TextIcon(jLabelA5, &quot;5&apos; UTR&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1 = new RotatedIcon(t1, RotatedIcon.Rotate.DOWN);&#xa;jLabelA5.setIcon( r1 );"/>
-                      </AuxValues>
-                    </Component>
-                    <Component class="javax.swing.JLabel" name="jLabelA3">
-                      <AuxValues>
-                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1 = new TextIcon(jLabelA3, &quot;3&apos; UTR&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1 = new RotatedIcon(t1, RotatedIcon.Rotate.DOWN);&#xa;jLabelA3.setIcon( r1 );"/>
-                      </AuxValues>
-                    </Component>
-                    <Component class="javax.swing.JLabel" name="jLabelAE8">
-                      <AuxValues>
-                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1 = new TextIcon(jLabelAE8, &quot;Exon 8&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1 = new RotatedIcon(t1, RotatedIcon.Rotate.DOWN);&#xa;jLabelAE8.setIcon( r1 );"/>
-                      </AuxValues>
-                    </Component>
-                    <Component class="javax.swing.JLabel" name="jLabelAI7">
-                      <AuxValues>
-                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1 = new TextIcon(jLabelAI7, &quot;Intron 7&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1 = new RotatedIcon(t1, RotatedIcon.Rotate.DOWN);&#xa;jLabelAI7.setIcon( r1 );"/>
-                      </AuxValues>
-                    </Component>
-                    <Component class="javax.swing.JLabel" name="jLabelAE7">
-                      <AuxValues>
-                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1 = new TextIcon(jLabelAE7, &quot;Exon 7&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1 = new RotatedIcon(t1, RotatedIcon.Rotate.DOWN);&#xa;jLabelAE7.setIcon( r1 );"/>
-                      </AuxValues>
-                    </Component>
-                    <Component class="javax.swing.JLabel" name="jLabelAI6">
-                      <AuxValues>
-                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1 = new TextIcon(jLabelAI6, &quot;Intron 6&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1 = new RotatedIcon(t1, RotatedIcon.Rotate.DOWN);&#xa;jLabelAI6.setIcon( r1 );"/>
-                      </AuxValues>
-                    </Component>
-                    <Component class="javax.swing.JLabel" name="jLabelAE6">
-                      <AuxValues>
-                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1 = new TextIcon(jLabelAE6, &quot;Exon 6&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1 = new RotatedIcon(t1, RotatedIcon.Rotate.DOWN);&#xa;jLabelAE6.setIcon( r1 );"/>
-                      </AuxValues>
-                    </Component>
-                    <Component class="javax.swing.JLabel" name="jLabelAI5">
-                      <AuxValues>
-                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1 = new TextIcon(jLabelAI5, &quot;Intron 5&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1 = new RotatedIcon(t1, RotatedIcon.Rotate.DOWN);&#xa;jLabelAI5.setIcon( r1 );"/>
-                      </AuxValues>
-                    </Component>
-                    <Component class="javax.swing.JLabel" name="jLabelAE5">
-                      <AuxValues>
-                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1 = new TextIcon(jLabelAE5, &quot;Exon 5&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1 = new RotatedIcon(t1, RotatedIcon.Rotate.DOWN);&#xa;jLabelAE5.setIcon( r1 );"/>
-                      </AuxValues>
-                    </Component>
-                    <Component class="javax.swing.JLabel" name="jLabelAI4">
-                      <AuxValues>
-                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1 = new TextIcon(jLabelAI4, &quot;Intron 4&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1 = new RotatedIcon(t1, RotatedIcon.Rotate.DOWN);&#xa;jLabelAI4.setIcon( r1 );"/>
-                      </AuxValues>
-                    </Component>
-                    <Component class="javax.swing.JLabel" name="jLabelAE4">
-                      <AuxValues>
-                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1 = new TextIcon(jLabelAE4, &quot;Exon 4&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1 = new RotatedIcon(t1, RotatedIcon.Rotate.DOWN);&#xa;jLabelAE4.setIcon( r1 );"/>
-                      </AuxValues>
-                    </Component>
-                    <Component class="javax.swing.JLabel" name="jLabelAI3">
-                      <AuxValues>
-                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1 = new TextIcon(jLabelAI3, &quot;Intron 3&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1 = new RotatedIcon(t1, RotatedIcon.Rotate.DOWN);&#xa;jLabelAI3.setIcon( r1 );"/>
-                      </AuxValues>
-                    </Component>
-                    <Component class="javax.swing.JLabel" name="jLabelAI2">
-                      <AuxValues>
-                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1 = new TextIcon(jLabelAI2, &quot;Intron 2&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1 = new RotatedIcon(t1, RotatedIcon.Rotate.DOWN);&#xa;jLabelAI2.setIcon( r1 );"/>
-                      </AuxValues>
-                    </Component>
-                    <Component class="javax.swing.JLabel" name="jLabelAE2">
-                      <AuxValues>
-                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1 = new TextIcon(jLabelAE2, &quot;Exon 2&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1 = new RotatedIcon(t1, RotatedIcon.Rotate.DOWN);&#xa;jLabelAE2.setIcon( r1 );"/>
-                      </AuxValues>
-                    </Component>
-                    <Component class="javax.swing.JLabel" name="jLabelAI1">
-                      <AuxValues>
-                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1 = new TextIcon(jLabelAI1, &quot;Intron 1&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1 = new RotatedIcon(t1, RotatedIcon.Rotate.DOWN);&#xa;jLabelAI1.setIcon( r1 );"/>
+                        <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="t1 = new TextIcon(jLabelA5, &quot;5&apos; UTR&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1 = new b12x.RotatedIcon(t1, b12x.RotatedIcon.Rotate.DOWN);&#xa;jLabelA5.setIcon( r1 );"/>
                       </AuxValues>
                     </Component>
                     <Component class="javax.swing.JLabel" name="jLabelAE1">
                       <AuxValues>
-                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1 = new TextIcon(jLabelAE1, &quot;Exon 1&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1 = new RotatedIcon(t1, RotatedIcon.Rotate.DOWN);&#xa;jLabelAE1.setIcon( r1 );"/>
+                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1 = new TextIcon(jLabelAE1, &quot;Exon 1&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1 = new b12x.RotatedIcon(t1, b12x.RotatedIcon.Rotate.DOWN);&#xa;jLabelAE1.setIcon( r1 );"/>
+                      </AuxValues>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="jLabelAI1">
+                      <AuxValues>
+                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1 = new TextIcon(jLabelAI1, &quot;Intron 1&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1 = new b12x.RotatedIcon(t1, b12x.RotatedIcon.Rotate.DOWN);&#xa;jLabelAI1.setIcon( r1 );"/>
+                      </AuxValues>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="jLabelAE2">
+                      <AuxValues>
+                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1 = new TextIcon(jLabelAE2, &quot;Exon 2&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1 = new b12x.RotatedIcon(t1, b12x.RotatedIcon.Rotate.DOWN);&#xa;jLabelAE2.setIcon( r1 );"/>
+                      </AuxValues>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="jLabelAI2">
+                      <AuxValues>
+                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1 = new TextIcon(jLabelAI2, &quot;Intron 2&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1 = new b12x.RotatedIcon(t1, b12x.RotatedIcon.Rotate.DOWN);&#xa;jLabelAI2.setIcon( r1 );"/>
                       </AuxValues>
                     </Component>
                     <Component class="javax.swing.JLabel" name="jLabelAE3">
                       <AuxValues>
-                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1 = new TextIcon(jLabelAE3, &quot;Exon 3&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1 = new RotatedIcon(t1, RotatedIcon.Rotate.DOWN);&#xa;jLabelAE3.setIcon( r1 );"/>
+                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1 = new TextIcon(jLabelAE3, &quot;Exon 3&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1 = new b12x.RotatedIcon(t1, b12x.RotatedIcon.Rotate.DOWN);&#xa;jLabelAE3.setIcon( r1 );"/>
+                      </AuxValues>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="jLabelAI3">
+                      <AuxValues>
+                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1 = new TextIcon(jLabelAI3, &quot;Intron 3&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1 = new b12x.RotatedIcon(t1, b12x.RotatedIcon.Rotate.DOWN);&#xa;jLabelAI3.setIcon( r1 );"/>
+                      </AuxValues>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="jLabelAE4">
+                      <AuxValues>
+                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1 = new TextIcon(jLabelAE4, &quot;Exon 4&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1 = new b12x.RotatedIcon(t1, b12x.RotatedIcon.Rotate.DOWN);&#xa;jLabelAE4.setIcon( r1 );"/>
+                      </AuxValues>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="jLabelAI4">
+                      <AuxValues>
+                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1 = new TextIcon(jLabelAI4, &quot;Intron 4&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1 = new b12x.RotatedIcon(t1, b12x.RotatedIcon.Rotate.DOWN);&#xa;jLabelAI4.setIcon( r1 );"/>
+                      </AuxValues>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="jLabelAE5">
+                      <AuxValues>
+                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1 = new TextIcon(jLabelAE5, &quot;Exon 5&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1 = new b12x.RotatedIcon(t1, b12x.RotatedIcon.Rotate.DOWN);&#xa;jLabelAE5.setIcon( r1 );"/>
+                      </AuxValues>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="jLabelAI5">
+                      <AuxValues>
+                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1 = new TextIcon(jLabelAI5, &quot;Intron 5&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1 = new b12x.RotatedIcon(t1, b12x.RotatedIcon.Rotate.DOWN);&#xa;jLabelAI5.setIcon( r1 );"/>
+                      </AuxValues>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="jLabelAE6">
+                      <AuxValues>
+                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1 = new TextIcon(jLabelAE6, &quot;Exon 6&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1 = new b12x.RotatedIcon(t1, b12x.RotatedIcon.Rotate.DOWN);&#xa;jLabelAE6.setIcon( r1 );"/>
+                      </AuxValues>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="jLabelAI6">
+                      <AuxValues>
+                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1 = new TextIcon(jLabelAI6, &quot;Intron 6&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1 = new b12x.RotatedIcon(t1, b12x.RotatedIcon.Rotate.DOWN);&#xa;jLabelAI6.setIcon( r1 );"/>
+                      </AuxValues>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="jLabelAE7">
+                      <AuxValues>
+                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1 = new TextIcon(jLabelAE7, &quot;Exon 7&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1 = new b12x.RotatedIcon(t1, b12x.RotatedIcon.Rotate.DOWN);&#xa;jLabelAE7.setIcon( r1 );"/>
+                      </AuxValues>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="jLabelAI7">
+                      <AuxValues>
+                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1 = new TextIcon(jLabelAI7, &quot;Intron 7&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1 = new b12x.RotatedIcon(t1, b12x.RotatedIcon.Rotate.DOWN);&#xa;jLabelAI7.setIcon( r1 );"/>
+                      </AuxValues>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="jLabelAE8">
+                      <AuxValues>
+                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1 = new TextIcon(jLabelAE8, &quot;Exon 8&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1 = new b12x.RotatedIcon(t1, b12x.RotatedIcon.Rotate.DOWN);&#xa;jLabelAE8.setIcon( r1 );"/>
+                      </AuxValues>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="jLabelA3">
+                      <AuxValues>
+                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1 = new TextIcon(jLabelA3, &quot;3&apos; UTR&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1 = new b12x.RotatedIcon(t1, b12x.RotatedIcon.Rotate.DOWN);&#xa;jLabelA3.setIcon( r1 );"/>
                       </AuxValues>
                     </Component>
                   </SubComponents>
@@ -931,82 +928,82 @@
                     </Component>
                     <Component class="javax.swing.JLabel" name="jLabelBW">
                       <AuxValues>
-                        <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="TextIcon t1B = new TextIcon(jLabelBW, &quot;Workshop Status&quot;, TextIcon.Layout.HORIZONTAL);&#xa;RotatedIcon r1B = new RotatedIcon(t1B, RotatedIcon.Rotate.DOWN);&#xa;jLabelBW.setIcon( r1B );"/>
+                        <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="TextIcon t1B = new TextIcon(jLabelBW, &quot;Workshop Status&quot;, TextIcon.Layout.HORIZONTAL);&#xa;b12x.RotatedIcon r1B = new b12x.RotatedIcon(t1B, b12x.RotatedIcon.Rotate.DOWN);&#xa;jLabelBW.setIcon( r1B );"/>
                       </AuxValues>
                     </Component>
                     <Component class="javax.swing.JLabel" name="jLabelB5">
                       <AuxValues>
-                        <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="t1B = new TextIcon(jLabelB5, &quot;5&apos; UTR&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1B = new RotatedIcon(t1B, RotatedIcon.Rotate.DOWN);&#xa;jLabelB5.setIcon( r1B );"/>
+                        <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="t1B = new TextIcon(jLabelB5, &quot;5&apos; UTR&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1B = new b12x.RotatedIcon(t1B, b12x.RotatedIcon.Rotate.DOWN);&#xa;jLabelB5.setIcon( r1B );"/>
                       </AuxValues>
                     </Component>
                     <Component class="javax.swing.JLabel" name="jLabelBE1">
                       <AuxValues>
-                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1B = new TextIcon(jLabelBE1, &quot;Exon 1&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1B = new RotatedIcon(t1B, RotatedIcon.Rotate.DOWN);&#xa;jLabelBE1.setIcon( r1B );"/>
+                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1B = new TextIcon(jLabelBE1, &quot;Exon 1&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1B = new b12x.RotatedIcon(t1B, b12x.RotatedIcon.Rotate.DOWN);&#xa;jLabelBE1.setIcon( r1B );"/>
                       </AuxValues>
                     </Component>
                     <Component class="javax.swing.JLabel" name="jLabelBI1">
                       <AuxValues>
-                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1B = new TextIcon(jLabelBI1, &quot;Intron 1&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1B = new RotatedIcon(t1B, RotatedIcon.Rotate.DOWN);&#xa;jLabelBI1.setIcon( r1B );"/>
+                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1B = new TextIcon(jLabelBI1, &quot;Intron 1&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1B = new b12x.RotatedIcon(t1B, b12x.RotatedIcon.Rotate.DOWN);&#xa;jLabelBI1.setIcon( r1B );"/>
                       </AuxValues>
                     </Component>
                     <Component class="javax.swing.JLabel" name="jLabelBE2">
                       <AuxValues>
-                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1B = new TextIcon(jLabelBE2, &quot;Exon 2&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1B = new RotatedIcon(t1B, RotatedIcon.Rotate.DOWN);&#xa;jLabelBE2.setIcon( r1B );"/>
+                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1B = new TextIcon(jLabelBE2, &quot;Exon 2&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1B = new b12x.RotatedIcon(t1B, b12x.RotatedIcon.Rotate.DOWN);&#xa;jLabelBE2.setIcon( r1B );"/>
                       </AuxValues>
                     </Component>
                     <Component class="javax.swing.JLabel" name="jLabelBI2">
                       <AuxValues>
-                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1B = new TextIcon(jLabelBI2, &quot;Intron 2&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1B = new RotatedIcon(t1B, RotatedIcon.Rotate.DOWN);&#xa;jLabelBI2.setIcon( r1B );"/>
+                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1B = new TextIcon(jLabelBI2, &quot;Intron 2&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1B = new b12x.RotatedIcon(t1B, b12x.RotatedIcon.Rotate.DOWN);&#xa;jLabelBI2.setIcon( r1B );"/>
                       </AuxValues>
                     </Component>
                     <Component class="javax.swing.JLabel" name="jLabelBE3">
                       <AuxValues>
-                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1B = new TextIcon(jLabelBE3, &quot;Exon 3&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1B = new RotatedIcon(t1B, RotatedIcon.Rotate.DOWN);&#xa;jLabelBE3.setIcon( r1B );"/>
+                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1B = new TextIcon(jLabelBE3, &quot;Exon 3&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1B = new b12x.RotatedIcon(t1B, b12x.RotatedIcon.Rotate.DOWN);&#xa;jLabelBE3.setIcon( r1B );"/>
                       </AuxValues>
                     </Component>
                     <Component class="javax.swing.JLabel" name="jLabelBI3">
                       <AuxValues>
-                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1B = new TextIcon(jLabelBI3, &quot;Intron 3&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1B = new RotatedIcon(t1B, RotatedIcon.Rotate.DOWN);&#xa;jLabelBI3.setIcon( r1B );"/>
+                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1B = new TextIcon(jLabelBI3, &quot;Intron 3&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1B = new b12x.RotatedIcon(t1B, b12x.RotatedIcon.Rotate.DOWN);&#xa;jLabelBI3.setIcon( r1B );"/>
                       </AuxValues>
                     </Component>
                     <Component class="javax.swing.JLabel" name="jLabelBE4">
                       <AuxValues>
-                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1B = new TextIcon(jLabelBE4, &quot;Exon 4&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1B = new RotatedIcon(t1B, RotatedIcon.Rotate.DOWN);&#xa;jLabelBE4.setIcon( r1B );"/>
+                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1B = new TextIcon(jLabelBE4, &quot;Exon 4&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1B = new b12x.RotatedIcon(t1B, b12x.RotatedIcon.Rotate.DOWN);&#xa;jLabelBE4.setIcon( r1B );"/>
                       </AuxValues>
                     </Component>
                     <Component class="javax.swing.JLabel" name="jLabelBI4">
                       <AuxValues>
-                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1B = new TextIcon(jLabelBI4, &quot;Intron 4&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1B = new RotatedIcon(t1B, RotatedIcon.Rotate.DOWN);&#xa;jLabelBI4.setIcon( r1B );"/>
+                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1B = new TextIcon(jLabelBI4, &quot;Intron 4&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1B = new b12x.RotatedIcon(t1B, b12x.RotatedIcon.Rotate.DOWN);&#xa;jLabelBI4.setIcon( r1B );"/>
                       </AuxValues>
                     </Component>
                     <Component class="javax.swing.JLabel" name="jLabelBE5">
                       <AuxValues>
-                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1B = new TextIcon(jLabelBE5, &quot;Exon 5&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1B = new RotatedIcon(t1B, RotatedIcon.Rotate.DOWN);&#xa;jLabelBE5.setIcon( r1B );"/>
+                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1B = new TextIcon(jLabelBE5, &quot;Exon 5&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1B = new b12x.RotatedIcon(t1B, b12x.RotatedIcon.Rotate.DOWN);&#xa;jLabelBE5.setIcon( r1B );"/>
                       </AuxValues>
                     </Component>
                     <Component class="javax.swing.JLabel" name="jLabelBI5">
                       <AuxValues>
-                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1B = new TextIcon(jLabelBI5, &quot;Intron 5&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1B = new RotatedIcon(t1B, RotatedIcon.Rotate.DOWN);&#xa;jLabelBI5.setIcon( r1B );"/>
+                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1B = new TextIcon(jLabelBI5, &quot;Intron 5&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1B = new b12x.RotatedIcon(t1B, b12x.RotatedIcon.Rotate.DOWN);&#xa;jLabelBI5.setIcon( r1B );"/>
                       </AuxValues>
                     </Component>
                     <Component class="javax.swing.JLabel" name="jLabelBE6">
                       <AuxValues>
-                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1B = new TextIcon(jLabelBE6, &quot;Exon 6&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1B = new RotatedIcon(t1B, RotatedIcon.Rotate.DOWN);&#xa;jLabelBE6.setIcon( r1B );"/>
+                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1B = new TextIcon(jLabelBE6, &quot;Exon 6&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1B = new b12x.RotatedIcon(t1B, b12x.RotatedIcon.Rotate.DOWN);&#xa;jLabelBE6.setIcon( r1B );"/>
                       </AuxValues>
                     </Component>
                     <Component class="javax.swing.JLabel" name="jLabelBI6">
                       <AuxValues>
-                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1B = new TextIcon(jLabelBI6, &quot;Intron 6&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1B = new RotatedIcon(t1B, RotatedIcon.Rotate.DOWN);&#xa;jLabelBI6.setIcon( r1B );"/>
+                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1B = new TextIcon(jLabelBI6, &quot;Intron 6&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1B = new b12x.RotatedIcon(t1B, b12x.RotatedIcon.Rotate.DOWN);&#xa;jLabelBI6.setIcon( r1B );"/>
                       </AuxValues>
                     </Component>
                     <Component class="javax.swing.JLabel" name="jLabelE7">
                       <AuxValues>
-                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1B = new TextIcon(jLabelE7, &quot;Exon 7&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1B = new RotatedIcon(t1B, RotatedIcon.Rotate.DOWN);&#xa;jLabelE7.setIcon( r1B );"/>
+                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1B = new TextIcon(jLabelE7, &quot;Exon 7&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1B = new b12x.RotatedIcon(t1B, b12x.RotatedIcon.Rotate.DOWN);&#xa;jLabelE7.setIcon( r1B );"/>
                       </AuxValues>
                     </Component>
                     <Component class="javax.swing.JLabel" name="jLabelB3">
                       <AuxValues>
-                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1B = new TextIcon(jLabelB3, &quot;3&apos; UTR&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1B = new RotatedIcon(t1B, RotatedIcon.Rotate.DOWN);&#xa;jLabelB3.setIcon( r1B );"/>
+                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1B = new TextIcon(jLabelB3, &quot;3&apos; UTR&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1B = new b12x.RotatedIcon(t1B, b12x.RotatedIcon.Rotate.DOWN);&#xa;jLabelB3.setIcon( r1B );"/>
                       </AuxValues>
                     </Component>
                   </SubComponents>
@@ -1370,92 +1367,92 @@
                     </Component>
                     <Component class="javax.swing.JLabel" name="jLabelCW">
                       <AuxValues>
-                        <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="TextIcon t1C = new TextIcon(jLabelCW, &quot;Workshop Status&quot;, TextIcon.Layout.HORIZONTAL);&#xa;RotatedIcon r1C = new RotatedIcon(t1C, RotatedIcon.Rotate.DOWN);&#xa;jLabelCW.setIcon( r1C );"/>
+                        <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="TextIcon t1C = new TextIcon(jLabelCW, &quot;Workshop Status&quot;, TextIcon.Layout.HORIZONTAL);&#xa;b12x.RotatedIcon r1C = new b12x.RotatedIcon(t1C, b12x.RotatedIcon.Rotate.DOWN);&#xa;jLabelCW.setIcon( r1C );"/>
                       </AuxValues>
                     </Component>
                     <Component class="javax.swing.JLabel" name="jLabelC5">
                       <AuxValues>
-                        <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="t1C = new TextIcon(jLabelC5, &quot;5&apos; UTR&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1C = new RotatedIcon(t1C, RotatedIcon.Rotate.DOWN);&#xa;jLabelC5.setIcon( r1C );"/>
+                        <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="t1C = new TextIcon(jLabelC5, &quot;5&apos; UTR&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1C = new b12x.RotatedIcon(t1C, b12x.RotatedIcon.Rotate.DOWN);&#xa;jLabelC5.setIcon( r1C );"/>
                       </AuxValues>
                     </Component>
                     <Component class="javax.swing.JLabel" name="jLabelCE1">
                       <AuxValues>
-                        <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="t1C = new TextIcon(jLabelCE1, &quot;Exon 1&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1C = new RotatedIcon(t1C, RotatedIcon.Rotate.DOWN);&#xa;jLabelCE1.setIcon( r1C );"/>
+                        <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="t1C = new TextIcon(jLabelCE1, &quot;Exon 1&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1C = new b12x.RotatedIcon(t1C, b12x.RotatedIcon.Rotate.DOWN);&#xa;jLabelCE1.setIcon( r1C );"/>
                       </AuxValues>
                     </Component>
                     <Component class="javax.swing.JLabel" name="jLabelCI1">
                       <AuxValues>
-                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1C = new TextIcon(jLabelCI1, &quot;Intron 1&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1C = new RotatedIcon(t1C, RotatedIcon.Rotate.DOWN);&#xa;jLabelCI1.setIcon( r1C );"/>
+                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1C = new TextIcon(jLabelCI1, &quot;Intron 1&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1C = new b12x.RotatedIcon(t1C, b12x.RotatedIcon.Rotate.DOWN);&#xa;jLabelCI1.setIcon( r1C );"/>
                       </AuxValues>
                     </Component>
                     <Component class="javax.swing.JLabel" name="jLabelCE2">
                       <AuxValues>
-                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1C = new TextIcon(jLabelCE2, &quot;Exon 2&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1C = new RotatedIcon(t1C, RotatedIcon.Rotate.DOWN);&#xa;jLabelCE2.setIcon( r1C );"/>
+                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1C = new TextIcon(jLabelCE2, &quot;Exon 2&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1C = new b12x.RotatedIcon(t1C, b12x.RotatedIcon.Rotate.DOWN);&#xa;jLabelCE2.setIcon( r1C );"/>
                       </AuxValues>
                     </Component>
                     <Component class="javax.swing.JLabel" name="jLabelCI2">
                       <AuxValues>
-                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1C = new TextIcon(jLabelCI2, &quot;Intron 2&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1C = new RotatedIcon(t1C, RotatedIcon.Rotate.DOWN);&#xa;jLabelCI2.setIcon( r1C );"/>
+                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1C = new TextIcon(jLabelCI2, &quot;Intron 2&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1C = new b12x.RotatedIcon(t1C, b12x.RotatedIcon.Rotate.DOWN);&#xa;jLabelCI2.setIcon( r1C );"/>
                       </AuxValues>
                     </Component>
                     <Component class="javax.swing.JLabel" name="jLabelCE3">
                       <AuxValues>
-                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1C = new TextIcon(jLabelCE3, &quot;Exon 3&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1C = new RotatedIcon(t1C, RotatedIcon.Rotate.DOWN);&#xa;jLabelCE3.setIcon( r1C );"/>
+                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1C = new TextIcon(jLabelCE3, &quot;Exon 3&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1C = new b12x.RotatedIcon(t1C, b12x.RotatedIcon.Rotate.DOWN);&#xa;jLabelCE3.setIcon( r1C );"/>
                       </AuxValues>
                     </Component>
                     <Component class="javax.swing.JLabel" name="jLabelCI3">
                       <AuxValues>
-                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1C = new TextIcon(jLabelCI3, &quot;Intron 3&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1C = new RotatedIcon(t1C, RotatedIcon.Rotate.DOWN);&#xa;jLabelCI3.setIcon( r1C );"/>
+                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1C = new TextIcon(jLabelCI3, &quot;Intron 3&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1C = new b12x.RotatedIcon(t1C, b12x.RotatedIcon.Rotate.DOWN);&#xa;jLabelCI3.setIcon( r1C );"/>
                       </AuxValues>
                     </Component>
                     <Component class="javax.swing.JLabel" name="jLabelCE4">
                       <AuxValues>
-                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1C = new TextIcon(jLabelCE4, &quot;Exon 4&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1C = new RotatedIcon(t1C, RotatedIcon.Rotate.DOWN);&#xa;jLabelCE4.setIcon( r1C );"/>
+                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1C = new TextIcon(jLabelCE4, &quot;Exon 4&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1C = new b12x.RotatedIcon(t1C, b12x.RotatedIcon.Rotate.DOWN);&#xa;jLabelCE4.setIcon( r1C );"/>
                       </AuxValues>
                     </Component>
                     <Component class="javax.swing.JLabel" name="jLabelCI4">
                       <AuxValues>
-                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1C = new TextIcon(jLabelCI4, &quot;Intron 4&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1C = new RotatedIcon(t1C, RotatedIcon.Rotate.DOWN);&#xa;jLabelCI4.setIcon( r1C );"/>
+                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1C = new TextIcon(jLabelCI4, &quot;Intron 4&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1C = new b12x.RotatedIcon(t1C, b12x.RotatedIcon.Rotate.DOWN);&#xa;jLabelCI4.setIcon( r1C );"/>
                       </AuxValues>
                     </Component>
                     <Component class="javax.swing.JLabel" name="jLabelCE5">
                       <AuxValues>
-                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1C = new TextIcon(jLabelCE5, &quot;Exon 5&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1C = new RotatedIcon(t1C, RotatedIcon.Rotate.DOWN);&#xa;jLabelCE5.setIcon( r1C );"/>
+                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1C = new TextIcon(jLabelCE5, &quot;Exon 5&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1C = new b12x.RotatedIcon(t1C, b12x.RotatedIcon.Rotate.DOWN);&#xa;jLabelCE5.setIcon( r1C );"/>
                       </AuxValues>
                     </Component>
                     <Component class="javax.swing.JLabel" name="jLabelCI5">
                       <AuxValues>
-                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1C = new TextIcon(jLabelCI5, &quot;Intron 5&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1C = new RotatedIcon(t1C, RotatedIcon.Rotate.DOWN);&#xa;jLabelCI5.setIcon( r1C );"/>
+                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1C = new TextIcon(jLabelCI5, &quot;Intron 5&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1C = new b12x.RotatedIcon(t1C, b12x.RotatedIcon.Rotate.DOWN);&#xa;jLabelCI5.setIcon( r1C );"/>
                       </AuxValues>
                     </Component>
                     <Component class="javax.swing.JLabel" name="jLabelCE6">
                       <AuxValues>
-                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1C = new TextIcon(jLabelCE6, &quot;Exon 6&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1C = new RotatedIcon(t1C, RotatedIcon.Rotate.DOWN);&#xa;jLabelCE6.setIcon( r1C );"/>
+                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1C = new TextIcon(jLabelCE6, &quot;Exon 6&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1C = new b12x.RotatedIcon(t1C, b12x.RotatedIcon.Rotate.DOWN);&#xa;jLabelCE6.setIcon( r1C );"/>
                       </AuxValues>
                     </Component>
                     <Component class="javax.swing.JLabel" name="jLabelCI6">
                       <AuxValues>
-                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1C = new TextIcon(jLabelCI6, &quot;Intron 6&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1C = new RotatedIcon(t1C, RotatedIcon.Rotate.DOWN);&#xa;jLabelCI6.setIcon( r1C );"/>
+                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1C = new TextIcon(jLabelCI6, &quot;Intron 6&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1C = new b12x.RotatedIcon(t1C, b12x.RotatedIcon.Rotate.DOWN);&#xa;jLabelCI6.setIcon( r1C );"/>
                       </AuxValues>
                     </Component>
                     <Component class="javax.swing.JLabel" name="jLabelCE7">
                       <AuxValues>
-                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1C = new TextIcon(jLabelCE7, &quot;Exon 7&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1C = new RotatedIcon(t1C, RotatedIcon.Rotate.DOWN);&#xa;jLabelCE7.setIcon( r1C );"/>
+                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1C = new TextIcon(jLabelCE7, &quot;Exon 7&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1C = new b12x.RotatedIcon(t1C, b12x.RotatedIcon.Rotate.DOWN);&#xa;jLabelCE7.setIcon( r1C );"/>
                       </AuxValues>
                     </Component>
                     <Component class="javax.swing.JLabel" name="jLabelCI7">
                       <AuxValues>
-                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1C = new TextIcon(jLabelCI7, &quot;Intron 7&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1C = new RotatedIcon(t1C, RotatedIcon.Rotate.DOWN);&#xa;jLabelCI7.setIcon( r1C );"/>
+                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1C = new TextIcon(jLabelCI7, &quot;Intron 7&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1C = new b12x.RotatedIcon(t1C, b12x.RotatedIcon.Rotate.DOWN);&#xa;jLabelCI7.setIcon( r1C );"/>
                       </AuxValues>
                     </Component>
                     <Component class="javax.swing.JLabel" name="jLabelCE8">
                       <AuxValues>
-                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1C = new TextIcon(jLabelCE8, &quot;Exon 8&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1C = new RotatedIcon(t1C, RotatedIcon.Rotate.DOWN);&#xa;jLabelCE8.setIcon( r1C );"/>
+                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1C = new TextIcon(jLabelCE8, &quot;Exon 8&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1C = new b12x.RotatedIcon(t1C, b12x.RotatedIcon.Rotate.DOWN);&#xa;jLabelCE8.setIcon( r1C );"/>
                       </AuxValues>
                     </Component>
                     <Component class="javax.swing.JLabel" name="jLabelC3">
                       <AuxValues>
-                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1C = new TextIcon(jLabelC3, &quot;3&apos; UTR&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1C = new RotatedIcon(t1C, RotatedIcon.Rotate.DOWN);&#xa;jLabelC3.setIcon( r1C );"/>
+                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1C = new TextIcon(jLabelC3, &quot;3&apos; UTR&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1C = new b12x.RotatedIcon(t1C, b12x.RotatedIcon.Rotate.DOWN);&#xa;jLabelC3.setIcon( r1C );"/>
                       </AuxValues>
                     </Component>
                   </SubComponents>
@@ -1679,52 +1676,52 @@
                     </Component>
                     <Component class="javax.swing.JLabel" name="jLabelDPA1W">
                       <AuxValues>
-                        <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="TextIcon t1DPA1 = new TextIcon(jLabelDPA1W, &quot;Workshop Status&quot;, TextIcon.Layout.HORIZONTAL);&#xa;RotatedIcon r1DPA1 = new RotatedIcon(t1DPA1, RotatedIcon.Rotate.DOWN);&#xa;jLabelDPA1W.setIcon( r1DPA1 );"/>
+                        <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="TextIcon t1DPA1 = new TextIcon(jLabelDPA1W, &quot;Workshop Status&quot;, TextIcon.Layout.HORIZONTAL);&#xa;b12x.RotatedIcon r1DPA1 = new b12x.RotatedIcon(t1DPA1, b12x.RotatedIcon.Rotate.DOWN);&#xa;jLabelDPA1W.setIcon( r1DPA1 );"/>
                       </AuxValues>
                     </Component>
                     <Component class="javax.swing.JLabel" name="jLabelDPA15">
                       <AuxValues>
-                        <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="t1DPA1 = new TextIcon(jLabelDPA15, &quot;5&apos; UTR&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1DPA1 = new RotatedIcon(t1DPA1, RotatedIcon.Rotate.DOWN);&#xa;jLabelDPA15.setIcon( r1DPA1 );"/>
+                        <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="t1DPA1 = new TextIcon(jLabelDPA15, &quot;5&apos; UTR&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1DPA1 = new b12x.RotatedIcon(t1DPA1, b12x.RotatedIcon.Rotate.DOWN);&#xa;jLabelDPA15.setIcon( r1DPA1 );"/>
                       </AuxValues>
                     </Component>
                     <Component class="javax.swing.JLabel" name="jLabelDPA1E1">
                       <AuxValues>
-                        <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="t1DPA1 = new TextIcon(jLabelDPA1E1, &quot;Exon 1&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1DPA1 = new RotatedIcon(t1DPA1, RotatedIcon.Rotate.DOWN);&#xa;jLabelDPA1E1.setIcon( r1DPA1 );"/>
+                        <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="t1DPA1 = new TextIcon(jLabelDPA1E1, &quot;Exon 1&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1DPA1 = new b12x.RotatedIcon(t1DPA1, b12x.RotatedIcon.Rotate.DOWN);&#xa;jLabelDPA1E1.setIcon( r1DPA1 );"/>
                       </AuxValues>
                     </Component>
                     <Component class="javax.swing.JLabel" name="jLabelDPA1I1">
                       <AuxValues>
-                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1DPA1 = new TextIcon(jLabelDPA1I1, &quot;Intron 1&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1DPA1 = new RotatedIcon(t1DPA1, RotatedIcon.Rotate.DOWN);&#xa;jLabelDPA1I1.setIcon( r1DPA1 );"/>
+                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1DPA1 = new TextIcon(jLabelDPA1I1, &quot;Intron 1&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1DPA1 = new b12x.RotatedIcon(t1DPA1, b12x.RotatedIcon.Rotate.DOWN);&#xa;jLabelDPA1I1.setIcon( r1DPA1 );"/>
                       </AuxValues>
                     </Component>
                     <Component class="javax.swing.JLabel" name="jLabelDPA1E2">
                       <AuxValues>
-                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1DPA1 = new TextIcon(jLabelDPA1E2, &quot;Exon 2&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1DPA1 = new RotatedIcon(t1DPA1, RotatedIcon.Rotate.DOWN);&#xa;jLabelDPA1E2.setIcon( r1DPA1 );"/>
+                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1DPA1 = new TextIcon(jLabelDPA1E2, &quot;Exon 2&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1DPA1 = new b12x.RotatedIcon(t1DPA1, b12x.RotatedIcon.Rotate.DOWN);&#xa;jLabelDPA1E2.setIcon( r1DPA1 );"/>
                       </AuxValues>
                     </Component>
                     <Component class="javax.swing.JLabel" name="jLabelDPA1I2">
                       <AuxValues>
-                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1DPA1 = new TextIcon(jLabelDPA1I2, &quot;Intron 2&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1DPA1 = new RotatedIcon(t1DPA1, RotatedIcon.Rotate.DOWN);&#xa;jLabelDPA1I2.setIcon( r1DPA1 );"/>
+                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1DPA1 = new TextIcon(jLabelDPA1I2, &quot;Intron 2&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1DPA1 = new b12x.RotatedIcon(t1DPA1, b12x.RotatedIcon.Rotate.DOWN);&#xa;jLabelDPA1I2.setIcon( r1DPA1 );"/>
                       </AuxValues>
                     </Component>
                     <Component class="javax.swing.JLabel" name="jLabelDPA1E3">
                       <AuxValues>
-                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1DPA1 = new TextIcon(jLabelDPA1E3, &quot;Exon 3&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1DPA1 = new RotatedIcon(t1DPA1, RotatedIcon.Rotate.DOWN);&#xa;jLabelDPA1E3.setIcon( r1DPA1 );"/>
+                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1DPA1 = new TextIcon(jLabelDPA1E3, &quot;Exon 3&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1DPA1 = new b12x.RotatedIcon(t1DPA1, b12x.RotatedIcon.Rotate.DOWN);&#xa;jLabelDPA1E3.setIcon( r1DPA1 );"/>
                       </AuxValues>
                     </Component>
                     <Component class="javax.swing.JLabel" name="jLabelDPA1I3">
                       <AuxValues>
-                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1DPA1 = new TextIcon(jLabelDPA1I3, &quot;Intron 3&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1DPA1 = new RotatedIcon(t1DPA1, RotatedIcon.Rotate.DOWN);&#xa;jLabelDPA1I3.setIcon( r1DPA1 );"/>
+                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1DPA1 = new TextIcon(jLabelDPA1I3, &quot;Intron 3&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1DPA1 = new b12x.RotatedIcon(t1DPA1, b12x.RotatedIcon.Rotate.DOWN);&#xa;jLabelDPA1I3.setIcon( r1DPA1 );"/>
                       </AuxValues>
                     </Component>
                     <Component class="javax.swing.JLabel" name="jLabelDPA1E4">
                       <AuxValues>
-                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1DPA1 = new TextIcon(jLabelDPA1E4, &quot;Exon 4&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1DPA1 = new RotatedIcon(t1DPA1, RotatedIcon.Rotate.DOWN);&#xa;jLabelDPA1E4.setIcon( r1DPA1 );"/>
+                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1DPA1 = new TextIcon(jLabelDPA1E4, &quot;Exon 4&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1DPA1 = new b12x.RotatedIcon(t1DPA1, b12x.RotatedIcon.Rotate.DOWN);&#xa;jLabelDPA1E4.setIcon( r1DPA1 );"/>
                       </AuxValues>
                     </Component>
                     <Component class="javax.swing.JLabel" name="jLabelDPA13">
                       <AuxValues>
-                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1DPA1 = new TextIcon(jLabelDPA13, &quot;3&apos; UTR&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1DPA1 = new RotatedIcon(t1DPA1, RotatedIcon.Rotate.DOWN);&#xa;jLabelDPA13.setIcon( r1DPA1 );"/>
+                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1DPA1 = new TextIcon(jLabelDPA13, &quot;3&apos; UTR&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1DPA1 = new b12x.RotatedIcon(t1DPA1, b12x.RotatedIcon.Rotate.DOWN);&#xa;jLabelDPA13.setIcon( r1DPA1 );"/>
                       </AuxValues>
                     </Component>
                   </SubComponents>
@@ -1985,62 +1982,62 @@
                     </Component>
                     <Component class="javax.swing.JLabel" name="jLabelDPB1W">
                       <AuxValues>
-                        <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="TextIcon t1DPB1 = new TextIcon(jLabelDPB1W, &quot;Workshop Status&quot;, TextIcon.Layout.HORIZONTAL);&#xa;RotatedIcon r1DPB1 = new RotatedIcon(t1DPB1, RotatedIcon.Rotate.DOWN);&#xa;jLabelDPB1W.setIcon( r1DPB1 );"/>
+                        <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="TextIcon t1DPB1 = new TextIcon(jLabelDPB1W, &quot;Workshop Status&quot;, TextIcon.Layout.HORIZONTAL);&#xa;b12x.RotatedIcon r1DPB1 = new b12x.RotatedIcon(t1DPB1, b12x.RotatedIcon.Rotate.DOWN);&#xa;jLabelDPB1W.setIcon( r1DPB1 );"/>
                       </AuxValues>
                     </Component>
                     <Component class="javax.swing.JLabel" name="jLabelDPB15">
                       <AuxValues>
-                        <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="t1DPB1 = new TextIcon(jLabelDPB15, &quot;5&apos; UTR&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1DPB1 = new RotatedIcon(t1DPB1, RotatedIcon.Rotate.DOWN);&#xa;jLabelDPB15.setIcon( r1DPB1 );"/>
+                        <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="t1DPB1 = new TextIcon(jLabelDPB15, &quot;5&apos; UTR&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1DPB1 = new b12x.RotatedIcon(t1DPB1, b12x.RotatedIcon.Rotate.DOWN);&#xa;jLabelDPB15.setIcon( r1DPB1 );"/>
                       </AuxValues>
                     </Component>
                     <Component class="javax.swing.JLabel" name="jLabelDPB1E1">
                       <AuxValues>
-                        <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="t1DPB1 = new TextIcon(jLabelDPB1E1, &quot;Exon 1&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1DPB1 = new RotatedIcon(t1DPB1, RotatedIcon.Rotate.DOWN);&#xa;jLabelDPB1E1.setIcon( r1DPB1 );"/>
+                        <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="t1DPB1 = new TextIcon(jLabelDPB1E1, &quot;Exon 1&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1DPB1 = new b12x.RotatedIcon(t1DPB1, b12x.RotatedIcon.Rotate.DOWN);&#xa;jLabelDPB1E1.setIcon( r1DPB1 );"/>
                       </AuxValues>
                     </Component>
                     <Component class="javax.swing.JLabel" name="jLabelDPB1I1">
                       <AuxValues>
-                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1DPB1 = new TextIcon(jLabelDPB1I1, &quot;Intron 1&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1DPB1 = new RotatedIcon(t1DPB1, RotatedIcon.Rotate.DOWN);&#xa;jLabelDPB1I1.setIcon( r1DPB1 );"/>
+                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1DPB1 = new TextIcon(jLabelDPB1I1, &quot;Intron 1&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1DPB1 = new b12x.RotatedIcon(t1DPB1, b12x.RotatedIcon.Rotate.DOWN);&#xa;jLabelDPB1I1.setIcon( r1DPB1 );"/>
                       </AuxValues>
                     </Component>
                     <Component class="javax.swing.JLabel" name="jLabelDPB1E2">
                       <AuxValues>
-                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1DPB1 = new TextIcon(jLabelDPB1E2, &quot;Exon 2&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1DPB1 = new RotatedIcon(t1DPB1, RotatedIcon.Rotate.DOWN);&#xa;jLabelDPB1E2.setIcon( r1DPB1 );"/>
+                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1DPB1 = new TextIcon(jLabelDPB1E2, &quot;Exon 2&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1DPB1 = new b12x.RotatedIcon(t1DPB1, b12x.RotatedIcon.Rotate.DOWN);&#xa;jLabelDPB1E2.setIcon( r1DPB1 );"/>
                       </AuxValues>
                     </Component>
                     <Component class="javax.swing.JLabel" name="jLabelDPB1I2">
                       <AuxValues>
-                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1DPB1 = new TextIcon(jLabelDPB1I2, &quot;Intron 2&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1DPB1 = new RotatedIcon(t1DPB1, RotatedIcon.Rotate.DOWN);&#xa;jLabelDPB1I2.setIcon( r1DPB1 );"/>
+                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1DPB1 = new TextIcon(jLabelDPB1I2, &quot;Intron 2&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1DPB1 = new b12x.RotatedIcon(t1DPB1, b12x.RotatedIcon.Rotate.DOWN);&#xa;jLabelDPB1I2.setIcon( r1DPB1 );"/>
                       </AuxValues>
                     </Component>
                     <Component class="javax.swing.JLabel" name="jLabelDPB1E3">
                       <AuxValues>
-                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1DPB1 = new TextIcon(jLabelDPB1E3, &quot;Exon 3&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1DPB1 = new RotatedIcon(t1DPB1, RotatedIcon.Rotate.DOWN);&#xa;jLabelDPB1E3.setIcon( r1DPB1 );"/>
+                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1DPB1 = new TextIcon(jLabelDPB1E3, &quot;Exon 3&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1DPB1 = new b12x.RotatedIcon(t1DPB1, b12x.RotatedIcon.Rotate.DOWN);&#xa;jLabelDPB1E3.setIcon( r1DPB1 );"/>
                       </AuxValues>
                     </Component>
                     <Component class="javax.swing.JLabel" name="jLabelDPB1I3">
                       <AuxValues>
-                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1DPB1 = new TextIcon(jLabelDPB1I3, &quot;Intron 3&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1DPB1 = new RotatedIcon(t1DPB1, RotatedIcon.Rotate.DOWN);&#xa;jLabelDPB1I3.setIcon( r1DPB1 );"/>
+                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1DPB1 = new TextIcon(jLabelDPB1I3, &quot;Intron 3&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1DPB1 = new b12x.RotatedIcon(t1DPB1, b12x.RotatedIcon.Rotate.DOWN);&#xa;jLabelDPB1I3.setIcon( r1DPB1 );"/>
                       </AuxValues>
                     </Component>
                     <Component class="javax.swing.JLabel" name="jLabelDPB1E4">
                       <AuxValues>
-                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1DPB1 = new TextIcon(jLabelDPB1E4, &quot;Exon 4&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1DPB1 = new RotatedIcon(t1DPB1, RotatedIcon.Rotate.DOWN);&#xa;jLabelDPB1E4.setIcon( r1DPB1 );"/>
+                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1DPB1 = new TextIcon(jLabelDPB1E4, &quot;Exon 4&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1DPB1 = new b12x.RotatedIcon(t1DPB1, b12x.RotatedIcon.Rotate.DOWN);&#xa;jLabelDPB1E4.setIcon( r1DPB1 );"/>
                       </AuxValues>
                     </Component>
                     <Component class="javax.swing.JLabel" name="jLabelDPB1I4">
                       <AuxValues>
-                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1DPB1 = new TextIcon(jLabelDPB1I4, &quot;Intron 4&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1DPB1 = new RotatedIcon(t1DPB1, RotatedIcon.Rotate.DOWN);&#xa;jLabelDPB1I4.setIcon( r1DPB1 );"/>
+                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1DPB1 = new TextIcon(jLabelDPB1I4, &quot;Intron 4&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1DPB1 = new b12x.RotatedIcon(t1DPB1, b12x.RotatedIcon.Rotate.DOWN);&#xa;jLabelDPB1I4.setIcon( r1DPB1 );"/>
                       </AuxValues>
                     </Component>
                     <Component class="javax.swing.JLabel" name="jLabelDPB1E5">
                       <AuxValues>
-                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1DPB1 = new TextIcon(jLabelDPB1E5, &quot;Exon 5&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1DPB1 = new RotatedIcon(t1DPB1, RotatedIcon.Rotate.DOWN);&#xa;jLabelDPB1E5.setIcon( r1DPB1 );"/>
+                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1DPB1 = new TextIcon(jLabelDPB1E5, &quot;Exon 5&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1DPB1 = new b12x.RotatedIcon(t1DPB1, b12x.RotatedIcon.Rotate.DOWN);&#xa;jLabelDPB1E5.setIcon( r1DPB1 );"/>
                       </AuxValues>
                     </Component>
                     <Component class="javax.swing.JLabel" name="jLabelDPB13">
                       <AuxValues>
-                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1DPB1 = new TextIcon(jLabelDPB13, &quot;3&apos; UTR&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1DPB1 = new RotatedIcon(t1DPB1, RotatedIcon.Rotate.DOWN);&#xa;jLabelDPB13.setIcon( r1DPB1 );"/>
+                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1DPB1 = new TextIcon(jLabelDPB13, &quot;3&apos; UTR&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1DPB1 = new b12x.RotatedIcon(t1DPB1, b12x.RotatedIcon.Rotate.DOWN);&#xa;jLabelDPB13.setIcon( r1DPB1 );"/>
                       </AuxValues>
                     </Component>
                   </SubComponents>
@@ -2269,52 +2266,52 @@
                     </Component>
                     <Component class="javax.swing.JLabel" name="jLabelDQA1W">
                       <AuxValues>
-                        <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="TextIcon t1DQA1 = new TextIcon(jLabelDQA1W, &quot;Workshop Status&quot;, TextIcon.Layout.HORIZONTAL);&#xa;RotatedIcon r1DQA1 = new RotatedIcon(t1DQA1, RotatedIcon.Rotate.DOWN);&#xa;jLabelDQA1W.setIcon( r1DQA1 );"/>
+                        <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="TextIcon t1DQA1 = new TextIcon(jLabelDQA1W, &quot;Workshop Status&quot;, TextIcon.Layout.HORIZONTAL);&#xa;b12x.RotatedIcon r1DQA1 = new b12x.RotatedIcon(t1DQA1, b12x.RotatedIcon.Rotate.DOWN);&#xa;jLabelDQA1W.setIcon( r1DQA1 );"/>
                       </AuxValues>
                     </Component>
                     <Component class="javax.swing.JLabel" name="jLabelDQA15">
                       <AuxValues>
-                        <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="t1DQA1 = new TextIcon(jLabelDQA15, &quot;5&apos; UTR&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1DQA1 = new RotatedIcon(t1DQA1, RotatedIcon.Rotate.DOWN);&#xa;jLabelDQA15.setIcon( r1DQA1 );"/>
+                        <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="t1DQA1 = new TextIcon(jLabelDQA15, &quot;5&apos; UTR&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1DQA1 = new b12x.RotatedIcon(t1DQA1, b12x.RotatedIcon.Rotate.DOWN);&#xa;jLabelDQA15.setIcon( r1DQA1 );"/>
                       </AuxValues>
                     </Component>
                     <Component class="javax.swing.JLabel" name="jLabelDQA1E1">
                       <AuxValues>
-                        <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="t1DQA1 = new TextIcon(jLabelDQA1E1, &quot;Exon 1&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1DQA1 = new RotatedIcon(t1DQA1, RotatedIcon.Rotate.DOWN);&#xa;jLabelDQA1E1.setIcon( r1DQA1 );"/>
+                        <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="t1DQA1 = new TextIcon(jLabelDQA1E1, &quot;Exon 1&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1DQA1 = new b12x.RotatedIcon(t1DQA1, b12x.RotatedIcon.Rotate.DOWN);&#xa;jLabelDQA1E1.setIcon( r1DQA1 );"/>
                       </AuxValues>
                     </Component>
                     <Component class="javax.swing.JLabel" name="jLabelDQA1I1">
                       <AuxValues>
-                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1DQA1 = new TextIcon(jLabelDQA1I1, &quot;Intron 1&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1DQA1 = new RotatedIcon(t1DQA1, RotatedIcon.Rotate.DOWN);&#xa;jLabelDQA1I1.setIcon( r1DQA1 );"/>
+                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1DQA1 = new TextIcon(jLabelDQA1I1, &quot;Intron 1&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1DQA1 = new b12x.RotatedIcon(t1DQA1, b12x.RotatedIcon.Rotate.DOWN);&#xa;jLabelDQA1I1.setIcon( r1DQA1 );"/>
                       </AuxValues>
                     </Component>
                     <Component class="javax.swing.JLabel" name="jLabelDQA1E2">
                       <AuxValues>
-                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1DQA1 = new TextIcon(jLabelDQA1E2, &quot;Exon 2&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1DQA1 = new RotatedIcon(t1DQA1, RotatedIcon.Rotate.DOWN);&#xa;jLabelDQA1E2.setIcon( r1DQA1 );"/>
+                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1DQA1 = new TextIcon(jLabelDQA1E2, &quot;Exon 2&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1DQA1 = new b12x.RotatedIcon(t1DQA1, b12x.RotatedIcon.Rotate.DOWN);&#xa;jLabelDQA1E2.setIcon( r1DQA1 );"/>
                       </AuxValues>
                     </Component>
                     <Component class="javax.swing.JLabel" name="jLabelDQA1I2">
                       <AuxValues>
-                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1DQA1 = new TextIcon(jLabelDQA1I2, &quot;Intron 2&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1DQA1 = new RotatedIcon(t1DQA1, RotatedIcon.Rotate.DOWN);&#xa;jLabelDQA1I2.setIcon( r1DQA1 );"/>
+                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1DQA1 = new TextIcon(jLabelDQA1I2, &quot;Intron 2&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1DQA1 = new b12x.RotatedIcon(t1DQA1, b12x.RotatedIcon.Rotate.DOWN);&#xa;jLabelDQA1I2.setIcon( r1DQA1 );"/>
                       </AuxValues>
                     </Component>
                     <Component class="javax.swing.JLabel" name="jLabelDQA1E3">
                       <AuxValues>
-                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1DQA1 = new TextIcon(jLabelDQA1E3, &quot;Exon 3&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1DQA1 = new RotatedIcon(t1DQA1, RotatedIcon.Rotate.DOWN);&#xa;jLabelDQA1E3.setIcon( r1DQA1 );"/>
+                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1DQA1 = new TextIcon(jLabelDQA1E3, &quot;Exon 3&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1DQA1 = new b12x.RotatedIcon(t1DQA1, b12x.RotatedIcon.Rotate.DOWN);&#xa;jLabelDQA1E3.setIcon( r1DQA1 );"/>
                       </AuxValues>
                     </Component>
                     <Component class="javax.swing.JLabel" name="jLabelDQA1I3">
                       <AuxValues>
-                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1DQA1 = new TextIcon(jLabelDQA1I3, &quot;Intron 3&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1DQA1 = new RotatedIcon(t1DQA1, RotatedIcon.Rotate.DOWN);&#xa;jLabelDQA1I3.setIcon( r1DQA1 );"/>
+                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1DQA1 = new TextIcon(jLabelDQA1I3, &quot;Intron 3&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1DQA1 = new b12x.RotatedIcon(t1DQA1, b12x.RotatedIcon.Rotate.DOWN);&#xa;jLabelDQA1I3.setIcon( r1DQA1 );"/>
                       </AuxValues>
                     </Component>
                     <Component class="javax.swing.JLabel" name="jLabelDQA1E4">
                       <AuxValues>
-                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1DQA1 = new TextIcon(jLabelDQA1E4, &quot;Exon 4&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1DQA1 = new RotatedIcon(t1DQA1, RotatedIcon.Rotate.DOWN);&#xa;jLabelDQA1E4.setIcon( r1DQA1 );"/>
+                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1DQA1 = new TextIcon(jLabelDQA1E4, &quot;Exon 4&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1DQA1 = new b12x.RotatedIcon(t1DQA1, b12x.RotatedIcon.Rotate.DOWN);&#xa;jLabelDQA1E4.setIcon( r1DQA1 );"/>
                       </AuxValues>
                     </Component>
                     <Component class="javax.swing.JLabel" name="jLabelDQA13">
                       <AuxValues>
-                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1DQA1 = new TextIcon(jLabelDQA13, &quot;3&apos; UTR&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1DQA1 = new RotatedIcon(t1DQA1, RotatedIcon.Rotate.DOWN);&#xa;jLabelDQA13.setIcon( r1DQA1 );"/>
+                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1DQA1 = new TextIcon(jLabelDQA13, &quot;3&apos; UTR&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1DQA1 = new b12x.RotatedIcon(t1DQA1, b12x.RotatedIcon.Rotate.DOWN);&#xa;jLabelDQA13.setIcon( r1DQA1 );"/>
                       </AuxValues>
                     </Component>
                   </SubComponents>
@@ -2614,72 +2611,72 @@
                     </Component>
                     <Component class="javax.swing.JLabel" name="jLabelDQB1W">
                       <AuxValues>
-                        <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="TextIcon t1DQB1 = new TextIcon(jLabelDQB1W, &quot;Workshop Status&quot;, TextIcon.Layout.HORIZONTAL);&#xa;RotatedIcon r1DQB1 = new RotatedIcon(t1DQB1, RotatedIcon.Rotate.DOWN);&#xa;jLabelDQB1W.setIcon( r1DQB1 );"/>
+                        <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="TextIcon t1DQB1 = new TextIcon(jLabelDQB1W, &quot;Workshop Status&quot;, TextIcon.Layout.HORIZONTAL);&#xa;b12x.RotatedIcon r1DQB1 = new b12x.RotatedIcon(t1DQB1, b12x.RotatedIcon.Rotate.DOWN);&#xa;jLabelDQB1W.setIcon( r1DQB1 );"/>
                       </AuxValues>
                     </Component>
                     <Component class="javax.swing.JLabel" name="jLabelDQB15">
                       <AuxValues>
-                        <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="t1DQB1 = new TextIcon(jLabelDQB15, &quot;5&apos; UTR&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1DQB1 = new RotatedIcon(t1DQB1, RotatedIcon.Rotate.DOWN);&#xa;jLabelDQB15.setIcon( r1DQB1 );"/>
+                        <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="t1DQB1 = new TextIcon(jLabelDQB15, &quot;5&apos; UTR&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1DQB1 = new b12x.RotatedIcon(t1DQB1, b12x.RotatedIcon.Rotate.DOWN);&#xa;jLabelDQB15.setIcon( r1DQB1 );"/>
                       </AuxValues>
                     </Component>
                     <Component class="javax.swing.JLabel" name="jLabelDQB1E1">
                       <AuxValues>
-                        <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="t1DQB1 = new TextIcon(jLabelDQB1E1, &quot;Exon 1&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1DQB1 = new RotatedIcon(t1DQB1, RotatedIcon.Rotate.DOWN);&#xa;jLabelDQB1E1.setIcon( r1DQB1 );"/>
+                        <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="t1DQB1 = new TextIcon(jLabelDQB1E1, &quot;Exon 1&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1DQB1 = new b12x.RotatedIcon(t1DQB1, b12x.RotatedIcon.Rotate.DOWN);&#xa;jLabelDQB1E1.setIcon( r1DQB1 );"/>
                       </AuxValues>
                     </Component>
                     <Component class="javax.swing.JLabel" name="jLabelDQB1I1">
                       <AuxValues>
-                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1DQB1 = new TextIcon(jLabelDQB1I1, &quot;Intron 1&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1DQB1 = new RotatedIcon(t1DQB1, RotatedIcon.Rotate.DOWN);&#xa;jLabelDQB1I1.setIcon( r1DQB1 );"/>
+                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1DQB1 = new TextIcon(jLabelDQB1I1, &quot;Intron 1&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1DQB1 = new b12x.RotatedIcon(t1DQB1, b12x.RotatedIcon.Rotate.DOWN);&#xa;jLabelDQB1I1.setIcon( r1DQB1 );"/>
                       </AuxValues>
                     </Component>
                     <Component class="javax.swing.JLabel" name="jLabelDQB1E2">
                       <AuxValues>
-                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1DQB1 = new TextIcon(jLabelDQB1E2, &quot;Exon 2&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1DQB1 = new RotatedIcon(t1DQB1, RotatedIcon.Rotate.DOWN);&#xa;jLabelDQB1E2.setIcon( r1DQB1 );"/>
+                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1DQB1 = new TextIcon(jLabelDQB1E2, &quot;Exon 2&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1DQB1 = new b12x.RotatedIcon(t1DQB1, b12x.RotatedIcon.Rotate.DOWN);&#xa;jLabelDQB1E2.setIcon( r1DQB1 );"/>
                       </AuxValues>
                     </Component>
                     <Component class="javax.swing.JLabel" name="jLabelDQB1I2">
                       <AuxValues>
-                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1DQB1 = new TextIcon(jLabelDQB1I2, &quot;Intron 2&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1DQB1 = new RotatedIcon(t1DQB1, RotatedIcon.Rotate.DOWN);&#xa;jLabelDQB1I2.setIcon( r1DQB1 );"/>
+                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1DQB1 = new TextIcon(jLabelDQB1I2, &quot;Intron 2&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1DQB1 = new b12x.RotatedIcon(t1DQB1, b12x.RotatedIcon.Rotate.DOWN);&#xa;jLabelDQB1I2.setIcon( r1DQB1 );"/>
                       </AuxValues>
                     </Component>
                     <Component class="javax.swing.JLabel" name="jLabelDQB1E3">
                       <AuxValues>
-                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1DQB1 = new TextIcon(jLabelDQB1E3, &quot;Exon 3&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1DQB1 = new RotatedIcon(t1DQB1, RotatedIcon.Rotate.DOWN);&#xa;jLabelDQB1E3.setIcon( r1DQB1 );"/>
+                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1DQB1 = new TextIcon(jLabelDQB1E3, &quot;Exon 3&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1DQB1 = new b12x.RotatedIcon(t1DQB1, b12x.RotatedIcon.Rotate.DOWN);&#xa;jLabelDQB1E3.setIcon( r1DQB1 );"/>
                       </AuxValues>
                     </Component>
                     <Component class="javax.swing.JLabel" name="jLabelDQB1I3">
                       <AuxValues>
-                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1DQB1 = new TextIcon(jLabelDQB1I3, &quot;Intron 3&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1DQB1 = new RotatedIcon(t1DQB1, RotatedIcon.Rotate.DOWN);&#xa;jLabelDQB1I3.setIcon( r1DQB1 );"/>
+                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1DQB1 = new TextIcon(jLabelDQB1I3, &quot;Intron 3&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1DQB1 = new b12x.RotatedIcon(t1DQB1, b12x.RotatedIcon.Rotate.DOWN);&#xa;jLabelDQB1I3.setIcon( r1DQB1 );"/>
                       </AuxValues>
                     </Component>
                     <Component class="javax.swing.JLabel" name="jLabelDQB1E4">
                       <AuxValues>
-                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1DQB1 = new TextIcon(jLabelDQB1E4, &quot;Exon 4&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1DQB1 = new RotatedIcon(t1DQB1, RotatedIcon.Rotate.DOWN);&#xa;jLabelDQB1E4.setIcon( r1DQB1 );"/>
+                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1DQB1 = new TextIcon(jLabelDQB1E4, &quot;Exon 4&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1DQB1 = new b12x.RotatedIcon(t1DQB1, b12x.RotatedIcon.Rotate.DOWN);&#xa;jLabelDQB1E4.setIcon( r1DQB1 );"/>
                       </AuxValues>
                     </Component>
                     <Component class="javax.swing.JLabel" name="jLabelDQB1I4">
                       <AuxValues>
-                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1DQB1 = new TextIcon(jLabelDQB1I4, &quot;Intron 4&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1DQB1 = new RotatedIcon(t1DQB1, RotatedIcon.Rotate.DOWN);&#xa;jLabelDQB1I4.setIcon( r1DQB1 );"/>
+                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1DQB1 = new TextIcon(jLabelDQB1I4, &quot;Intron 4&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1DQB1 = new b12x.RotatedIcon(t1DQB1, b12x.RotatedIcon.Rotate.DOWN);&#xa;jLabelDQB1I4.setIcon( r1DQB1 );"/>
                       </AuxValues>
                     </Component>
                     <Component class="javax.swing.JLabel" name="jLabelDQB1E5">
                       <AuxValues>
-                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1DQB1 = new TextIcon(jLabelDQB1E5, &quot;Exon 5&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1DQB1 = new RotatedIcon(t1DQB1, RotatedIcon.Rotate.DOWN);&#xa;jLabelDQB1E5.setIcon( r1DQB1 );"/>
+                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1DQB1 = new TextIcon(jLabelDQB1E5, &quot;Exon 5&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1DQB1 = new b12x.RotatedIcon(t1DQB1, b12x.RotatedIcon.Rotate.DOWN);&#xa;jLabelDQB1E5.setIcon( r1DQB1 );"/>
                       </AuxValues>
                     </Component>
                     <Component class="javax.swing.JLabel" name="jLabelDQB1I5">
                       <AuxValues>
-                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1DQB1 = new TextIcon(jLabelDQB1I5, &quot;Intron 5&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1DQB1 = new RotatedIcon(t1DQB1, RotatedIcon.Rotate.DOWN);&#xa;jLabelDQB1I5.setIcon( r1DQB1 );"/>
+                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1DQB1 = new TextIcon(jLabelDQB1I5, &quot;Intron 5&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1DQB1 = new b12x.RotatedIcon(t1DQB1, b12x.RotatedIcon.Rotate.DOWN);&#xa;jLabelDQB1I5.setIcon( r1DQB1 );"/>
                       </AuxValues>
                     </Component>
                     <Component class="javax.swing.JLabel" name="jLabelDQB1E6">
                       <AuxValues>
-                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1DQB1 = new TextIcon(jLabelDQB1E6, &quot;Exon 6&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1DQB1 = new RotatedIcon(t1DQB1, RotatedIcon.Rotate.DOWN);&#xa;jLabelDQB1E6.setIcon( r1DQB1 );"/>
+                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1DQB1 = new TextIcon(jLabelDQB1E6, &quot;Exon 6&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1DQB1 = new b12x.RotatedIcon(t1DQB1, b12x.RotatedIcon.Rotate.DOWN);&#xa;jLabelDQB1E6.setIcon( r1DQB1 );"/>
                       </AuxValues>
                     </Component>
                     <Component class="javax.swing.JLabel" name="jLabelDQB13">
                       <AuxValues>
-                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1DQB1 = new TextIcon(jLabelDQB13, &quot;3&apos; UTR&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1DQB1 = new RotatedIcon(t1DQB1, RotatedIcon.Rotate.DOWN);&#xa;jLabelDQB13.setIcon( r1DQB1 );"/>
+                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1DQB1 = new TextIcon(jLabelDQB13, &quot;3&apos; UTR&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1DQB1 = new b12x.RotatedIcon(t1DQB1, b12x.RotatedIcon.Rotate.DOWN);&#xa;jLabelDQB13.setIcon( r1DQB1 );"/>
                       </AuxValues>
                     </Component>
                   </SubComponents>
@@ -2979,72 +2976,72 @@
                     </Component>
                     <Component class="javax.swing.JLabel" name="jLabelDRB1W">
                       <AuxValues>
-                        <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="TextIcon t1DRB1 = new TextIcon(jLabelDRB1W, &quot;Workshop Status&quot;, TextIcon.Layout.HORIZONTAL);&#xa;RotatedIcon r1DRB1 = new RotatedIcon(t1DRB1, RotatedIcon.Rotate.DOWN);&#xa;jLabelDRB1W.setIcon( r1DRB1 );"/>
+                        <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="TextIcon t1DRB1 = new TextIcon(jLabelDRB1W, &quot;Workshop Status&quot;, TextIcon.Layout.HORIZONTAL);&#xa;b12x.RotatedIcon r1DRB1 = new b12x.RotatedIcon(t1DRB1, b12x.RotatedIcon.Rotate.DOWN);&#xa;jLabelDRB1W.setIcon( r1DRB1 );"/>
                       </AuxValues>
                     </Component>
                     <Component class="javax.swing.JLabel" name="jLabelDRB15">
                       <AuxValues>
-                        <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="t1DRB1 = new TextIcon(jLabelDRB15, &quot;5&apos; UTR&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1DRB1 = new RotatedIcon(t1DRB1, RotatedIcon.Rotate.DOWN);&#xa;jLabelDRB15.setIcon( r1DRB1 );"/>
+                        <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="t1DRB1 = new TextIcon(jLabelDRB15, &quot;5&apos; UTR&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1DRB1 = new b12x.RotatedIcon(t1DRB1, b12x.RotatedIcon.Rotate.DOWN);&#xa;jLabelDRB15.setIcon( r1DRB1 );"/>
                       </AuxValues>
                     </Component>
                     <Component class="javax.swing.JLabel" name="jLabelDRB1E1">
                       <AuxValues>
-                        <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="t1DRB1 = new TextIcon(jLabelDRB1E1, &quot;Exon 1&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1DRB1 = new RotatedIcon(t1DRB1, RotatedIcon.Rotate.DOWN);&#xa;jLabelDRB1E1.setIcon( r1DRB1 );"/>
+                        <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="t1DRB1 = new TextIcon(jLabelDRB1E1, &quot;Exon 1&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1DRB1 = new b12x.RotatedIcon(t1DRB1, b12x.RotatedIcon.Rotate.DOWN);&#xa;jLabelDRB1E1.setIcon( r1DRB1 );"/>
                       </AuxValues>
                     </Component>
                     <Component class="javax.swing.JLabel" name="jLabelDRB1I1">
                       <AuxValues>
-                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1DRB1 = new TextIcon(jLabelDRB1I1, &quot;Intron 1&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1DRB1 = new RotatedIcon(t1DRB1, RotatedIcon.Rotate.DOWN);&#xa;jLabelDRB1I1.setIcon( r1DRB1 );"/>
+                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1DRB1 = new TextIcon(jLabelDRB1I1, &quot;Intron 1&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1DRB1 = new b12x.RotatedIcon(t1DRB1, b12x.RotatedIcon.Rotate.DOWN);&#xa;jLabelDRB1I1.setIcon( r1DRB1 );"/>
                       </AuxValues>
                     </Component>
                     <Component class="javax.swing.JLabel" name="jLabelDRB1E2">
                       <AuxValues>
-                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1DRB1 = new TextIcon(jLabelDRB1E2, &quot;Exon 2&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1DRB1 = new RotatedIcon(t1DRB1, RotatedIcon.Rotate.DOWN);&#xa;jLabelDRB1E2.setIcon( r1DRB1 );"/>
+                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1DRB1 = new TextIcon(jLabelDRB1E2, &quot;Exon 2&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1DRB1 = new b12x.RotatedIcon(t1DRB1, b12x.RotatedIcon.Rotate.DOWN);&#xa;jLabelDRB1E2.setIcon( r1DRB1 );"/>
                       </AuxValues>
                     </Component>
                     <Component class="javax.swing.JLabel" name="jLabelDRB1I2">
                       <AuxValues>
-                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1DRB1 = new TextIcon(jLabelDRB1I2, &quot;Intron 2&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1DRB1 = new RotatedIcon(t1DRB1, RotatedIcon.Rotate.DOWN);&#xa;jLabelDRB1I2.setIcon( r1DRB1 );"/>
+                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1DRB1 = new TextIcon(jLabelDRB1I2, &quot;Intron 2&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1DRB1 = new b12x.RotatedIcon(t1DRB1, b12x.RotatedIcon.Rotate.DOWN);&#xa;jLabelDRB1I2.setIcon( r1DRB1 );"/>
                       </AuxValues>
                     </Component>
                     <Component class="javax.swing.JLabel" name="jLabelDRB1E3">
                       <AuxValues>
-                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1DRB1 = new TextIcon(jLabelDRB1E3, &quot;Exon 3&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1DRB1 = new RotatedIcon(t1DRB1, RotatedIcon.Rotate.DOWN);&#xa;jLabelDRB1E3.setIcon( r1DRB1 );"/>
+                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1DRB1 = new TextIcon(jLabelDRB1E3, &quot;Exon 3&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1DRB1 = new b12x.RotatedIcon(t1DRB1, b12x.RotatedIcon.Rotate.DOWN);&#xa;jLabelDRB1E3.setIcon( r1DRB1 );"/>
                       </AuxValues>
                     </Component>
                     <Component class="javax.swing.JLabel" name="jLabelDRB1I3">
                       <AuxValues>
-                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1DRB1 = new TextIcon(jLabelDRB1I3, &quot;Intron 3&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1DRB1 = new RotatedIcon(t1DRB1, RotatedIcon.Rotate.DOWN);&#xa;jLabelDRB1I3.setIcon( r1DRB1 );"/>
+                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1DRB1 = new TextIcon(jLabelDRB1I3, &quot;Intron 3&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1DRB1 = new b12x.RotatedIcon(t1DRB1, b12x.RotatedIcon.Rotate.DOWN);&#xa;jLabelDRB1I3.setIcon( r1DRB1 );"/>
                       </AuxValues>
                     </Component>
                     <Component class="javax.swing.JLabel" name="jLabelDRB1E4">
                       <AuxValues>
-                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1DRB1 = new TextIcon(jLabelDRB1E4, &quot;Exon 4&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1DRB1 = new RotatedIcon(t1DRB1, RotatedIcon.Rotate.DOWN);&#xa;jLabelDRB1E4.setIcon( r1DRB1 );"/>
+                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1DRB1 = new TextIcon(jLabelDRB1E4, &quot;Exon 4&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1DRB1 = new b12x.RotatedIcon(t1DRB1, b12x.RotatedIcon.Rotate.DOWN);&#xa;jLabelDRB1E4.setIcon( r1DRB1 );"/>
                       </AuxValues>
                     </Component>
                     <Component class="javax.swing.JLabel" name="jLabelDRB1I4">
                       <AuxValues>
-                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1DRB1 = new TextIcon(jLabelDRB1I4, &quot;Intron 4&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1DRB1 = new RotatedIcon(t1DRB1, RotatedIcon.Rotate.DOWN);&#xa;jLabelDRB1I4.setIcon( r1DRB1 );"/>
+                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1DRB1 = new TextIcon(jLabelDRB1I4, &quot;Intron 4&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1DRB1 = new b12x.RotatedIcon(t1DRB1, b12x.RotatedIcon.Rotate.DOWN);&#xa;jLabelDRB1I4.setIcon( r1DRB1 );"/>
                       </AuxValues>
                     </Component>
                     <Component class="javax.swing.JLabel" name="jLabelDRB1E5">
                       <AuxValues>
-                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1DRB1 = new TextIcon(jLabelDRB1E5, &quot;Exon 5&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1DRB1 = new RotatedIcon(t1DRB1, RotatedIcon.Rotate.DOWN);&#xa;jLabelDRB1E5.setIcon( r1DRB1 );"/>
+                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1DRB1 = new TextIcon(jLabelDRB1E5, &quot;Exon 5&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1DRB1 = new b12x.RotatedIcon(t1DRB1, b12x.RotatedIcon.Rotate.DOWN);&#xa;jLabelDRB1E5.setIcon( r1DRB1 );"/>
                       </AuxValues>
                     </Component>
                     <Component class="javax.swing.JLabel" name="jLabelDRB1I5">
                       <AuxValues>
-                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1DRB1 = new TextIcon(jLabelDRB1I5, &quot;Intron 5&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1DRB1 = new RotatedIcon(t1DRB1, RotatedIcon.Rotate.DOWN);&#xa;jLabelDRB1I5.setIcon( r1DRB1 );"/>
+                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1DRB1 = new TextIcon(jLabelDRB1I5, &quot;Intron 5&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1DRB1 = new b12x.RotatedIcon(t1DRB1, b12x.RotatedIcon.Rotate.DOWN);&#xa;jLabelDRB1I5.setIcon( r1DRB1 );"/>
                       </AuxValues>
                     </Component>
                     <Component class="javax.swing.JLabel" name="jLabelDRB1E6">
                       <AuxValues>
-                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1DRB1 = new TextIcon(jLabelDRB1E6, &quot;Exon 6&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1DRB1 = new RotatedIcon(t1DRB1, RotatedIcon.Rotate.DOWN);&#xa;jLabelDRB1E6.setIcon( r1DRB1 );"/>
+                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1DRB1 = new TextIcon(jLabelDRB1E6, &quot;Exon 6&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1DRB1 = new b12x.RotatedIcon(t1DRB1, b12x.RotatedIcon.Rotate.DOWN);&#xa;jLabelDRB1E6.setIcon( r1DRB1 );"/>
                       </AuxValues>
                     </Component>
                     <Component class="javax.swing.JLabel" name="jLabelDRB13">
                       <AuxValues>
-                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1DRB1 = new TextIcon(jLabelDRB13, &quot;3&apos; UTR&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1DRB1 = new RotatedIcon(t1DRB1, RotatedIcon.Rotate.DOWN);&#xa;jLabelDRB13.setIcon( r1DRB1 );"/>
+                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1DRB1 = new TextIcon(jLabelDRB13, &quot;3&apos; UTR&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1DRB1 = new b12x.RotatedIcon(t1DRB1, b12x.RotatedIcon.Rotate.DOWN);&#xa;jLabelDRB13.setIcon( r1DRB1 );"/>
                       </AuxValues>
                     </Component>
                   </SubComponents>
@@ -3286,72 +3283,72 @@
                     </Component>
                     <Component class="javax.swing.JLabel" name="jLabelDRB3W">
                       <AuxValues>
-                        <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="TextIcon t1DRB3 = new TextIcon(jLabelDRB3W, &quot;Workshop Status&quot;, TextIcon.Layout.HORIZONTAL);&#xa;RotatedIcon r1DRB3 = new RotatedIcon(t1DRB3, RotatedIcon.Rotate.DOWN);&#xa;jLabelDRB3W.setIcon( r1DRB3 );"/>
+                        <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="TextIcon t1DRB3 = new TextIcon(jLabelDRB3W, &quot;Workshop Status&quot;, TextIcon.Layout.HORIZONTAL);&#xa;b12x.RotatedIcon r1DRB3 = new b12x.RotatedIcon(t1DRB3, b12x.RotatedIcon.Rotate.DOWN);&#xa;jLabelDRB3W.setIcon( r1DRB3 );"/>
                       </AuxValues>
                     </Component>
                     <Component class="javax.swing.JLabel" name="jLabelDRB35">
                       <AuxValues>
-                        <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="t1DRB3 = new TextIcon(jLabelDRB35, &quot;5&apos; UTR&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1DRB3 = new RotatedIcon(t1DRB3, RotatedIcon.Rotate.DOWN);&#xa;jLabelDRB35.setIcon( r1DRB3 );"/>
+                        <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="t1DRB3 = new TextIcon(jLabelDRB35, &quot;5&apos; UTR&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1DRB3 = new b12x.RotatedIcon(t1DRB3, b12x.RotatedIcon.Rotate.DOWN);&#xa;jLabelDRB35.setIcon( r1DRB3 );"/>
                       </AuxValues>
                     </Component>
                     <Component class="javax.swing.JLabel" name="jLabelDRB3E1">
                       <AuxValues>
-                        <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="t1DRB3 = new TextIcon(jLabelDRB3E1, &quot;Exon 1&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1DRB3 = new RotatedIcon(t1DRB3, RotatedIcon.Rotate.DOWN);&#xa;jLabelDRB3E1.setIcon( r1DRB3 );"/>
+                        <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="t1DRB3 = new TextIcon(jLabelDRB3E1, &quot;Exon 1&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1DRB3 = new b12x.RotatedIcon(t1DRB3, b12x.RotatedIcon.Rotate.DOWN);&#xa;jLabelDRB3E1.setIcon( r1DRB3 );"/>
                       </AuxValues>
                     </Component>
                     <Component class="javax.swing.JLabel" name="jLabelDRB3I1">
                       <AuxValues>
-                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1DRB3 = new TextIcon(jLabelDRB3I1, &quot;Intron 1&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1DRB3 = new RotatedIcon(t1DRB3, RotatedIcon.Rotate.DOWN);&#xa;jLabelDRB3I1.setIcon( r1DRB3 );"/>
+                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1DRB3 = new TextIcon(jLabelDRB3I1, &quot;Intron 1&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1DRB3 = new b12x.RotatedIcon(t1DRB3, b12x.RotatedIcon.Rotate.DOWN);&#xa;jLabelDRB3I1.setIcon( r1DRB3 );"/>
                       </AuxValues>
                     </Component>
                     <Component class="javax.swing.JLabel" name="jLabelDRB3E2">
                       <AuxValues>
-                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1DRB3 = new TextIcon(jLabelDRB3E2, &quot;Exon 2&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1DRB3 = new RotatedIcon(t1DRB3, RotatedIcon.Rotate.DOWN);&#xa;jLabelDRB3E2.setIcon( r1DRB3 );"/>
+                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1DRB3 = new TextIcon(jLabelDRB3E2, &quot;Exon 2&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1DRB3 = new b12x.RotatedIcon(t1DRB3, b12x.RotatedIcon.Rotate.DOWN);&#xa;jLabelDRB3E2.setIcon( r1DRB3 );"/>
                       </AuxValues>
                     </Component>
                     <Component class="javax.swing.JLabel" name="jLabelDRB3I2">
                       <AuxValues>
-                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1DRB3 = new TextIcon(jLabelDRB3I2, &quot;Intron 2&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1DRB3 = new RotatedIcon(t1DRB3, RotatedIcon.Rotate.DOWN);&#xa;jLabelDRB3I2.setIcon( r1DRB3 );"/>
+                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1DRB3 = new TextIcon(jLabelDRB3I2, &quot;Intron 2&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1DRB3 = new b12x.RotatedIcon(t1DRB3, b12x.RotatedIcon.Rotate.DOWN);&#xa;jLabelDRB3I2.setIcon( r1DRB3 );"/>
                       </AuxValues>
                     </Component>
                     <Component class="javax.swing.JLabel" name="jLabelDRB3E3">
                       <AuxValues>
-                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1DRB3 = new TextIcon(jLabelDRB3E3, &quot;Exon 3&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1DRB3 = new RotatedIcon(t1DRB3, RotatedIcon.Rotate.DOWN);&#xa;jLabelDRB3E3.setIcon( r1DRB3 );"/>
+                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1DRB3 = new TextIcon(jLabelDRB3E3, &quot;Exon 3&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1DRB3 = new b12x.RotatedIcon(t1DRB3, b12x.RotatedIcon.Rotate.DOWN);&#xa;jLabelDRB3E3.setIcon( r1DRB3 );"/>
                       </AuxValues>
                     </Component>
                     <Component class="javax.swing.JLabel" name="jLabelDRB3I3">
                       <AuxValues>
-                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1DRB3 = new TextIcon(jLabelDRB3I3, &quot;Intron 3&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1DRB3 = new RotatedIcon(t1DRB3, RotatedIcon.Rotate.DOWN);&#xa;jLabelDRB3I3.setIcon( r1DRB3 );"/>
+                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1DRB3 = new TextIcon(jLabelDRB3I3, &quot;Intron 3&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1DRB3 = new b12x.RotatedIcon(t1DRB3, b12x.RotatedIcon.Rotate.DOWN);&#xa;jLabelDRB3I3.setIcon( r1DRB3 );"/>
                       </AuxValues>
                     </Component>
                     <Component class="javax.swing.JLabel" name="jLabelDRB3E4">
                       <AuxValues>
-                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1DRB3 = new TextIcon(jLabelDRB3E4, &quot;Exon 4&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1DRB3 = new RotatedIcon(t1DRB3, RotatedIcon.Rotate.DOWN);&#xa;jLabelDRB3E4.setIcon( r1DRB3 );"/>
+                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1DRB3 = new TextIcon(jLabelDRB3E4, &quot;Exon 4&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1DRB3 = new b12x.RotatedIcon(t1DRB3, b12x.RotatedIcon.Rotate.DOWN);&#xa;jLabelDRB3E4.setIcon( r1DRB3 );"/>
                       </AuxValues>
                     </Component>
                     <Component class="javax.swing.JLabel" name="jLabelDRB3I4">
                       <AuxValues>
-                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1DRB3 = new TextIcon(jLabelDRB3I4, &quot;Intron 4&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1DRB3 = new RotatedIcon(t1DRB3, RotatedIcon.Rotate.DOWN);&#xa;jLabelDRB3I4.setIcon( r1DRB3 );"/>
+                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1DRB3 = new TextIcon(jLabelDRB3I4, &quot;Intron 4&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1DRB3 = new b12x.RotatedIcon(t1DRB3, b12x.RotatedIcon.Rotate.DOWN);&#xa;jLabelDRB3I4.setIcon( r1DRB3 );"/>
                       </AuxValues>
                     </Component>
                     <Component class="javax.swing.JLabel" name="jLabelDRB3E5">
                       <AuxValues>
-                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1DRB3 = new TextIcon(jLabelDRB3E5, &quot;Exon 5&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1DRB3 = new RotatedIcon(t1DRB3, RotatedIcon.Rotate.DOWN);&#xa;jLabelDRB3E5.setIcon( r1DRB3 );"/>
+                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1DRB3 = new TextIcon(jLabelDRB3E5, &quot;Exon 5&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1DRB3 = new b12x.RotatedIcon(t1DRB3, b12x.RotatedIcon.Rotate.DOWN);&#xa;jLabelDRB3E5.setIcon( r1DRB3 );"/>
                       </AuxValues>
                     </Component>
                     <Component class="javax.swing.JLabel" name="jLabelDRB3I5">
                       <AuxValues>
-                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1DRB3 = new TextIcon(jLabelDRB3I5, &quot;Intron 5&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1DRB3 = new RotatedIcon(t1DRB3, RotatedIcon.Rotate.DOWN);&#xa;jLabelDRB3I5.setIcon( r1DRB3 );"/>
+                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1DRB3 = new TextIcon(jLabelDRB3I5, &quot;Intron 5&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1DRB3 = new b12x.RotatedIcon(t1DRB3, b12x.RotatedIcon.Rotate.DOWN);&#xa;jLabelDRB3I5.setIcon( r1DRB3 );"/>
                       </AuxValues>
                     </Component>
                     <Component class="javax.swing.JLabel" name="jLabelDRB3E6">
                       <AuxValues>
-                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1DRB3 = new TextIcon(jLabelDRB3E6, &quot;Exon 6&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1DRB3 = new RotatedIcon(t1DRB3, RotatedIcon.Rotate.DOWN);&#xa;jLabelDRB3E6.setIcon( r1DRB3 );"/>
+                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1DRB3 = new TextIcon(jLabelDRB3E6, &quot;Exon 6&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1DRB3 = new b12x.RotatedIcon(t1DRB3, b12x.RotatedIcon.Rotate.DOWN);&#xa;jLabelDRB3E6.setIcon( r1DRB3 );"/>
                       </AuxValues>
                     </Component>
                     <Component class="javax.swing.JLabel" name="jLabelDRB33">
                       <AuxValues>
-                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1DRB3 = new TextIcon(jLabelDRB33, &quot;3&apos; UTR&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1DRB3 = new RotatedIcon(t1DRB3, RotatedIcon.Rotate.DOWN);&#xa;jLabelDRB33.setIcon( r1DRB3 );"/>
+                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1DRB3 = new TextIcon(jLabelDRB33, &quot;3&apos; UTR&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1DRB3 = new b12x.RotatedIcon(t1DRB3, b12x.RotatedIcon.Rotate.DOWN);&#xa;jLabelDRB33.setIcon( r1DRB3 );"/>
                       </AuxValues>
                     </Component>
                   </SubComponents>
@@ -3593,72 +3590,72 @@
                     </Component>
                     <Component class="javax.swing.JLabel" name="jLabelDRB4W">
                       <AuxValues>
-                        <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="TextIcon t1DRB4 = new TextIcon(jLabelDRB4W, &quot;Workshop Status&quot;, TextIcon.Layout.HORIZONTAL);&#xa;RotatedIcon r1DRB4 = new RotatedIcon(t1DRB4, RotatedIcon.Rotate.DOWN);&#xa;jLabelDRB4W.setIcon( r1DRB4 );"/>
+                        <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="TextIcon t1DRB4 = new TextIcon(jLabelDRB4W, &quot;Workshop Status&quot;, TextIcon.Layout.HORIZONTAL);&#xa;b12x.RotatedIcon r1DRB4 = new b12x.RotatedIcon(t1DRB4, b12x.RotatedIcon.Rotate.DOWN);&#xa;jLabelDRB4W.setIcon( r1DRB4 );"/>
                       </AuxValues>
                     </Component>
                     <Component class="javax.swing.JLabel" name="jLabelDRB45">
                       <AuxValues>
-                        <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="t1DRB4 = new TextIcon(jLabelDRB45, &quot;5&apos; UTR&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1DRB4 = new RotatedIcon(t1DRB4, RotatedIcon.Rotate.DOWN);&#xa;jLabelDRB45.setIcon( r1DRB4 );"/>
+                        <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="t1DRB4 = new TextIcon(jLabelDRB45, &quot;5&apos; UTR&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1DRB4 = new b12x.RotatedIcon(t1DRB4, b12x.RotatedIcon.Rotate.DOWN);&#xa;jLabelDRB45.setIcon( r1DRB4 );"/>
                       </AuxValues>
                     </Component>
                     <Component class="javax.swing.JLabel" name="jLabelDRB4E1">
                       <AuxValues>
-                        <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="t1DRB4 = new TextIcon(jLabelDRB4E1, &quot;Exon 1&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1DRB4 = new RotatedIcon(t1DRB4, RotatedIcon.Rotate.DOWN);&#xa;jLabelDRB4E1.setIcon( r1DRB4 );"/>
+                        <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="t1DRB4 = new TextIcon(jLabelDRB4E1, &quot;Exon 1&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1DRB4 = new b12x.RotatedIcon(t1DRB4, b12x.RotatedIcon.Rotate.DOWN);&#xa;jLabelDRB4E1.setIcon( r1DRB4 );"/>
                       </AuxValues>
                     </Component>
                     <Component class="javax.swing.JLabel" name="jLabelDRB4I1">
                       <AuxValues>
-                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1DRB4 = new TextIcon(jLabelDRB4I1, &quot;Intron 1&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1DRB4 = new RotatedIcon(t1DRB4, RotatedIcon.Rotate.DOWN);&#xa;jLabelDRB4I1.setIcon( r1DRB4 );"/>
+                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1DRB4 = new TextIcon(jLabelDRB4I1, &quot;Intron 1&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1DRB4 = new b12x.RotatedIcon(t1DRB4, b12x.RotatedIcon.Rotate.DOWN);&#xa;jLabelDRB4I1.setIcon( r1DRB4 );"/>
                       </AuxValues>
                     </Component>
                     <Component class="javax.swing.JLabel" name="jLabelDRB4E2">
                       <AuxValues>
-                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1DRB4 = new TextIcon(jLabelDRB4E2, &quot;Exon 2&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1DRB4 = new RotatedIcon(t1DRB4, RotatedIcon.Rotate.DOWN);&#xa;jLabelDRB4E2.setIcon( r1DRB4 );"/>
+                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1DRB4 = new TextIcon(jLabelDRB4E2, &quot;Exon 2&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1DRB4 = new b12x.RotatedIcon(t1DRB4, b12x.RotatedIcon.Rotate.DOWN);&#xa;jLabelDRB4E2.setIcon( r1DRB4 );"/>
                       </AuxValues>
                     </Component>
                     <Component class="javax.swing.JLabel" name="jLabelDRB4I2">
                       <AuxValues>
-                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1DRB4 = new TextIcon(jLabelDRB4I2, &quot;Intron 2&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1DRB4 = new RotatedIcon(t1DRB4, RotatedIcon.Rotate.DOWN);&#xa;jLabelDRB4I2.setIcon( r1DRB4 );"/>
+                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1DRB4 = new TextIcon(jLabelDRB4I2, &quot;Intron 2&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1DRB4 = new b12x.RotatedIcon(t1DRB4, b12x.RotatedIcon.Rotate.DOWN);&#xa;jLabelDRB4I2.setIcon( r1DRB4 );"/>
                       </AuxValues>
                     </Component>
                     <Component class="javax.swing.JLabel" name="jLabelDRB4E3">
                       <AuxValues>
-                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1DRB4 = new TextIcon(jLabelDRB4E3, &quot;Exon 3&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1DRB4 = new RotatedIcon(t1DRB4, RotatedIcon.Rotate.DOWN);&#xa;jLabelDRB4E3.setIcon( r1DRB4 );"/>
+                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1DRB4 = new TextIcon(jLabelDRB4E3, &quot;Exon 3&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1DRB4 = new b12x.RotatedIcon(t1DRB4, b12x.RotatedIcon.Rotate.DOWN);&#xa;jLabelDRB4E3.setIcon( r1DRB4 );"/>
                       </AuxValues>
                     </Component>
                     <Component class="javax.swing.JLabel" name="jLabelDRB4I3">
                       <AuxValues>
-                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1DRB4 = new TextIcon(jLabelDRB4I3, &quot;Intron 3&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1DRB4 = new RotatedIcon(t1DRB4, RotatedIcon.Rotate.DOWN);&#xa;jLabelDRB4I3.setIcon( r1DRB4 );"/>
+                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1DRB4 = new TextIcon(jLabelDRB4I3, &quot;Intron 3&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1DRB4 = new b12x.RotatedIcon(t1DRB4, b12x.RotatedIcon.Rotate.DOWN);&#xa;jLabelDRB4I3.setIcon( r1DRB4 );"/>
                       </AuxValues>
                     </Component>
                     <Component class="javax.swing.JLabel" name="jLabelDRB4E4">
                       <AuxValues>
-                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1DRB4 = new TextIcon(jLabelDRB4E4, &quot;Exon 4&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1DRB4 = new RotatedIcon(t1DRB4, RotatedIcon.Rotate.DOWN);&#xa;jLabelDRB4E4.setIcon( r1DRB4 );"/>
+                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1DRB4 = new TextIcon(jLabelDRB4E4, &quot;Exon 4&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1DRB4 = new b12x.RotatedIcon(t1DRB4, b12x.RotatedIcon.Rotate.DOWN);&#xa;jLabelDRB4E4.setIcon( r1DRB4 );"/>
                       </AuxValues>
                     </Component>
                     <Component class="javax.swing.JLabel" name="jLabelDRB4I4">
                       <AuxValues>
-                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1DRB4 = new TextIcon(jLabelDRB4I4, &quot;Intron 4&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1DRB4 = new RotatedIcon(t1DRB4, RotatedIcon.Rotate.DOWN);&#xa;jLabelDRB4I4.setIcon( r1DRB4 );"/>
+                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1DRB4 = new TextIcon(jLabelDRB4I4, &quot;Intron 4&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1DRB4 = new b12x.RotatedIcon(t1DRB4, b12x.RotatedIcon.Rotate.DOWN);&#xa;jLabelDRB4I4.setIcon( r1DRB4 );"/>
                       </AuxValues>
                     </Component>
                     <Component class="javax.swing.JLabel" name="jLabelDRB4E5">
                       <AuxValues>
-                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1DRB4 = new TextIcon(jLabelDRB4E5, &quot;Exon 5&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1DRB4 = new RotatedIcon(t1DRB4, RotatedIcon.Rotate.DOWN);&#xa;jLabelDRB4E5.setIcon( r1DRB4 );"/>
+                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1DRB4 = new TextIcon(jLabelDRB4E5, &quot;Exon 5&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1DRB4 = new b12x.RotatedIcon(t1DRB4, b12x.RotatedIcon.Rotate.DOWN);&#xa;jLabelDRB4E5.setIcon( r1DRB4 );"/>
                       </AuxValues>
                     </Component>
                     <Component class="javax.swing.JLabel" name="jLabelDRB4I5">
                       <AuxValues>
-                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1DRB4 = new TextIcon(jLabelDRB4I5, &quot;Intron 5&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1DRB4 = new RotatedIcon(t1DRB4, RotatedIcon.Rotate.DOWN);&#xa;jLabelDRB4I5.setIcon( r1DRB4 );"/>
+                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1DRB4 = new TextIcon(jLabelDRB4I5, &quot;Intron 5&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1DRB4 = new b12x.RotatedIcon(t1DRB4, b12x.RotatedIcon.Rotate.DOWN);&#xa;jLabelDRB4I5.setIcon( r1DRB4 );"/>
                       </AuxValues>
                     </Component>
                     <Component class="javax.swing.JLabel" name="jLabelDRB4E6">
                       <AuxValues>
-                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1DRB4 = new TextIcon(jLabelDRB4E6, &quot;Exon 6&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1DRB4 = new RotatedIcon(t1DRB4, RotatedIcon.Rotate.DOWN);&#xa;jLabelDRB4E6.setIcon( r1DRB4 );"/>
+                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1DRB4 = new TextIcon(jLabelDRB4E6, &quot;Exon 6&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1DRB4 = new b12x.RotatedIcon(t1DRB4, b12x.RotatedIcon.Rotate.DOWN);&#xa;jLabelDRB4E6.setIcon( r1DRB4 );"/>
                       </AuxValues>
                     </Component>
                     <Component class="javax.swing.JLabel" name="jLabelDRB43">
                       <AuxValues>
-                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1DRB4 = new TextIcon(jLabelDRB43, &quot;3&apos; UTR&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1DRB4 = new RotatedIcon(t1DRB4, RotatedIcon.Rotate.DOWN);&#xa;jLabelDRB43.setIcon( r1DRB4 );"/>
+                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1DRB4 = new TextIcon(jLabelDRB43, &quot;3&apos; UTR&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1DRB4 = new b12x.RotatedIcon(t1DRB4, b12x.RotatedIcon.Rotate.DOWN);&#xa;jLabelDRB43.setIcon( r1DRB4 );"/>
                       </AuxValues>
                     </Component>
                   </SubComponents>
@@ -3900,72 +3897,72 @@
                     </Component>
                     <Component class="javax.swing.JLabel" name="jLabelDRB5W">
                       <AuxValues>
-                        <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="TextIcon t1DRB5 = new TextIcon(jLabelDRB5W, &quot;Workshop Status&quot;, TextIcon.Layout.HORIZONTAL);&#xa;RotatedIcon r1DRB5 = new RotatedIcon(t1DRB5, RotatedIcon.Rotate.DOWN);&#xa;jLabelDRB5W.setIcon( r1DRB5 );"/>
+                        <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="TextIcon t1DRB5 = new TextIcon(jLabelDRB5W, &quot;Workshop Status&quot;, TextIcon.Layout.HORIZONTAL);&#xa;b12x.RotatedIcon r1DRB5 = new b12x.RotatedIcon(t1DRB5, b12x.RotatedIcon.Rotate.DOWN);&#xa;jLabelDRB5W.setIcon( r1DRB5 );"/>
                       </AuxValues>
                     </Component>
                     <Component class="javax.swing.JLabel" name="jLabelDRB55">
                       <AuxValues>
-                        <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="t1DRB5 = new TextIcon(jLabelDRB55, &quot;5&apos; UTR&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1DRB5 = new RotatedIcon(t1DRB5, RotatedIcon.Rotate.DOWN);&#xa;jLabelDRB55.setIcon( r1DRB5 );"/>
+                        <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="t1DRB5 = new TextIcon(jLabelDRB55, &quot;5&apos; UTR&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1DRB5 = new b12x.RotatedIcon(t1DRB5, b12x.RotatedIcon.Rotate.DOWN);&#xa;jLabelDRB55.setIcon( r1DRB5 );"/>
                       </AuxValues>
                     </Component>
                     <Component class="javax.swing.JLabel" name="jLabelDRB5E1">
                       <AuxValues>
-                        <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="t1DRB5 = new TextIcon(jLabelDRB5E1, &quot;Exon 1&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1DRB5 = new RotatedIcon(t1DRB5, RotatedIcon.Rotate.DOWN);&#xa;jLabelDRB5E1.setIcon( r1DRB5 );"/>
+                        <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="t1DRB5 = new TextIcon(jLabelDRB5E1, &quot;Exon 1&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1DRB5 = new b12x.RotatedIcon(t1DRB5, b12x.RotatedIcon.Rotate.DOWN);&#xa;jLabelDRB5E1.setIcon( r1DRB5 );"/>
                       </AuxValues>
                     </Component>
                     <Component class="javax.swing.JLabel" name="jLabelDRB5I1">
                       <AuxValues>
-                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1DRB5 = new TextIcon(jLabelDRB5I1, &quot;Intron 1&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1DRB5 = new RotatedIcon(t1DRB5, RotatedIcon.Rotate.DOWN);&#xa;jLabelDRB5I1.setIcon( r1DRB5 );"/>
+                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1DRB5 = new TextIcon(jLabelDRB5I1, &quot;Intron 1&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1DRB5 = new b12x.RotatedIcon(t1DRB5, b12x.RotatedIcon.Rotate.DOWN);&#xa;jLabelDRB5I1.setIcon( r1DRB5 );"/>
                       </AuxValues>
                     </Component>
                     <Component class="javax.swing.JLabel" name="jLabelDRB5E2">
                       <AuxValues>
-                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1DRB5 = new TextIcon(jLabelDRB5E2, &quot;Exon 2&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1DRB5 = new RotatedIcon(t1DRB5, RotatedIcon.Rotate.DOWN);&#xa;jLabelDRB5E2.setIcon( r1DRB5 );"/>
+                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1DRB5 = new TextIcon(jLabelDRB5E2, &quot;Exon 2&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1DRB5 = new b12x.RotatedIcon(t1DRB5, b12x.RotatedIcon.Rotate.DOWN);&#xa;jLabelDRB5E2.setIcon( r1DRB5 );"/>
                       </AuxValues>
                     </Component>
                     <Component class="javax.swing.JLabel" name="jLabelDRB5I2">
                       <AuxValues>
-                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1DRB5 = new TextIcon(jLabelDRB5I2, &quot;Intron 2&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1DRB5 = new RotatedIcon(t1DRB5, RotatedIcon.Rotate.DOWN);&#xa;jLabelDRB5I2.setIcon( r1DRB5 );"/>
+                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1DRB5 = new TextIcon(jLabelDRB5I2, &quot;Intron 2&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1DRB5 = new b12x.RotatedIcon(t1DRB5, b12x.RotatedIcon.Rotate.DOWN);&#xa;jLabelDRB5I2.setIcon( r1DRB5 );"/>
                       </AuxValues>
                     </Component>
                     <Component class="javax.swing.JLabel" name="jLabelDRB5E3">
                       <AuxValues>
-                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1DRB5 = new TextIcon(jLabelDRB5E3, &quot;Exon 3&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1DRB5 = new RotatedIcon(t1DRB5, RotatedIcon.Rotate.DOWN);&#xa;jLabelDRB5E3.setIcon( r1DRB5 );"/>
+                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1DRB5 = new TextIcon(jLabelDRB5E3, &quot;Exon 3&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1DRB5 = new b12x.RotatedIcon(t1DRB5, b12x.RotatedIcon.Rotate.DOWN);&#xa;jLabelDRB5E3.setIcon( r1DRB5 );"/>
                       </AuxValues>
                     </Component>
                     <Component class="javax.swing.JLabel" name="jLabelDRB5I3">
                       <AuxValues>
-                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1DRB5 = new TextIcon(jLabelDRB5I3, &quot;Intron 3&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1DRB5 = new RotatedIcon(t1DRB5, RotatedIcon.Rotate.DOWN);&#xa;jLabelDRB5I3.setIcon( r1DRB5 );"/>
+                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1DRB5 = new TextIcon(jLabelDRB5I3, &quot;Intron 3&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1DRB5 = new b12x.RotatedIcon(t1DRB5, b12x.RotatedIcon.Rotate.DOWN);&#xa;jLabelDRB5I3.setIcon( r1DRB5 );"/>
                       </AuxValues>
                     </Component>
                     <Component class="javax.swing.JLabel" name="jLabelDRB5E4">
                       <AuxValues>
-                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1DRB5 = new TextIcon(jLabelDRB5E4, &quot;Exon 4&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1DRB5 = new RotatedIcon(t1DRB5, RotatedIcon.Rotate.DOWN);&#xa;jLabelDRB5E4.setIcon( r1DRB5 );"/>
+                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1DRB5 = new TextIcon(jLabelDRB5E4, &quot;Exon 4&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1DRB5 = new b12x.RotatedIcon(t1DRB5, b12x.RotatedIcon.Rotate.DOWN);&#xa;jLabelDRB5E4.setIcon( r1DRB5 );"/>
                       </AuxValues>
                     </Component>
                     <Component class="javax.swing.JLabel" name="jLabelDRB5I4">
                       <AuxValues>
-                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1DRB5 = new TextIcon(jLabelDRB5I4, &quot;Intron 4&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1DRB5 = new RotatedIcon(t1DRB5, RotatedIcon.Rotate.DOWN);&#xa;jLabelDRB5I4.setIcon( r1DRB5 );"/>
+                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1DRB5 = new TextIcon(jLabelDRB5I4, &quot;Intron 4&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1DRB5 = new b12x.RotatedIcon(t1DRB5, b12x.RotatedIcon.Rotate.DOWN);&#xa;jLabelDRB5I4.setIcon( r1DRB5 );"/>
                       </AuxValues>
                     </Component>
                     <Component class="javax.swing.JLabel" name="jLabelDRB5E5">
                       <AuxValues>
-                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1DRB5 = new TextIcon(jLabelDRB5E5, &quot;Exon 5&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1DRB5 = new RotatedIcon(t1DRB5, RotatedIcon.Rotate.DOWN);&#xa;jLabelDRB5E5.setIcon( r1DRB5 );"/>
+                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1DRB5 = new TextIcon(jLabelDRB5E5, &quot;Exon 5&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1DRB5 = new b12x.RotatedIcon(t1DRB5, b12x.RotatedIcon.Rotate.DOWN);&#xa;jLabelDRB5E5.setIcon( r1DRB5 );"/>
                       </AuxValues>
                     </Component>
                     <Component class="javax.swing.JLabel" name="jLabelDRB5I5">
                       <AuxValues>
-                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1DRB5 = new TextIcon(jLabelDRB5I5, &quot;Intron 5&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1DRB5 = new RotatedIcon(t1DRB5, RotatedIcon.Rotate.DOWN);&#xa;jLabelDRB5I5.setIcon( r1DRB5 );"/>
+                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1DRB5 = new TextIcon(jLabelDRB5I5, &quot;Intron 5&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1DRB5 = new b12x.RotatedIcon(t1DRB5, b12x.RotatedIcon.Rotate.DOWN);&#xa;jLabelDRB5I5.setIcon( r1DRB5 );"/>
                       </AuxValues>
                     </Component>
                     <Component class="javax.swing.JLabel" name="jLabelDRB5E6">
                       <AuxValues>
-                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1DRB5 = new TextIcon(jLabelDRB5E6, &quot;Exon 6&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1DRB5 = new RotatedIcon(t1DRB5, RotatedIcon.Rotate.DOWN);&#xa;jLabelDRB5E6.setIcon( r1DRB5 );"/>
+                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1DRB5 = new TextIcon(jLabelDRB5E6, &quot;Exon 6&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1DRB5 = new b12x.RotatedIcon(t1DRB5, b12x.RotatedIcon.Rotate.DOWN);&#xa;jLabelDRB5E6.setIcon( r1DRB5 );"/>
                       </AuxValues>
                     </Component>
                     <Component class="javax.swing.JLabel" name="jLabelDRB53">
                       <AuxValues>
-                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1DRB5 = new TextIcon(jLabelDRB53, &quot;3&apos; UTR&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1DRB5 = new RotatedIcon(t1DRB5, RotatedIcon.Rotate.DOWN);&#xa;jLabelDRB53.setIcon( r1DRB5 );"/>
+                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="t1DRB5 = new TextIcon(jLabelDRB53, &quot;3&apos; UTR&quot;, TextIcon.Layout.HORIZONTAL);&#xa;r1DRB5 = new b12x.RotatedIcon(t1DRB5, b12x.RotatedIcon.Rotate.DOWN);&#xa;jLabelDRB53.setIcon( r1DRB5 );"/>
                       </AuxValues>
                     </Component>
                   </SubComponents>

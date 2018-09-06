@@ -1,5 +1,6 @@
 package b12x;
 
+import b12x.*;
 import neo4j.*;
 
 import java.awt.CardLayout;
@@ -78,22 +79,22 @@ public class B12xGUI extends javax.swing.JFrame {
         a17_3Prime = new javax.swing.JTextField();
         jLabelAW = new javax.swing.JLabel();
         jLabelA5 = new javax.swing.JLabel();
-        jLabelA3 = new javax.swing.JLabel();
-        jLabelAE8 = new javax.swing.JLabel();
-        jLabelAI7 = new javax.swing.JLabel();
-        jLabelAE7 = new javax.swing.JLabel();
-        jLabelAI6 = new javax.swing.JLabel();
-        jLabelAE6 = new javax.swing.JLabel();
-        jLabelAI5 = new javax.swing.JLabel();
-        jLabelAE5 = new javax.swing.JLabel();
-        jLabelAI4 = new javax.swing.JLabel();
-        jLabelAE4 = new javax.swing.JLabel();
-        jLabelAI3 = new javax.swing.JLabel();
-        jLabelAI2 = new javax.swing.JLabel();
-        jLabelAE2 = new javax.swing.JLabel();
-        jLabelAI1 = new javax.swing.JLabel();
         jLabelAE1 = new javax.swing.JLabel();
+        jLabelAI1 = new javax.swing.JLabel();
+        jLabelAE2 = new javax.swing.JLabel();
+        jLabelAI2 = new javax.swing.JLabel();
         jLabelAE3 = new javax.swing.JLabel();
+        jLabelAI3 = new javax.swing.JLabel();
+        jLabelAE4 = new javax.swing.JLabel();
+        jLabelAI4 = new javax.swing.JLabel();
+        jLabelAE5 = new javax.swing.JLabel();
+        jLabelAI5 = new javax.swing.JLabel();
+        jLabelAE6 = new javax.swing.JLabel();
+        jLabelAI6 = new javax.swing.JLabel();
+        jLabelAE7 = new javax.swing.JLabel();
+        jLabelAI7 = new javax.swing.JLabel();
+        jLabelAE8 = new javax.swing.JLabel();
+        jLabelA3 = new javax.swing.JLabel();
         jPanelEnterGfeB = new javax.swing.JPanel();
         hlaBLabel = new javax.swing.JLabel();
         b00_ws = new javax.swing.JTextField();
@@ -439,11 +440,6 @@ public class B12xGUI extends javax.swing.JFrame {
         a00_WS.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         a00_WS.setText("w");
         a00_WS.setName("00"); // NOI18N
-        a00_WS.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                a00_WSActionPerformed(evt);
-            }
-        });
 
         a01_5Prime.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         a01_5Prime.setName("01"); // NOI18N
@@ -507,69 +503,69 @@ public class B12xGUI extends javax.swing.JFrame {
         r1 = new RotatedIcon(t1, RotatedIcon.Rotate.DOWN);
         jLabelA5.setIcon( r1 );
 
-        t1 = new TextIcon(jLabelA3, "3' UTR", TextIcon.Layout.HORIZONTAL);
+        t1 = new TextIcon(jLabelAE1, "Exon 1", TextIcon.Layout.HORIZONTAL);
         r1 = new RotatedIcon(t1, RotatedIcon.Rotate.DOWN);
-        jLabelA3.setIcon( r1 );
-
-        t1 = new TextIcon(jLabelAE8, "Exon 8", TextIcon.Layout.HORIZONTAL);
-        r1 = new RotatedIcon(t1, RotatedIcon.Rotate.DOWN);
-        jLabelAE8.setIcon( r1 );
-
-        t1 = new TextIcon(jLabelAI7, "Intron 7", TextIcon.Layout.HORIZONTAL);
-        r1 = new RotatedIcon(t1, RotatedIcon.Rotate.DOWN);
-        jLabelAI7.setIcon( r1 );
-
-        t1 = new TextIcon(jLabelAE7, "Exon 7", TextIcon.Layout.HORIZONTAL);
-        r1 = new RotatedIcon(t1, RotatedIcon.Rotate.DOWN);
-        jLabelAE7.setIcon( r1 );
-
-        t1 = new TextIcon(jLabelAI6, "Intron 6", TextIcon.Layout.HORIZONTAL);
-        r1 = new RotatedIcon(t1, RotatedIcon.Rotate.DOWN);
-        jLabelAI6.setIcon( r1 );
-
-        t1 = new TextIcon(jLabelAE6, "Exon 6", TextIcon.Layout.HORIZONTAL);
-        r1 = new RotatedIcon(t1, RotatedIcon.Rotate.DOWN);
-        jLabelAE6.setIcon( r1 );
-
-        t1 = new TextIcon(jLabelAI5, "Intron 5", TextIcon.Layout.HORIZONTAL);
-        r1 = new RotatedIcon(t1, RotatedIcon.Rotate.DOWN);
-        jLabelAI5.setIcon( r1 );
-
-        t1 = new TextIcon(jLabelAE5, "Exon 5", TextIcon.Layout.HORIZONTAL);
-        r1 = new RotatedIcon(t1, RotatedIcon.Rotate.DOWN);
-        jLabelAE5.setIcon( r1 );
-
-        t1 = new TextIcon(jLabelAI4, "Intron 4", TextIcon.Layout.HORIZONTAL);
-        r1 = new RotatedIcon(t1, RotatedIcon.Rotate.DOWN);
-        jLabelAI4.setIcon( r1 );
-
-        t1 = new TextIcon(jLabelAE4, "Exon 4", TextIcon.Layout.HORIZONTAL);
-        r1 = new RotatedIcon(t1, RotatedIcon.Rotate.DOWN);
-        jLabelAE4.setIcon( r1 );
-
-        t1 = new TextIcon(jLabelAI3, "Intron 3", TextIcon.Layout.HORIZONTAL);
-        r1 = new RotatedIcon(t1, RotatedIcon.Rotate.DOWN);
-        jLabelAI3.setIcon( r1 );
-
-        t1 = new TextIcon(jLabelAI2, "Intron 2", TextIcon.Layout.HORIZONTAL);
-        r1 = new RotatedIcon(t1, RotatedIcon.Rotate.DOWN);
-        jLabelAI2.setIcon( r1 );
-
-        t1 = new TextIcon(jLabelAE2, "Exon 2", TextIcon.Layout.HORIZONTAL);
-        r1 = new RotatedIcon(t1, RotatedIcon.Rotate.DOWN);
-        jLabelAE2.setIcon( r1 );
+        jLabelAE1.setIcon( r1 );
 
         t1 = new TextIcon(jLabelAI1, "Intron 1", TextIcon.Layout.HORIZONTAL);
         r1 = new RotatedIcon(t1, RotatedIcon.Rotate.DOWN);
         jLabelAI1.setIcon( r1 );
 
-        t1 = new TextIcon(jLabelAE1, "Exon 1", TextIcon.Layout.HORIZONTAL);
+        t1 = new TextIcon(jLabelAE2, "Exon 2", TextIcon.Layout.HORIZONTAL);
         r1 = new RotatedIcon(t1, RotatedIcon.Rotate.DOWN);
-        jLabelAE1.setIcon( r1 );
+        jLabelAE2.setIcon( r1 );
+
+        t1 = new TextIcon(jLabelAI2, "Intron 2", TextIcon.Layout.HORIZONTAL);
+        r1 = new RotatedIcon(t1, RotatedIcon.Rotate.DOWN);
+        jLabelAI2.setIcon( r1 );
 
         t1 = new TextIcon(jLabelAE3, "Exon 3", TextIcon.Layout.HORIZONTAL);
         r1 = new RotatedIcon(t1, RotatedIcon.Rotate.DOWN);
         jLabelAE3.setIcon( r1 );
+
+        t1 = new TextIcon(jLabelAI3, "Intron 3", TextIcon.Layout.HORIZONTAL);
+        r1 = new RotatedIcon(t1, RotatedIcon.Rotate.DOWN);
+        jLabelAI3.setIcon( r1 );
+
+        t1 = new TextIcon(jLabelAE4, "Exon 4", TextIcon.Layout.HORIZONTAL);
+        r1 = new RotatedIcon(t1, RotatedIcon.Rotate.DOWN);
+        jLabelAE4.setIcon( r1 );
+
+        t1 = new TextIcon(jLabelAI4, "Intron 4", TextIcon.Layout.HORIZONTAL);
+        r1 = new RotatedIcon(t1, RotatedIcon.Rotate.DOWN);
+        jLabelAI4.setIcon( r1 );
+
+        t1 = new TextIcon(jLabelAE5, "Exon 5", TextIcon.Layout.HORIZONTAL);
+        r1 = new RotatedIcon(t1, RotatedIcon.Rotate.DOWN);
+        jLabelAE5.setIcon( r1 );
+
+        t1 = new TextIcon(jLabelAI5, "Intron 5", TextIcon.Layout.HORIZONTAL);
+        r1 = new RotatedIcon(t1, RotatedIcon.Rotate.DOWN);
+        jLabelAI5.setIcon( r1 );
+
+        t1 = new TextIcon(jLabelAE6, "Exon 6", TextIcon.Layout.HORIZONTAL);
+        r1 = new RotatedIcon(t1, RotatedIcon.Rotate.DOWN);
+        jLabelAE6.setIcon( r1 );
+
+        t1 = new TextIcon(jLabelAI6, "Intron 6", TextIcon.Layout.HORIZONTAL);
+        r1 = new RotatedIcon(t1, RotatedIcon.Rotate.DOWN);
+        jLabelAI6.setIcon( r1 );
+
+        t1 = new TextIcon(jLabelAE7, "Exon 7", TextIcon.Layout.HORIZONTAL);
+        r1 = new RotatedIcon(t1, RotatedIcon.Rotate.DOWN);
+        jLabelAE7.setIcon( r1 );
+
+        t1 = new TextIcon(jLabelAI7, "Intron 7", TextIcon.Layout.HORIZONTAL);
+        r1 = new RotatedIcon(t1, RotatedIcon.Rotate.DOWN);
+        jLabelAI7.setIcon( r1 );
+
+        t1 = new TextIcon(jLabelAE8, "Exon 8", TextIcon.Layout.HORIZONTAL);
+        r1 = new RotatedIcon(t1, RotatedIcon.Rotate.DOWN);
+        jLabelAE8.setIcon( r1 );
+
+        t1 = new TextIcon(jLabelA3, "3' UTR", TextIcon.Layout.HORIZONTAL);
+        r1 = new RotatedIcon(t1, RotatedIcon.Rotate.DOWN);
+        jLabelA3.setIcon( r1 );
 
         javax.swing.GroupLayout jPanelEnterGfeALayout = new javax.swing.GroupLayout(jPanelEnterGfeA);
         jPanelEnterGfeA.setLayout(jPanelEnterGfeALayout);
@@ -3369,10 +3365,6 @@ public class B12xGUI extends javax.swing.JFrame {
 
 
     
-    private void a00_WSActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_a00_WSActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_a00_WSActionPerformed
-
     private void hlaSelectNeo4jActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_hlaSelectNeo4jActionPerformed
         String selectedLocus = (String)hlaSelectNeo4j.getSelectedItem();
         CardLayout card = (CardLayout)mainCardPanel.getLayout();
