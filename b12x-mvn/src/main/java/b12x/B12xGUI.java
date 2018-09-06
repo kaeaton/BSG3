@@ -3445,6 +3445,11 @@ public class B12xGUI extends javax.swing.JFrame {
             System.out.println("panelName " + panelName);
 
             Component currentGfePanel = jPanelEnterGfeA;
+            
+            // creating the human readable search string
+            String searchString = locus;
+
+            // building the regex string
             String currentRegex = "^" + locus;
             String finalRegex;
             ArrayList<JTextField> typeFields = new ArrayList();
@@ -3475,8 +3480,11 @@ public class B12xGUI extends javax.swing.JFrame {
             // Special rules for textfield 00
             if (typeFields.get(0).getText().isEmpty()){
                 currentRegex = currentRegex.concat("w");
+                searchString = searchString.concat("w");
+
             } else {
                 currentRegex = currentRegex.concat(typeFields.get(0).getText());
+                searchString = searchString.concat(typeFields.get(0).getText());
             }
 
             // For each textfield add regex or specified term to currentRegex
@@ -3485,8 +3493,10 @@ public class B12xGUI extends javax.swing.JFrame {
 
                 if (typeFields.get(i).getText().isEmpty()){
                     currentRegex = currentRegex.concat("(\\d+)-");
+                    searchString = searchString.concat( "*-");
                 } else {
                     currentRegex = currentRegex.concat(typeFields.get(i).getText() + "-");
+                    searchString = searchString.concat(typeFields.get(i).getText() + "-");
                 }
             }
 
@@ -3496,12 +3506,18 @@ public class B12xGUI extends javax.swing.JFrame {
             } else {
                 finalRegex = currentRegex.concat("$");
             }
+            // Check for extraneous dash at the end            
+            if (searchString.matches("^.+-$")){
+                searchString = searchString.substring(0, (searchString.length() - 1));
+            }
 
             System.out.println("Gui running " + locus);
             System.out.println("Final Regex " + finalRegex);
+            System.out.println("Search String " + searchString);
+
             
             neo4jResults.setText("");
-            Neo4j neo4j = new Neo4j(locus, dataPath, finalRegex);
+            Neo4j neo4j = new Neo4j(locus, dataPath, finalRegex, searchString);
             neo4j.execute();
             
 
@@ -3524,8 +3540,9 @@ public class B12xGUI extends javax.swing.JFrame {
                     + "neo4j_" + locus // + "_" + version
                     + "_Download.csv");
             String regex = "";
+            String searchString = "";
 
-            Neo4j neo4j = new Neo4j(locus, path, regex);
+            Neo4j neo4j = new Neo4j(locus, path, regex, searchString);
             neo4j.dataUpdate();
         } catch (Exception ex) {
             System.out.println(ex);
