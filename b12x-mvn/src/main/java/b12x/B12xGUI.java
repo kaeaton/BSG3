@@ -3238,7 +3238,11 @@ public class B12xGUI extends javax.swing.JFrame {
         }
     });
 
-    hlaSelectNeo4jVersion.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "3.31.0", "Item 2", "Item 3", "Item 4" }));
+    try {
+        hlaSelectNeo4jVersion.setModel(VersionModel.versions());
+    } catch (Exception ex) {
+        System.out.println(ex);
+    }
 
     VersionSelectLabel.setText("Defaults to the most recent version available in the database.");
 
@@ -3321,7 +3325,11 @@ public class B12xGUI extends javax.swing.JFrame {
 
     jLabel3.setText("This tool is for forcing a data update before that time is up. ");
 
-    hlaSelectNeo4jVersionUpdate.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "3.31.0", "Item 2", "Item 3", "Item 4" }));
+    try {
+        hlaSelectNeo4jVersionUpdate.setModel(VersionModel.versions());
+    } catch (Exception ex) {
+        System.out.println(ex);
+    }
 
     javax.swing.GroupLayout neo4jUpdateLayout = new javax.swing.GroupLayout(neo4jUpdate);
     neo4jUpdate.setLayout(neo4jUpdateLayout);

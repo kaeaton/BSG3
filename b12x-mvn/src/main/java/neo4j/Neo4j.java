@@ -12,6 +12,7 @@ import java.net.URL;
 import java.nio.file.*;
 import java.time.LocalDate;
 import java.util.List;
+import javax.swing.DefaultComboBoxModel;
 import javax.swing.SwingWorker;
 
 
@@ -56,13 +57,13 @@ public class Neo4j  extends SwingWorker<String, String> {
             
             // determine the most recent version
             // create the request and send it
-            Neo4jVersionRequest whatVersion = new Neo4jVersionRequest(factory);
-            InputStream incomingVersionData = neo4jHttp
-                    .makeCall(neo4jURL, whatVersion.formNeo4jVersionRequest());
-            
-            // recieve the version data and parse it
-            versions = parser.parseVersion(incomingVersionData, factory);
-            System.out.println(versions.toString());
+//            Neo4jVersionRequest whatVersion = new Neo4jVersionRequest(factory);
+//            InputStream incomingVersionData = neo4jHttp
+//                    .makeCall(neo4jURL, whatVersion.formNeo4jVersionRequest());
+//            
+//            // recieve the version data and parse it
+//            versions = parser.parseVersion(incomingVersionData, factory);
+//            System.out.println(versions.toString());
 
             // retrieve the data
             // create the request and send it
@@ -80,11 +81,32 @@ public class Neo4j  extends SwingWorker<String, String> {
         }
     }
     
-    public String versions() {
-        String versionList = "";
-        
-        return versionList;
-    }
+//    public DefaultComboBoxModel versions() throws IOException {
+//        String labels[] = { "A", "B", "C", "D", "E" };
+//        DefaultComboBoxModel model = new DefaultComboBoxModel(labels);
+//
+//        try {
+//        
+//        // set up the call
+//        Neo4jHttp neo4jHttp = new Neo4jHttp();
+//            
+//        // set up for parsing the incoming data
+//        Neo4jIncomingData parser = new Neo4jIncomingData();
+//
+//        // determine the most recent version
+//        // create the request and send it
+//        Neo4jVersionRequest whatVersion = new Neo4jVersionRequest(factory);
+//        InputStream incomingVersionData = neo4jHttp
+//                .makeCall(neo4jURL, whatVersion.formNeo4jVersionRequest());
+//
+//        // recieve the version data and parse it
+//        versions = parser.parseVersion(incomingVersionData, factory);
+//        System.out.println(versions.toString());
+//        } catch (Exception ex) {
+//            System.out.println(ex);
+//        }
+//        return model;
+//    }
     
     @Override
     protected String doInBackground() throws IOException {
