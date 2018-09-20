@@ -31,11 +31,11 @@ public class Neo4jVersionRequest {
             request = "MATCH (n) WHERE " 
                     + "EXISTS(n.imgt_release) RETURN DISTINCT " 
                     + quote + "node" + quote + "as element, " 
-                    + "n.imgt_release AS imgt_release LIMIT 1 " 
+                    + "n.imgt_release AS imgt_release " 
                     + "UNION ALL MATCH ()-[r]-() WHERE EXISTS(r.imgt_release) "
                     + "RETURN DISTINCT " + quote + "relationship" + quote 
                     + "AS element, r.imgt_release AS imgt_release "
-                    + "ORDER BY r.imgt_release DESC LIMIT 1";
+                    + "ORDER BY r.imgt_release DESC ";
             
 //             MATCH (n) WHERE EXISTS(n.imgt_release) 
 //             RETURN DISTINCT "node" as element, n.imgt_release 
@@ -46,8 +46,11 @@ public class Neo4jVersionRequest {
 //          Set descending, limit 2
 //          MATCH (n) WHERE EXISTS(n.imgt_release) RETURN DISTINCT "node" as element, n.imgt_release AS imgt_release LIMIT 2 UNION ALL MATCH ()-[r]-() WHERE EXISTS(r.imgt_release) RETURN DISTINCT "relationship" AS element, r.imgt_release AS imgt_release ORDER BY r.imgt_release DESC LIMIT 2
 //          Set descending, limit 1
-//          MATCH (n) WHERE EXISTS(n.imgt_release) RETURN DISTINCT "node" as element, n.imgt_release AS imgt_release LIMIT 2 UNION ALL MATCH ()-[r]-() WHERE EXISTS(r.imgt_release) RETURN DISTINCT "relationship" AS element, r.imgt_release AS imgt_release ORDER BY r.imgt_release DESC LIMIT 2
-            
+//          MATCH (n) WHERE EXISTS(n.imgt_release) RETURN DISTINCT "node" as element, n.imgt_release AS imgt_release LIMIT 1 UNION ALL MATCH ()-[r]-() WHERE EXISTS(r.imgt_release) RETURN DISTINCT "relationship" AS element, r.imgt_release AS imgt_release ORDER BY r.imgt_release DESC LIMIT 1
+//          Set descending, all
+//          MATCH (n) WHERE EXISTS(n.imgt_release) RETURN DISTINCT "node" as element, n.imgt_release AS imgt_release UNION ALL MATCH ()-[r]-() WHERE EXISTS(r.imgt_release) RETURN DISTINCT "relationship" AS element, r.imgt_release AS imgt_release ORDER BY r.imgt_release DESC
+
+
             JsonGenerator generator = factory.createGenerator(writer);
 
             // start writing with {

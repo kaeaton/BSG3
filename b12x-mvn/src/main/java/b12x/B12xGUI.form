@@ -88,6 +88,10 @@
                                   <Group type="102" alignment="0" attributes="0">
                                       <EmptySpace min="-2" pref="43" max="-2" attributes="0"/>
                                       <Component id="jButtonResetSearchTerms" min="-2" pref="154" max="-2" attributes="0"/>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Component id="hlaSelectNeo4jVersion" min="-2" pref="141" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="VersionSelectLabel" min="-2" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                           </Group>
@@ -114,7 +118,11 @@
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="mainCardPanel" min="-2" pref="170" max="-2" attributes="0"/>
                       <EmptySpace min="-2" max="-2" attributes="0"/>
-                      <Component id="jButtonResetSearchTerms" min="-2" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="jButtonResetSearchTerms" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="hlaSelectNeo4jVersion" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="VersionSelectLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="jPanel1" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
@@ -4081,6 +4089,26 @@
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonResetSearchTermsActionPerformed"/>
               </Events>
             </Component>
+            <Component class="javax.swing.JComboBox" name="hlaSelectNeo4jVersion">
+              <Properties>
+                <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                  <StringArray count="4">
+                    <StringItem index="0" value="3.31.0"/>
+                    <StringItem index="1" value="Item 2"/>
+                    <StringItem index="2" value="Item 3"/>
+                    <StringItem index="3" value="Item 4"/>
+                  </StringArray>
+                </Property>
+              </Properties>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+              </AuxValues>
+            </Component>
+            <Component class="javax.swing.JLabel" name="VersionSelectLabel">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Defaults to the most recent version available in the database."/>
+              </Properties>
+            </Component>
           </SubComponents>
         </Container>
         <Container class="javax.swing.JPanel" name="neo4jUpdate">
@@ -4107,8 +4135,9 @@
                               <EmptySpace min="-2" pref="88" max="-2" attributes="0"/>
                               <Component id="neo4jUpdateCancelButton" min="-2" max="-2" attributes="0"/>
                           </Group>
+                          <Component id="hlaSelectNeo4jVersionUpdate" alignment="0" min="-2" pref="141" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace max="32767" attributes="0"/>
+                      <EmptySpace pref="171" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -4125,7 +4154,9 @@
                           <Component id="neo4jUpdateButton" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="neo4jUpdateCancelButton" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace pref="207" max="32767" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="hlaSelectNeo4jVersionUpdate" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace pref="425" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -4178,6 +4209,21 @@
               <Properties>
                 <Property name="text" type="java.lang.String" value="This tool is for forcing a data update before that time is up. "/>
               </Properties>
+            </Component>
+            <Component class="javax.swing.JComboBox" name="hlaSelectNeo4jVersionUpdate">
+              <Properties>
+                <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                  <StringArray count="4">
+                    <StringItem index="0" value="3.31.0"/>
+                    <StringItem index="1" value="Item 2"/>
+                    <StringItem index="2" value="Item 3"/>
+                    <StringItem index="3" value="Item 4"/>
+                  </StringArray>
+                </Property>
+              </Properties>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+              </AuxValues>
             </Component>
           </SubComponents>
         </Container>

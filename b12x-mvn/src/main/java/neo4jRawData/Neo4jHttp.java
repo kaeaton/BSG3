@@ -44,6 +44,7 @@ public class Neo4jHttp {
             System.out.println("http response code: " + httpResult);
             if (httpResult == HttpURLConnection.HTTP_OK) {
                 incomingData = connection.getInputStream();
+                System.out.println("got input string");
             }
         } catch (Exception ex) {
             B12xGUI.neo4jResults.append(ex.toString());
@@ -51,5 +52,4 @@ public class Neo4jHttp {
         }
         return incomingData;
     }
-    
 }

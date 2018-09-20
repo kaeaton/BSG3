@@ -16,6 +16,7 @@ import java.io.InputStream;
 //import java.net.HttpURLConnection;
 import java.time.LocalDate;
 import java.util.*;
+import java.util.ArrayList;
 
 /**
  *
@@ -34,8 +35,9 @@ public class Neo4jIncomingData {
                     + System.getProperty("file.separator") + "Documents" 
                     + System.getProperty("file.separator") + "BSG"
                     + System.getProperty("file.separator") + "BSGData"
+                    + System.getProperty("file.separator") + version
                     + System.getProperty("file.separator") 
-                    + "neo4j_" + locus // + "_" + version 
+                    + "neo4j_" + locus + "_" + version 
                     + "_Download.csv");
             neo4jRaw.createNewFile();
 
@@ -110,34 +112,40 @@ public class Neo4jIncomingData {
         }
     }
     
-    public String parseVersion(InputStream httpResult, JsonFactory factory) throws IOException {
-        String version = "";
+    public List<String> parseVersion(InputStream httpResult, JsonFactory factory) throws IOException {
+        List<String> versions = new ArrayList<>();
+        System.out.println(versions.toString());
 
         try {
             // reading raw data and extracting the version string
             // open the json parser
             JsonParser parser = factory.createParser(httpResult);
+            System.out.println("Taken the input string and opened the Version parser");
             
             // continue parsing the token till the end of input is reached
             while (!parser.isClosed()) {
                 // get the token
                 JsonToken token = parser.nextToken();
 
-                // if its the last token then we are done
-                if (token == null)
-                    break;
-                
-                // we want to look for a key field that says relationship
-                if (JsonToken.VALUE_STRING.equals(token) 
-                        && "relationship".equals(parser.getText())) {
+                while (true) {
                     token = parser.nextToken();
-                    version = parser.getText();
+                    if (token == null)
+                            break;
+                    
+                    // we want to look for a key field that says relationship
+                    if (JsonToken.VALUE_STRING.equals(token) 
+                            && "relationship".equals(parser.getText())) {
+                        token = parser.nextToken();
+                        versions.add(parser.getText());
+                        System.out.println(versions.toString());
+
+                    }
                 }
             }
             
             // close the json parser
             parser.close();
-
+            
             
             //Debugging tools
             // Write raw data to file to see structure
@@ -148,24 +156,24 @@ public class Neo4jIncomingData {
             
 
             // Write extracted data to file to make sure we're pulling the correct data.
-//            File neo4jVersionRaw = new File(System.getProperty("user.home") 
-//                    + System.getProperty("file.separator") + "Documents" 
-//                    + System.getProperty("file.separator") + "BSG"
-//                    + System.getProperty("file.separator") + "BSGData"
-//                    + System.getProperty("file.separator") 
-//                    + "neo4j_version.txt");
-//            neo4jVersionRaw.createNewFile();
-//
-//            BufferedWriter writer = new BufferedWriter(new FileWriter(neo4jVersionRaw));
-//            
-//            LocalDate date = LocalDate.now();
-//            writer.write(date.toString() + System.lineSeparator());
-//            writer.write(version);
-//            writer.close();
+            File neo4jVersionRaw = new File(System.getProperty("user.home") 
+                    + System.getProperty("file.separator") + "Documents" 
+                    + System.getProperty("file.separator") + "BSG"
+                    + System.getProperty("file.separator") + "BSGData"
+                    + System.getProperty("file.separator") 
+                    + "neo4j_version.txt");
+            neo4jVersionRaw.createNewFile();
+
+            BufferedWriter writer = new BufferedWriter(new FileWriter(neo4jVersionRaw));
+            
+            LocalDate date = LocalDate.now();
+            writer.write(date.toString() + System.lineSeparator());
+            writer.write(versions.toString());
+            writer.close();
 
         } catch (Exception ex) {
             System.out.println(ex);
         }
-        return version;
+        return versions;
     }
 }

@@ -3,32 +3,41 @@ package neo4j;
 
 import neo4jRawData.*;
 import com.fasterxml.jackson.core.JsonFactory;
+import java.io.BufferedWriter;
 import java.io.File;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStream;
 import java.net.URL;
 import java.nio.file.*;
+import java.time.LocalDate;
+import java.util.List;
 import javax.swing.SwingWorker;
 
 
 public class Neo4j  extends SwingWorker<String, String> {
     
     private final String locus, regex, searchString;
-    private String version;
+    private final String version;
+    private List<String> versions;
     private final Path path;
     private final URL neo4jURL = new URL("http://neo4j.b12x.org/db/data/transaction/commit");
     private JsonFactory factory;
 
 //    private String request;
     
-    public Neo4j(String incomingLocus, Path incomingPath, String incomingRegex, String incomingSearchString) 
-            throws IOException 
+    public Neo4j(String incomingLocus, 
+                 String incomingVersion, 
+                 Path incomingPath, 
+                 String incomingRegex, 
+                 String incomingSearchString) 
+                 throws IOException 
     {
         locus = incomingLocus;
         path = incomingPath;
         regex = incomingRegex;
         searchString = incomingSearchString;
-//        version = "3.31.0";
+        version = incomingVersion; //"3.31.0";
 //        path = Paths.get(System.getProperty("user.home") 
 //                    + System.getProperty("file.separator") + "Documents" 
 //                    + System.getProperty("file.separator") 
@@ -52,8 +61,9 @@ public class Neo4j  extends SwingWorker<String, String> {
                     .makeCall(neo4jURL, whatVersion.formNeo4jVersionRequest());
             
             // recieve the version data and parse it
-            version = parser.parseVersion(incomingVersionData, factory);
-            
+            versions = parser.parseVersion(incomingVersionData, factory);
+            System.out.println(versions.toString());
+
             // retrieve the data
             // create the request and send it
             Neo4jRequest request = new Neo4jRequest(locus, version, factory);
@@ -68,6 +78,12 @@ public class Neo4j  extends SwingWorker<String, String> {
         } catch (Exception ex) {
             System.out.println(ex);
         }
+    }
+    
+    public String versions() {
+        String versionList = "";
+        
+        return versionList;
     }
     
     @Override

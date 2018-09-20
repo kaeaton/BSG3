@@ -29,8 +29,8 @@ public class WriteFile {
         String fileName = System.getProperty("user.home")
                 + System.getProperty("file.separator") + "Documents"
                 + System.getProperty("file.separator") + "BSG"
-                + System.getProperty("file.separator") + locus 
-//                + ".v" + version.replaceAll("\\.", "-") 
+                + System.getProperty("file.separator") + locus
+                + "_" + version
                 + "." + dateStamp + "." + timeStamp
                 + "." + fileType;
         

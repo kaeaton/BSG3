@@ -58,12 +58,19 @@ public class Neo4jFileCheck {
 
             // compare file date to expiration date
             if (fileDate.isBefore(expirationDate)){
-                System.out.println("expired");
+                System.out.println("filedate expired");
                 return false;
-            } else {
-                System.out.println("still good");
+            } else if (fileDate.toString().isEmpty()) {
+                System.out.println("filedate is empty");
+                return false;
+            } else if (fileDate.isAfter(expirationDate)){
+                System.out.println("filedate still good");
                 return true;
+            } else {
+                System.out.println("something is wrong with the filedate");
+                return false;
             }
+            
         } catch (Exception ex) {
             System.out.println(ex); 
         }

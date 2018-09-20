@@ -395,12 +395,15 @@ public class B12xGUI extends javax.swing.JFrame {
         jRadioButtonPretty = new javax.swing.JRadioButton();
         jCheckBoxNeo4jSaveToFile = new javax.swing.JCheckBox();
         jButtonResetSearchTerms = new javax.swing.JButton();
+        hlaSelectNeo4jVersion = new javax.swing.JComboBox<>();
+        VersionSelectLabel = new javax.swing.JLabel();
         neo4jUpdate = new javax.swing.JPanel();
         hlaSelectUpdate = new javax.swing.JComboBox<>();
         neo4jUpdateButton = new javax.swing.JButton();
         neo4jUpdateCancelButton = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
+        hlaSelectNeo4jVersionUpdate = new javax.swing.JComboBox<>();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("B12x Search Generator");
@@ -495,76 +498,76 @@ public class B12xGUI extends javax.swing.JFrame {
         a17_3Prime.setMaximumSize(new java.awt.Dimension(10, 26));
         a17_3Prime.setName("17"); // NOI18N
 
-        TextIcon t1 = new TextIcon(jLabelAW, "Workshop Status", TextIcon.Layout.HORIZONTAL);
-        RotatedIcon r1 = new RotatedIcon(t1, RotatedIcon.Rotate.DOWN);
+        b12x.TextIcon t1 = new b12x.TextIcon(jLabelAW, "Workshop Status", b12x.TextIcon.Layout.HORIZONTAL);
+        b12x.RotatedIcon r1 = new b12x.RotatedIcon(t1, b12x.RotatedIcon.Rotate.DOWN);
         jLabelAW.setIcon( r1 );
 
         t1 = new TextIcon(jLabelA5, "5' UTR", TextIcon.Layout.HORIZONTAL);
-        r1 = new RotatedIcon(t1, RotatedIcon.Rotate.DOWN);
+        r1 = new b12x.RotatedIcon(t1, b12x.RotatedIcon.Rotate.DOWN);
         jLabelA5.setIcon( r1 );
 
         t1 = new TextIcon(jLabelAE1, "Exon 1", TextIcon.Layout.HORIZONTAL);
-        r1 = new RotatedIcon(t1, RotatedIcon.Rotate.DOWN);
+        r1 = new b12x.RotatedIcon(t1, b12x.RotatedIcon.Rotate.DOWN);
         jLabelAE1.setIcon( r1 );
 
         t1 = new TextIcon(jLabelAI1, "Intron 1", TextIcon.Layout.HORIZONTAL);
-        r1 = new RotatedIcon(t1, RotatedIcon.Rotate.DOWN);
+        r1 = new b12x.RotatedIcon(t1, b12x.RotatedIcon.Rotate.DOWN);
         jLabelAI1.setIcon( r1 );
 
         t1 = new TextIcon(jLabelAE2, "Exon 2", TextIcon.Layout.HORIZONTAL);
-        r1 = new RotatedIcon(t1, RotatedIcon.Rotate.DOWN);
+        r1 = new b12x.RotatedIcon(t1, b12x.RotatedIcon.Rotate.DOWN);
         jLabelAE2.setIcon( r1 );
 
         t1 = new TextIcon(jLabelAI2, "Intron 2", TextIcon.Layout.HORIZONTAL);
-        r1 = new RotatedIcon(t1, RotatedIcon.Rotate.DOWN);
+        r1 = new b12x.RotatedIcon(t1, b12x.RotatedIcon.Rotate.DOWN);
         jLabelAI2.setIcon( r1 );
 
         t1 = new TextIcon(jLabelAE3, "Exon 3", TextIcon.Layout.HORIZONTAL);
-        r1 = new RotatedIcon(t1, RotatedIcon.Rotate.DOWN);
+        r1 = new b12x.RotatedIcon(t1, b12x.RotatedIcon.Rotate.DOWN);
         jLabelAE3.setIcon( r1 );
 
         t1 = new TextIcon(jLabelAI3, "Intron 3", TextIcon.Layout.HORIZONTAL);
-        r1 = new RotatedIcon(t1, RotatedIcon.Rotate.DOWN);
+        r1 = new b12x.RotatedIcon(t1, b12x.RotatedIcon.Rotate.DOWN);
         jLabelAI3.setIcon( r1 );
 
         t1 = new TextIcon(jLabelAE4, "Exon 4", TextIcon.Layout.HORIZONTAL);
-        r1 = new RotatedIcon(t1, RotatedIcon.Rotate.DOWN);
+        r1 = new b12x.RotatedIcon(t1, b12x.RotatedIcon.Rotate.DOWN);
         jLabelAE4.setIcon( r1 );
 
         t1 = new TextIcon(jLabelAI4, "Intron 4", TextIcon.Layout.HORIZONTAL);
-        r1 = new RotatedIcon(t1, RotatedIcon.Rotate.DOWN);
+        r1 = new b12x.RotatedIcon(t1, b12x.RotatedIcon.Rotate.DOWN);
         jLabelAI4.setIcon( r1 );
 
         t1 = new TextIcon(jLabelAE5, "Exon 5", TextIcon.Layout.HORIZONTAL);
-        r1 = new RotatedIcon(t1, RotatedIcon.Rotate.DOWN);
+        r1 = new b12x.RotatedIcon(t1, b12x.RotatedIcon.Rotate.DOWN);
         jLabelAE5.setIcon( r1 );
 
         t1 = new TextIcon(jLabelAI5, "Intron 5", TextIcon.Layout.HORIZONTAL);
-        r1 = new RotatedIcon(t1, RotatedIcon.Rotate.DOWN);
+        r1 = new b12x.RotatedIcon(t1, b12x.RotatedIcon.Rotate.DOWN);
         jLabelAI5.setIcon( r1 );
 
         t1 = new TextIcon(jLabelAE6, "Exon 6", TextIcon.Layout.HORIZONTAL);
-        r1 = new RotatedIcon(t1, RotatedIcon.Rotate.DOWN);
+        r1 = new b12x.RotatedIcon(t1, b12x.RotatedIcon.Rotate.DOWN);
         jLabelAE6.setIcon( r1 );
 
         t1 = new TextIcon(jLabelAI6, "Intron 6", TextIcon.Layout.HORIZONTAL);
-        r1 = new RotatedIcon(t1, RotatedIcon.Rotate.DOWN);
+        r1 = new b12x.RotatedIcon(t1, b12x.RotatedIcon.Rotate.DOWN);
         jLabelAI6.setIcon( r1 );
 
         t1 = new TextIcon(jLabelAE7, "Exon 7", TextIcon.Layout.HORIZONTAL);
-        r1 = new RotatedIcon(t1, RotatedIcon.Rotate.DOWN);
+        r1 = new b12x.RotatedIcon(t1, b12x.RotatedIcon.Rotate.DOWN);
         jLabelAE7.setIcon( r1 );
 
         t1 = new TextIcon(jLabelAI7, "Intron 7", TextIcon.Layout.HORIZONTAL);
-        r1 = new RotatedIcon(t1, RotatedIcon.Rotate.DOWN);
+        r1 = new b12x.RotatedIcon(t1, b12x.RotatedIcon.Rotate.DOWN);
         jLabelAI7.setIcon( r1 );
 
         t1 = new TextIcon(jLabelAE8, "Exon 8", TextIcon.Layout.HORIZONTAL);
-        r1 = new RotatedIcon(t1, RotatedIcon.Rotate.DOWN);
+        r1 = new b12x.RotatedIcon(t1, b12x.RotatedIcon.Rotate.DOWN);
         jLabelAE8.setIcon( r1 );
 
         t1 = new TextIcon(jLabelA3, "3' UTR", TextIcon.Layout.HORIZONTAL);
-        r1 = new RotatedIcon(t1, RotatedIcon.Rotate.DOWN);
+        r1 = new b12x.RotatedIcon(t1, b12x.RotatedIcon.Rotate.DOWN);
         jLabelA3.setIcon( r1 );
 
         javax.swing.GroupLayout jPanelEnterGfeALayout = new javax.swing.GroupLayout(jPanelEnterGfeA);
@@ -797,67 +800,67 @@ public class B12xGUI extends javax.swing.JFrame {
         b15_3Prime.setName("14"); // NOI18N
 
         TextIcon t1B = new TextIcon(jLabelBW, "Workshop Status", TextIcon.Layout.HORIZONTAL);
-        RotatedIcon r1B = new RotatedIcon(t1B, RotatedIcon.Rotate.DOWN);
+        b12x.RotatedIcon r1B = new b12x.RotatedIcon(t1B, b12x.RotatedIcon.Rotate.DOWN);
         jLabelBW.setIcon( r1B );
 
         t1B = new TextIcon(jLabelB5, "5' UTR", TextIcon.Layout.HORIZONTAL);
-        r1B = new RotatedIcon(t1B, RotatedIcon.Rotate.DOWN);
+        r1B = new b12x.RotatedIcon(t1B, b12x.RotatedIcon.Rotate.DOWN);
         jLabelB5.setIcon( r1B );
 
         t1B = new TextIcon(jLabelBE1, "Exon 1", TextIcon.Layout.HORIZONTAL);
-        r1B = new RotatedIcon(t1B, RotatedIcon.Rotate.DOWN);
+        r1B = new b12x.RotatedIcon(t1B, b12x.RotatedIcon.Rotate.DOWN);
         jLabelBE1.setIcon( r1B );
 
         t1B = new TextIcon(jLabelBI1, "Intron 1", TextIcon.Layout.HORIZONTAL);
-        r1B = new RotatedIcon(t1B, RotatedIcon.Rotate.DOWN);
+        r1B = new b12x.RotatedIcon(t1B, b12x.RotatedIcon.Rotate.DOWN);
         jLabelBI1.setIcon( r1B );
 
         t1B = new TextIcon(jLabelBE2, "Exon 2", TextIcon.Layout.HORIZONTAL);
-        r1B = new RotatedIcon(t1B, RotatedIcon.Rotate.DOWN);
+        r1B = new b12x.RotatedIcon(t1B, b12x.RotatedIcon.Rotate.DOWN);
         jLabelBE2.setIcon( r1B );
 
         t1B = new TextIcon(jLabelBI2, "Intron 2", TextIcon.Layout.HORIZONTAL);
-        r1B = new RotatedIcon(t1B, RotatedIcon.Rotate.DOWN);
+        r1B = new b12x.RotatedIcon(t1B, b12x.RotatedIcon.Rotate.DOWN);
         jLabelBI2.setIcon( r1B );
 
         t1B = new TextIcon(jLabelBE3, "Exon 3", TextIcon.Layout.HORIZONTAL);
-        r1B = new RotatedIcon(t1B, RotatedIcon.Rotate.DOWN);
+        r1B = new b12x.RotatedIcon(t1B, b12x.RotatedIcon.Rotate.DOWN);
         jLabelBE3.setIcon( r1B );
 
         t1B = new TextIcon(jLabelBI3, "Intron 3", TextIcon.Layout.HORIZONTAL);
-        r1B = new RotatedIcon(t1B, RotatedIcon.Rotate.DOWN);
+        r1B = new b12x.RotatedIcon(t1B, b12x.RotatedIcon.Rotate.DOWN);
         jLabelBI3.setIcon( r1B );
 
         t1B = new TextIcon(jLabelBE4, "Exon 4", TextIcon.Layout.HORIZONTAL);
-        r1B = new RotatedIcon(t1B, RotatedIcon.Rotate.DOWN);
+        r1B = new b12x.RotatedIcon(t1B, b12x.RotatedIcon.Rotate.DOWN);
         jLabelBE4.setIcon( r1B );
 
         t1B = new TextIcon(jLabelBI4, "Intron 4", TextIcon.Layout.HORIZONTAL);
-        r1B = new RotatedIcon(t1B, RotatedIcon.Rotate.DOWN);
+        r1B = new b12x.RotatedIcon(t1B, b12x.RotatedIcon.Rotate.DOWN);
         jLabelBI4.setIcon( r1B );
 
         t1B = new TextIcon(jLabelBE5, "Exon 5", TextIcon.Layout.HORIZONTAL);
-        r1B = new RotatedIcon(t1B, RotatedIcon.Rotate.DOWN);
+        r1B = new b12x.RotatedIcon(t1B, b12x.RotatedIcon.Rotate.DOWN);
         jLabelBE5.setIcon( r1B );
 
         t1B = new TextIcon(jLabelBI5, "Intron 5", TextIcon.Layout.HORIZONTAL);
-        r1B = new RotatedIcon(t1B, RotatedIcon.Rotate.DOWN);
+        r1B = new b12x.RotatedIcon(t1B, b12x.RotatedIcon.Rotate.DOWN);
         jLabelBI5.setIcon( r1B );
 
         t1B = new TextIcon(jLabelBE6, "Exon 6", TextIcon.Layout.HORIZONTAL);
-        r1B = new RotatedIcon(t1B, RotatedIcon.Rotate.DOWN);
+        r1B = new b12x.RotatedIcon(t1B, b12x.RotatedIcon.Rotate.DOWN);
         jLabelBE6.setIcon( r1B );
 
         t1B = new TextIcon(jLabelBI6, "Intron 6", TextIcon.Layout.HORIZONTAL);
-        r1B = new RotatedIcon(t1B, RotatedIcon.Rotate.DOWN);
+        r1B = new b12x.RotatedIcon(t1B, b12x.RotatedIcon.Rotate.DOWN);
         jLabelBI6.setIcon( r1B );
 
         t1B = new TextIcon(jLabelE7, "Exon 7", TextIcon.Layout.HORIZONTAL);
-        r1B = new RotatedIcon(t1B, RotatedIcon.Rotate.DOWN);
+        r1B = new b12x.RotatedIcon(t1B, b12x.RotatedIcon.Rotate.DOWN);
         jLabelE7.setIcon( r1B );
 
         t1B = new TextIcon(jLabelB3, "3' UTR", TextIcon.Layout.HORIZONTAL);
-        r1B = new RotatedIcon(t1B, RotatedIcon.Rotate.DOWN);
+        r1B = new b12x.RotatedIcon(t1B, b12x.RotatedIcon.Rotate.DOWN);
         jLabelB3.setIcon( r1B );
 
         javax.swing.GroupLayout jPanelEnterGfeBLayout = new javax.swing.GroupLayout(jPanelEnterGfeB);
@@ -1082,75 +1085,75 @@ public class B12xGUI extends javax.swing.JFrame {
         c17_3Prime.setName("17"); // NOI18N
 
         TextIcon t1C = new TextIcon(jLabelCW, "Workshop Status", TextIcon.Layout.HORIZONTAL);
-        RotatedIcon r1C = new RotatedIcon(t1C, RotatedIcon.Rotate.DOWN);
+        b12x.RotatedIcon r1C = new b12x.RotatedIcon(t1C, b12x.RotatedIcon.Rotate.DOWN);
         jLabelCW.setIcon( r1C );
 
         t1C = new TextIcon(jLabelC5, "5' UTR", TextIcon.Layout.HORIZONTAL);
-        r1C = new RotatedIcon(t1C, RotatedIcon.Rotate.DOWN);
+        r1C = new b12x.RotatedIcon(t1C, b12x.RotatedIcon.Rotate.DOWN);
         jLabelC5.setIcon( r1C );
 
         t1C = new TextIcon(jLabelCE1, "Exon 1", TextIcon.Layout.HORIZONTAL);
-        r1C = new RotatedIcon(t1C, RotatedIcon.Rotate.DOWN);
+        r1C = new b12x.RotatedIcon(t1C, b12x.RotatedIcon.Rotate.DOWN);
         jLabelCE1.setIcon( r1C );
 
         t1C = new TextIcon(jLabelCI1, "Intron 1", TextIcon.Layout.HORIZONTAL);
-        r1C = new RotatedIcon(t1C, RotatedIcon.Rotate.DOWN);
+        r1C = new b12x.RotatedIcon(t1C, b12x.RotatedIcon.Rotate.DOWN);
         jLabelCI1.setIcon( r1C );
 
         t1C = new TextIcon(jLabelCE2, "Exon 2", TextIcon.Layout.HORIZONTAL);
-        r1C = new RotatedIcon(t1C, RotatedIcon.Rotate.DOWN);
+        r1C = new b12x.RotatedIcon(t1C, b12x.RotatedIcon.Rotate.DOWN);
         jLabelCE2.setIcon( r1C );
 
         t1C = new TextIcon(jLabelCI2, "Intron 2", TextIcon.Layout.HORIZONTAL);
-        r1C = new RotatedIcon(t1C, RotatedIcon.Rotate.DOWN);
+        r1C = new b12x.RotatedIcon(t1C, b12x.RotatedIcon.Rotate.DOWN);
         jLabelCI2.setIcon( r1C );
 
         t1C = new TextIcon(jLabelCE3, "Exon 3", TextIcon.Layout.HORIZONTAL);
-        r1C = new RotatedIcon(t1C, RotatedIcon.Rotate.DOWN);
+        r1C = new b12x.RotatedIcon(t1C, b12x.RotatedIcon.Rotate.DOWN);
         jLabelCE3.setIcon( r1C );
 
         t1C = new TextIcon(jLabelCI3, "Intron 3", TextIcon.Layout.HORIZONTAL);
-        r1C = new RotatedIcon(t1C, RotatedIcon.Rotate.DOWN);
+        r1C = new b12x.RotatedIcon(t1C, b12x.RotatedIcon.Rotate.DOWN);
         jLabelCI3.setIcon( r1C );
 
         t1C = new TextIcon(jLabelCE4, "Exon 4", TextIcon.Layout.HORIZONTAL);
-        r1C = new RotatedIcon(t1C, RotatedIcon.Rotate.DOWN);
+        r1C = new b12x.RotatedIcon(t1C, b12x.RotatedIcon.Rotate.DOWN);
         jLabelCE4.setIcon( r1C );
 
         t1C = new TextIcon(jLabelCI4, "Intron 4", TextIcon.Layout.HORIZONTAL);
-        r1C = new RotatedIcon(t1C, RotatedIcon.Rotate.DOWN);
+        r1C = new b12x.RotatedIcon(t1C, b12x.RotatedIcon.Rotate.DOWN);
         jLabelCI4.setIcon( r1C );
 
         t1C = new TextIcon(jLabelCE5, "Exon 5", TextIcon.Layout.HORIZONTAL);
-        r1C = new RotatedIcon(t1C, RotatedIcon.Rotate.DOWN);
+        r1C = new b12x.RotatedIcon(t1C, b12x.RotatedIcon.Rotate.DOWN);
         jLabelCE5.setIcon( r1C );
 
         t1C = new TextIcon(jLabelCI5, "Intron 5", TextIcon.Layout.HORIZONTAL);
-        r1C = new RotatedIcon(t1C, RotatedIcon.Rotate.DOWN);
+        r1C = new b12x.RotatedIcon(t1C, b12x.RotatedIcon.Rotate.DOWN);
         jLabelCI5.setIcon( r1C );
 
         t1C = new TextIcon(jLabelCE6, "Exon 6", TextIcon.Layout.HORIZONTAL);
-        r1C = new RotatedIcon(t1C, RotatedIcon.Rotate.DOWN);
+        r1C = new b12x.RotatedIcon(t1C, b12x.RotatedIcon.Rotate.DOWN);
         jLabelCE6.setIcon( r1C );
 
         t1C = new TextIcon(jLabelCI6, "Intron 6", TextIcon.Layout.HORIZONTAL);
-        r1C = new RotatedIcon(t1C, RotatedIcon.Rotate.DOWN);
+        r1C = new b12x.RotatedIcon(t1C, b12x.RotatedIcon.Rotate.DOWN);
         jLabelCI6.setIcon( r1C );
 
         t1C = new TextIcon(jLabelCE7, "Exon 7", TextIcon.Layout.HORIZONTAL);
-        r1C = new RotatedIcon(t1C, RotatedIcon.Rotate.DOWN);
+        r1C = new b12x.RotatedIcon(t1C, b12x.RotatedIcon.Rotate.DOWN);
         jLabelCE7.setIcon( r1C );
 
         t1C = new TextIcon(jLabelCI7, "Intron 7", TextIcon.Layout.HORIZONTAL);
-        r1C = new RotatedIcon(t1C, RotatedIcon.Rotate.DOWN);
+        r1C = new b12x.RotatedIcon(t1C, b12x.RotatedIcon.Rotate.DOWN);
         jLabelCI7.setIcon( r1C );
 
         t1C = new TextIcon(jLabelCE8, "Exon 8", TextIcon.Layout.HORIZONTAL);
-        r1C = new RotatedIcon(t1C, RotatedIcon.Rotate.DOWN);
+        r1C = new b12x.RotatedIcon(t1C, b12x.RotatedIcon.Rotate.DOWN);
         jLabelCE8.setIcon( r1C );
 
         t1C = new TextIcon(jLabelC3, "3' UTR", TextIcon.Layout.HORIZONTAL);
-        r1C = new RotatedIcon(t1C, RotatedIcon.Rotate.DOWN);
+        r1C = new b12x.RotatedIcon(t1C, b12x.RotatedIcon.Rotate.DOWN);
         jLabelC3.setIcon( r1C );
 
         javax.swing.GroupLayout jPanelEnterGfeCLayout = new javax.swing.GroupLayout(jPanelEnterGfeC);
@@ -1373,43 +1376,43 @@ public class B12xGUI extends javax.swing.JFrame {
         dpa109_3Prime.setName("17"); // NOI18N
 
         TextIcon t1DPA1 = new TextIcon(jLabelDPA1W, "Workshop Status", TextIcon.Layout.HORIZONTAL);
-        RotatedIcon r1DPA1 = new RotatedIcon(t1DPA1, RotatedIcon.Rotate.DOWN);
+        b12x.RotatedIcon r1DPA1 = new b12x.RotatedIcon(t1DPA1, b12x.RotatedIcon.Rotate.DOWN);
         jLabelDPA1W.setIcon( r1DPA1 );
 
         t1DPA1 = new TextIcon(jLabelDPA15, "5' UTR", TextIcon.Layout.HORIZONTAL);
-        r1DPA1 = new RotatedIcon(t1DPA1, RotatedIcon.Rotate.DOWN);
+        r1DPA1 = new b12x.RotatedIcon(t1DPA1, b12x.RotatedIcon.Rotate.DOWN);
         jLabelDPA15.setIcon( r1DPA1 );
 
         t1DPA1 = new TextIcon(jLabelDPA1E1, "Exon 1", TextIcon.Layout.HORIZONTAL);
-        r1DPA1 = new RotatedIcon(t1DPA1, RotatedIcon.Rotate.DOWN);
+        r1DPA1 = new b12x.RotatedIcon(t1DPA1, b12x.RotatedIcon.Rotate.DOWN);
         jLabelDPA1E1.setIcon( r1DPA1 );
 
         t1DPA1 = new TextIcon(jLabelDPA1I1, "Intron 1", TextIcon.Layout.HORIZONTAL);
-        r1DPA1 = new RotatedIcon(t1DPA1, RotatedIcon.Rotate.DOWN);
+        r1DPA1 = new b12x.RotatedIcon(t1DPA1, b12x.RotatedIcon.Rotate.DOWN);
         jLabelDPA1I1.setIcon( r1DPA1 );
 
         t1DPA1 = new TextIcon(jLabelDPA1E2, "Exon 2", TextIcon.Layout.HORIZONTAL);
-        r1DPA1 = new RotatedIcon(t1DPA1, RotatedIcon.Rotate.DOWN);
+        r1DPA1 = new b12x.RotatedIcon(t1DPA1, b12x.RotatedIcon.Rotate.DOWN);
         jLabelDPA1E2.setIcon( r1DPA1 );
 
         t1DPA1 = new TextIcon(jLabelDPA1I2, "Intron 2", TextIcon.Layout.HORIZONTAL);
-        r1DPA1 = new RotatedIcon(t1DPA1, RotatedIcon.Rotate.DOWN);
+        r1DPA1 = new b12x.RotatedIcon(t1DPA1, b12x.RotatedIcon.Rotate.DOWN);
         jLabelDPA1I2.setIcon( r1DPA1 );
 
         t1DPA1 = new TextIcon(jLabelDPA1E3, "Exon 3", TextIcon.Layout.HORIZONTAL);
-        r1DPA1 = new RotatedIcon(t1DPA1, RotatedIcon.Rotate.DOWN);
+        r1DPA1 = new b12x.RotatedIcon(t1DPA1, b12x.RotatedIcon.Rotate.DOWN);
         jLabelDPA1E3.setIcon( r1DPA1 );
 
         t1DPA1 = new TextIcon(jLabelDPA1I3, "Intron 3", TextIcon.Layout.HORIZONTAL);
-        r1DPA1 = new RotatedIcon(t1DPA1, RotatedIcon.Rotate.DOWN);
+        r1DPA1 = new b12x.RotatedIcon(t1DPA1, b12x.RotatedIcon.Rotate.DOWN);
         jLabelDPA1I3.setIcon( r1DPA1 );
 
         t1DPA1 = new TextIcon(jLabelDPA1E4, "Exon 4", TextIcon.Layout.HORIZONTAL);
-        r1DPA1 = new RotatedIcon(t1DPA1, RotatedIcon.Rotate.DOWN);
+        r1DPA1 = new b12x.RotatedIcon(t1DPA1, b12x.RotatedIcon.Rotate.DOWN);
         jLabelDPA1E4.setIcon( r1DPA1 );
 
         t1DPA1 = new TextIcon(jLabelDPA13, "3' UTR", TextIcon.Layout.HORIZONTAL);
-        r1DPA1 = new RotatedIcon(t1DPA1, RotatedIcon.Rotate.DOWN);
+        r1DPA1 = new b12x.RotatedIcon(t1DPA1, b12x.RotatedIcon.Rotate.DOWN);
         jLabelDPA13.setIcon( r1DPA1 );
 
         javax.swing.GroupLayout jPanelEnterGfeDPA1Layout = new javax.swing.GroupLayout(jPanelEnterGfeDPA1);
@@ -1569,51 +1572,51 @@ public class B12xGUI extends javax.swing.JFrame {
         dpb111_3Prime.setName("17"); // NOI18N
 
         TextIcon t1DPB1 = new TextIcon(jLabelDPB1W, "Workshop Status", TextIcon.Layout.HORIZONTAL);
-        RotatedIcon r1DPB1 = new RotatedIcon(t1DPB1, RotatedIcon.Rotate.DOWN);
+        b12x.RotatedIcon r1DPB1 = new b12x.RotatedIcon(t1DPB1, b12x.RotatedIcon.Rotate.DOWN);
         jLabelDPB1W.setIcon( r1DPB1 );
 
         t1DPB1 = new TextIcon(jLabelDPB15, "5' UTR", TextIcon.Layout.HORIZONTAL);
-        r1DPB1 = new RotatedIcon(t1DPB1, RotatedIcon.Rotate.DOWN);
+        r1DPB1 = new b12x.RotatedIcon(t1DPB1, b12x.RotatedIcon.Rotate.DOWN);
         jLabelDPB15.setIcon( r1DPB1 );
 
         t1DPB1 = new TextIcon(jLabelDPB1E1, "Exon 1", TextIcon.Layout.HORIZONTAL);
-        r1DPB1 = new RotatedIcon(t1DPB1, RotatedIcon.Rotate.DOWN);
+        r1DPB1 = new b12x.RotatedIcon(t1DPB1, b12x.RotatedIcon.Rotate.DOWN);
         jLabelDPB1E1.setIcon( r1DPB1 );
 
         t1DPB1 = new TextIcon(jLabelDPB1I1, "Intron 1", TextIcon.Layout.HORIZONTAL);
-        r1DPB1 = new RotatedIcon(t1DPB1, RotatedIcon.Rotate.DOWN);
+        r1DPB1 = new b12x.RotatedIcon(t1DPB1, b12x.RotatedIcon.Rotate.DOWN);
         jLabelDPB1I1.setIcon( r1DPB1 );
 
         t1DPB1 = new TextIcon(jLabelDPB1E2, "Exon 2", TextIcon.Layout.HORIZONTAL);
-        r1DPB1 = new RotatedIcon(t1DPB1, RotatedIcon.Rotate.DOWN);
+        r1DPB1 = new b12x.RotatedIcon(t1DPB1, b12x.RotatedIcon.Rotate.DOWN);
         jLabelDPB1E2.setIcon( r1DPB1 );
 
         t1DPB1 = new TextIcon(jLabelDPB1I2, "Intron 2", TextIcon.Layout.HORIZONTAL);
-        r1DPB1 = new RotatedIcon(t1DPB1, RotatedIcon.Rotate.DOWN);
+        r1DPB1 = new b12x.RotatedIcon(t1DPB1, b12x.RotatedIcon.Rotate.DOWN);
         jLabelDPB1I2.setIcon( r1DPB1 );
 
         t1DPB1 = new TextIcon(jLabelDPB1E3, "Exon 3", TextIcon.Layout.HORIZONTAL);
-        r1DPB1 = new RotatedIcon(t1DPB1, RotatedIcon.Rotate.DOWN);
+        r1DPB1 = new b12x.RotatedIcon(t1DPB1, b12x.RotatedIcon.Rotate.DOWN);
         jLabelDPB1E3.setIcon( r1DPB1 );
 
         t1DPB1 = new TextIcon(jLabelDPB1I3, "Intron 3", TextIcon.Layout.HORIZONTAL);
-        r1DPB1 = new RotatedIcon(t1DPB1, RotatedIcon.Rotate.DOWN);
+        r1DPB1 = new b12x.RotatedIcon(t1DPB1, b12x.RotatedIcon.Rotate.DOWN);
         jLabelDPB1I3.setIcon( r1DPB1 );
 
         t1DPB1 = new TextIcon(jLabelDPB1E4, "Exon 4", TextIcon.Layout.HORIZONTAL);
-        r1DPB1 = new RotatedIcon(t1DPB1, RotatedIcon.Rotate.DOWN);
+        r1DPB1 = new b12x.RotatedIcon(t1DPB1, b12x.RotatedIcon.Rotate.DOWN);
         jLabelDPB1E4.setIcon( r1DPB1 );
 
         t1DPB1 = new TextIcon(jLabelDPB1I4, "Intron 4", TextIcon.Layout.HORIZONTAL);
-        r1DPB1 = new RotatedIcon(t1DPB1, RotatedIcon.Rotate.DOWN);
+        r1DPB1 = new b12x.RotatedIcon(t1DPB1, b12x.RotatedIcon.Rotate.DOWN);
         jLabelDPB1I4.setIcon( r1DPB1 );
 
         t1DPB1 = new TextIcon(jLabelDPB1E5, "Exon 5", TextIcon.Layout.HORIZONTAL);
-        r1DPB1 = new RotatedIcon(t1DPB1, RotatedIcon.Rotate.DOWN);
+        r1DPB1 = new b12x.RotatedIcon(t1DPB1, b12x.RotatedIcon.Rotate.DOWN);
         jLabelDPB1E5.setIcon( r1DPB1 );
 
         t1DPB1 = new TextIcon(jLabelDPB13, "3' UTR", TextIcon.Layout.HORIZONTAL);
-        r1DPB1 = new RotatedIcon(t1DPB1, RotatedIcon.Rotate.DOWN);
+        r1DPB1 = new b12x.RotatedIcon(t1DPB1, b12x.RotatedIcon.Rotate.DOWN);
         jLabelDPB13.setIcon( r1DPB1 );
 
         javax.swing.GroupLayout jPanelEnterGfeDPB1Layout = new javax.swing.GroupLayout(jPanelEnterGfeDPB1);
@@ -1786,43 +1789,43 @@ public class B12xGUI extends javax.swing.JFrame {
         dqa109_3Prime.setName("17"); // NOI18N
 
         TextIcon t1DQA1 = new TextIcon(jLabelDQA1W, "Workshop Status", TextIcon.Layout.HORIZONTAL);
-        RotatedIcon r1DQA1 = new RotatedIcon(t1DQA1, RotatedIcon.Rotate.DOWN);
+        b12x.RotatedIcon r1DQA1 = new b12x.RotatedIcon(t1DQA1, b12x.RotatedIcon.Rotate.DOWN);
         jLabelDQA1W.setIcon( r1DQA1 );
 
         t1DQA1 = new TextIcon(jLabelDQA15, "5' UTR", TextIcon.Layout.HORIZONTAL);
-        r1DQA1 = new RotatedIcon(t1DQA1, RotatedIcon.Rotate.DOWN);
+        r1DQA1 = new b12x.RotatedIcon(t1DQA1, b12x.RotatedIcon.Rotate.DOWN);
         jLabelDQA15.setIcon( r1DQA1 );
 
         t1DQA1 = new TextIcon(jLabelDQA1E1, "Exon 1", TextIcon.Layout.HORIZONTAL);
-        r1DQA1 = new RotatedIcon(t1DQA1, RotatedIcon.Rotate.DOWN);
+        r1DQA1 = new b12x.RotatedIcon(t1DQA1, b12x.RotatedIcon.Rotate.DOWN);
         jLabelDQA1E1.setIcon( r1DQA1 );
 
         t1DQA1 = new TextIcon(jLabelDQA1I1, "Intron 1", TextIcon.Layout.HORIZONTAL);
-        r1DQA1 = new RotatedIcon(t1DQA1, RotatedIcon.Rotate.DOWN);
+        r1DQA1 = new b12x.RotatedIcon(t1DQA1, b12x.RotatedIcon.Rotate.DOWN);
         jLabelDQA1I1.setIcon( r1DQA1 );
 
         t1DQA1 = new TextIcon(jLabelDQA1E2, "Exon 2", TextIcon.Layout.HORIZONTAL);
-        r1DQA1 = new RotatedIcon(t1DQA1, RotatedIcon.Rotate.DOWN);
+        r1DQA1 = new b12x.RotatedIcon(t1DQA1, b12x.RotatedIcon.Rotate.DOWN);
         jLabelDQA1E2.setIcon( r1DQA1 );
 
         t1DQA1 = new TextIcon(jLabelDQA1I2, "Intron 2", TextIcon.Layout.HORIZONTAL);
-        r1DQA1 = new RotatedIcon(t1DQA1, RotatedIcon.Rotate.DOWN);
+        r1DQA1 = new b12x.RotatedIcon(t1DQA1, b12x.RotatedIcon.Rotate.DOWN);
         jLabelDQA1I2.setIcon( r1DQA1 );
 
         t1DQA1 = new TextIcon(jLabelDQA1E3, "Exon 3", TextIcon.Layout.HORIZONTAL);
-        r1DQA1 = new RotatedIcon(t1DQA1, RotatedIcon.Rotate.DOWN);
+        r1DQA1 = new b12x.RotatedIcon(t1DQA1, b12x.RotatedIcon.Rotate.DOWN);
         jLabelDQA1E3.setIcon( r1DQA1 );
 
         t1DQA1 = new TextIcon(jLabelDQA1I3, "Intron 3", TextIcon.Layout.HORIZONTAL);
-        r1DQA1 = new RotatedIcon(t1DQA1, RotatedIcon.Rotate.DOWN);
+        r1DQA1 = new b12x.RotatedIcon(t1DQA1, b12x.RotatedIcon.Rotate.DOWN);
         jLabelDQA1I3.setIcon( r1DQA1 );
 
         t1DQA1 = new TextIcon(jLabelDQA1E4, "Exon 4", TextIcon.Layout.HORIZONTAL);
-        r1DQA1 = new RotatedIcon(t1DQA1, RotatedIcon.Rotate.DOWN);
+        r1DQA1 = new b12x.RotatedIcon(t1DQA1, b12x.RotatedIcon.Rotate.DOWN);
         jLabelDQA1E4.setIcon( r1DQA1 );
 
         t1DQA1 = new TextIcon(jLabelDQA13, "3' UTR", TextIcon.Layout.HORIZONTAL);
-        r1DQA1 = new RotatedIcon(t1DQA1, RotatedIcon.Rotate.DOWN);
+        r1DQA1 = new b12x.RotatedIcon(t1DQA1, b12x.RotatedIcon.Rotate.DOWN);
         jLabelDQA13.setIcon( r1DQA1 );
 
         javax.swing.GroupLayout jPanelEnterGfeDQA1Layout = new javax.swing.GroupLayout(jPanelEnterGfeDQA1);
@@ -1996,59 +1999,59 @@ public class B12xGUI extends javax.swing.JFrame {
         dqb113_3Prime.setName("17"); // NOI18N
 
         TextIcon t1DQB1 = new TextIcon(jLabelDQB1W, "Workshop Status", TextIcon.Layout.HORIZONTAL);
-        RotatedIcon r1DQB1 = new RotatedIcon(t1DQB1, RotatedIcon.Rotate.DOWN);
+        b12x.RotatedIcon r1DQB1 = new b12x.RotatedIcon(t1DQB1, b12x.RotatedIcon.Rotate.DOWN);
         jLabelDQB1W.setIcon( r1DQB1 );
 
         t1DQB1 = new TextIcon(jLabelDQB15, "5' UTR", TextIcon.Layout.HORIZONTAL);
-        r1DQB1 = new RotatedIcon(t1DQB1, RotatedIcon.Rotate.DOWN);
+        r1DQB1 = new b12x.RotatedIcon(t1DQB1, b12x.RotatedIcon.Rotate.DOWN);
         jLabelDQB15.setIcon( r1DQB1 );
 
         t1DQB1 = new TextIcon(jLabelDQB1E1, "Exon 1", TextIcon.Layout.HORIZONTAL);
-        r1DQB1 = new RotatedIcon(t1DQB1, RotatedIcon.Rotate.DOWN);
+        r1DQB1 = new b12x.RotatedIcon(t1DQB1, b12x.RotatedIcon.Rotate.DOWN);
         jLabelDQB1E1.setIcon( r1DQB1 );
 
         t1DQB1 = new TextIcon(jLabelDQB1I1, "Intron 1", TextIcon.Layout.HORIZONTAL);
-        r1DQB1 = new RotatedIcon(t1DQB1, RotatedIcon.Rotate.DOWN);
+        r1DQB1 = new b12x.RotatedIcon(t1DQB1, b12x.RotatedIcon.Rotate.DOWN);
         jLabelDQB1I1.setIcon( r1DQB1 );
 
         t1DQB1 = new TextIcon(jLabelDQB1E2, "Exon 2", TextIcon.Layout.HORIZONTAL);
-        r1DQB1 = new RotatedIcon(t1DQB1, RotatedIcon.Rotate.DOWN);
+        r1DQB1 = new b12x.RotatedIcon(t1DQB1, b12x.RotatedIcon.Rotate.DOWN);
         jLabelDQB1E2.setIcon( r1DQB1 );
 
         t1DQB1 = new TextIcon(jLabelDQB1I2, "Intron 2", TextIcon.Layout.HORIZONTAL);
-        r1DQB1 = new RotatedIcon(t1DQB1, RotatedIcon.Rotate.DOWN);
+        r1DQB1 = new b12x.RotatedIcon(t1DQB1, b12x.RotatedIcon.Rotate.DOWN);
         jLabelDQB1I2.setIcon( r1DQB1 );
 
         t1DQB1 = new TextIcon(jLabelDQB1E3, "Exon 3", TextIcon.Layout.HORIZONTAL);
-        r1DQB1 = new RotatedIcon(t1DQB1, RotatedIcon.Rotate.DOWN);
+        r1DQB1 = new b12x.RotatedIcon(t1DQB1, b12x.RotatedIcon.Rotate.DOWN);
         jLabelDQB1E3.setIcon( r1DQB1 );
 
         t1DQB1 = new TextIcon(jLabelDQB1I3, "Intron 3", TextIcon.Layout.HORIZONTAL);
-        r1DQB1 = new RotatedIcon(t1DQB1, RotatedIcon.Rotate.DOWN);
+        r1DQB1 = new b12x.RotatedIcon(t1DQB1, b12x.RotatedIcon.Rotate.DOWN);
         jLabelDQB1I3.setIcon( r1DQB1 );
 
         t1DQB1 = new TextIcon(jLabelDQB1E4, "Exon 4", TextIcon.Layout.HORIZONTAL);
-        r1DQB1 = new RotatedIcon(t1DQB1, RotatedIcon.Rotate.DOWN);
+        r1DQB1 = new b12x.RotatedIcon(t1DQB1, b12x.RotatedIcon.Rotate.DOWN);
         jLabelDQB1E4.setIcon( r1DQB1 );
 
         t1DQB1 = new TextIcon(jLabelDQB1I4, "Intron 4", TextIcon.Layout.HORIZONTAL);
-        r1DQB1 = new RotatedIcon(t1DQB1, RotatedIcon.Rotate.DOWN);
+        r1DQB1 = new b12x.RotatedIcon(t1DQB1, b12x.RotatedIcon.Rotate.DOWN);
         jLabelDQB1I4.setIcon( r1DQB1 );
 
         t1DQB1 = new TextIcon(jLabelDQB1E5, "Exon 5", TextIcon.Layout.HORIZONTAL);
-        r1DQB1 = new RotatedIcon(t1DQB1, RotatedIcon.Rotate.DOWN);
+        r1DQB1 = new b12x.RotatedIcon(t1DQB1, b12x.RotatedIcon.Rotate.DOWN);
         jLabelDQB1E5.setIcon( r1DQB1 );
 
         t1DQB1 = new TextIcon(jLabelDQB1I5, "Intron 5", TextIcon.Layout.HORIZONTAL);
-        r1DQB1 = new RotatedIcon(t1DQB1, RotatedIcon.Rotate.DOWN);
+        r1DQB1 = new b12x.RotatedIcon(t1DQB1, b12x.RotatedIcon.Rotate.DOWN);
         jLabelDQB1I5.setIcon( r1DQB1 );
 
         t1DQB1 = new TextIcon(jLabelDQB1E6, "Exon 6", TextIcon.Layout.HORIZONTAL);
-        r1DQB1 = new RotatedIcon(t1DQB1, RotatedIcon.Rotate.DOWN);
+        r1DQB1 = new b12x.RotatedIcon(t1DQB1, b12x.RotatedIcon.Rotate.DOWN);
         jLabelDQB1E6.setIcon( r1DQB1 );
 
         t1DQB1 = new TextIcon(jLabelDQB13, "3' UTR", TextIcon.Layout.HORIZONTAL);
-        r1DQB1 = new RotatedIcon(t1DQB1, RotatedIcon.Rotate.DOWN);
+        r1DQB1 = new b12x.RotatedIcon(t1DQB1, b12x.RotatedIcon.Rotate.DOWN);
         jLabelDQB13.setIcon( r1DQB1 );
 
         javax.swing.GroupLayout jPanelEnterGfeDQB1Layout = new javax.swing.GroupLayout(jPanelEnterGfeDQB1);
@@ -2256,59 +2259,59 @@ public class B12xGUI extends javax.swing.JFrame {
         drb113_3Prime.setName("17"); // NOI18N
 
         TextIcon t1DRB1 = new TextIcon(jLabelDRB1W, "Workshop Status", TextIcon.Layout.HORIZONTAL);
-        RotatedIcon r1DRB1 = new RotatedIcon(t1DRB1, RotatedIcon.Rotate.DOWN);
+        b12x.RotatedIcon r1DRB1 = new b12x.RotatedIcon(t1DRB1, b12x.RotatedIcon.Rotate.DOWN);
         jLabelDRB1W.setIcon( r1DRB1 );
 
         t1DRB1 = new TextIcon(jLabelDRB15, "5' UTR", TextIcon.Layout.HORIZONTAL);
-        r1DRB1 = new RotatedIcon(t1DRB1, RotatedIcon.Rotate.DOWN);
+        r1DRB1 = new b12x.RotatedIcon(t1DRB1, b12x.RotatedIcon.Rotate.DOWN);
         jLabelDRB15.setIcon( r1DRB1 );
 
         t1DRB1 = new TextIcon(jLabelDRB1E1, "Exon 1", TextIcon.Layout.HORIZONTAL);
-        r1DRB1 = new RotatedIcon(t1DRB1, RotatedIcon.Rotate.DOWN);
+        r1DRB1 = new b12x.RotatedIcon(t1DRB1, b12x.RotatedIcon.Rotate.DOWN);
         jLabelDRB1E1.setIcon( r1DRB1 );
 
         t1DRB1 = new TextIcon(jLabelDRB1I1, "Intron 1", TextIcon.Layout.HORIZONTAL);
-        r1DRB1 = new RotatedIcon(t1DRB1, RotatedIcon.Rotate.DOWN);
+        r1DRB1 = new b12x.RotatedIcon(t1DRB1, b12x.RotatedIcon.Rotate.DOWN);
         jLabelDRB1I1.setIcon( r1DRB1 );
 
         t1DRB1 = new TextIcon(jLabelDRB1E2, "Exon 2", TextIcon.Layout.HORIZONTAL);
-        r1DRB1 = new RotatedIcon(t1DRB1, RotatedIcon.Rotate.DOWN);
+        r1DRB1 = new b12x.RotatedIcon(t1DRB1, b12x.RotatedIcon.Rotate.DOWN);
         jLabelDRB1E2.setIcon( r1DRB1 );
 
         t1DRB1 = new TextIcon(jLabelDRB1I2, "Intron 2", TextIcon.Layout.HORIZONTAL);
-        r1DRB1 = new RotatedIcon(t1DRB1, RotatedIcon.Rotate.DOWN);
+        r1DRB1 = new b12x.RotatedIcon(t1DRB1, b12x.RotatedIcon.Rotate.DOWN);
         jLabelDRB1I2.setIcon( r1DRB1 );
 
         t1DRB1 = new TextIcon(jLabelDRB1E3, "Exon 3", TextIcon.Layout.HORIZONTAL);
-        r1DRB1 = new RotatedIcon(t1DRB1, RotatedIcon.Rotate.DOWN);
+        r1DRB1 = new b12x.RotatedIcon(t1DRB1, b12x.RotatedIcon.Rotate.DOWN);
         jLabelDRB1E3.setIcon( r1DRB1 );
 
         t1DRB1 = new TextIcon(jLabelDRB1I3, "Intron 3", TextIcon.Layout.HORIZONTAL);
-        r1DRB1 = new RotatedIcon(t1DRB1, RotatedIcon.Rotate.DOWN);
+        r1DRB1 = new b12x.RotatedIcon(t1DRB1, b12x.RotatedIcon.Rotate.DOWN);
         jLabelDRB1I3.setIcon( r1DRB1 );
 
         t1DRB1 = new TextIcon(jLabelDRB1E4, "Exon 4", TextIcon.Layout.HORIZONTAL);
-        r1DRB1 = new RotatedIcon(t1DRB1, RotatedIcon.Rotate.DOWN);
+        r1DRB1 = new b12x.RotatedIcon(t1DRB1, b12x.RotatedIcon.Rotate.DOWN);
         jLabelDRB1E4.setIcon( r1DRB1 );
 
         t1DRB1 = new TextIcon(jLabelDRB1I4, "Intron 4", TextIcon.Layout.HORIZONTAL);
-        r1DRB1 = new RotatedIcon(t1DRB1, RotatedIcon.Rotate.DOWN);
+        r1DRB1 = new b12x.RotatedIcon(t1DRB1, b12x.RotatedIcon.Rotate.DOWN);
         jLabelDRB1I4.setIcon( r1DRB1 );
 
         t1DRB1 = new TextIcon(jLabelDRB1E5, "Exon 5", TextIcon.Layout.HORIZONTAL);
-        r1DRB1 = new RotatedIcon(t1DRB1, RotatedIcon.Rotate.DOWN);
+        r1DRB1 = new b12x.RotatedIcon(t1DRB1, b12x.RotatedIcon.Rotate.DOWN);
         jLabelDRB1E5.setIcon( r1DRB1 );
 
         t1DRB1 = new TextIcon(jLabelDRB1I5, "Intron 5", TextIcon.Layout.HORIZONTAL);
-        r1DRB1 = new RotatedIcon(t1DRB1, RotatedIcon.Rotate.DOWN);
+        r1DRB1 = new b12x.RotatedIcon(t1DRB1, b12x.RotatedIcon.Rotate.DOWN);
         jLabelDRB1I5.setIcon( r1DRB1 );
 
         t1DRB1 = new TextIcon(jLabelDRB1E6, "Exon 6", TextIcon.Layout.HORIZONTAL);
-        r1DRB1 = new RotatedIcon(t1DRB1, RotatedIcon.Rotate.DOWN);
+        r1DRB1 = new b12x.RotatedIcon(t1DRB1, b12x.RotatedIcon.Rotate.DOWN);
         jLabelDRB1E6.setIcon( r1DRB1 );
 
         t1DRB1 = new TextIcon(jLabelDRB13, "3' UTR", TextIcon.Layout.HORIZONTAL);
-        r1DRB1 = new RotatedIcon(t1DRB1, RotatedIcon.Rotate.DOWN);
+        r1DRB1 = new b12x.RotatedIcon(t1DRB1, b12x.RotatedIcon.Rotate.DOWN);
         jLabelDRB13.setIcon( r1DRB1 );
 
         javax.swing.GroupLayout jPanelEnterGfeDRB1Layout = new javax.swing.GroupLayout(jPanelEnterGfeDRB1);
@@ -2516,59 +2519,59 @@ public class B12xGUI extends javax.swing.JFrame {
         drb313_3Prime.setName("17"); // NOI18N
 
         TextIcon t1DRB3 = new TextIcon(jLabelDRB3W, "Workshop Status", TextIcon.Layout.HORIZONTAL);
-        RotatedIcon r1DRB3 = new RotatedIcon(t1DRB3, RotatedIcon.Rotate.DOWN);
+        b12x.RotatedIcon r1DRB3 = new b12x.RotatedIcon(t1DRB3, b12x.RotatedIcon.Rotate.DOWN);
         jLabelDRB3W.setIcon( r1DRB3 );
 
         t1DRB3 = new TextIcon(jLabelDRB35, "5' UTR", TextIcon.Layout.HORIZONTAL);
-        r1DRB3 = new RotatedIcon(t1DRB3, RotatedIcon.Rotate.DOWN);
+        r1DRB3 = new b12x.RotatedIcon(t1DRB3, b12x.RotatedIcon.Rotate.DOWN);
         jLabelDRB35.setIcon( r1DRB3 );
 
         t1DRB3 = new TextIcon(jLabelDRB3E1, "Exon 1", TextIcon.Layout.HORIZONTAL);
-        r1DRB3 = new RotatedIcon(t1DRB3, RotatedIcon.Rotate.DOWN);
+        r1DRB3 = new b12x.RotatedIcon(t1DRB3, b12x.RotatedIcon.Rotate.DOWN);
         jLabelDRB3E1.setIcon( r1DRB3 );
 
         t1DRB3 = new TextIcon(jLabelDRB3I1, "Intron 1", TextIcon.Layout.HORIZONTAL);
-        r1DRB3 = new RotatedIcon(t1DRB3, RotatedIcon.Rotate.DOWN);
+        r1DRB3 = new b12x.RotatedIcon(t1DRB3, b12x.RotatedIcon.Rotate.DOWN);
         jLabelDRB3I1.setIcon( r1DRB3 );
 
         t1DRB3 = new TextIcon(jLabelDRB3E2, "Exon 2", TextIcon.Layout.HORIZONTAL);
-        r1DRB3 = new RotatedIcon(t1DRB3, RotatedIcon.Rotate.DOWN);
+        r1DRB3 = new b12x.RotatedIcon(t1DRB3, b12x.RotatedIcon.Rotate.DOWN);
         jLabelDRB3E2.setIcon( r1DRB3 );
 
         t1DRB3 = new TextIcon(jLabelDRB3I2, "Intron 2", TextIcon.Layout.HORIZONTAL);
-        r1DRB3 = new RotatedIcon(t1DRB3, RotatedIcon.Rotate.DOWN);
+        r1DRB3 = new b12x.RotatedIcon(t1DRB3, b12x.RotatedIcon.Rotate.DOWN);
         jLabelDRB3I2.setIcon( r1DRB3 );
 
         t1DRB3 = new TextIcon(jLabelDRB3E3, "Exon 3", TextIcon.Layout.HORIZONTAL);
-        r1DRB3 = new RotatedIcon(t1DRB3, RotatedIcon.Rotate.DOWN);
+        r1DRB3 = new b12x.RotatedIcon(t1DRB3, b12x.RotatedIcon.Rotate.DOWN);
         jLabelDRB3E3.setIcon( r1DRB3 );
 
         t1DRB3 = new TextIcon(jLabelDRB3I3, "Intron 3", TextIcon.Layout.HORIZONTAL);
-        r1DRB3 = new RotatedIcon(t1DRB3, RotatedIcon.Rotate.DOWN);
+        r1DRB3 = new b12x.RotatedIcon(t1DRB3, b12x.RotatedIcon.Rotate.DOWN);
         jLabelDRB3I3.setIcon( r1DRB3 );
 
         t1DRB3 = new TextIcon(jLabelDRB3E4, "Exon 4", TextIcon.Layout.HORIZONTAL);
-        r1DRB3 = new RotatedIcon(t1DRB3, RotatedIcon.Rotate.DOWN);
+        r1DRB3 = new b12x.RotatedIcon(t1DRB3, b12x.RotatedIcon.Rotate.DOWN);
         jLabelDRB3E4.setIcon( r1DRB3 );
 
         t1DRB3 = new TextIcon(jLabelDRB3I4, "Intron 4", TextIcon.Layout.HORIZONTAL);
-        r1DRB3 = new RotatedIcon(t1DRB3, RotatedIcon.Rotate.DOWN);
+        r1DRB3 = new b12x.RotatedIcon(t1DRB3, b12x.RotatedIcon.Rotate.DOWN);
         jLabelDRB3I4.setIcon( r1DRB3 );
 
         t1DRB3 = new TextIcon(jLabelDRB3E5, "Exon 5", TextIcon.Layout.HORIZONTAL);
-        r1DRB3 = new RotatedIcon(t1DRB3, RotatedIcon.Rotate.DOWN);
+        r1DRB3 = new b12x.RotatedIcon(t1DRB3, b12x.RotatedIcon.Rotate.DOWN);
         jLabelDRB3E5.setIcon( r1DRB3 );
 
         t1DRB3 = new TextIcon(jLabelDRB3I5, "Intron 5", TextIcon.Layout.HORIZONTAL);
-        r1DRB3 = new RotatedIcon(t1DRB3, RotatedIcon.Rotate.DOWN);
+        r1DRB3 = new b12x.RotatedIcon(t1DRB3, b12x.RotatedIcon.Rotate.DOWN);
         jLabelDRB3I5.setIcon( r1DRB3 );
 
         t1DRB3 = new TextIcon(jLabelDRB3E6, "Exon 6", TextIcon.Layout.HORIZONTAL);
-        r1DRB3 = new RotatedIcon(t1DRB3, RotatedIcon.Rotate.DOWN);
+        r1DRB3 = new b12x.RotatedIcon(t1DRB3, b12x.RotatedIcon.Rotate.DOWN);
         jLabelDRB3E6.setIcon( r1DRB3 );
 
         t1DRB3 = new TextIcon(jLabelDRB33, "3' UTR", TextIcon.Layout.HORIZONTAL);
-        r1DRB3 = new RotatedIcon(t1DRB3, RotatedIcon.Rotate.DOWN);
+        r1DRB3 = new b12x.RotatedIcon(t1DRB3, b12x.RotatedIcon.Rotate.DOWN);
         jLabelDRB33.setIcon( r1DRB3 );
 
         javax.swing.GroupLayout jPanelEnterGfeDRB3Layout = new javax.swing.GroupLayout(jPanelEnterGfeDRB3);
@@ -2746,59 +2749,59 @@ public class B12xGUI extends javax.swing.JFrame {
         drb413_3Prime.setName("17"); // NOI18N
 
         TextIcon t1DRB4 = new TextIcon(jLabelDRB4W, "Workshop Status", TextIcon.Layout.HORIZONTAL);
-        RotatedIcon r1DRB4 = new RotatedIcon(t1DRB4, RotatedIcon.Rotate.DOWN);
+        b12x.RotatedIcon r1DRB4 = new b12x.RotatedIcon(t1DRB4, b12x.RotatedIcon.Rotate.DOWN);
         jLabelDRB4W.setIcon( r1DRB4 );
 
         t1DRB4 = new TextIcon(jLabelDRB45, "5' UTR", TextIcon.Layout.HORIZONTAL);
-        r1DRB4 = new RotatedIcon(t1DRB4, RotatedIcon.Rotate.DOWN);
+        r1DRB4 = new b12x.RotatedIcon(t1DRB4, b12x.RotatedIcon.Rotate.DOWN);
         jLabelDRB45.setIcon( r1DRB4 );
 
         t1DRB4 = new TextIcon(jLabelDRB4E1, "Exon 1", TextIcon.Layout.HORIZONTAL);
-        r1DRB4 = new RotatedIcon(t1DRB4, RotatedIcon.Rotate.DOWN);
+        r1DRB4 = new b12x.RotatedIcon(t1DRB4, b12x.RotatedIcon.Rotate.DOWN);
         jLabelDRB4E1.setIcon( r1DRB4 );
 
         t1DRB4 = new TextIcon(jLabelDRB4I1, "Intron 1", TextIcon.Layout.HORIZONTAL);
-        r1DRB4 = new RotatedIcon(t1DRB4, RotatedIcon.Rotate.DOWN);
+        r1DRB4 = new b12x.RotatedIcon(t1DRB4, b12x.RotatedIcon.Rotate.DOWN);
         jLabelDRB4I1.setIcon( r1DRB4 );
 
         t1DRB4 = new TextIcon(jLabelDRB4E2, "Exon 2", TextIcon.Layout.HORIZONTAL);
-        r1DRB4 = new RotatedIcon(t1DRB4, RotatedIcon.Rotate.DOWN);
+        r1DRB4 = new b12x.RotatedIcon(t1DRB4, b12x.RotatedIcon.Rotate.DOWN);
         jLabelDRB4E2.setIcon( r1DRB4 );
 
         t1DRB4 = new TextIcon(jLabelDRB4I2, "Intron 2", TextIcon.Layout.HORIZONTAL);
-        r1DRB4 = new RotatedIcon(t1DRB4, RotatedIcon.Rotate.DOWN);
+        r1DRB4 = new b12x.RotatedIcon(t1DRB4, b12x.RotatedIcon.Rotate.DOWN);
         jLabelDRB4I2.setIcon( r1DRB4 );
 
         t1DRB4 = new TextIcon(jLabelDRB4E3, "Exon 3", TextIcon.Layout.HORIZONTAL);
-        r1DRB4 = new RotatedIcon(t1DRB4, RotatedIcon.Rotate.DOWN);
+        r1DRB4 = new b12x.RotatedIcon(t1DRB4, b12x.RotatedIcon.Rotate.DOWN);
         jLabelDRB4E3.setIcon( r1DRB4 );
 
         t1DRB4 = new TextIcon(jLabelDRB4I3, "Intron 3", TextIcon.Layout.HORIZONTAL);
-        r1DRB4 = new RotatedIcon(t1DRB4, RotatedIcon.Rotate.DOWN);
+        r1DRB4 = new b12x.RotatedIcon(t1DRB4, b12x.RotatedIcon.Rotate.DOWN);
         jLabelDRB4I3.setIcon( r1DRB4 );
 
         t1DRB4 = new TextIcon(jLabelDRB4E4, "Exon 4", TextIcon.Layout.HORIZONTAL);
-        r1DRB4 = new RotatedIcon(t1DRB4, RotatedIcon.Rotate.DOWN);
+        r1DRB4 = new b12x.RotatedIcon(t1DRB4, b12x.RotatedIcon.Rotate.DOWN);
         jLabelDRB4E4.setIcon( r1DRB4 );
 
         t1DRB4 = new TextIcon(jLabelDRB4I4, "Intron 4", TextIcon.Layout.HORIZONTAL);
-        r1DRB4 = new RotatedIcon(t1DRB4, RotatedIcon.Rotate.DOWN);
+        r1DRB4 = new b12x.RotatedIcon(t1DRB4, b12x.RotatedIcon.Rotate.DOWN);
         jLabelDRB4I4.setIcon( r1DRB4 );
 
         t1DRB4 = new TextIcon(jLabelDRB4E5, "Exon 5", TextIcon.Layout.HORIZONTAL);
-        r1DRB4 = new RotatedIcon(t1DRB4, RotatedIcon.Rotate.DOWN);
+        r1DRB4 = new b12x.RotatedIcon(t1DRB4, b12x.RotatedIcon.Rotate.DOWN);
         jLabelDRB4E5.setIcon( r1DRB4 );
 
         t1DRB4 = new TextIcon(jLabelDRB4I5, "Intron 5", TextIcon.Layout.HORIZONTAL);
-        r1DRB4 = new RotatedIcon(t1DRB4, RotatedIcon.Rotate.DOWN);
+        r1DRB4 = new b12x.RotatedIcon(t1DRB4, b12x.RotatedIcon.Rotate.DOWN);
         jLabelDRB4I5.setIcon( r1DRB4 );
 
         t1DRB4 = new TextIcon(jLabelDRB4E6, "Exon 6", TextIcon.Layout.HORIZONTAL);
-        r1DRB4 = new RotatedIcon(t1DRB4, RotatedIcon.Rotate.DOWN);
+        r1DRB4 = new b12x.RotatedIcon(t1DRB4, b12x.RotatedIcon.Rotate.DOWN);
         jLabelDRB4E6.setIcon( r1DRB4 );
 
         t1DRB4 = new TextIcon(jLabelDRB43, "3' UTR", TextIcon.Layout.HORIZONTAL);
-        r1DRB4 = new RotatedIcon(t1DRB4, RotatedIcon.Rotate.DOWN);
+        r1DRB4 = new b12x.RotatedIcon(t1DRB4, b12x.RotatedIcon.Rotate.DOWN);
         jLabelDRB43.setIcon( r1DRB4 );
 
         javax.swing.GroupLayout jPanelEnterGfeDRB4Layout = new javax.swing.GroupLayout(jPanelEnterGfeDRB4);
@@ -2976,59 +2979,59 @@ public class B12xGUI extends javax.swing.JFrame {
         drb513_3Prime.setName("17"); // NOI18N
 
         TextIcon t1DRB5 = new TextIcon(jLabelDRB5W, "Workshop Status", TextIcon.Layout.HORIZONTAL);
-        RotatedIcon r1DRB5 = new RotatedIcon(t1DRB5, RotatedIcon.Rotate.DOWN);
+        b12x.RotatedIcon r1DRB5 = new b12x.RotatedIcon(t1DRB5, b12x.RotatedIcon.Rotate.DOWN);
         jLabelDRB5W.setIcon( r1DRB5 );
 
         t1DRB5 = new TextIcon(jLabelDRB55, "5' UTR", TextIcon.Layout.HORIZONTAL);
-        r1DRB5 = new RotatedIcon(t1DRB5, RotatedIcon.Rotate.DOWN);
+        r1DRB5 = new b12x.RotatedIcon(t1DRB5, b12x.RotatedIcon.Rotate.DOWN);
         jLabelDRB55.setIcon( r1DRB5 );
 
         t1DRB5 = new TextIcon(jLabelDRB5E1, "Exon 1", TextIcon.Layout.HORIZONTAL);
-        r1DRB5 = new RotatedIcon(t1DRB5, RotatedIcon.Rotate.DOWN);
+        r1DRB5 = new b12x.RotatedIcon(t1DRB5, b12x.RotatedIcon.Rotate.DOWN);
         jLabelDRB5E1.setIcon( r1DRB5 );
 
         t1DRB5 = new TextIcon(jLabelDRB5I1, "Intron 1", TextIcon.Layout.HORIZONTAL);
-        r1DRB5 = new RotatedIcon(t1DRB5, RotatedIcon.Rotate.DOWN);
+        r1DRB5 = new b12x.RotatedIcon(t1DRB5, b12x.RotatedIcon.Rotate.DOWN);
         jLabelDRB5I1.setIcon( r1DRB5 );
 
         t1DRB5 = new TextIcon(jLabelDRB5E2, "Exon 2", TextIcon.Layout.HORIZONTAL);
-        r1DRB5 = new RotatedIcon(t1DRB5, RotatedIcon.Rotate.DOWN);
+        r1DRB5 = new b12x.RotatedIcon(t1DRB5, b12x.RotatedIcon.Rotate.DOWN);
         jLabelDRB5E2.setIcon( r1DRB5 );
 
         t1DRB5 = new TextIcon(jLabelDRB5I2, "Intron 2", TextIcon.Layout.HORIZONTAL);
-        r1DRB5 = new RotatedIcon(t1DRB5, RotatedIcon.Rotate.DOWN);
+        r1DRB5 = new b12x.RotatedIcon(t1DRB5, b12x.RotatedIcon.Rotate.DOWN);
         jLabelDRB5I2.setIcon( r1DRB5 );
 
         t1DRB5 = new TextIcon(jLabelDRB5E3, "Exon 3", TextIcon.Layout.HORIZONTAL);
-        r1DRB5 = new RotatedIcon(t1DRB5, RotatedIcon.Rotate.DOWN);
+        r1DRB5 = new b12x.RotatedIcon(t1DRB5, b12x.RotatedIcon.Rotate.DOWN);
         jLabelDRB5E3.setIcon( r1DRB5 );
 
         t1DRB5 = new TextIcon(jLabelDRB5I3, "Intron 3", TextIcon.Layout.HORIZONTAL);
-        r1DRB5 = new RotatedIcon(t1DRB5, RotatedIcon.Rotate.DOWN);
+        r1DRB5 = new b12x.RotatedIcon(t1DRB5, b12x.RotatedIcon.Rotate.DOWN);
         jLabelDRB5I3.setIcon( r1DRB5 );
 
         t1DRB5 = new TextIcon(jLabelDRB5E4, "Exon 4", TextIcon.Layout.HORIZONTAL);
-        r1DRB5 = new RotatedIcon(t1DRB5, RotatedIcon.Rotate.DOWN);
+        r1DRB5 = new b12x.RotatedIcon(t1DRB5, b12x.RotatedIcon.Rotate.DOWN);
         jLabelDRB5E4.setIcon( r1DRB5 );
 
         t1DRB5 = new TextIcon(jLabelDRB5I4, "Intron 4", TextIcon.Layout.HORIZONTAL);
-        r1DRB5 = new RotatedIcon(t1DRB5, RotatedIcon.Rotate.DOWN);
+        r1DRB5 = new b12x.RotatedIcon(t1DRB5, b12x.RotatedIcon.Rotate.DOWN);
         jLabelDRB5I4.setIcon( r1DRB5 );
 
         t1DRB5 = new TextIcon(jLabelDRB5E5, "Exon 5", TextIcon.Layout.HORIZONTAL);
-        r1DRB5 = new RotatedIcon(t1DRB5, RotatedIcon.Rotate.DOWN);
+        r1DRB5 = new b12x.RotatedIcon(t1DRB5, b12x.RotatedIcon.Rotate.DOWN);
         jLabelDRB5E5.setIcon( r1DRB5 );
 
         t1DRB5 = new TextIcon(jLabelDRB5I5, "Intron 5", TextIcon.Layout.HORIZONTAL);
-        r1DRB5 = new RotatedIcon(t1DRB5, RotatedIcon.Rotate.DOWN);
+        r1DRB5 = new b12x.RotatedIcon(t1DRB5, b12x.RotatedIcon.Rotate.DOWN);
         jLabelDRB5I5.setIcon( r1DRB5 );
 
         t1DRB5 = new TextIcon(jLabelDRB5E6, "Exon 6", TextIcon.Layout.HORIZONTAL);
-        r1DRB5 = new RotatedIcon(t1DRB5, RotatedIcon.Rotate.DOWN);
+        r1DRB5 = new b12x.RotatedIcon(t1DRB5, b12x.RotatedIcon.Rotate.DOWN);
         jLabelDRB5E6.setIcon( r1DRB5 );
 
         t1DRB5 = new TextIcon(jLabelDRB53, "3' UTR", TextIcon.Layout.HORIZONTAL);
-        r1DRB5 = new RotatedIcon(t1DRB5, RotatedIcon.Rotate.DOWN);
+        r1DRB5 = new b12x.RotatedIcon(t1DRB5, b12x.RotatedIcon.Rotate.DOWN);
         jLabelDRB53.setIcon( r1DRB5 );
 
         javax.swing.GroupLayout jPanelEnterGfeDRB5Layout = new javax.swing.GroupLayout(jPanelEnterGfeDRB5);
@@ -3235,6 +3238,10 @@ public class B12xGUI extends javax.swing.JFrame {
         }
     });
 
+    hlaSelectNeo4jVersion.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "3.31.0", "Item 2", "Item 3", "Item 4" }));
+
+    VersionSelectLabel.setText("Defaults to the most recent version available in the database.");
+
     javax.swing.GroupLayout neo4jLayout = new javax.swing.GroupLayout(neo4j);
     neo4j.setLayout(neo4jLayout);
     neo4jLayout.setHorizontalGroup(
@@ -3255,7 +3262,11 @@ public class B12xGUI extends javax.swing.JFrame {
                         .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGroup(neo4jLayout.createSequentialGroup()
                             .addGap(43, 43, 43)
-                            .addComponent(jButtonResetSearchTerms, javax.swing.GroupLayout.PREFERRED_SIZE, 154, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addComponent(jButtonResetSearchTerms, javax.swing.GroupLayout.PREFERRED_SIZE, 154, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGap(18, 18, 18)
+                            .addComponent(hlaSelectNeo4jVersion, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(VersionSelectLabel))))
                 .addComponent(mainCardPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 857, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGroup(neo4jLayout.createSequentialGroup()
                     .addGap(336, 336, 336)
@@ -3274,7 +3285,10 @@ public class B12xGUI extends javax.swing.JFrame {
             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
             .addComponent(mainCardPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-            .addComponent(jButtonResetSearchTerms)
+            .addGroup(neo4jLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addComponent(jButtonResetSearchTerms)
+                .addComponent(hlaSelectNeo4jVersion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(VersionSelectLabel))
             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
             .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -3307,6 +3321,8 @@ public class B12xGUI extends javax.swing.JFrame {
 
     jLabel3.setText("This tool is for forcing a data update before that time is up. ");
 
+    hlaSelectNeo4jVersionUpdate.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "3.31.0", "Item 2", "Item 3", "Item 4" }));
+
     javax.swing.GroupLayout neo4jUpdateLayout = new javax.swing.GroupLayout(neo4jUpdate);
     neo4jUpdate.setLayout(neo4jUpdateLayout);
     neo4jUpdateLayout.setHorizontalGroup(
@@ -3321,8 +3337,9 @@ public class B12xGUI extends javax.swing.JFrame {
                     .addGap(83, 83, 83)
                     .addComponent(neo4jUpdateButton)
                     .addGap(88, 88, 88)
-                    .addComponent(neo4jUpdateCancelButton)))
-            .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(neo4jUpdateCancelButton))
+                .addComponent(hlaSelectNeo4jVersionUpdate, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addContainerGap(171, Short.MAX_VALUE))
     );
     neo4jUpdateLayout.setVerticalGroup(
         neo4jUpdateLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -3336,7 +3353,9 @@ public class B12xGUI extends javax.swing.JFrame {
                 .addComponent(hlaSelectUpdate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addComponent(neo4jUpdateButton)
                 .addComponent(neo4jUpdateCancelButton))
-            .addContainerGap(207, Short.MAX_VALUE))
+            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+            .addComponent(hlaSelectNeo4jVersionUpdate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addContainerGap(425, Short.MAX_VALUE))
     );
 
     jTabbedPane2.addTab("Neo4j Update", neo4jUpdate);
@@ -3424,13 +3443,15 @@ public class B12xGUI extends javax.swing.JFrame {
         try {
             String locus = hlaSelectNeo4j.getSelectedItem().toString();
             String parsedLocus = LocusNameParser.parseLocus(locus);
+            String version = hlaSelectNeo4jVersion.getSelectedItem().toString();
 //            String neo4jLocation = "";
             Path dataPath = Paths.get(System.getProperty("user.home")
                 + System.getProperty("file.separator") + "Documents"
                 + System.getProperty("file.separator") + "BSG"
                 + System.getProperty("file.separator") + "BSGData"
+                + System.getProperty("file.separator") + version
                 + System.getProperty("file.separator")
-                + "neo4j_" + locus
+                + "neo4j_" + locus + "_" + version 
                 + "_Download.csv");
 
             String panelName = "jPanelEnterGfe" + parsedLocus;
@@ -3452,6 +3473,7 @@ public class B12xGUI extends javax.swing.JFrame {
             for (Component component : mainCardPanel.getComponents()) {
                 if (component.getName().equals(panelName)){
                     currentGfePanel = component;
+                    System.out.println("panel: " + currentGfePanel);
                 } else {
                     System.out.println("cannot find panel by that name");
                 }
@@ -3509,7 +3531,7 @@ public class B12xGUI extends javax.swing.JFrame {
 
             
             neo4jResults.setText("");
-            Neo4j neo4j = new Neo4j(locus, dataPath, finalRegex, searchString);
+            Neo4j neo4j = new Neo4j(locus, version, dataPath, finalRegex, searchString);
             neo4j.execute();
             
 
@@ -3523,18 +3545,20 @@ public class B12xGUI extends javax.swing.JFrame {
     private void neo4jUpdateButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_neo4jUpdateButtonActionPerformed
                 try {
             String locus = hlaSelectUpdate.getSelectedItem().toString();
+            String version = hlaSelectNeo4jVersionUpdate.getSelectedItem().toString();
             String neo4jLocation = "";
             Path path = Paths.get(System.getProperty("user.home") 
                     + System.getProperty("file.separator") + "Documents"
                     + System.getProperty("file.separator") + "BSG"
                     + System.getProperty("file.separator") + "BSGData"
+                    + System.getProperty("file.separator") + version
                     + System.getProperty("file.separator") 
-                    + "neo4j_" + locus // + "_" + version
+                    + "neo4j_" + locus + "_" + version
                     + "_Download.csv");
             String regex = "";
             String searchString = "";
 
-            Neo4j neo4j = new Neo4j(locus, path, regex, searchString);
+            Neo4j neo4j = new Neo4j(locus, version, path, regex, searchString);
             neo4j.dataUpdate();
         } catch (Exception ex) {
             System.out.println(ex);
@@ -3671,6 +3695,7 @@ public class B12xGUI extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel VersionSelectLabel;
     private javax.swing.JTextField a00_WS;
     private javax.swing.JTextField a01_5Prime;
     private javax.swing.JTextField a02_Exon1;
@@ -3838,6 +3863,8 @@ public class B12xGUI extends javax.swing.JFrame {
     private javax.swing.JLabel hlaDRB4Label;
     private javax.swing.JLabel hlaDRB5Label;
     private javax.swing.JComboBox<String> hlaSelectNeo4j;
+    private javax.swing.JComboBox<String> hlaSelectNeo4jVersion;
+    private javax.swing.JComboBox<String> hlaSelectNeo4jVersionUpdate;
     private javax.swing.JComboBox<String> hlaSelectUpdate;
     private javax.swing.JLabel instructions;
     private javax.swing.JButton jButtonResetSearchTerms;
