@@ -168,7 +168,10 @@ public class Neo4jIncomingData {
             
             LocalDate date = LocalDate.now();
             writer.write(date.toString() + System.lineSeparator());
-            writer.write(versions.toString());
+            for(int i = 0; i < versions.size(); i++){
+                writer.write(versions.get(i) + ",");
+            }
+//            writer.write(versions.toString());
             writer.close();
 
         } catch (Exception ex) {
