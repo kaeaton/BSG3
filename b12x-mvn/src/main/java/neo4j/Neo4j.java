@@ -24,7 +24,6 @@ public class Neo4j extends SwingWorker<String, String> {
     private List<String> versions;
     private final Path path;
     private final URL neo4jURL = new URL(GlobalVariables.neo4jUrl());
-//    private final URL neo4jURL = new URL("http://neo4j.b12x.org/db/data/transaction/commit");
     private JsonFactory factory = GlobalVariables.factory();
 
 //    private String request;
@@ -40,12 +39,11 @@ public class Neo4j extends SwingWorker<String, String> {
         path = incomingPath;
         regex = incomingRegex;
         searchString = incomingSearchString;
-        version = incomingVersion; //"3.31.0";
+        version = incomingVersion;
 //        path = Paths.get(System.getProperty("user.home") 
 //                    + System.getProperty("file.separator") + "Documents" 
 //                    + System.getProperty("file.separator") 
 //                    + "neo4j_" + locus + "_Download.csv");
-//        factory = new JsonFactory();
     }
         
     

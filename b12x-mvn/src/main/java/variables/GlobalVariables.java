@@ -21,11 +21,14 @@ public class GlobalVariables {
         
     }
     
+    // getter methods for the few things that need a central repository
+    
+    // the fewer factories running, the less memory needed
     public static JsonFactory factory () {
-        
         return factory;
     }
     
+    // url for data queries from neo4j.b12x.org
     public static String neo4jUrl () throws IOException {
         return neo4jURL;
     }
