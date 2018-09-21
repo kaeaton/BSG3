@@ -35,13 +35,9 @@ public class VersionModel {
     }
     
     static String[] getVersionData() throws IOException {
-        Path path = Paths.get(System.getProperty("user.home") 
-                + System.getProperty("file.separator") + "Documents" 
-                + System.getProperty("file.separator") + "BSG"
-                + System.getProperty("file.separator") + "BSGData"
-                + System.getProperty("file.separator") 
-                + "neo4j_version.txt");
-        File file = path.toFile();
+        Path versionPath = Paths.get(GlobalVariables.dataFilesPath() 
+                                     + "neo4j_version.txt");
+        File file = versionPath.toFile();
         if (file.exists()){
             BufferedReader br = new BufferedReader(new FileReader(file));
             
