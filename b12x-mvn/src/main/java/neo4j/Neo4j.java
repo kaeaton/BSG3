@@ -14,16 +14,18 @@ import java.time.LocalDate;
 import java.util.List;
 import javax.swing.DefaultComboBoxModel;
 import javax.swing.SwingWorker;
+import variables.GlobalVariables;
 
 
-public class Neo4j  extends SwingWorker<String, String> {
+public class Neo4j extends SwingWorker<String, String> {
     
     private final String locus, regex, searchString;
     private final String version;
     private List<String> versions;
     private final Path path;
-    private final URL neo4jURL = new URL("http://neo4j.b12x.org/db/data/transaction/commit");
-    private JsonFactory factory;
+    private final URL neo4jURL = new URL(GlobalVariables.neo4jUrl());
+//    private final URL neo4jURL = new URL("http://neo4j.b12x.org/db/data/transaction/commit");
+    private JsonFactory factory = GlobalVariables.factory();
 
 //    private String request;
     
@@ -43,7 +45,7 @@ public class Neo4j  extends SwingWorker<String, String> {
 //                    + System.getProperty("file.separator") + "Documents" 
 //                    + System.getProperty("file.separator") 
 //                    + "neo4j_" + locus + "_Download.csv");
-        factory = new JsonFactory();
+//        factory = new JsonFactory();
     }
         
     
@@ -80,33 +82,6 @@ public class Neo4j  extends SwingWorker<String, String> {
             System.out.println(ex);
         }
     }
-    
-//    public DefaultComboBoxModel versions() throws IOException {
-//        String labels[] = { "A", "B", "C", "D", "E" };
-//        DefaultComboBoxModel model = new DefaultComboBoxModel(labels);
-//
-//        try {
-//        
-//        // set up the call
-//        Neo4jHttp neo4jHttp = new Neo4jHttp();
-//            
-//        // set up for parsing the incoming data
-//        Neo4jIncomingData parser = new Neo4jIncomingData();
-//
-//        // determine the most recent version
-//        // create the request and send it
-//        Neo4jVersionRequest whatVersion = new Neo4jVersionRequest(factory);
-//        InputStream incomingVersionData = neo4jHttp
-//                .makeCall(neo4jURL, whatVersion.formNeo4jVersionRequest());
-//
-//        // recieve the version data and parse it
-//        versions = parser.parseVersion(incomingVersionData, factory);
-//        System.out.println(versions.toString());
-//        } catch (Exception ex) {
-//            System.out.println(ex);
-//        }
-//        return model;
-//    }
     
     @Override
     protected String doInBackground() throws IOException {

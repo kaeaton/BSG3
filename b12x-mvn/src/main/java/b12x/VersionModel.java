@@ -20,12 +20,15 @@ import javax.swing.DefaultComboBoxModel;
 import neo4jRawData.Neo4jHttp;
 import neo4jRawData.Neo4jIncomingData;
 import neo4jRawData.Neo4jVersionRequest;
+import variables.GlobalVariables;
 
 /**
  *
  * @author katrinaeaton
  */
 public class VersionModel {
+    
+//    Global variables = new Global();
     
     public VersionModel() {
         
@@ -39,13 +42,22 @@ public class VersionModel {
                 + System.getProperty("file.separator") 
                 + "neo4j_version.txt");
         File file = path.toFile();
-        BufferedReader br = new BufferedReader(new FileReader(file));
-        String line = br.readLine();
-        line = br.readLine();
-        String[] versions = line.split(",");    
-        System.out.println("Last updated: " + Arrays.toString(versions));
-        br.close();
-        return versions;
+        if (file.exists()){
+            BufferedReader br = new BufferedReader(new FileReader(file));
+            
+            // date stamp
+            String line = br.readLine();
+            
+            // versions
+            line = br.readLine();
+            
+            String[] versions = line.split(",");    
+            System.out.println("Versions array: " + Arrays.toString(versions));
+            br.close();
+            return versions;
+        } else {
+            return null;
+        }
 //        } catch (Exception ex) {
 //            System.out.println(ex); 
 //        }
@@ -53,39 +65,42 @@ public class VersionModel {
     }
     
     static DefaultComboBoxModel versions() throws IOException {
-        String labels[] = { "A", "B", "C", "D", "E" };
 
-//        try {
+        List<String> versions;
+        DefaultComboBoxModel model = new DefaultComboBoxModel();
         
-//        // set up the call
-//        Neo4jHttp neo4jHttp = new Neo4jHttp();
-//            
-//        // set up for parsing the incoming data
-//        Neo4jIncomingData parser = new Neo4jIncomingData();
-//
-//        // determine the most recent version
-//        // create the request and send it
-//        JsonFactory factory = new JsonFactory();
-//        URL neo4jURL = new URL("http://neo4j.b12x.org/db/data/transaction/commit");
-//
-//        Neo4jVersionRequest whatVersion = new Neo4jVersionRequest(factory);
-//        InputStream incomingVersionData = neo4jHttp
-//                .makeCall(neo4jURL, whatVersion.formNeo4jVersionRequest());
 
-        // recieve the version data and parse it
-//        List<String> versions;
-//        versions = parser.parseVersion(incomingVersionData, factory);
+        String[] versionData = getVersionData();
         
-//        getVersionData();
-        DefaultComboBoxModel model = new DefaultComboBoxModel(getVersionData());
+        // is there a data file to read from?
+        if (versionData != null)
+            model = new DefaultComboBoxModel(versionData);
+        
+        // no? create one
+        else {
+            
+            System.out.println("Realized there's no version data file.");
+            
+            // set up the call
+            Neo4jHttp neo4jHttp = new Neo4jHttp();
 
-//        DefaultComboBoxModel model = new DefaultComboBoxModel(versions.toArray());
-//        DefaultComboBoxModel model = new DefaultComboBoxModel(labels);
+            // set up for parsing the incoming data
+            Neo4jIncomingData parser = new Neo4jIncomingData();
 
-//        System.out.println(versions.toString());
-//        } catch (Exception ex) {
-//            System.out.println(ex);
-//        }
+            // create the request and send it
+            JsonFactory factory = GlobalVariables.factory();
+            URL neo4jURL = new URL(GlobalVariables.neo4jUrl());
+
+            Neo4jVersionRequest whatVersion = new Neo4jVersionRequest(factory);
+            InputStream incomingVersionData = neo4jHttp
+                    .makeCall(neo4jURL, whatVersion.formNeo4jVersionRequest());
+            
+            // recieve the version data and parse it
+            versions = parser.parseVersion(incomingVersionData, factory);
+            model = new DefaultComboBoxModel(versions.toArray());
+
+        }
+        
         return model;
     }
     
