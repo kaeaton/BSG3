@@ -1,6 +1,8 @@
 
 package neo4j;
 
+import b12x.B12xGUI;
+import b12x.VersionModel;
 import neo4jRawData.*;
 import com.fasterxml.jackson.core.JsonFactory;
 import java.io.BufferedWriter;
@@ -23,6 +25,8 @@ public class Neo4j extends SwingWorker<String, String> {
     private final String version;
     private List<String> versions;
     private final Path path;
+    private final Path versionPath = Paths.get(GlobalVariables.dataFilesPath() 
+                             + "neo4j_version.txt");
     private final URL neo4jURL = new URL(GlobalVariables.neo4jUrl());
     private JsonFactory factory = GlobalVariables.factory();
 
@@ -40,10 +44,6 @@ public class Neo4j extends SwingWorker<String, String> {
         regex = incomingRegex;
         searchString = incomingSearchString;
         version = incomingVersion;
-//        path = Paths.get(System.getProperty("user.home") 
-//                    + System.getProperty("file.separator") + "Documents" 
-//                    + System.getProperty("file.separator") 
-//                    + "neo4j_" + locus + "_Download.csv");
     }
         
     
@@ -57,13 +57,13 @@ public class Neo4j extends SwingWorker<String, String> {
             
             // determine the most recent version
             // create the request and send it
-//            Neo4jVersionRequest whatVersion = new Neo4jVersionRequest(factory);
-//            InputStream incomingVersionData = neo4jHttp
-//                    .makeCall(neo4jURL, whatVersion.formNeo4jVersionRequest());
-//            
-//            // recieve the version data and parse it
-//            versions = parser.parseVersion(incomingVersionData, factory);
-//            System.out.println(versions.toString());
+            Neo4jVersionRequest whatVersion = new Neo4jVersionRequest(factory);
+            InputStream incomingVersionData = neo4jHttp
+                    .makeCall(neo4jURL, whatVersion.formNeo4jVersionRequest());
+            
+            // recieve the version data and parse it
+            versions = parser.parseVersion(incomingVersionData, factory);
+            System.out.println(versions.toString());
 
             // retrieve the data
             // create the request and send it
@@ -95,14 +95,22 @@ public class Neo4j extends SwingWorker<String, String> {
             }
             
             // if the data exists, check the date on it
-            // if older than 30 days old, redownload it.
+            // if older than 30 days, redownload it.
             Neo4jFileCheck dataCheck = new Neo4jFileCheck();
             if (dataCheck.checkDate(path.toFile()) != true)
             {
                 dataUpdate();
             }
+            if (dataCheck.checkDate(versionPath.toFile()) != true)
+            {
+                dataUpdate();
+            }
             Neo4jDataIO parseData = new Neo4jDataIO();
             parseData.readCSVFile(locus, path.toFile(), regex, searchString);
+            
+            // update the version selection menus
+            B12xGUI.hlaSelectNeo4jVersionUpdate.setModel(VersionModel.versions());
+            B12xGUI.hlaSelectNeo4jVersion.setModel(VersionModel.versions());
             
         } catch (Exception ex) {
             System.out.println(ex);

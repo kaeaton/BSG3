@@ -16,6 +16,7 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.HashMap;
 import java.util.Map;
+import variables.GlobalVariables;
 
 
 
@@ -3453,14 +3454,11 @@ public class B12xGUI extends javax.swing.JFrame {
             String parsedLocus = LocusNameParser.parseLocus(locus);
             String version = hlaSelectNeo4jVersion.getSelectedItem().toString();
 //            String neo4jLocation = "";
-            Path dataPath = Paths.get(System.getProperty("user.home")
-                + System.getProperty("file.separator") + "Documents"
-                + System.getProperty("file.separator") + "BSG"
-                + System.getProperty("file.separator") + "BSGData"
-                + System.getProperty("file.separator") + version
-                + System.getProperty("file.separator")
-                + "neo4j_" + locus + "_" + version 
-                + "_Download.csv");
+            Path dataPath = Paths.get(GlobalVariables.dataFilesPath() 
+                                    + version
+                                    + System.getProperty("file.separator") 
+                                    + "neo4j_" + locus + "_" + version
+                                    + "_Download.csv");
 
             String panelName = "jPanelEnterGfe" + parsedLocus;
             System.out.println("panelName " + panelName);
@@ -3542,6 +3540,10 @@ public class B12xGUI extends javax.swing.JFrame {
             Neo4j neo4j = new Neo4j(locus, version, dataPath, finalRegex, searchString);
             neo4j.execute();
             
+            // update the version selection menus
+            hlaSelectNeo4jVersionUpdate.setModel(VersionModel.versions());
+            hlaSelectNeo4jVersion.setModel(VersionModel.versions());
+            
 
         } catch (Exception ex) {
             System.out.println(ex);
@@ -3554,20 +3556,21 @@ public class B12xGUI extends javax.swing.JFrame {
                 try {
             String locus = hlaSelectUpdate.getSelectedItem().toString();
             String version = hlaSelectNeo4jVersionUpdate.getSelectedItem().toString();
-            String neo4jLocation = "";
-            Path path = Paths.get(System.getProperty("user.home") 
-                    + System.getProperty("file.separator") + "Documents"
-                    + System.getProperty("file.separator") + "BSG"
-                    + System.getProperty("file.separator") + "BSGData"
-                    + System.getProperty("file.separator") + version
-                    + System.getProperty("file.separator") 
-                    + "neo4j_" + locus + "_" + version
-                    + "_Download.csv");
+//            String neo4jLocation = "";
+            Path path = Paths.get(GlobalVariables.dataFilesPath() 
+                                    + version
+                                    + System.getProperty("file.separator") 
+                                    + "neo4j_" + locus + "_" + version
+                                    + "_Download.csv");
             String regex = "";
             String searchString = "";
 
             Neo4j neo4j = new Neo4j(locus, version, path, regex, searchString);
             neo4j.dataUpdate();
+            
+            // update the version selection menus
+            hlaSelectNeo4jVersionUpdate.setModel(VersionModel.versions());
+            hlaSelectNeo4jVersion.setModel(VersionModel.versions());
         } catch (Exception ex) {
             System.out.println(ex);
         }
@@ -3871,8 +3874,8 @@ public class B12xGUI extends javax.swing.JFrame {
     private javax.swing.JLabel hlaDRB4Label;
     private javax.swing.JLabel hlaDRB5Label;
     private javax.swing.JComboBox<String> hlaSelectNeo4j;
-    private javax.swing.JComboBox<String> hlaSelectNeo4jVersion;
-    private javax.swing.JComboBox<String> hlaSelectNeo4jVersionUpdate;
+    public static javax.swing.JComboBox<String> hlaSelectNeo4jVersion;
+    public static javax.swing.JComboBox<String> hlaSelectNeo4jVersionUpdate;
     private javax.swing.JComboBox<String> hlaSelectUpdate;
     private javax.swing.JLabel instructions;
     private javax.swing.JButton jButtonResetSearchTerms;

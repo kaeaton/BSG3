@@ -4099,6 +4099,7 @@
                 <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="} catch (Exception ex) {&#xa;System.out.println(ex);&#xa;}"/>
                 <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="try {"/>
                 <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="9"/>
               </AuxValues>
             </Component>
             <Component class="javax.swing.JLabel" name="VersionSelectLabel">
@@ -4217,6 +4218,7 @@
                 <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="} catch (Exception ex) {&#xa;System.out.println(ex);&#xa;}"/>
                 <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="try {"/>
                 <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="9"/>
               </AuxValues>
             </Component>
           </SubComponents>

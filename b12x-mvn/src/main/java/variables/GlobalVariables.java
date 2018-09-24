@@ -17,7 +17,6 @@ import java.nio.file.Paths;
  */
 public class GlobalVariables {
     private static String neo4jURL = new String("http://neo4j.b12x.org/db/data/transaction/commit");
-//    private static Path dataFilesPath = Paths.get(System.getProperty("user.home")
     private static String dataFilesPath = new String(System.getProperty("user.home") 
                 + System.getProperty("file.separator") + "Documents" 
                 + System.getProperty("file.separator") + "BSG"
@@ -42,7 +41,7 @@ public class GlobalVariables {
         return neo4jURL;
     }
     
-    
+    // the locatrion of BSG's raw data files
     public static String dataFilesPath () {
         return dataFilesPath;
     }

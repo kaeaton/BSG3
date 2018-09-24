@@ -54,13 +54,31 @@ public class VersionModel {
         } else {
             return null;
         }
-//        } catch (Exception ex) {
-//            System.out.println(ex); 
-//        }
-//        return fileData;
     }
     
-    static DefaultComboBoxModel versions() throws IOException {
+    public static List<String> downloadVersionData() throws IOException {
+        List<String> versions;
+        // set up the call
+        Neo4jHttp neo4jHttp = new Neo4jHttp();
+
+        // set up for parsing the incoming data
+        Neo4jIncomingData parser = new Neo4jIncomingData();
+
+        // create the request and send it
+        JsonFactory factory = GlobalVariables.factory();
+        URL neo4jURL = new URL(GlobalVariables.neo4jUrl());
+
+        Neo4jVersionRequest whatVersion = new Neo4jVersionRequest(factory);
+        InputStream incomingVersionData = neo4jHttp
+                .makeCall(neo4jURL, whatVersion.formNeo4jVersionRequest());
+
+        // recieve the version data and parse it
+        versions = parser.parseVersion(incomingVersionData, factory);
+        
+        return versions;
+    }
+    
+    public static DefaultComboBoxModel versions() throws IOException {
 
         List<String> versions;
         DefaultComboBoxModel model = new DefaultComboBoxModel();
@@ -77,22 +95,7 @@ public class VersionModel {
             
             System.out.println("Realized there's no version data file.");
             
-            // set up the call
-            Neo4jHttp neo4jHttp = new Neo4jHttp();
-
-            // set up for parsing the incoming data
-            Neo4jIncomingData parser = new Neo4jIncomingData();
-
-            // create the request and send it
-            JsonFactory factory = GlobalVariables.factory();
-            URL neo4jURL = new URL(GlobalVariables.neo4jUrl());
-
-            Neo4jVersionRequest whatVersion = new Neo4jVersionRequest(factory);
-            InputStream incomingVersionData = neo4jHttp
-                    .makeCall(neo4jURL, whatVersion.formNeo4jVersionRequest());
-            
-            // recieve the version data and parse it
-            versions = parser.parseVersion(incomingVersionData, factory);
+            versions = downloadVersionData();
             model = new DefaultComboBoxModel(versions.toArray());
 
         }
