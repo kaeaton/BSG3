@@ -3322,9 +3322,9 @@ public class B12xGUI extends javax.swing.JFrame {
         }
     });
 
-    jLabel2.setText("The allele data is automatically updated if the data is more than 30 days old when you run the GFE search. ");
+    jLabel2.setText("The allele and version data is automatically updated if the data is more than 30 days old when you run the GFE search. ");
 
-    jLabel3.setText("This tool is for forcing a data update before that time is up. ");
+    jLabel3.setText("This tool is for forcing a data update before that time is up. It will also force update what versions are available.");
 
     try {
         hlaSelectNeo4jVersionUpdate.setModel(VersionModel.versions());
@@ -3339,16 +3339,16 @@ public class B12xGUI extends javax.swing.JFrame {
         .addGroup(neo4jUpdateLayout.createSequentialGroup()
             .addContainerGap()
             .addGroup(neo4jUpdateLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 686, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 686, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGroup(neo4jUpdateLayout.createSequentialGroup()
                     .addComponent(hlaSelectUpdate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGap(83, 83, 83)
                     .addComponent(neo4jUpdateButton)
                     .addGap(88, 88, 88)
                     .addComponent(neo4jUpdateCancelButton))
-                .addComponent(hlaSelectNeo4jVersionUpdate, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addContainerGap(171, Short.MAX_VALUE))
+                .addComponent(hlaSelectNeo4jVersionUpdate, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 743, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 756, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addContainerGap(101, Short.MAX_VALUE))
     );
     neo4jUpdateLayout.setVerticalGroup(
         neo4jUpdateLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -3540,11 +3540,6 @@ public class B12xGUI extends javax.swing.JFrame {
             Neo4j neo4j = new Neo4j(locus, version, dataPath, finalRegex, searchString);
             neo4j.execute();
             
-            // update the version selection menus
-            hlaSelectNeo4jVersionUpdate.setModel(VersionModel.versions());
-            hlaSelectNeo4jVersion.setModel(VersionModel.versions());
-            
-
         } catch (Exception ex) {
             System.out.println(ex);
         }        // TODO add your handling code here:

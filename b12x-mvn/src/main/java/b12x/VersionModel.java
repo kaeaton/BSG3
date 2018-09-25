@@ -83,7 +83,6 @@ public class VersionModel {
         List<String> versions;
         DefaultComboBoxModel model = new DefaultComboBoxModel();
         
-
         String[] versionData = getVersionData();
         
         // is there a data file to read from?

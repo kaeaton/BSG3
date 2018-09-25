@@ -4124,8 +4124,6 @@
                   <Group type="102" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="jLabel2" min="-2" pref="686" max="-2" attributes="0"/>
-                          <Component id="jLabel3" min="-2" pref="686" max="-2" attributes="0"/>
                           <Group type="102" alignment="0" attributes="0">
                               <Component id="hlaSelectUpdate" min="-2" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="83" max="-2" attributes="0"/>
@@ -4134,8 +4132,10 @@
                               <Component id="neo4jUpdateCancelButton" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <Component id="hlaSelectNeo4jVersionUpdate" alignment="0" min="-2" pref="141" max="-2" attributes="0"/>
+                          <Component id="jLabel3" alignment="0" min="-2" pref="743" max="-2" attributes="0"/>
+                          <Component id="jLabel2" alignment="0" min="-2" pref="756" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace pref="171" max="32767" attributes="0"/>
+                      <EmptySpace pref="101" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -4200,12 +4200,12 @@
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel2">
               <Properties>
-                <Property name="text" type="java.lang.String" value="The allele data is automatically updated if the data is more than 30 days old when you run the GFE search. "/>
+                <Property name="text" type="java.lang.String" value="The allele and version data is automatically updated if the data is more than 30 days old when you run the GFE search. "/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel3">
               <Properties>
-                <Property name="text" type="java.lang.String" value="This tool is for forcing a data update before that time is up. "/>
+                <Property name="text" type="java.lang.String" value="This tool is for forcing a data update before that time is up. It will also force update what versions are available."/>
               </Properties>
             </Component>
             <Component class="javax.swing.JComboBox" name="hlaSelectNeo4jVersionUpdate">
