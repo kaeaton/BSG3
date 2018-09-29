@@ -23,6 +23,10 @@ public class GlobalVariables {
                 + System.getProperty("file.separator") + "BSGData"
                 + System.getProperty("file.separator") );
 //                + "neo4j_version.txt");
+    private static String resultsFilesPath = new String(System.getProperty("user.home") 
+                + System.getProperty("file.separator") + "Documents" 
+                + System.getProperty("file.separator") + "BSG"
+                + System.getProperty("file.separator") );
     private static JsonFactory factory = new JsonFactory();
     
     public GlobalVariables () {
@@ -41,8 +45,13 @@ public class GlobalVariables {
         return neo4jURL;
     }
     
-    // the locatrion of BSG's raw data files
+    // the location of BSG's raw data files
     public static String dataFilesPath () {
         return dataFilesPath;
     }
+    
+    // the default location of the saved results file
+    public static String resultsFilesPath () {
+        return resultsFilesPath;
+    }    
 }

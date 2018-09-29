@@ -11,6 +11,7 @@ import java.io.FileWriter;
 import java.time.format.DateTimeFormatter;
 import java.time.LocalDate;
 import java.time.LocalTime;
+import variables.GlobalVariables;
 /**
  *
  * @author katrinaeaton
@@ -26,10 +27,10 @@ public class WriteFile {
 
         LocalDate dateStamp = LocalDate.now();
         String timeStamp = LocalTime.now().format(dtf).toString();
-        String fileName = System.getProperty("user.home")
-                + System.getProperty("file.separator") + "Documents"
-                + System.getProperty("file.separator") + "BSG"
-                + System.getProperty("file.separator") + locus
+        String fileName = GlobalVariables.dataFilesPath()//System.getProperty("user.home")
+//                + System.getProperty("file.separator") + "Documents"
+//                + System.getProperty("file.separator") + "BSG"
+                + locus
                 + "_" + version
                 + "." + dateStamp + "." + timeStamp
                 + "." + fileType;
