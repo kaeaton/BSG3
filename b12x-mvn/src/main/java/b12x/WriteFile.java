@@ -27,12 +27,10 @@ public class WriteFile {
 
         LocalDate dateStamp = LocalDate.now();
         String timeStamp = LocalTime.now().format(dtf).toString();
-        String fileName = GlobalVariables.dataFilesPath()//System.getProperty("user.home")
-//                + System.getProperty("file.separator") + "Documents"
-//                + System.getProperty("file.separator") + "BSG"
+        String fileName = GlobalVariables.dataFilesPath()
                 + locus
                 + "_" + version
-                + "." + dateStamp + "." + timeStamp
+                + "_" + dateStamp + "_" + timeStamp
                 + "." + fileType;
         
         System.out.println(fileName);
