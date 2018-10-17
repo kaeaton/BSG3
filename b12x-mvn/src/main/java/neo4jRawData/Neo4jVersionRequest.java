@@ -28,20 +28,28 @@ public class Neo4jVersionRequest {
     public String formNeo4jVersionRequest() throws IOException {
         try {
             char quote = '"';
-            request = "MATCH (n) WHERE " 
-                    + "EXISTS(n.imgt_release) RETURN DISTINCT " 
-                    + quote + "node" + quote + "as element, " 
-                    + "n.imgt_release AS imgt_release " 
-                    + "UNION ALL MATCH ()-[r]-() WHERE EXISTS(r.imgt_release) "
+            request = "MATCH ()-[r]-() WHERE EXISTS(r.imgt_release) "
                     + "RETURN DISTINCT " + quote + "relationship" + quote 
                     + "AS element, r.imgt_release AS imgt_release "
                     + "ORDER BY r.imgt_release DESC ";
+            
+//            request = "MATCH (n) WHERE " 
+//                    + "EXISTS(n.imgt_release) RETURN DISTINCT " 
+//                    + quote + "node" + quote + "as element, " 
+//                    + "n.imgt_release AS imgt_release " 
+//                    + "UNION ALL MATCH ()-[r]-() WHERE EXISTS(r.imgt_release) "
+//                    + "RETURN DISTINCT " + quote + "relationship" + quote 
+//                    + "AS element, r.imgt_release AS imgt_release "
+//                    + "ORDER BY r.imgt_release DESC ";
+            
+            // look for new releases, would be let know if new relationships 
             
 //             MATCH (n) WHERE EXISTS(n.imgt_release) 
 //             RETURN DISTINCT "node" as element, n.imgt_release 
 //             AS imgt_release UNION ALL MATCH ()-[r]-() 
 //             WHERE EXISTS(r.imgt_release) RETURN DISTINCT "relationship" 
 //             AS element, r.imgt_release AS imgt_release
+//             ORDER BY r.imgt_release DESC 
 
 //          Set descending, limit 2
 //          MATCH (n) WHERE EXISTS(n.imgt_release) RETURN DISTINCT "node" as element, n.imgt_release AS imgt_release LIMIT 2 UNION ALL MATCH ()-[r]-() WHERE EXISTS(r.imgt_release) RETURN DISTINCT "relationship" AS element, r.imgt_release AS imgt_release ORDER BY r.imgt_release DESC LIMIT 2
