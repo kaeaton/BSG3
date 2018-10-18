@@ -28,10 +28,10 @@ public class Neo4jVersionRequest {
     public String formNeo4jVersionRequest() throws IOException {
         try {
             char quote = '"';
-            request = "MATCH ()-[r]-() WHERE EXISTS(r.imgt_release) "
+            request = "MATCH ()-[r]-() WHERE EXISTS(r.imgtdb) "
                     + "RETURN DISTINCT " + quote + "relationship" + quote 
-                    + "AS element, r.imgt_release AS imgt_release "
-                    + "ORDER BY r.imgt_release DESC ";
+                    + "AS element, r.imgtdb AS imgtdb "
+                    + "ORDER BY r.imgtdb DESC ";
             
 //            request = "MATCH (n) WHERE " 
 //                    + "EXISTS(n.imgt_release) RETURN DISTINCT " 
