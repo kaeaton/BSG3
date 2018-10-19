@@ -29,8 +29,8 @@ public class Neo4jVersionRequest {
         try {
             char quote = '"';
             
-//            request = "MATCH (n:IMGT_HLA)-[e:HAS_FEATURE]-(feat:FEATURE) RETURN DISTINCT e.imgt_release AS HLA_DB";
-              request = "MATCH (n:IMGT_KIR)-[e:HAS_FEATURE]-(feat:FEATURE) RETURN DISTINCT e.imgt_release AS KIR_DB";
+            request = "MATCH (n:IMGT_HLA)-[e:HAS_FEATURE]-(feat:FEATURE) RETURN DISTINCT e.imgt_release AS HLA_DB";
+//              request = "MATCH (n:IMGT_KIR)-[e:HAS_FEATURE]-(feat:FEATURE) RETURN DISTINCT e.imgt_release AS KIR_DB";
 //            request = "MATCH ()-[r]-() WHERE EXISTS(r.imgtdb) "
 //                    + "RETURN DISTINCT " + quote + "relationship" + quote 
 //                    + "AS element, r.imgtdb AS imgtdb "
