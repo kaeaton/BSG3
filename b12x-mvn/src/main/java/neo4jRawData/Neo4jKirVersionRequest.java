@@ -8,13 +8,13 @@ import java.io.StringWriter;
 import java.nio.ByteBuffer;
 import java.nio.charset.Charset;
 
-public class Neo4jKirRequest {
+public class Neo4jKirVersionRequest {
     
     private String locus, version, request;
     private JsonFactory factory;
     private StringWriter writer = new StringWriter();
     
-    public Neo4jKirRequest(String incomingLocus, 
+    public Neo4jKirVersionRequest(String incomingLocus, 
                         String currentVersion, 
                         JsonFactory parentFactory)
     {
@@ -27,18 +27,10 @@ public class Neo4jKirRequest {
         try {
             char quote = '"';
             
-//          request string: MATCH (n:IMGT_HLA)-[r:HAS_GFE]-(g:GFE) WHERE n.locus = "locus" AND r.imgt_release = "version" RETURN n.name, g.name
+//          request string: MATCH (n:IMGT_KIR)-[e:HAS_FEATURE]-(feat:FEATURE) RETURN DISTINCT e.imgt_release AS KIR_DB
                  
-            request = ("MATCH (n:IMGT_HLA)-[r:HAS_GFE]-(g:GFE) " +
-                        "WHERE n.locus = " + quote + locus + quote + " " +
-                        "AND r.imgt_release = " + quote + version + quote +
-                        " RETURN n.name, g.name");
-            
-//            Old request
-//            request = ("MATCH (h:IMGT)-[r1:HAS_GFE]-(g:GFE) " +
-//                        "WHERE h.locus = \"" + locus + "\" " +
-//                        "AND r1.status = \"Expected\" " +
-//                        "RETURN h.name, g.name");
+            request = "MATCH (n:IMGT_KIR)-[e:HAS_FEATURE]-(feat:FEATURE) " +
+                       "RETURN DISTINCT e.imgt_release AS KIR_DB";
             
             JsonGenerator generator = factory.createGenerator(writer);
 

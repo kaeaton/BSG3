@@ -28,19 +28,13 @@ public class Neo4jVersionRequest {
     public String formNeo4jVersionRequest() throws IOException {
         try {
             char quote = '"';
-            request = "MATCH ()-[r]-() WHERE EXISTS(r.imgtdb) "
-                    + "RETURN DISTINCT " + quote + "relationship" + quote 
-                    + "AS element, r.imgtdb AS imgtdb "
-                    + "ORDER BY r.imgtdb DESC ";
             
-//            request = "MATCH (n) WHERE " 
-//                    + "EXISTS(n.imgt_release) RETURN DISTINCT " 
-//                    + quote + "node" + quote + "as element, " 
-//                    + "n.imgt_release AS imgt_release " 
-//                    + "UNION ALL MATCH ()-[r]-() WHERE EXISTS(r.imgt_release) "
+//            request = "MATCH (n:IMGT_HLA)-[e:HAS_FEATURE]-(feat:FEATURE) RETURN DISTINCT e.imgt_release AS HLA_DB";
+              request = "MATCH (n:IMGT_KIR)-[e:HAS_FEATURE]-(feat:FEATURE) RETURN DISTINCT e.imgt_release AS KIR_DB";
+//            request = "MATCH ()-[r]-() WHERE EXISTS(r.imgtdb) "
 //                    + "RETURN DISTINCT " + quote + "relationship" + quote 
-//                    + "AS element, r.imgt_release AS imgt_release "
-//                    + "ORDER BY r.imgt_release DESC ";
+//                    + "AS element, r.imgtdb AS imgtdb "
+//                    + "ORDER BY r.imgtdb DESC ";
             
             // look for new releases, would be let know if new relationships 
             

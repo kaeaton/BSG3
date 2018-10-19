@@ -149,30 +149,30 @@ public class Neo4jIncomingData {
             
             //Debugging tools
             // Write raw data to file to see structure
-//            ObjectMapper mapper = new ObjectMapper();
-//            Object json = mapper.readValue(httpResult, Object.class);
-//            File neo4jRaw = new File(System.getProperty("user.home") + System.getProperty("file.separator") + "Documents" + System.getProperty("file.separator") + "neo4jRawVersionData.json");
-//            mapper.writerWithDefaultPrettyPrinter().writeValue(neo4jRaw, json);  
+            ObjectMapper mapper = new ObjectMapper();
+            Object json = mapper.readValue(httpResult, Object.class);
+            File neo4jRaw = new File(System.getProperty("user.home") + System.getProperty("file.separator") + "Documents" + System.getProperty("file.separator") + "neo4jRawVersionData.json");
+            mapper.writerWithDefaultPrettyPrinter().writeValue(neo4jRaw, json);  
             
 
             // Write extracted data to file to make sure we're pulling the correct data.
-            File neo4jVersionRaw = new File(System.getProperty("user.home") 
-                    + System.getProperty("file.separator") + "Documents" 
-                    + System.getProperty("file.separator") + "BSG"
-                    + System.getProperty("file.separator") + "BSGData"
-                    + System.getProperty("file.separator") 
-                    + "neo4j_version.txt");
-            neo4jVersionRaw.createNewFile();
+//            File neo4jVersionRaw = new File(System.getProperty("user.home") 
+//                    + System.getProperty("file.separator") + "Documents" 
+//                    + System.getProperty("file.separator") + "BSG"
+//                    + System.getProperty("file.separator") + "BSGData"
+//                    + System.getProperty("file.separator") 
+//                    + "neo4j_version.txt");
+//            neo4jVersionRaw.createNewFile();
 
-            BufferedWriter writer = new BufferedWriter(new FileWriter(neo4jVersionRaw));
-            
-            LocalDate date = LocalDate.now();
-            writer.write(date.toString() + System.lineSeparator());
-            for(int i = 0; i < versions.size(); i++){
-                writer.write(versions.get(i) + ",");
-            }
-//            writer.write(versions.toString());
-            writer.close();
+//            BufferedWriter writer = new BufferedWriter(new FileWriter(neo4jVersionRaw));
+//            
+//            LocalDate date = LocalDate.now();
+//            writer.write(date.toString() + System.lineSeparator());
+//            for(int i = 0; i < versions.size(); i++){
+//                writer.write(versions.get(i) + ",");
+//            }
+////            writer.write(versions.toString());
+//            writer.close();
 
         } catch (Exception ex) {
             System.out.println(ex);
