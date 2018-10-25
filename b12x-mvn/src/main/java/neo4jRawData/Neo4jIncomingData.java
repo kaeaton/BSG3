@@ -133,8 +133,8 @@ public class Neo4jIncomingData {
                             break;
                     
                     // we want to look for a key field that says row
-                    if (JsonToken.VALUE_STRING.equals(token) 
-                            && "row".equals(parser.getText())) {
+                    if (JsonToken.FIELD_NAME.equals(token) 
+                            && "row".equals(parser.getCurrentName())) { 
                         token = parser.nextToken();
                         token = parser.nextToken();
                         versions.add(parser.getText());
