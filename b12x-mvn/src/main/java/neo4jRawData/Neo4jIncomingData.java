@@ -134,7 +134,9 @@ public class Neo4jIncomingData {
                     
                     // we want to look for a key field that says row
                     if (JsonToken.FIELD_NAME.equals(token) 
-                            && "row".equals(parser.getCurrentName())) { 
+                            && "row".equals(parser.getCurrentName())) {
+//                    if (JsonToken.VALUE_STRING.equals(token) 
+//                            && "row".equals(parser.getText())) {
                         token = parser.nextToken();
                         token = parser.nextToken();
                         versions.add(parser.getText());
@@ -163,6 +165,75 @@ public class Neo4jIncomingData {
                     + System.getProperty("file.separator") + "BSGData"
                     + System.getProperty("file.separator") 
                     + "neo4j_version.txt");
+            neo4jVersionRaw.createNewFile();
+
+            BufferedWriter writer = new BufferedWriter(new FileWriter(neo4jVersionRaw));
+            
+            LocalDate date = LocalDate.now();
+            writer.write(date.toString() + System.lineSeparator());
+            for(int i = 0; i < versions.size(); i++){
+                writer.write(versions.get(i) + ",");
+            }
+//            writer.write(versions.toString());
+            writer.close();
+
+        } catch (Exception ex) {
+            System.out.println(ex);
+        }
+        return versions;
+    }
+    
+    public List<String> parseKirVersion(InputStream httpResult, JsonFactory factory) throws IOException {
+        List<String> versions = new ArrayList<>();
+        System.out.println(versions.toString());
+
+        try {
+            // reading raw data and extracting the version string
+            // open the json parser
+            JsonParser parser = factory.createParser(httpResult);
+            System.out.println("Taken the input string and opened the Version parser");
+            
+            // continue parsing the token till the end of input is reached
+            while (!parser.isClosed()) {
+                // get the token
+                JsonToken token = parser.nextToken();
+
+                while (true) {
+                    token = parser.nextToken();
+                    if (token == null)
+                            break;
+                    
+                    // we want to look for a key field that says row
+                    if (JsonToken.FIELD_NAME.equals(token) 
+                            && "row".equals(parser.getCurrentName())) { 
+                        token = parser.nextToken();
+                        token = parser.nextToken();
+                        versions.add(parser.getText());
+                        System.out.println(versions.toString());
+
+                    }
+                }
+            }
+            
+            // close the json parser
+            parser.close();
+            
+            
+            //Debugging tools
+            // Write raw data to file to see structure
+//            ObjectMapper mapper = new ObjectMapper();
+//            Object json = mapper.readValue(httpResult, Object.class);
+//            File neo4jRaw = new File(System.getProperty("user.home") + System.getProperty("file.separator") + "Documents" + System.getProperty("file.separator") + "neo4jRawVersionData.json");
+//            mapper.writerWithDefaultPrettyPrinter().writeValue(neo4jRaw, json);  
+            
+
+            // Write extracted data to file to make sure we're pulling the correct data.
+            File neo4jVersionRaw = new File(System.getProperty("user.home") 
+                    + System.getProperty("file.separator") + "Documents" 
+                    + System.getProperty("file.separator") + "BSG"
+                    + System.getProperty("file.separator") + "BSGData"
+                    + System.getProperty("file.separator") 
+                    + "neo4j_kir_version.txt");
             neo4jVersionRaw.createNewFile();
 
             BufferedWriter writer = new BufferedWriter(new FileWriter(neo4jVersionRaw));
