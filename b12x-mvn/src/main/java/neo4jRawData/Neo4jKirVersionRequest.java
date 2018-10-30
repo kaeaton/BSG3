@@ -30,7 +30,8 @@ public class Neo4jKirVersionRequest {
 //          request string: MATCH (n:IMGT_KIR)-[e:HAS_FEATURE]-(feat:FEATURE) RETURN DISTINCT e.imgt_release AS KIR_DB
                  
             request = "MATCH (n:IMGT_KIR)-[e:HAS_FEATURE]-(feat:FEATURE) " +
-                       "RETURN DISTINCT e.imgt_release AS KIR_DB";
+                      "RETURN DISTINCT e.imgt_release AS KIR_DB " +
+                      "ORDER BY e.imgt_release DESC";
             
             JsonGenerator generator = factory.createGenerator(writer);
 
