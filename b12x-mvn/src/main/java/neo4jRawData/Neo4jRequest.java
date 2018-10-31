@@ -66,7 +66,7 @@ public class Neo4jRequest {
             
             // request string MATCH (n:IMGT_KIR)-[r:HAS_GFE]-(g:GFE) WHERE r.imgt_release = "2.7.0" RETURN n.name, g.name
                  
-            request = ("MATCH (n:IMGT_HLA)-[r:HAS_GFE]-(g:GFE) " +
+            request = ("MATCH (n:IMGT_KIR)-[r:HAS_GFE]-(g:GFE) " +
                         "WHERE r.imgt_release = " + quote + version + quote +
                         " RETURN n.name, g.name");
             
