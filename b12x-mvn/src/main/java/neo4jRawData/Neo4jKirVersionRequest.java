@@ -23,11 +23,13 @@ public class Neo4jKirVersionRequest {
         version = currentVersion;
     }
     
-    public String formNeo4jKirRequest() throws IOException {
-        try {
+    public String formNeo4jKirRequest() throws IOException 
+    {
+        try 
+        {
             char quote = '"';
             
-//          request string: MATCH (n:IMGT_KIR)-[e:HAS_FEATURE]-(feat:FEATURE) RETURN DISTINCT e.imgt_release AS KIR_DB
+//          request string: MATCH (n:IMGT_KIR)-[e:HAS_FEATURE]-(feat:FEATURE) RETURN DISTINCT e.imgt_release AS KIR_DB ORDER BY e.imgt_release DESC
                  
             request = "MATCH (n:IMGT_KIR)-[e:HAS_FEATURE]-(feat:FEATURE) " +
                       "RETURN DISTINCT e.imgt_release AS KIR_DB " +
@@ -47,10 +49,10 @@ public class Neo4jKirVersionRequest {
             generator.close();
 
             System.out.println(writer.toString());            
-        } catch (Exception ex) {
+        } catch (Exception ex) 
+        {
             System.out.println(ex);
         }
         return writer.toString();
     }
-    
 }
