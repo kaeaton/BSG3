@@ -3306,7 +3306,12 @@ public class B12xGUI extends javax.swing.JFrame {
 
     jTabbedPane2.addTab("Neo4j GFE Search", neo4j);
 
-    hlaSelectUpdate.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "HLA-A", "HLA-B", "HLA-C", "HLA-DPA1", "HLA-DPB1", "HLA-DQA1", "HLA-DQB1", "HLA-DRB1", "HLA-DRB3", "HLA-DRB4", "HLA-DRB5" }));
+    hlaSelectUpdate.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "HLA-A", "HLA-B", "HLA-C", "HLA-DPA1", "HLA-DPB1", "HLA-DQA1", "HLA-DQB1", "HLA-DRB1", "HLA-DRB3", "HLA-DRB4", "HLA-DRB5", "KIR" }));
+    hlaSelectUpdate.addActionListener(new java.awt.event.ActionListener() {
+        public void actionPerformed(java.awt.event.ActionEvent evt) {
+            hlaSelectUpdateActionPerformed(evt);
+        }
+    });
 
     neo4jUpdateButton.setText("Update Neo4j Records");
     neo4jUpdateButton.addActionListener(new java.awt.event.ActionListener() {
@@ -3331,6 +3336,11 @@ public class B12xGUI extends javax.swing.JFrame {
     } catch (Exception ex) {
         System.out.println(ex);
     }
+    hlaSelectNeo4jVersionUpdate.addActionListener(new java.awt.event.ActionListener() {
+        public void actionPerformed(java.awt.event.ActionEvent evt) {
+            hlaSelectNeo4jVersionUpdateActionPerformed(evt);
+        }
+    });
 
     javax.swing.GroupLayout neo4jUpdateLayout = new javax.swing.GroupLayout(neo4jUpdate);
     neo4jUpdate.setLayout(neo4jUpdateLayout);
@@ -3650,6 +3660,18 @@ public class B12xGUI extends javax.swing.JFrame {
             System.out.println(ex);
         }        // TODO add your handling code here:
     }//GEN-LAST:event_jButtonResetSearchTermsActionPerformed
+
+    private void hlaSelectNeo4jVersionUpdateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_hlaSelectNeo4jVersionUpdateActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_hlaSelectNeo4jVersionUpdateActionPerformed
+
+    private void hlaSelectUpdateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_hlaSelectUpdateActionPerformed
+        // TODO add your handling code here:
+        if (hlaSelectNeo4j.getSelectedItem().toString() == "KIR")
+        {
+            
+        }
+    }//GEN-LAST:event_hlaSelectUpdateActionPerformed
     
 //    public void neo4jResults.getDocument();
 //    DocumentListener(new DocumentListener() {

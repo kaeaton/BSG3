@@ -102,4 +102,28 @@ public class VersionModel {
         return model;
     }
     
+    public static DefaultComboBoxModel kirVersions() throws IOException {
+
+        List<String> versions;
+        DefaultComboBoxModel model = new DefaultComboBoxModel();
+        
+        String[] kirVersionData = getVersionData();
+        
+        // is there a data file to read from?
+        if (kirVersionData != null)
+            model = new DefaultComboBoxModel(kirVersionData);
+        
+        // no? create one
+        else {
+            
+            System.out.println("Realized there's no version data file.");
+            
+            versions = downloadVersionData();
+            model = new DefaultComboBoxModel(versions.toArray());
+
+        }
+        
+        return model;
+    }
+    
 }
