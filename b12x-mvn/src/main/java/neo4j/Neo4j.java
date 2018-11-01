@@ -109,8 +109,8 @@ public class Neo4j extends SwingWorker<String, String> {
             parseData.readCSVFile(locus, path.toFile(), regex, searchString);
             
             // update the version selection menus
-            B12xGUI.hlaSelectNeo4jVersionUpdate.setModel(VersionModel.versions());
-            B12xGUI.hlaSelectNeo4jVersion.setModel(VersionModel.versions());
+            B12xGUI.hlaSelectNeo4jVersionUpdate.setModel(VersionModel.versions("HLA"));
+            B12xGUI.hlaSelectNeo4jVersion.setModel(VersionModel.versions("HLA"));
             
         } catch (Exception ex) {
             System.out.println(ex);

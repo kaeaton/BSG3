@@ -64,7 +64,7 @@ public class Neo4jVersionRequest {
         return writer.toString();
     }
     
-    public String formNeo4jKirRequest() throws IOException 
+    public String formNeo4jKirVersionRequest() throws IOException 
     {
         try 
         {

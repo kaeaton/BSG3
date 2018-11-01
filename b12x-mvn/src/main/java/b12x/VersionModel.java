@@ -56,7 +56,7 @@ public class VersionModel {
         }
     }
     
-    public static List<String> downloadVersionData() throws IOException {
+    public static List<String> downloadVersionData(String versionType) throws IOException {
         List<String> versions;
         // set up the call
         Neo4jHttp neo4jHttp = new Neo4jHttp();
@@ -67,18 +67,38 @@ public class VersionModel {
         // create the request and send it
         JsonFactory factory = GlobalVariables.factory();
         URL neo4jURL = new URL(GlobalVariables.neo4jUrl());
-
+        
         Neo4jVersionRequest whatVersion = new Neo4jVersionRequest(factory);
-        InputStream incomingVersionData = neo4jHttp
+//        InputStream incomingVersionData = new InputStream();
+        if (versionType == "HLA")
+        {
+            InputStream incomingVersionData = neo4jHttp
                 .makeCall(neo4jURL, whatVersion.formNeo4jVersionRequest());
 
+            // recieve the version data and parse it
+            versions = parser.parseVersion(incomingVersionData, factory);
+                    
+            return versions;
+
+        }
+        else if (versionType == "KIR")
+        {
+            InputStream incomingVersionData = neo4jHttp
+                .makeCall(neo4jURL, whatVersion.formNeo4jKirVersionRequest());
+
+            // recieve the version data and parse it
+            versions = parser.parseVersion(incomingVersionData, factory);
+
+            return versions;
+        }
+
         // recieve the version data and parse it
-        versions = parser.parseVersion(incomingVersionData, factory);
+//        versions = parser.parseVersion(incomingVersionData, factory);
         
-        return versions;
+        return null;
     }
     
-    public static DefaultComboBoxModel versions() throws IOException {
+    public static DefaultComboBoxModel versions(String versionType) throws IOException {
 
         List<String> versions;
         DefaultComboBoxModel model = new DefaultComboBoxModel();
@@ -94,7 +114,7 @@ public class VersionModel {
             
             System.out.println("Realized there's no version data file.");
             
-            versions = downloadVersionData();
+            versions = downloadVersionData(versionType);
             model = new DefaultComboBoxModel(versions.toArray());
 
         }
@@ -118,8 +138,8 @@ public class VersionModel {
             
             System.out.println("Realized there's no version data file.");
             
-            versions = downloadVersionData();
-            model = new DefaultComboBoxModel(versions.toArray());
+//            versions = downloadVersionData(versionType);
+//            model = new DefaultComboBoxModel(versions.toArray());
 
         }
         

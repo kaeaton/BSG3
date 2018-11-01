@@ -3240,7 +3240,7 @@ public class B12xGUI extends javax.swing.JFrame {
     });
 
     try {
-        hlaSelectNeo4jVersion.setModel(VersionModel.versions());
+        hlaSelectNeo4jVersion.setModel(VersionModel.versions("HLA"));
     } catch (Exception ex) {
         System.out.println(ex);
     }
@@ -3332,7 +3332,7 @@ public class B12xGUI extends javax.swing.JFrame {
     jLabel3.setText("This tool is for forcing a data update before that time is up. It will also force update what versions are available.");
 
     try {
-        hlaSelectNeo4jVersionUpdate.setModel(VersionModel.versions());
+        hlaSelectNeo4jVersionUpdate.setModel(VersionModel.versions("HLA"));
     } catch (Exception ex) {
         System.out.println(ex);
     }
@@ -3574,8 +3574,8 @@ public class B12xGUI extends javax.swing.JFrame {
             neo4j.dataUpdate();
             
             // update the version selection menus
-            hlaSelectNeo4jVersionUpdate.setModel(VersionModel.versions());
-            hlaSelectNeo4jVersion.setModel(VersionModel.versions());
+            hlaSelectNeo4jVersionUpdate.setModel(VersionModel.versions("HLA"));
+            hlaSelectNeo4jVersion.setModel(VersionModel.versions("HLA"));
         } catch (Exception ex) {
             System.out.println(ex);
         }
@@ -3667,9 +3667,18 @@ public class B12xGUI extends javax.swing.JFrame {
 
     private void hlaSelectUpdateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_hlaSelectUpdateActionPerformed
         // TODO add your handling code here:
-        if (hlaSelectNeo4j.getSelectedItem().toString() == "KIR")
+        try 
         {
-            
+            if (hlaSelectNeo4j.getSelectedItem().toString() == "KIR")
+            {
+                hlaSelectNeo4jVersionUpdate.setModel(VersionModel.versions("KIR"));
+            } else
+            {
+                hlaSelectNeo4jVersionUpdate.setModel(VersionModel.versions("HLA"));                
+            }
+        } catch (Exception ex) 
+        {
+            System.out.println(ex);
         }
     }//GEN-LAST:event_hlaSelectUpdateActionPerformed
     
