@@ -23,6 +23,7 @@ public class Neo4j extends SwingWorker<String, String> {
     
     private final String locus, regex, searchString;
     private final String version;
+    private final String versionType;
     private List<String> versions;
     private final Path path;
     private final Path versionPath = Paths.get(GlobalVariables.dataFilesPath() 
@@ -36,7 +37,8 @@ public class Neo4j extends SwingWorker<String, String> {
                  String incomingVersion, 
                  Path incomingPath, 
                  String incomingRegex, 
-                 String incomingSearchString) 
+                 String incomingSearchString,
+                 String incomingVersionType) 
                  throws IOException 
     {
         locus = incomingLocus;
@@ -44,10 +46,11 @@ public class Neo4j extends SwingWorker<String, String> {
         regex = incomingRegex;
         searchString = incomingSearchString;
         version = incomingVersion;
+        versionType = incomingVersionType;
     }
         
     
-    public void dataUpdate(String versionType) throws IOException {
+    public void dataUpdate() throws IOException {
         try {
             // set up the call
             Neo4jHttp neo4jHttp = new Neo4jHttp();

@@ -3463,7 +3463,7 @@ public class B12xGUI extends javax.swing.JFrame {
             String locus = hlaSelectNeo4j.getSelectedItem().toString();
             String parsedLocus = LocusNameParser.parseLocus(locus);
             String version = hlaSelectNeo4jVersion.getSelectedItem().toString();
-//            String neo4jLocation = "";
+            String versionType = LocusNameParser.hlaOrKir(locus);
             Path dataPath = Paths.get(GlobalVariables.dataFilesPath() 
                                     + version
                                     + System.getProperty("file.separator") 
@@ -3547,7 +3547,7 @@ public class B12xGUI extends javax.swing.JFrame {
 
             
             neo4jResults.setText("");
-            Neo4j neo4j = new Neo4j(locus, version, dataPath, finalRegex, searchString);
+            Neo4j neo4j = new Neo4j(locus, version, dataPath, finalRegex, searchString, versionType);
             neo4j.execute();
             
         } catch (Exception ex) {
@@ -3569,13 +3569,14 @@ public class B12xGUI extends javax.swing.JFrame {
                                     + "_Download.csv");
             String regex = "";
             String searchString = "";
+            String versionType = LocusNameParser.hlaOrKir(locus);
 
-            Neo4j neo4j = new Neo4j(locus, version, path, regex, searchString);
+            Neo4j neo4j = new Neo4j(locus, version, path, regex, searchString, versionType);
             neo4j.dataUpdate();
             
             // update the version selection menus
-            hlaSelectNeo4jVersionUpdate.setModel(VersionModel.versions("HLA"));
-            hlaSelectNeo4jVersion.setModel(VersionModel.versions("HLA"));
+            hlaSelectNeo4jVersionUpdate.setModel(VersionModel.versions(versionType));
+            hlaSelectNeo4jVersion.setModel(VersionModel.versions(versionType));
         } catch (Exception ex) {
             System.out.println(ex);
         }
@@ -3671,13 +3672,10 @@ public class B12xGUI extends javax.swing.JFrame {
         {
             if (hlaSelectUpdate.getSelectedItem().toString() == "KIR")
             {
-                System.out.println("Data update: KIR selected");
                 hlaSelectNeo4jVersionUpdate.setModel(VersionModel.versions("KIR"));
-//                repaint();
             } else
             {
                 hlaSelectNeo4jVersionUpdate.setModel(VersionModel.versions("HLA"));
-//                repaint();                
             }
         } catch (Exception ex) 
         {
@@ -3695,7 +3693,7 @@ public class B12xGUI extends javax.swing.JFrame {
 //  }
 //  public void insertUpdate(DocumentEvent e) {
 //    warn();
-//  }
+//  }  
 //});
        
             

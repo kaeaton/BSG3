@@ -30,4 +30,19 @@ public class LocusNameParser {
         
         return parsedLocus;
     }
+    
+    static String hlaOrKir(String locus)
+    {
+        String type = "";
+        Pattern p = Pattern.compile("^([A-Z]{3})");
+        Matcher m = p.matcher(locus);
+
+        // Find locus
+        if (m.find()) {
+            type = m.group(1);
+            System.out.println(type);
+        }
+        
+        return type;
+    }
 }
