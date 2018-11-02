@@ -3673,11 +3673,11 @@ public class B12xGUI extends javax.swing.JFrame {
             {
                 System.out.println("Data update: KIR selected");
                 hlaSelectNeo4jVersionUpdate.setModel(VersionModel.versions("KIR"));
-                repaint();
+//                repaint();
             } else
             {
                 hlaSelectNeo4jVersionUpdate.setModel(VersionModel.versions("HLA"));
-                repaint();                
+//                repaint();                
             }
         } catch (Exception ex) 
         {
