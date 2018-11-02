@@ -34,9 +34,9 @@ public class VersionModel {
         
     }
     
-    static String[] getVersionData() throws IOException {
+    static String[] getVersionData(String versionType) throws IOException {
         Path versionPath = Paths.get(GlobalVariables.dataFilesPath() 
-                                     + "neo4j_version.txt");
+                                     + "neo4j_" + versionType + "_version.txt");
         File file = versionPath.toFile();
         if (file.exists()){
             BufferedReader br = new BufferedReader(new FileReader(file));
@@ -69,14 +69,15 @@ public class VersionModel {
         URL neo4jURL = new URL(GlobalVariables.neo4jUrl());
         
         Neo4jVersionRequest whatVersion = new Neo4jVersionRequest(factory);
-//        InputStream incomingVersionData = new InputStream();
+
+        // what kind of version data are we looking for?
         if (versionType == "HLA")
         {
             InputStream incomingVersionData = neo4jHttp
                 .makeCall(neo4jURL, whatVersion.formNeo4jVersionRequest());
 
             // recieve the version data and parse it
-            versions = parser.parseVersion(incomingVersionData, factory);
+            versions = parser.parseVersion(incomingVersionData, factory, versionType);
                     
             return versions;
 
@@ -87,8 +88,9 @@ public class VersionModel {
                 .makeCall(neo4jURL, whatVersion.formNeo4jKirVersionRequest());
 
             // recieve the version data and parse it
-            versions = parser.parseVersion(incomingVersionData, factory);
+            versions = parser.parseVersion(incomingVersionData, factory, versionType);
 
+            System.out.println("versionType is neither HLA nor KIR");
             return versions;
         }
 
@@ -103,7 +105,7 @@ public class VersionModel {
         List<String> versions;
         DefaultComboBoxModel model = new DefaultComboBoxModel();
         
-        String[] versionData = getVersionData();
+        String[] versionData = getVersionData(versionType);
         
         // is there a data file to read from?
         if (versionData != null)
@@ -122,28 +124,28 @@ public class VersionModel {
         return model;
     }
     
-    public static DefaultComboBoxModel kirVersions() throws IOException {
-
-        List<String> versions;
-        DefaultComboBoxModel model = new DefaultComboBoxModel();
+//    public static DefaultComboBoxModel kirVersions() throws IOException {
+//
+//        List<String> versions;
+//        DefaultComboBoxModel model = new DefaultComboBoxModel();
         
-        String[] kirVersionData = getVersionData();
+//        String[] kirVersionData = getVersionData();
         
         // is there a data file to read from?
-        if (kirVersionData != null)
-            model = new DefaultComboBoxModel(kirVersionData);
+//        if (kirVersionData != null)
+//            model = new DefaultComboBoxModel(kirVersionData);
         
         // no? create one
-        else {
-            
-            System.out.println("Realized there's no version data file.");
-            
-//            versions = downloadVersionData(versionType);
-//            model = new DefaultComboBoxModel(versions.toArray());
-
-        }
+//        else {
+//            
+//            System.out.println("Realized there's no version data file.");
+//            
+////            versions = downloadVersionData(versionType);
+////            model = new DefaultComboBoxModel(versions.toArray());
+//
+//        }
         
-        return model;
-    }
+//        return model;
+//    }
     
 }

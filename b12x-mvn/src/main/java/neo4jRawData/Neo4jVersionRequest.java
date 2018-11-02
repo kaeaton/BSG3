@@ -29,7 +29,7 @@ public class Neo4jVersionRequest {
     {
         try 
         {
-            char quote = '"';
+//            char quote = '"';
             
             request = "MATCH (n:IMGT_HLA)-[e:HAS_FEATURE]-(feat:FEATURE) " 
                     + "RETURN DISTINCT e.imgt_release AS HLA_DB ORDER BY "
@@ -68,7 +68,7 @@ public class Neo4jVersionRequest {
     {
         try 
         {
-            char quote = '"';
+//            char quote = '"';
             
 //          request string: MATCH (n:IMGT_KIR)-[e:HAS_FEATURE]-(feat:FEATURE) RETURN DISTINCT e.imgt_release AS KIR_DB ORDER BY e.imgt_release DESC
                  

@@ -3669,12 +3669,15 @@ public class B12xGUI extends javax.swing.JFrame {
         // TODO add your handling code here:
         try 
         {
-            if (hlaSelectNeo4j.getSelectedItem().toString() == "KIR")
+            if (hlaSelectUpdate.getSelectedItem().toString() == "KIR")
             {
+                System.out.println("Data update: KIR selected");
                 hlaSelectNeo4jVersionUpdate.setModel(VersionModel.versions("KIR"));
+                repaint();
             } else
             {
-                hlaSelectNeo4jVersionUpdate.setModel(VersionModel.versions("HLA"));                
+                hlaSelectNeo4jVersionUpdate.setModel(VersionModel.versions("HLA"));
+                repaint();                
             }
         } catch (Exception ex) 
         {
