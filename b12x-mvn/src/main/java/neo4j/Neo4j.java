@@ -49,7 +49,6 @@ public class Neo4j extends SwingWorker<String, String> {
         versionType = incomingVersionType;
     }
         
-    
     public void dataUpdate() throws IOException {
         try {
             // set up the call
@@ -62,7 +61,7 @@ public class Neo4j extends SwingWorker<String, String> {
             // create the request and send it
             Neo4jVersionRequest whatVersion = new Neo4jVersionRequest(factory);
             InputStream incomingVersionData = neo4jHttp
-                    .makeCall(neo4jURL, whatVersion.formNeo4jVersionRequest());
+                    .makeCall(neo4jURL, whatVersion.formNeo4jVersionRequest(versionType));
             
             // recieve the version data and parse it
             versions = parser.parseVersion(incomingVersionData, factory, versionType);

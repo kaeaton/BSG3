@@ -71,33 +71,33 @@ public class VersionModel {
         Neo4jVersionRequest whatVersion = new Neo4jVersionRequest(factory);
 
         // what kind of version data are we looking for?
-        if (versionType == "HLA")
-        {
+//        if (versionType == "HLA")
+//        {
             InputStream incomingVersionData = neo4jHttp
-                .makeCall(neo4jURL, whatVersion.formNeo4jVersionRequest());
+                .makeCall(neo4jURL, whatVersion.formNeo4jVersionRequest(versionType));
 
             // recieve the version data and parse it
             versions = parser.parseVersion(incomingVersionData, factory, versionType);
                     
             return versions;
 
-        }
-        else if (versionType == "KIR")
-        {
-            InputStream incomingVersionData = neo4jHttp
-                .makeCall(neo4jURL, whatVersion.formNeo4jKirVersionRequest());
-
-            // recieve the version data and parse it
-            versions = parser.parseVersion(incomingVersionData, factory, versionType);
-
-            System.out.println("versionType is neither HLA nor KIR");
-            return versions;
-        }
+//        }
+//        else if (versionType == "KIR")
+//        {
+//            InputStream incomingVersionData = neo4jHttp
+//                .makeCall(neo4jURL, whatVersion.formNeo4jKirVersionRequest());
+//
+//            // recieve the version data and parse it
+//            versions = parser.parseVersion(incomingVersionData, factory, versionType);
+//
+//            System.out.println("versionType is neither HLA nor KIR");
+//            return versions;
+//        }
 
         // recieve the version data and parse it
 //        versions = parser.parseVersion(incomingVersionData, factory);
         
-        return null;
+//        return null;
     }
     
     public static DefaultComboBoxModel versions(String versionType) throws IOException {
