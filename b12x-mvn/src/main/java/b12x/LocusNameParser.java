@@ -13,17 +13,20 @@ import java.util.regex.Pattern;
  * @author kaeaton
  */
 public class LocusNameParser {
-    public LocusNameParser (){
+    public LocusNameParser ()
+    {
 
     }
     
-    static String parseLocus(String locus){
+    public static String parseLocus(String locus)
+    {
         String parsedLocus = "";
         Pattern p = Pattern.compile("^HLA-(\\w+)$");
         Matcher m = p.matcher(locus);
             
         // Find locus
-        if (m.find()) {
+        if (m.find()) 
+        {
             parsedLocus = m.group(1);
             System.out.println(parsedLocus);
         }
@@ -31,7 +34,7 @@ public class LocusNameParser {
         return parsedLocus;
     }
     
-    static String hlaOrKir(String locus)
+    public static String hlaOrKir(String locus)
     {
         String type = "";
         Pattern p = Pattern.compile("^([A-Z]{3})");

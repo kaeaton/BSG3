@@ -59,9 +59,9 @@ public class Neo4j extends SwingWorker<String, String> {
             
             // determine the most recent version
             // create the request and send it
-            Neo4jVersionRequest whatVersion = new Neo4jVersionRequest(factory);
+            Neo4jVersionRequest whatVersion = new Neo4jVersionRequest();
             InputStream incomingVersionData = neo4jHttp
-                    .makeCall(neo4jURL, whatVersion.formNeo4jVersionRequest(versionType));
+                    .makeCall(neo4jURL, whatVersion.formNeo4jVersionRequest(versionType, factory));
             
             // recieve the version data and parse it
             versions = parser.parseVersion(incomingVersionData, factory, versionType);

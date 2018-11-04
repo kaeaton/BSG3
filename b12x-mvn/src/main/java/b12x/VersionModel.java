@@ -68,13 +68,13 @@ public class VersionModel {
         JsonFactory factory = GlobalVariables.factory();
         URL neo4jURL = new URL(GlobalVariables.neo4jUrl());
         
-        Neo4jVersionRequest whatVersion = new Neo4jVersionRequest(factory);
+        Neo4jVersionRequest whatVersion = new Neo4jVersionRequest();
 
         // what kind of version data are we looking for?
 //        if (versionType == "HLA")
 //        {
             InputStream incomingVersionData = neo4jHttp
-                .makeCall(neo4jURL, whatVersion.formNeo4jVersionRequest(versionType));
+                .makeCall(neo4jURL, whatVersion.formNeo4jVersionRequest(versionType, factory));
 
             // recieve the version data and parse it
             versions = parser.parseVersion(incomingVersionData, factory, versionType);
