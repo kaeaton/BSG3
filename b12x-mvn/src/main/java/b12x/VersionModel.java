@@ -34,9 +34,9 @@ public class VersionModel {
         
     }
     
-    static String[] getVersionData() throws IOException {
+    static String[] getVersionData(String versionType) throws IOException {
         Path versionPath = Paths.get(GlobalVariables.dataFilesPath() 
-                                     + "neo4j_version.txt");
+                                     + "neo4j_" + versionType + "_version.txt");
         File file = versionPath.toFile();
         if (file.exists()){
             BufferedReader br = new BufferedReader(new FileReader(file));
@@ -56,7 +56,7 @@ public class VersionModel {
         }
     }
     
-    public static List<String> downloadVersionData() throws IOException {
+    public static List<String> downloadVersionData(String versionType) throws IOException {
         List<String> versions;
         // set up the call
         Neo4jHttp neo4jHttp = new Neo4jHttp();
@@ -67,23 +67,45 @@ public class VersionModel {
         // create the request and send it
         JsonFactory factory = GlobalVariables.factory();
         URL neo4jURL = new URL(GlobalVariables.neo4jUrl());
+        
+        Neo4jVersionRequest whatVersion = new Neo4jVersionRequest();
 
-        Neo4jVersionRequest whatVersion = new Neo4jVersionRequest(factory);
-        InputStream incomingVersionData = neo4jHttp
-                .makeCall(neo4jURL, whatVersion.formNeo4jVersionRequest());
+        // what kind of version data are we looking for?
+//        if (versionType == "HLA")
+//        {
+            InputStream incomingVersionData = neo4jHttp
+                .makeCall(neo4jURL, whatVersion.formNeo4jVersionRequest(versionType, factory));
+
+            // recieve the version data and parse it
+            versions = parser.parseVersion(incomingVersionData, factory, versionType);
+                    
+            return versions;
+
+//        }
+//        else if (versionType == "KIR")
+//        {
+//            InputStream incomingVersionData = neo4jHttp
+//                .makeCall(neo4jURL, whatVersion.formNeo4jKirVersionRequest());
+//
+//            // recieve the version data and parse it
+//            versions = parser.parseVersion(incomingVersionData, factory, versionType);
+//
+//            System.out.println("versionType is neither HLA nor KIR");
+//            return versions;
+//        }
 
         // recieve the version data and parse it
-        versions = parser.parseVersion(incomingVersionData, factory);
+//        versions = parser.parseVersion(incomingVersionData, factory);
         
-        return versions;
+//        return null;
     }
     
-    public static DefaultComboBoxModel versions() throws IOException {
+    public static DefaultComboBoxModel versions(String versionType) throws IOException {
 
         List<String> versions;
         DefaultComboBoxModel model = new DefaultComboBoxModel();
         
-        String[] versionData = getVersionData();
+        String[] versionData = getVersionData(versionType);
         
         // is there a data file to read from?
         if (versionData != null)
@@ -94,12 +116,36 @@ public class VersionModel {
             
             System.out.println("Realized there's no version data file.");
             
-            versions = downloadVersionData();
+            versions = downloadVersionData(versionType);
             model = new DefaultComboBoxModel(versions.toArray());
 
         }
         
         return model;
     }
+    
+//    public static DefaultComboBoxModel kirVersions() throws IOException {
+//
+//        List<String> versions;
+//        DefaultComboBoxModel model = new DefaultComboBoxModel();
+        
+//        String[] kirVersionData = getVersionData();
+        
+        // is there a data file to read from?
+//        if (kirVersionData != null)
+//            model = new DefaultComboBoxModel(kirVersionData);
+        
+        // no? create one
+//        else {
+//            
+//            System.out.println("Realized there's no version data file.");
+//            
+////            versions = downloadVersionData(versionType);
+////            model = new DefaultComboBoxModel(versions.toArray());
+//
+//        }
+        
+//        return model;
+//    }
     
 }
