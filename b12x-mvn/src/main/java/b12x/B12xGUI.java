@@ -1532,7 +1532,7 @@ public class B12xGUI extends javax.swing.JFrame {
 
         jPanelEnterGfeDPB1.setName("jPanelEnterGfeDPB1"); // NOI18N
 
-        hlaDPB1Label.setText("HLA-DQB1");
+        hlaDPB1Label.setText("HLA-DPB1");
 
         dpb100_WS.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         dpb100_WS.setText("w");
@@ -1698,7 +1698,7 @@ public class B12xGUI extends javax.swing.JFrame {
                         .addGap(10, 10, 10)
                         .addComponent(jLabelDPB13, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(dpb111_3Prime, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(250, Short.MAX_VALUE))
+                .addContainerGap(253, Short.MAX_VALUE))
         );
 
         jPanelEnterGfeDPB1Layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {dpb101_5Prime, dpb102_Exon1, dpb103_Intron1, dpb104_Exon2, dpb105_Intron2, dpb106_Exon3, dpb107_Intron3, dpb108_Exon4, dpb109_Intron4, dpb110_Exon5, dpb111_3Prime});
