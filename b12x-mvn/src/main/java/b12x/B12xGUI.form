@@ -1845,7 +1845,7 @@
                                   </Group>
                                   <Component id="dpb111_3Prime" linkSize="18" alignment="0" min="-2" max="-2" attributes="0"/>
                               </Group>
-                              <EmptySpace pref="250" max="32767" attributes="0"/>
+                              <EmptySpace pref="253" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
@@ -1909,7 +1909,7 @@
                   <SubComponents>
                     <Component class="javax.swing.JLabel" name="hlaDPB1Label">
                       <Properties>
-                        <Property name="text" type="java.lang.String" value="HLA-DQB1"/>
+                        <Property name="text" type="java.lang.String" value="HLA-DPB1"/>
                       </Properties>
                     </Component>
                     <Component class="javax.swing.JTextField" name="dpb100_WS">
@@ -4092,7 +4092,7 @@
             <Component class="javax.swing.JComboBox" name="hlaSelectNeo4jVersion">
               <Properties>
                 <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-                  <Connection code="VersionModel.versions()" type="code"/>
+                  <Connection code="VersionModel.versions(&quot;HLA&quot;)" type="code"/>
                 </Property>
               </Properties>
               <AuxValues>
@@ -4163,7 +4163,7 @@
             <Component class="javax.swing.JComboBox" name="hlaSelectUpdate">
               <Properties>
                 <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-                  <StringArray count="11">
+                  <StringArray count="12">
                     <StringItem index="0" value="HLA-A"/>
                     <StringItem index="1" value="HLA-B"/>
                     <StringItem index="2" value="HLA-C"/>
@@ -4175,9 +4175,13 @@
                     <StringItem index="8" value="HLA-DRB3"/>
                     <StringItem index="9" value="HLA-DRB4"/>
                     <StringItem index="10" value="HLA-DRB5"/>
+                    <StringItem index="11" value="KIR"/>
                   </StringArray>
                 </Property>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="hlaSelectUpdateActionPerformed"/>
+              </Events>
               <AuxValues>
                 <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
               </AuxValues>
@@ -4211,9 +4215,12 @@
             <Component class="javax.swing.JComboBox" name="hlaSelectNeo4jVersionUpdate">
               <Properties>
                 <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-                  <Connection code="VersionModel.versions()" type="code"/>
+                  <Connection code="VersionModel.versions(&quot;HLA&quot;)" type="code"/>
                 </Property>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="hlaSelectNeo4jVersionUpdateActionPerformed"/>
+              </Events>
               <AuxValues>
                 <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="} catch (Exception ex) {&#xa;System.out.println(ex);&#xa;}"/>
                 <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="try {"/>

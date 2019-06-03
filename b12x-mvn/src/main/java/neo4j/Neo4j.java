@@ -23,6 +23,7 @@ public class Neo4j extends SwingWorker<String, String> {
     
     private final String locus, regex, searchString;
     private final String version;
+    private final String versionType;
     private List<String> versions;
     private final Path path;
     private final Path versionPath = Paths.get(GlobalVariables.dataFilesPath() 
@@ -36,7 +37,8 @@ public class Neo4j extends SwingWorker<String, String> {
                  String incomingVersion, 
                  Path incomingPath, 
                  String incomingRegex, 
-                 String incomingSearchString) 
+                 String incomingSearchString,
+                 String incomingVersionType) 
                  throws IOException 
     {
         locus = incomingLocus;
@@ -44,9 +46,9 @@ public class Neo4j extends SwingWorker<String, String> {
         regex = incomingRegex;
         searchString = incomingSearchString;
         version = incomingVersion;
+        versionType = incomingVersionType;
     }
         
-    
     public void dataUpdate() throws IOException {
         try {
             // set up the call
@@ -57,12 +59,12 @@ public class Neo4j extends SwingWorker<String, String> {
             
             // determine the most recent version
             // create the request and send it
-            Neo4jVersionRequest whatVersion = new Neo4jVersionRequest(factory);
+            Neo4jVersionRequest whatVersion = new Neo4jVersionRequest();
             InputStream incomingVersionData = neo4jHttp
-                    .makeCall(neo4jURL, whatVersion.formNeo4jVersionRequest());
+                    .makeCall(neo4jURL, whatVersion.formNeo4jVersionRequest(versionType, factory));
             
             // recieve the version data and parse it
-            versions = parser.parseVersion(incomingVersionData, factory);
+            versions = parser.parseVersion(incomingVersionData, factory, versionType);
             System.out.println(versions.toString());
 
             // retrieve the data
@@ -109,8 +111,8 @@ public class Neo4j extends SwingWorker<String, String> {
             parseData.readCSVFile(locus, path.toFile(), regex, searchString);
             
             // update the version selection menus
-            B12xGUI.hlaSelectNeo4jVersionUpdate.setModel(VersionModel.versions());
-            B12xGUI.hlaSelectNeo4jVersion.setModel(VersionModel.versions());
+            B12xGUI.hlaSelectNeo4jVersionUpdate.setModel(VersionModel.versions("HLA"));
+            B12xGUI.hlaSelectNeo4jVersion.setModel(VersionModel.versions("HLA"));
             
         } catch (Exception ex) {
             System.out.println(ex);

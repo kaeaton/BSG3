@@ -1532,7 +1532,7 @@ public class B12xGUI extends javax.swing.JFrame {
 
         jPanelEnterGfeDPB1.setName("jPanelEnterGfeDPB1"); // NOI18N
 
-        hlaDPB1Label.setText("HLA-DQB1");
+        hlaDPB1Label.setText("HLA-DPB1");
 
         dpb100_WS.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         dpb100_WS.setText("w");
@@ -1698,7 +1698,7 @@ public class B12xGUI extends javax.swing.JFrame {
                         .addGap(10, 10, 10)
                         .addComponent(jLabelDPB13, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(dpb111_3Prime, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(250, Short.MAX_VALUE))
+                .addContainerGap(253, Short.MAX_VALUE))
         );
 
         jPanelEnterGfeDPB1Layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {dpb101_5Prime, dpb102_Exon1, dpb103_Intron1, dpb104_Exon2, dpb105_Intron2, dpb106_Exon3, dpb107_Intron3, dpb108_Exon4, dpb109_Intron4, dpb110_Exon5, dpb111_3Prime});
@@ -3240,7 +3240,7 @@ public class B12xGUI extends javax.swing.JFrame {
     });
 
     try {
-        hlaSelectNeo4jVersion.setModel(VersionModel.versions());
+        hlaSelectNeo4jVersion.setModel(VersionModel.versions("HLA"));
     } catch (Exception ex) {
         System.out.println(ex);
     }
@@ -3306,7 +3306,12 @@ public class B12xGUI extends javax.swing.JFrame {
 
     jTabbedPane2.addTab("Neo4j GFE Search", neo4j);
 
-    hlaSelectUpdate.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "HLA-A", "HLA-B", "HLA-C", "HLA-DPA1", "HLA-DPB1", "HLA-DQA1", "HLA-DQB1", "HLA-DRB1", "HLA-DRB3", "HLA-DRB4", "HLA-DRB5" }));
+    hlaSelectUpdate.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "HLA-A", "HLA-B", "HLA-C", "HLA-DPA1", "HLA-DPB1", "HLA-DQA1", "HLA-DQB1", "HLA-DRB1", "HLA-DRB3", "HLA-DRB4", "HLA-DRB5", "KIR" }));
+    hlaSelectUpdate.addActionListener(new java.awt.event.ActionListener() {
+        public void actionPerformed(java.awt.event.ActionEvent evt) {
+            hlaSelectUpdateActionPerformed(evt);
+        }
+    });
 
     neo4jUpdateButton.setText("Update Neo4j Records");
     neo4jUpdateButton.addActionListener(new java.awt.event.ActionListener() {
@@ -3327,10 +3332,15 @@ public class B12xGUI extends javax.swing.JFrame {
     jLabel3.setText("This tool is for forcing a data update before that time is up. It will also force update what versions are available.");
 
     try {
-        hlaSelectNeo4jVersionUpdate.setModel(VersionModel.versions());
+        hlaSelectNeo4jVersionUpdate.setModel(VersionModel.versions("HLA"));
     } catch (Exception ex) {
         System.out.println(ex);
     }
+    hlaSelectNeo4jVersionUpdate.addActionListener(new java.awt.event.ActionListener() {
+        public void actionPerformed(java.awt.event.ActionEvent evt) {
+            hlaSelectNeo4jVersionUpdateActionPerformed(evt);
+        }
+    });
 
     javax.swing.GroupLayout neo4jUpdateLayout = new javax.swing.GroupLayout(neo4jUpdate);
     neo4jUpdate.setLayout(neo4jUpdateLayout);
@@ -3453,7 +3463,7 @@ public class B12xGUI extends javax.swing.JFrame {
             String locus = hlaSelectNeo4j.getSelectedItem().toString();
             String parsedLocus = LocusNameParser.parseLocus(locus);
             String version = hlaSelectNeo4jVersion.getSelectedItem().toString();
-//            String neo4jLocation = "";
+            String versionType = LocusNameParser.hlaOrKir(locus);
             Path dataPath = Paths.get(GlobalVariables.dataFilesPath() 
                                     + version
                                     + System.getProperty("file.separator") 
@@ -3537,7 +3547,7 @@ public class B12xGUI extends javax.swing.JFrame {
 
             
             neo4jResults.setText("");
-            Neo4j neo4j = new Neo4j(locus, version, dataPath, finalRegex, searchString);
+            Neo4j neo4j = new Neo4j(locus, version, dataPath, finalRegex, searchString, versionType);
             neo4j.execute();
             
         } catch (Exception ex) {
@@ -3559,13 +3569,14 @@ public class B12xGUI extends javax.swing.JFrame {
                                     + "_Download.csv");
             String regex = "";
             String searchString = "";
+            String versionType = LocusNameParser.hlaOrKir(locus);
 
-            Neo4j neo4j = new Neo4j(locus, version, path, regex, searchString);
+            Neo4j neo4j = new Neo4j(locus, version, path, regex, searchString, versionType);
             neo4j.dataUpdate();
             
             // update the version selection menus
-            hlaSelectNeo4jVersionUpdate.setModel(VersionModel.versions());
-            hlaSelectNeo4jVersion.setModel(VersionModel.versions());
+            hlaSelectNeo4jVersionUpdate.setModel(VersionModel.versions(versionType));
+            hlaSelectNeo4jVersion.setModel(VersionModel.versions(versionType));
         } catch (Exception ex) {
             System.out.println(ex);
         }
@@ -3650,6 +3661,27 @@ public class B12xGUI extends javax.swing.JFrame {
             System.out.println(ex);
         }        // TODO add your handling code here:
     }//GEN-LAST:event_jButtonResetSearchTermsActionPerformed
+
+    private void hlaSelectNeo4jVersionUpdateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_hlaSelectNeo4jVersionUpdateActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_hlaSelectNeo4jVersionUpdateActionPerformed
+
+    private void hlaSelectUpdateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_hlaSelectUpdateActionPerformed
+        // TODO add your handling code here:
+        try 
+        {
+            if (hlaSelectUpdate.getSelectedItem().toString() == "KIR")
+            {
+                hlaSelectNeo4jVersionUpdate.setModel(VersionModel.versions("KIR"));
+            } else
+            {
+                hlaSelectNeo4jVersionUpdate.setModel(VersionModel.versions("HLA"));
+            }
+        } catch (Exception ex) 
+        {
+            System.out.println(ex);
+        }
+    }//GEN-LAST:event_hlaSelectUpdateActionPerformed
     
 //    public void neo4jResults.getDocument();
 //    DocumentListener(new DocumentListener() {
@@ -3661,7 +3693,7 @@ public class B12xGUI extends javax.swing.JFrame {
 //  }
 //  public void insertUpdate(DocumentEvent e) {
 //    warn();
-//  }
+//  }  
 //});
        
             
