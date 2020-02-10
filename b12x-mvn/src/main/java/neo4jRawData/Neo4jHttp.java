@@ -32,7 +32,7 @@ public class Neo4jHttp {
             connection.setRequestProperty("Accept", "application/json");
             connection.setRequestProperty("Content-Type", "application/json");
             connection.setRequestProperty("X-Stream", "true");
-            connection.setRequestProperty("Authorization",***REMOVED***);
+            connection.setRequestProperty("Authorization", Passwords.neo4jPassword());
             
             // Send our request
             OutputStreamWriter wr = new OutputStreamWriter(connection.getOutputStream());

@@ -7,3 +7,4 @@ Thumbs.db
 /b12x-ee/b12x-ee-war/nbproject/private/
 /b12x-ee/b12x-ee-ejb/nbproject/private/
 /b12x-mvn/target/
+b12x-mvn/src/main/java/neo4jRawData/Passwords.java
