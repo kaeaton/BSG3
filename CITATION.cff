@@ -1,0 +1,28 @@
+# This CITATION.cff file was generated with cffinit.
+# Visit https://bit.ly/cffinit to generate yours today!
+
+cff-version: 1.2.0
+title: B12x Search Generator
+message: >-
+  If you use this software, please cite it using the
+  metadata from this file.
+type: software
+authors:
+  - given-names: Katrina
+    family-names: Eaton
+    email: katrina.eaton@ucsf.edu
+    affiliation: 'University of California, San Francisco'
+identifiers:
+  - type: url
+    value: >-
+      https://github.com/kaeaton/BSG3/releases/tag/BSGv3.6.2
+    description: The current (and final) release of BSG.
+repository-code: 'https://github.com/kaeaton/BSG3'
+keywords:
+  - GFE
+  - Gene Feature Enumeration
+  - HLA
+  - Human Leukocyte Antigen
+license: Beerware
+version: 3.6.2
+date-released: '2020-02-10'
